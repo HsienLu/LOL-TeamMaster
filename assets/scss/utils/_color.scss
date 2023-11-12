@@ -1,0 +1,37 @@
+$primary:       #D6EEFF;
+$secondary:     #819EB2;
+$white:         #fff;
+$dark:          #060818;
+$green:         #00FFFF;
+$blue:          #0066FF;
+
+$Secondary2:     #93B4CC;
+$Secondary2-1:   tint-color($Secondary2, 10%);
+$Secondary2-2:   tint-color($Secondary2, 20%);
+$Secondary2-3:   tint-color($Secondary2, 30%);
+$Secondary2-4:   tint-color($Secondary2, 40%);
+$Secondary2-5:   tint-color($Secondary2, 50%);
+$Secondary2-6:   tint-color($Secondary2, 60%);
+$Secondary2-7:   tint-color($Secondary2, 70%);
+$Secondary2-8:   tint-color($Secondary2, 80%);
+$Secondary2-9:   tint-color($Secondary2, 90%);
+
+$white-1:        tint-color($white, 10%);
+$white-2:        tint-color($white, 20%);
+$white-3:        tint-color($white, 30%);
+$white-4:        tint-color($white, 40%);
+$white-5:        tint-color($white, 50%);
+$white-6:        tint-color($white, 60%);
+$white-7:        tint-color($white, 70%);
+$white-8:        tint-color($white, 80%);
+$white-9:        tint-color($white, 90%);
+
+$dark-1:        tint-color($dark, 10%);
+$dark-2:        tint-color($dark, 20%);
+$dark-3:        tint-color($dark, 30%);
+$dark-4:        tint-color($dark, 40%);
+$dark-5:        tint-color($dark, 50%);
+$dark-6:        tint-color($dark, 60%);
+$dark-7:        tint-color($dark, 70%);
+$dark-8:        tint-color($dark, 80%);
+$dark-9:        tint-color($dark, 90%);
