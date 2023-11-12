@@ -1,11 +1,24 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import './utils/variables';
 
+@import './utils/base';
+@import './utils/color';
+@import './utils/font';
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
 
-@import './pages/index.scss';
+@import './pages/index';
+@import './pages/alreadyJoinedTeam';
+@import './pages/buildTeam';
+@import './pages/editMemberProfile';
+@import './pages/historicalTeamRecords';
+@import './pages/memberCentre';
+@import './pages/myTeamList';
+@import './pages/playerList';
+@import './pages/teamCreated';
+@import './pages/teamDetails';
+@import './pages/teamList';
 
 @import "../../node_modules/bootstrap";
