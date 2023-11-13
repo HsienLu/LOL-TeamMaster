@@ -1,0 +1,21 @@
+
+// 其他設定
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+//ol,ul reset
+ol,ul{
+    padding: 0;
+  }
+  ol,ul,dl{
+    margin: 0;
+  }
