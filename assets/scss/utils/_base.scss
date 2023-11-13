@@ -13,9 +13,18 @@ img{
 }
 
 //ol,ul reset
-ol,ul{
+ol, ul{
+    list-style: none;
     padding: 0;
-  }
-  ol,ul,dl{
+}
+ol,ul,dl{
     margin: 0;
-  }
+}
+
+// .lightGreenRadialGradientBg {
+//     @include radial-gradient($green, $white);
+// }
+
+// .lightBlueRadialGradientBg {
+//     @include radial-gradient($blue, $white);
+// }
