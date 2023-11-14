@@ -1,4 +1,15 @@
-.header{
-  // background: $dark-8;
-  font-size: 64px;
+
+.z-index {
+  z-index: 1200;
+}
+
+.logo{
+  background-image: url(../images/Logo-blue.png);
+  background-position: center;
+  background-size: cover;
+  width: 143px;
+  height: 56px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
 }
