@@ -299,13 +299,49 @@ $cyans: (
 
 // scss-docs-start theme-color-variables
 // $primary:       $blue !default;
+$primary:       #D6EEFF; //custom
 // $secondary:     $gray-600 !default;
+$secondary:     #819EB2; //custom
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
+$green:         #00FFFF; //custom
+$blue:          #0066FF; //custom
 // $dark:          $gray-900 !default;
+$dark:          #060818; //custom
+//custom
+$secondary2:    #93B4CC;
+$secondary2-1:   tint-color($secondary2, 90%) !default;
+$secondary2-2:   tint-color($secondary2, 80%) !default;
+$secondary2-3:   tint-color($secondary2, 70%) !default;
+$secondary2-4:   tint-color($secondary2, 60%) !default;
+$secondary2-5:   tint-color($secondary2, 50%) !default;
+$secondary2-6:   tint-color($secondary2, 40%) !default;
+$secondary2-7:   tint-color($secondary2, 30%) !default;
+$secondary2-8:   tint-color($secondary2, 20%) !default;
+$secondary2-9:   tint-color($secondary2, 10%) !default;
+
+$white-1:        shade-color($white, 90%) !default;
+$white-2:        shade-color($white, 80%) !default;
+$white-3:        shade-color($white, 70%) !default;
+$white-4:        shade-color($white, 60%) !default;
+$white-5:        shade-color($white, 50%) !default;
+$white-6:        shade-color($white, 40%) !default;
+$white-7:        shade-color($white, 30%) !default;
+$white-8:        shade-color($white, 20%) !default;
+$white-9:        shade-color($white, 10%) !default;
+
+$dark-1:        tint-color($dark, 90%) !default;
+$dark-2:        tint-color($dark, 80%) !default;
+$dark-3:        tint-color($dark, 70%) !default;
+$dark-4:        tint-color($dark, 60%) !default;
+$dark-5:        tint-color($dark, 50%) !default;
+$dark-6:        tint-color($dark, 40%) !default;
+$dark-7:        tint-color($dark, 30%) !default;
+$dark-8:        tint-color($dark, 20%) !default;
+$dark-9:        tint-color($dark, 10%) !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -317,11 +353,40 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
+  "green":      $green,
+  "blue":       $blue,
   "dark":       $dark,
-  // -----custom-----
-  "secondary2": $secondary2,
-  "white":      $white
-  // -----custom-----
+  "secondary2":  $secondary2,
+  //custom
+  "secondary2-1": $secondary2-1,
+  "secondary2-2": $secondary2-2,
+  "secondary2-3": $secondary2-3,
+  "secondary2-4": $secondary2-4,
+  "secondary2-5": $secondary2-5,
+  "secondary2-6": $secondary2-6,
+  "secondary2-7": $secondary2-7,
+  "secondary2-8": $secondary2-8,
+  "secondary2-9": $secondary2-9,
+
+  "white-1": $white-1,
+  "white-2": $white-2,
+  "white-3": $white-3,
+  "white-4": $white-4,
+  "white-5": $white-5,
+  "white-6": $white-6,
+  "white-7": $white-7,
+  "white-8": $white-8,
+  "white-9": $white-9,
+
+  "dark-1": $dark-1,
+  "dark-2": $dark-2,
+  "dark-3": $dark-3,
+  "dark-4": $dark-4,
+  "dark-5": $dark-5,
+  "dark-6": $dark-6,
+  "dark-7": $dark-7,
+  "dark-8": $dark-8,
+  "dark-9": $dark-9
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -412,10 +477,8 @@ $position-values: (
 
 // $body-bg:                   $white !default;
 // $body-color:                $gray-900 !default;
-// -----custom-----
-$body-bg:                   $dark !default;
-$body-color:                $primary !default;
-// -----custom-----
+$body-bg:                   $dark !default; //custom
+$body-color:                $primary !default; //custom
 $body-text-align:           null !default;
 
 // Links
@@ -423,9 +486,7 @@ $body-text-align:           null !default;
 // Style anchor elements.
 
 // $link-color:                              $primary !default;
-// -----custom-----
-$link-color:                              $secondary !default;
-// -----custom-----
+$link-color:                              $secondary !default; //custom
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
@@ -439,9 +500,7 @@ $stretched-link-z-index:                  1 !default;
 // Style p element.
 
 // $paragraph-margin-bottom:   1rem !default;
-// -----custom-----
-$paragraph-margin-bottom: 0 !default;
-// -----custom-----
+$paragraph-margin-bottom: 0 !default; //custom
 
 
 // Grid breakpoints
@@ -515,7 +574,7 @@ $border-color-translucent:    rgba($black, .175) !default;
 
 // scss-docs-start border-radius-variables
 // $border-radius:               .375rem !default;
-$border-radius:               .125rem !default;//custom
+$border-radius:               .125rem !default; //custom
 $border-radius-sm:            .25rem !default;
 $border-radius-lg:            .5rem !default;
 $border-radius-xl:            1rem !default;
@@ -590,16 +649,16 @@ $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
 // $h1-font-size:                $font-size-base * 2.5 !default;
-$h1-font-size:                $font-size-base * 3.5 !default;//custom
+$h1-font-size:                $font-size-base * 3.5 !default; //custom
 // $h2-font-size:                $font-size-base * 2 !default;
-$h2-font-size:                $font-size-base * 3 !default;//custom
+$h2-font-size:                $font-size-base * 3 !default; //custom
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
-$h7-font-size:                $font-size-base * 1.125 !default;//custom
-$h8-font-size:                $font-size-base * 0.875 !default;//custom
-$h9-font-size:                $font-size-base * 0.75 !default;//custom
+$h7-font-size:                $font-size-base * 1.125 !default; //custom
+$h8-font-size:                $font-size-base * 0.875 !default; //custom
+$h9-font-size:                $font-size-base * 0.75 !default; //custom
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -618,9 +677,7 @@ $font-sizes: (
 
 // scss-docs-start headings-variables
 // $headings-margin-bottom:      $spacer * .5 !default;
-// -----custom-----
-$headings-margin-bottom: 0 !default;
-// -----custom-----
+$headings-margin-bottom: 0 !default; //custom
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
@@ -1282,7 +1339,7 @@ $card-cap-color:                    null !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
 // $card-bg:                           $white !default;
-$card-bg:                           $dark !default;//custom
+$card-bg:                           $dark !default; //custom
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
 // scss-docs-end card-variables
