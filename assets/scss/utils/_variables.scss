@@ -441,14 +441,44 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
+//custom
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  1: $spacer * .25,   //4
+  2: $spacer * .5,    //8
+  3: $spacer,         //16
+  4: $spacer * 1.25,  //20
+  5: $spacer * 1.5,   //24
+  6: $spacer * 1.75,  //28
+  7: $spacer * 1.875, //30
+  8: $spacer * 2,     //32
+  9: $spacer * 2.25,  //36
+  10: $spacer * 2.5,   //40
+  11: $spacer * 3.5,   //56
+  12: $spacer * 3.75,   //60
+  13: $spacer * 2.5,   //72
+  14: $spacer * 4.5,   //80
+  15: $spacer * 5.25,   //84
+  16: $spacer * 5.5,   //88
+  17: $spacer * 6,   //96
+  18: $spacer * 6.25,   //100
+  19: $spacer * 6.5,   //104
+  20: $spacer * 8.5,   //136
+  21: $spacer * 9,   //144
+  22: $spacer * 9.5,   //152
+  23: $spacer * 9.75,   //156
+  24: $spacer * 10.125,   //162
+  25: $spacer * 18.5,   //296
 ) !default;
+// $spacers: (
+//   0: 0,
+//   1: $spacer * .25, //4
+//   2: $spacer * .5,  //8
+//   3: $spacer,       //16
+//   4: $spacer * 1.5, //24
+//   5: $spacer * 3,   //48
+//   6: $spacer * 4.5,   //72
+// ) !default;
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -467,15 +497,18 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+// $body-bg:                   $white !default;
+// $body-color:                $gray-900 !default;
+$body-bg:                   $dark !default; //custom
+$body-color:                $primary !default; //custom
 $body-text-align:           null !default;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
+// $link-color:                              $primary !default;
+$link-color:                              $secondary !default; //custom
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
@@ -488,7 +521,8 @@ $stretched-link-z-index:                  1 !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+// $paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom: 0 !default; //custom
 
 
 // Grid breakpoints
@@ -663,7 +697,8 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+// $headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom: 0 !default; //custom
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
