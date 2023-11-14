@@ -5,11 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>隊伍列表</title>
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/8eab62e458.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <h1>我是contact</h1>
+    <div class="container pt-lg-38">
+      <!-- Example single danger button -->
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-danger dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          讚數
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

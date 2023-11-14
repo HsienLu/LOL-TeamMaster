@@ -1,10 +1,10 @@
 
-.z-index {
-  z-index: 1200;
-}
+// header {
+//   opacity: .8;
+// }
 
-.logo{
-  background-image: url(../images/Logo-blue.png);
+.logo {
+  background-image: url(../images/logo-blue.png);
   background-position: center;
   background-size: cover;
   width: 143px;
@@ -13,3 +13,8 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+.z-index {
+  z-index: 1200;
+}
+

@@ -319,7 +319,8 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
   // -----custom-----
-  "dark-8":      $dark-8
+  "secondary2": $secondary2,
+  "dark-8": $dark-8
   // -----custom-----
 ) !default;
 // scss-docs-end theme-colors-map
@@ -380,12 +381,15 @@ $spacers: (
   1: $spacer * .25,
   2: $spacer * .5,        // 8
   3: $spacer,
-  4: $spacer * 1.5,
+  // 4: $spacer * 1.5,
   5: $spacer * 3,
+  6: $spacer * 1.5,       // 24
   10: $spacer * 2.5,      // 40
+  12: $spacer * 3,        // 48
   20: $spacer * 5,        // 80
   23: $spacer * 5.75,     // 92
-  26: $spacer * 6.5       // 104
+  26: $spacer * 6.5,      // 104
+  38: $spacer * 9.5       // 152
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -408,7 +412,7 @@ $position-values: (
 // $body-bg:                   $white !default;
 // $body-color:                $gray-900 !default;
 // -----custom-----
-$body-bg:                   $dark-8 !default;
+$body-bg:                   $dark !default;
 $body-color:                $primary !default;
 // -----custom-----
 $body-text-align:           null !default;
@@ -583,22 +587,30 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
+// $h1-font-size:                $font-size-base * 2.5 !default;
+$h1-font-size:                $font-size-base * 3.5 !default;//custom
+// $h2-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 3 !default;//custom
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+$h7-font-size:                $font-size-base * 1.125 !default;//custom
+$h8-font-size:                $font-size-base * 0.875 !default;//custom
+$h9-font-size:                $font-size-base * 0.75 !default;//custom
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+  1: $h1-font-size, //56px
+  2: $h2-font-size, //48px
+  3: $h3-font-size, //28px
+  4: $h4-font-size, //24px
+  5: $h5-font-size, //20px
+  6: $h6-font-size, //16px
+  7: $h7-font-size, //18px
+  8: $h7-font-size, //14px
+  9: $h7-font-size  //12px
 ) !default;
 // scss-docs-end font-sizes
 
