@@ -21,6 +21,29 @@ ol,ul,dl{
     margin: 0;
 }
 
+// .titleImg {
+//     background-image: url(../images/img-rectangle-title.png);
+//     background-position: center;
+//     background-size: cover;
+//     width: 126px;
+//     height: 100px;
+// }
+
+.parallelogram {
+    border: 2px solid $secondary;
+    transform: skew(-16deg);
+    overflow: hidden;
+}
+
+.parallelogram-content {
+    transform: skew(16deg);
+    
+}
+
+.waitJoin {
+    opacity: .5;
+}
+
 // .lightGreenRadialGradientBg {
 //     @include radial-gradient($green, $white);
 // }

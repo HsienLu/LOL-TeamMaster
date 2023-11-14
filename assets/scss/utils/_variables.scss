@@ -320,7 +320,7 @@ $theme-colors: (
   "dark":       $dark,
   // -----custom-----
   "secondary2": $secondary2,
-  "dark-8": $dark-8
+  "white":      $white
   // -----custom-----
 ) !default;
 // scss-docs-end theme-colors-map
@@ -378,16 +378,17 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
+  1: $spacer * .25,       // 4
   2: $spacer * .5,        // 8
   3: $spacer,
   // 4: $spacer * 1.5,
-  5: $spacer * 3,
+  5: $spacer * 1.25,      // 20
   6: $spacer * 1.5,       // 24
+  8: $spacer * 2,         // 32
   10: $spacer * 2.5,      // 40
   12: $spacer * 3,        // 48
+  18: $spacer * 4.5,      // 72
   20: $spacer * 5,        // 80
-  23: $spacer * 5.75,     // 92
   26: $spacer * 6.5,      // 104
   38: $spacer * 9.5       // 152
 ) !default;
@@ -513,7 +514,8 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
+// $border-radius:               .375rem !default;
+$border-radius:               .125rem !default;//custom
 $border-radius-sm:            .25rem !default;
 $border-radius-lg:            .5rem !default;
 $border-radius-xl:            1rem !default;
@@ -623,6 +625,7 @@ $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
+
 $headings-color:              null !default;
 // scss-docs-end headings-variables
 
@@ -1278,7 +1281,8 @@ $card-cap-bg:                       rgba($black, .03) !default;
 $card-cap-color:                    null !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
-$card-bg:                           $white !default;
+// $card-bg:                           $white !default;
+$card-bg:                           $dark !default;//custom
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
 // scss-docs-end card-variables
