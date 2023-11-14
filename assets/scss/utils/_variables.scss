@@ -312,16 +312,16 @@ $blue:          #0066FF; //custom
 // $dark:          $gray-900 !default;
 $dark:          #060818; //custom
 //custom
-$secondary2: #93B4CC;
-$secondary2-1:   tint-color($secondary2, 10%) !default;
-$secondary2-2:   tint-color($secondary2, 20%) !default;
-$secondary2-3:   tint-color($secondary2, 30%) !default;
-$secondary2-4:   tint-color($secondary2, 40%) !default;
+$secondary2:    #93B4CC;
+$secondary2-1:   tint-color($secondary2, 90%) !default;
+$secondary2-2:   tint-color($secondary2, 80%) !default;
+$secondary2-3:   tint-color($secondary2, 70%) !default;
+$secondary2-4:   tint-color($secondary2, 60%) !default;
 $secondary2-5:   tint-color($secondary2, 50%) !default;
-$secondary2-6:   tint-color($secondary2, 60%) !default;
-$secondary2-7:   tint-color($secondary2, 70%) !default;
-$secondary2-8:   tint-color($secondary2, 80%) !default;
-$secondary2-9:   tint-color($secondary2, 90%) !default;
+$secondary2-6:   tint-color($secondary2, 40%) !default;
+$secondary2-7:   tint-color($secondary2, 30%) !default;
+$secondary2-8:   tint-color($secondary2, 20%) !default;
+$secondary2-9:   tint-color($secondary2, 10%) !default;
 
 $white-1:        shade-color($white, 90%) !default;
 $white-2:        shade-color($white, 80%) !default;
@@ -333,15 +333,15 @@ $white-7:        shade-color($white, 30%) !default;
 $white-8:        shade-color($white, 20%) !default;
 $white-9:        shade-color($white, 10%) !default;
 
-$dark-1:        tint-color($dark, 10%) !default;
-$dark-2:        tint-color($dark, 20%) !default;
-$dark-3:        tint-color($dark, 30%) !default;
-$dark-4:        tint-color($dark, 40%) !default;
+$dark-1:        tint-color($dark, 90%) !default;
+$dark-2:        tint-color($dark, 80%) !default;
+$dark-3:        tint-color($dark, 70%) !default;
+$dark-4:        tint-color($dark, 60%) !default;
 $dark-5:        tint-color($dark, 50%) !default;
-$dark-6:        tint-color($dark, 60%) !default;
-$dark-7:        tint-color($dark, 70%) !default;
-$dark-8:        tint-color($dark, 80%) !default;
-$dark-9:        tint-color($dark, 90%) !default;
+$dark-6:        tint-color($dark, 40%) !default;
+$dark-7:        tint-color($dark, 30%) !default;
+$dark-8:        tint-color($dark, 20%) !default;
+$dark-9:        tint-color($dark, 10%) !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -356,6 +356,7 @@ $theme-colors: (
   "green":      $green,
   "blue":       $blue,
   "dark":       $dark,
+  "secondary2":  $secondary2,
   //custom
   "secondary2-1": $secondary2-1,
   "secondary2-2": $secondary2-2,
