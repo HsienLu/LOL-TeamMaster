@@ -1,4 +1,6 @@
 @import "../../node_modules/bootstrap/scss/functions";
+@import './utils/color';
+@import './utils/font';
 @import './utils/variables';
 @import './utils/utilites';
 @import "../../node_modules/bootstrap";
@@ -6,8 +8,7 @@
 
 
 @import './utils/base';
-@import './utils/color';
-@import './utils/font';
+
 
 @import './layout/header.scss';
 @import './layout/footer.scss';

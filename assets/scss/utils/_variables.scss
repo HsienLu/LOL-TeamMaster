@@ -298,14 +298,50 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+// $primary:       $blue !default;
+$primary:       #D6EEFF; //custom
+// $secondary:     $gray-600 !default;
+$secondary:     #819EB2; //custom
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+$green:         #00FFFF; //custom
+$blue:          #0066FF; //custom
+// $dark:          $gray-900 !default;
+$dark:          #060818; //custom
+//custom
+$secondary2: #93B4CC;
+$secondary2-1:   tint-color($secondary2, 10%) !default;
+$secondary2-2:   tint-color($secondary2, 20%) !default;
+$secondary2-3:   tint-color($secondary2, 30%) !default;
+$secondary2-4:   tint-color($secondary2, 40%) !default;
+$secondary2-5:   tint-color($secondary2, 50%) !default;
+$secondary2-6:   tint-color($secondary2, 60%) !default;
+$secondary2-7:   tint-color($secondary2, 70%) !default;
+$secondary2-8:   tint-color($secondary2, 80%) !default;
+$secondary2-9:   tint-color($secondary2, 90%) !default;
+
+$white-1:        shade-color($white, 90%) !default;
+$white-2:        shade-color($white, 80%) !default;
+$white-3:        shade-color($white, 70%) !default;
+$white-4:        shade-color($white, 60%) !default;
+$white-5:        shade-color($white, 50%) !default;
+$white-6:        shade-color($white, 40%) !default;
+$white-7:        shade-color($white, 30%) !default;
+$white-8:        shade-color($white, 20%) !default;
+$white-9:        shade-color($white, 10%) !default;
+
+$dark-1:        tint-color($dark, 10%) !default;
+$dark-2:        tint-color($dark, 20%) !default;
+$dark-3:        tint-color($dark, 30%) !default;
+$dark-4:        tint-color($dark, 40%) !default;
+$dark-5:        tint-color($dark, 50%) !default;
+$dark-6:        tint-color($dark, 60%) !default;
+$dark-7:        tint-color($dark, 70%) !default;
+$dark-8:        tint-color($dark, 80%) !default;
+$dark-9:        tint-color($dark, 90%) !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -317,7 +353,39 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "green":      $green,
+  "blue":       $blue,
+  "dark":       $dark,
+  //custom
+  "secondary2-1": $secondary2-1,
+  "secondary2-2": $secondary2-2,
+  "secondary2-3": $secondary2-3,
+  "secondary2-4": $secondary2-4,
+  "secondary2-5": $secondary2-5,
+  "secondary2-6": $secondary2-6,
+  "secondary2-7": $secondary2-7,
+  "secondary2-8": $secondary2-8,
+  "secondary2-9": $secondary2-9,
+
+  "white-1": $white-1,
+  "white-2": $white-2,
+  "white-3": $white-3,
+  "white-4": $white-4,
+  "white-5": $white-5,
+  "white-6": $white-6,
+  "white-7": $white-7,
+  "white-8": $white-8,
+  "white-9": $white-9,
+
+  "dark-1": $dark-1,
+  "dark-2": $dark-2,
+  "dark-3": $dark-3,
+  "dark-4": $dark-4,
+  "dark-5": $dark-5,
+  "dark-6": $dark-6,
+  "dark-7": $dark-7,
+  "dark-8": $dark-8,
+  "dark-9": $dark-9
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -566,22 +634,30 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
+// $h1-font-size:                $font-size-base * 2.5 !default;
+$h1-font-size:                $font-size-base * 3.5 !default;//custom
+// $h2-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 3 !default;//custom
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+$h7-font-size:                $font-size-base * 1.125 !default;//custom
+$h8-font-size:                $font-size-base * 0.875 !default;//custom
+$h9-font-size:                $font-size-base * 0.75 !default;//custom
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+  1: $h1-font-size, //56px
+  2: $h2-font-size, //48px
+  3: $h3-font-size, //28px
+  4: $h4-font-size, //24px
+  5: $h5-font-size, //20px
+  6: $h6-font-size, //16px
+  7: $h7-font-size, //18px
+  8: $h7-font-size, //14px
+  9: $h7-font-size  //12px
 ) !default;
 // scss-docs-end font-sizes
 
