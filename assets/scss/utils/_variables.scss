@@ -328,40 +328,7 @@ $theme-colors: (
   "green": $green,
   "blue": $blue,
   "dark": $dark,
-
-  "white": $white,
-  "secondary2": $secondary2,
-
-  //custom
-  "secondary2-1": $secondary2-1,
-  "secondary2-2": $secondary2-2,
-  "secondary2-3": $secondary2-3,
-  "secondary2-4": $secondary2-4,
-  "secondary2-5": $secondary2-5,
-  "secondary2-6": $secondary2-6,
-  "secondary2-7": $secondary2-7,
-  "secondary2-8": $secondary2-8,
-  "secondary2-9": $secondary2-9,
-
-  "white-1": $white-1,
-  "white-2": $white-2,
-  "white-3": $white-3,
-  "white-4": $white-4,
-  "white-5": $white-5,
-  "white-6": $white-6,
-  "white-7": $white-7,
-  "white-8": $white-8,
-  "white-9": $white-9,
-
-  "dark-1": $dark-1,
-  "dark-2": $dark-2,
-  "dark-3": $dark-3,
-  "dark-4": $dark-4,
-  "dark-5": $dark-5,
-  "dark-6": $dark-6,
-  "dark-7": $dark-7,
-  "dark-8": $dark-8,
-  "dark-9": $dark-9,
+  "white": $white
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -423,58 +390,36 @@ $spacer: 1rem !default;
 //custom
 $spacers: (
   0: 0,
-  1: $spacer * 0.25,
-  // 4
-  2: $spacer * 0.5,
-  // 8
-  3: $spacer,
-  // 4: $spacer * 1.5,
-  5: $spacer * 1.25,
-  // 20
-  6: $spacer * 1.5,
-  // 24
-  8: $spacer * 2,
-  // 32
-  10: $spacer * 2.5,
-  // 40
-  12: $spacer * 3,
-  // 48
-  18: $spacer * 4.5,
-  // 72
-  20: $spacer * 5,
-  // 80
-  26: $spacer * 6.5,
-  // 104
-  38: $spacer * 9.5 // 152,
+  1: $spacer * .25,   //4
+  2: $spacer * .5,    //8
+  3: $spacer,         //16
+  4: $spacer * 1.25,  //20
+  5: $spacer * 1.5,   //24
+  6: $spacer * 1.75,  //28
+  7: $spacer * 1.875, //30
+  8: $spacer * 2,     //32
+  9: $spacer * 2.25,  //36
+  10: $spacer * 2.5,   //40
+  11: $spacer * 3.5,   //56
+  12: $spacer * 3.75,   //60
+  13: $spacer * 4.5,   //72
+  14: $spacer * 5,   //80
+  15: $spacer * 5.25,   //84
+  16: $spacer * 5.5,   //88
+  17: $spacer * 6,   //96
+  18: $spacer * 6.25,   //100
+  19: $spacer * 6.5,   //104
+  20: $spacer * 8.5,   //136
+  21: $spacer * 9,   //144
+  22: $spacer * 9.5,   //152
+  23: $spacer * 9.75,   //156
+  24: $spacer * 10.125,   //162
+  25: $spacer * 18.5,   //296
 ) !default;
 
-/*
-1: $spacer * .25,   //4
-2: $spacer * .5,    //8
-3: $spacer,         //16
-4: $spacer * 1.25,  //20
-5: $spacer * 1.5,   //24
-6: $spacer * 1.75,  //28
-7: $spacer * 1.875, //30
-8: $spacer * 2,     //32
-9: $spacer * 2.25,  //36
-10: $spacer * 2.5,   //40
-11: $spacer * 3.5,   //56
-12: $spacer * 3.75,   //60
-13: $spacer * 2.5,   //72
-14: $spacer * 4.5,   //80
-15: $spacer * 5.25,   //84
-16: $spacer * 5.5,   //88
-17: $spacer * 6,   //96
-18: $spacer * 6.25,   //100
-19: $spacer * 6.5,   //104
-20: $spacer * 8.5,   //136
-21: $spacer * 9,   //144
-22: $spacer * 9.5,   //152
-23: $spacer * 9.75,   //156
-24: $spacer * 10.125,   //162
-25: $spacer * 18.5,   //296
-*/
+
+
+
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -1192,6 +1137,16 @@ $zindex-popover: 1070 !default;
 $zindex-tooltip: 1080 !default;
 $zindex-toast: 1090 !default;
 // scss-docs-end zindex-stack
+
+// scss-docs-start zindex-levels-map
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3) !default;
+// scss-docs-end zindex-levels-map
+
 
 // Navs
 
