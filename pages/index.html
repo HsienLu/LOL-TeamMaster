@@ -1,73 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LOL 組隊大師</title>
-    <script
-      src="https://kit.fontawesome.com/8eab62e458.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
-    
-    <h1 class="index-title fs-7
-    ">我是首頁</h1>
-    <div class="bg-white">
-      <h2 class="bg-dark-1 text-dark">secondary2</h2>
-      <h2 class="bg-dark-2   text-dark">secondary2-9</h2>
-      <h2 class="bg-dark-3 text-dark">secondary2-8</h2>
-      <h2 class="bg-dark-4
-      text-dark">secondary2-7</h2>
-      <h2 class="bg-dark-5 text-dark">secondary2-6</h2>
-      <h2 class="bg-dark-6 text-dark">secondary2-5</h2>
-      <h2 class="bg-dark-9 text-dark">secondary2-5</h2>
-      <h2 class="bg-dark text-dark">secondary2-5</h2>
-    </div>
-    <i class="fa-solid fa-chess-queen"></i>
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOL 組隊大師</title>
+  <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-dark mt-13">
+  <%- include('./layout/header'); -%>
+    <wrap class="mt-13">
+      <div>
+        <h1 class="bg-primary text-white ">我是標題</h1>
       </div>
-    </div>
+      <h2 class="bg-white
+      bg-opacity-90 text-secondary2 text-opacity-90">secondary2</h2>
+      <h2 class="bg-white
+      bg-opacity-80 text-secondary2 text-opacity-80">secondary2</h2>
+      <h2 class="bg-white
+      bg-opacity-70 text-secondary2 text-opacity-70">secondary2</h2>
+      <h2 class="bg-white
+      bg-opacity-60 text-secondary2 text-opacity-60">secondary2</h2>
+      <h2 class="bg-white
+      bg-opacity-50 text-secondary2 text-opacity-50">secondary2</h2>
+      <h2 class="bg-white bg-opacity-40 text-secondary2 text-opacity-40">secondary2</h2>
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
+      <%- include('./layout/footer'); -%>
 
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
-          </div>
-        </div>
-      </div>
-    </div>
+        <script type="module" src="../main.js"></script>
+</body>
 
-    <%- include('./layout/footer'); -%>
-
-    <script type="module" src="../main.js"></script>
-  </body>
 </html>
