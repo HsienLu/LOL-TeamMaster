@@ -2,6 +2,7 @@
 @import './utils/variables';
 @import './utils/color';
 @import './utils/font';
+@import "../../node_modules/bootstrap/scss/maps"; //引入 maps
 @import './utils/utilities';
 
 $utilities: map-merge(
