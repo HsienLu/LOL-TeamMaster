@@ -10,6 +10,7 @@
     max-height: 703px;
     max-width: 416px;
     padding: 24px 40px 40px 40px;
+    border-radius: 2px;
 }
 
 .parallelogram {
@@ -21,8 +22,4 @@
 .parallelogram-content {
     transform: skew(16deg);
     
-}
-
-.waitJoin {
-    opacity: .5;
 }

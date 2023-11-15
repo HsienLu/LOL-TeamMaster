@@ -116,6 +116,36 @@ $utilities: map-merge(
         90:  .9
       )
     ),
+    "bg-opacity": (
+      css-var: true,
+      class: bg-opacity,
+      values: (
+        10: .1,
+        20: .2,
+        30: .3,
+        40: .4,
+        50: .5,
+        60: .6,
+        70: .7,
+        80: .8,
+        90: .9,
+      )
+    ),
+    "text-opacity": (
+      css-var: true,
+      class: text-opacity,
+      values: (
+        10: .1,
+        20: .2,
+        30: .3,
+        40: .4,
+        50: .5,
+        60: .6,
+        70: .7,
+        80: .8,
+        90: .9,
+      )
+    ),
   ),
   $utilities
 );
