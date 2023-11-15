@@ -13,13 +13,15 @@ img{
 }
 
 //ol,ul reset
+
 ol,ul{
     list-style: none;
     padding: 0;
-  }
-  ol,ul,dl{
+}
+ol,ul,dl{
     margin: 0;
-  }
+}
+
 
 //spacer
 /*
@@ -48,4 +50,13 @@ ol,ul{
   23: 156px
   24: 162px
   25: 296px
+
 */
+
+// .lightGreenRadialGradientBg {
+//     @include radial-gradient($green, $white);
+// }
+
+// .lightBlueRadialGradientBg {
+//     @include radial-gradient($blue, $white);
+// }
