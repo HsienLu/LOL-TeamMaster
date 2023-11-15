@@ -311,6 +311,7 @@ $green:         #00FFFF; //custom
 $blue:          #0066FF; //custom
 // $dark:          $gray-900 !default;
 $dark:          #060818; //custom
+
 //custom
 $secondary2:    #93B4CC;
 $secondary2-1:   tint-color($secondary2, 90%) !default;
@@ -356,7 +357,9 @@ $theme-colors: (
   "green":      $green,
   "blue":       $blue,
   "dark":       $dark,
+  "white":      $white,
   "secondary2":  $secondary2,
+  
   //custom
   "secondary2-1": $secondary2-1,
   "secondary2-2": $secondary2-2,
@@ -457,6 +460,35 @@ $spacers: (
   26: $spacer * 6.5,      // 104
   38: $spacer * 9.5       // 152
 ) !default;
+
+/*
+1: $spacer * .25,   //4
+2: $spacer * .5,    //8
+3: $spacer,         //16
+4: $spacer * 1.25,  //20
+5: $spacer * 1.5,   //24
+6: $spacer * 1.75,  //28
+7: $spacer * 1.875, //30
+8: $spacer * 2,     //32
+9: $spacer * 2.25,  //36
+10: $spacer * 2.5,   //40
+11: $spacer * 3.5,   //56
+12: $spacer * 3.75,   //60
+13: $spacer * 2.5,   //72
+14: $spacer * 4.5,   //80
+15: $spacer * 5.25,   //84
+16: $spacer * 5.5,   //88
+17: $spacer * 6,   //96
+18: $spacer * 6.25,   //100
+19: $spacer * 6.5,   //104
+20: $spacer * 8.5,   //136
+21: $spacer * 9,   //144
+22: $spacer * 9.5,   //152
+23: $spacer * 9.75,   //156
+24: $spacer * 10.125,   //162
+25: $spacer * 18.5,   //296
+*/
+
 // scss-docs-end spacer-variables-maps
 
 // Position
