@@ -1,0 +1,26 @@
+// 水平方向的漸層
+@mixin gradient-x($start-color: $primary, $end-color: $secondary) {
+    background-image: linear-gradient(to right, $start-color, $end-color);
+  }
+  
+  // 垂直方向的漸層
+@mixin gradient-y($start-color: $primary, $end-color: $secondary) {
+    background-image: linear-gradient(to bottom, $start-color, $end-color);
+}
+
+// 使用方式
+// 在下拉選單的區塊使用 @include 加入 gradient-y 樣式
+// 帶入顏色色碼就可以囉，也可以帶入變數
+// @include gradient-y(#7000FF, #11002D);
+
+
+
+@mixin radial-gradient(
+  $start-color: $primary,
+  $end-color: $secondary,
+) {
+  background-image: radial-gradient(50% 50% at 50% 50%, $start-color 0%, $end-color 100%);
+}
+
+// 使用方式
+// @include radial-gradient(#28085c, #000000);

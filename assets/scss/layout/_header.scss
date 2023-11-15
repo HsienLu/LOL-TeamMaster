@@ -1,4 +1,15 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.logo {
+  background-image: url(../images/logo-blue.png);
+  background-position: center;
+  background-size: cover;
+  width: 143px;
+  height: 56px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
 }
+
+.z-index {
+  z-index: 1200;
+}
+
