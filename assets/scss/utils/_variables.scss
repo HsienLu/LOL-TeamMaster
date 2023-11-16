@@ -390,59 +390,35 @@ $spacer: 1rem !default;
 //custom
 $spacers: (
   0: 0,
-  1: $spacer * 0.25,
-  // 4
-  2: $spacer * 0.5,
-  // 8
-  3: $spacer * 0.75,
-  // 12
-  // 4: $spacer * 1.5,
-  5: $spacer * 1.25,
-  // 20
-  6: $spacer * 1.5,
-  // 24
-  8: $spacer * 2,
-  // 32
-  10: $spacer * 2.5,
-  // 40
-  12: $spacer * 3,
-  // 48
-  18: $spacer * 4.5,
-  // 72
-  20: $spacer * 5,
-  // 80
-  26: $spacer * 6.5,
-  // 104
-  38: $spacer * 9.5 // 152,
-) !default;
+  1: $spacer * 0.25,     // 4
+  2: $spacer * 0.5,      // 8
+  3: $spacer * 0.75,     // 12
+  4: $spacer,            // 16
+  5: $spacer * 1.25,     // 20
+  6: $spacer * 1.5,      // 24
+  7: $spacer * 1.75,     // 28
+  8: $spacer * 2,        // 32
+  9: $spacer * 2.25,     // 36
+  10: $spacer * 2.5,     // 40
+  12: $spacer * 3,       // 48
+  14: $spacer * 3.5,     // 56
+  15: $spacer * 3.75,    // 60
+  18: $spacer * 4.5,     // 72
+  20: $spacer * 5,       // 80
+  21: $spacer * 5.25,    // 84
+  22: $spacer * 5.5,     // 88
+  24: $spacer * 6,       // 96
+  25: $spacer * 6.25,    // 100
+  26: $spacer * 6.5,     // 104
+  34: $spacer * 8.5,     // 136
+  36: $spacer * 9,       // 144
+  38: $spacer * 9.5,     // 152
+  39: $spacer * 9.75,    // 156
+  74: $spacer * 18.5,    // 296
 
-/*
-1: $spacer * .25,   //4
-2: $spacer * .5,    //8
-3: $spacer,         //16
-4: $spacer * 1.25,  //20
-5: $spacer * 1.5,   //24
-6: $spacer * 1.75,  //28
-7: $spacer * 1.875, //30
-8: $spacer * 2,     //32
-9: $spacer * 2.25,  //36
-10: $spacer * 2.5,   //40
-11: $spacer * 3.5,   //56
-12: $spacer * 3.75,   //60
-13: $spacer * 2.5,   //72
-14: $spacer * 4.5,   //80
-15: $spacer * 5.25,   //84
-16: $spacer * 5.5,   //88
-17: $spacer * 6,   //96
-18: $spacer * 6.25,   //100
-19: $spacer * 6.5,   //104
-20: $spacer * 8.5,   //136
-21: $spacer * 9,   //144
-22: $spacer * 9.5,   //152
-23: $spacer * 9.75,   //156
-24: $spacer * 10.125,   //162
-25: $spacer * 18.5,   //296
-*/
+  30: $spacer * 1.875,   // 30
+  162: $spacer * 10.125  // 162
+) !default;
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -452,8 +428,9 @@ $spacers: (
 // scss-docs-start position-map
 $position-values: (
   0: 0,
-  20: 20%,
-  30: 30%,
+  20: 20%, //custom
+  30: 30%, //custom
+  33: 33%, //custom
   50: 50%,
   100: 100%,
 ) !default;
@@ -627,6 +604,7 @@ $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-semibold: 600 !default;
 $font-weight-bold: 700 !default;
+$font-weight-black: 900 !default; //custom
 $font-weight-bolder: bolder !default;
 
 $font-weight-base: $font-weight-normal !default;
