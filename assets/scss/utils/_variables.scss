@@ -390,34 +390,60 @@ $spacer: 1rem !default;
 //custom
 $spacers: (
   0: 0,
-  1: $spacer * 0.25,     // 4
-  2: $spacer * 0.5,      // 8
-  3: $spacer * 0.75,     // 12
-  4: $spacer,            // 16
-  5: $spacer * 1.25,     // 20
-  6: $spacer * 1.5,      // 24
-  7: $spacer * 1.75,     // 28
-  8: $spacer * 2,        // 32
-  9: $spacer * 2.25,     // 36
-  10: $spacer * 2.5,     // 40
-  12: $spacer * 3,       // 48
-  14: $spacer * 3.5,     // 56
-  15: $spacer * 3.75,    // 60
-  18: $spacer * 4.5,     // 72
-  20: $spacer * 5,       // 80
-  21: $spacer * 5.25,    // 84
-  22: $spacer * 5.5,     // 88
-  24: $spacer * 6,       // 96
-  25: $spacer * 6.25,    // 100
-  26: $spacer * 6.5,     // 104
-  34: $spacer * 8.5,     // 136
-  36: $spacer * 9,       // 144
-  38: $spacer * 9.5,     // 152
-  39: $spacer * 9.75,    // 156
-  74: $spacer * 18.5,    // 296
+  1: $spacer * 0.25,
+  // 4
+  2: $spacer * 0.5,
+  // 8
+  3: $spacer * 0.75,
+  // 12
+  4: $spacer,
+  // 16
+  5: $spacer * 1.25,
+  // 20
+  6: $spacer * 1.5,
+  // 24
+  7: $spacer * 1.75,
+  // 28
+  8: $spacer * 2,
+  // 32
+  9: $spacer * 2.25,
+  // 36
+  10: $spacer * 2.5,
+  // 40
+  12: $spacer * 3,
+  // 48
+  14: $spacer * 3.5,
+  // 56
+  15: $spacer * 3.75,
+  // 60
+  18: $spacer * 4.5,
+  // 72
+  20: $spacer * 5,
+  // 80
+  21: $spacer * 5.25,
+  // 84
+  22: $spacer * 5.5,
+  // 88
+  24: $spacer * 6,
+  // 96
+  25: $spacer * 6.25,
+  // 100
+  26: $spacer * 6.5,
+  // 104
+  34: $spacer * 8.5,
+  // 136
+  36: $spacer * 9,
+  // 144
+  38: $spacer * 9.5,
+  // 152
+  39: $spacer * 9.75,
+  // 156
+  74: $spacer * 18.5,
 
-  30: $spacer * 1.875,   // 30
-  162: $spacer * 10.125  // 162
+  // 296
+  30: $spacer * 1.875,
+  // 30
+  162: $spacer * 10.125 // 162,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -428,9 +454,12 @@ $spacers: (
 // scss-docs-start position-map
 $position-values: (
   0: 0,
-  20: 20%, //custom
-  30: 30%, //custom
-  33: 33%, //custom
+  20: 20%,
+  //custom
+  30: 30%,
+  //custom
+  33: 33%,
+  //custom
   50: 50%,
   100: 100%,
 ) !default;
@@ -624,6 +653,8 @@ $h6-font-size: $font-size-base !default;
 $h7-font-size: $font-size-base * 1.125 !default; //custom
 $h8-font-size: $font-size-base * 0.875 !default; //custom
 $h9-font-size: $font-size-base * 0.75 !default; //custom
+$h10-font-size: $font-size-base * 2.5 !default; //custom
+$h11-font-size: $font-size-base * 2 !default; //custom
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -642,9 +673,14 @@ $font-sizes: (
   //16px
   7: $h7-font-size,
   //18px
-  8: $h7-font-size,
+  8: $h8-font-size,
   //14px
-  9: $h7-font-size //12px,
+  9: $h9-font-size, 
+  //12px
+  10: $h10-font-size,
+  //40
+  11: $h11-font-size
+  //32
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1149,9 +1185,9 @@ $zindex-levels: (
   0: 0,
   1: 1,
   2: 2,
-  3: 3) !default;
+  3: 3,
+) !default;
 // scss-docs-end zindex-levels-map
-
 
 // Navs
 
