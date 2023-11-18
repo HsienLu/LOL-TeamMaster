@@ -81,26 +81,32 @@
           已加入隊伍
         </h2>
       </div>
-      <!-- Slider main container -->
-      <div class="swiper" id="swiper1">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-          <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-          <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-          ...
+      <div class="swi-father1 position-relative blueShadow">
+        <!-- Slider main container -->
+        <div class="swiper" id="swiper1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+
+          </div>
+          <!-- If we need pagination -->
+
+
+          <!-- If we need navigation buttons -->
+
+
+
+          <!-- If we need scrollbar -->
+
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper-button-prev position-absolute" id="swiper-button-prev1" style="left: -60px;"></div>
+        <div class="swiper-button-next position-absolute" id="swiper-button-next1" style="right: -60px;"></div>
+        <div class="swiper-pagination position-absolute" id="swiper-pagination1" style="bottom: -44px;"></div>
       </div>
+
 
       <!-- 已建立隊伍 -->
       <div class="titleImg position-relative mt-lg-18 mb-lg-5">
@@ -108,23 +114,30 @@
           已建立隊伍
         </h2>
       </div>
-      <!-- Slider main container -->
-      <div class="swiper" id="swiper2">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-          <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-          <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-          ...
+      <div class="swi-father2 position-relative blueShadow">
+        <!-- Slider main container -->
+        <div class="swiper" id="swiper2">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+
+          </div>
+          <!-- If we need pagination -->
+
+
+          <!-- If we need navigation buttons -->
+
+
+
+          <!-- If we need scrollbar -->
+
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
+        <div class="swiper-button-prev position-absolute" id="swiper-button-prev2" style="left: -60px;"></div>
+        <div class="swiper-button-next position-absolute" id="swiper-button-next2" style="right: -60px;"></div>
+        <div class="swiper-pagination position-absolute" id="swiper-pagination2" style="bottom: -44px;"></div>
       </div>
 
     </div>
@@ -141,13 +154,13 @@
 
           // If we need pagination
           pagination: {
-            el: '.swiper-pagination',
+            el: '#swiper-pagination1',
           },
 
           // Navigation arrows
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '#swiper-button-next1',
+            prevEl: '#swiper-button-prev1',
           },
 
         });
@@ -158,13 +171,13 @@
 
           // If we need pagination
           pagination: {
-            el: '.swiper-pagination',
+            el: '#swiper-pagination2',
           },
 
           // Navigation arrows
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '#swiper-button-next2',
+            prevEl: '#swiper-button-prev2',
           },
 
         });
