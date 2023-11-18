@@ -69,6 +69,14 @@ ol,ul,dl{
     }
 }
 
+.glow-circle {
+    width: 1282px;
+    height: 1282px;
+    background-color: #0066FF;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+  }
+
 .outLine {
     width: 352px;
     height: 53px;

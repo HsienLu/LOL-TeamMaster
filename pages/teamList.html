@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>隊伍列表</title>
+    <link
+      rel="stylesheet"
+      href="https://pagination.js.org/dist/2.6.0/pagination.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/8eab62e458.js"
       crossorigin="anonymous"
@@ -12,6 +20,7 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
+
     <div class="container pt-lg-38">
       <div class="searchGroup d-flex justify-content-between">
         <div class="searchDropDown d-flex gap-lg-8">
@@ -86,6 +95,7 @@
           </div>
         </form>
       </div>
+
       <div class="titleImg position-relative mt-lg-18 mb-lg-5">
         <h2
           class="position-absolute top-20 start-33 fw-black"
@@ -93,6 +103,16 @@
         >
           隊伍列表
         </h2>
+        <span
+          class="position-absolute top-50 end-0"
+          style="
+            background-image: url(../assets/images/BG-Light-blue.png);
+            background-position: center;
+            background-size: cover;
+            width: 800px;
+            height: 800px;
+          "
+        ></span>
       </div>
       <div class="d-flex">
         <div class="teamCard blueShadow mx-lg-3">
@@ -136,7 +156,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player@2x.png);
                         background-size: cover;
@@ -148,7 +168,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-badge@2x.png);
                         background-size: cover;
@@ -168,7 +188,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-03.png);
                         background-size: cover;
@@ -180,7 +200,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -200,7 +220,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-04.png);
                         background-size: cover;
@@ -212,7 +232,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -232,7 +252,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-05.png);
                         background-size: cover;
@@ -244,7 +264,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -264,7 +284,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-06.png);
                         background-size: cover;
@@ -276,7 +296,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -332,7 +352,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player@2x.png);
                         background-size: cover;
@@ -344,7 +364,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-badge@2x.png);
                         background-size: cover;
@@ -364,7 +384,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-03.png);
                         background-size: cover;
@@ -376,7 +396,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -396,7 +416,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-04.png);
                         background-size: cover;
@@ -408,7 +428,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -428,7 +448,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-05.png);
                         background-size: cover;
@@ -440,7 +460,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -460,7 +480,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-06.png);
                         background-size: cover;
@@ -472,7 +492,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -529,7 +549,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player@2x.png);
                         background-size: cover;
@@ -541,7 +561,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-badge@2x.png);
                         background-size: cover;
@@ -561,7 +581,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-03.png);
                         background-size: cover;
@@ -573,7 +593,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -593,7 +613,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-04.png);
                         background-size: cover;
@@ -605,7 +625,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -625,7 +645,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-05.png);
                         background-size: cover;
@@ -637,7 +657,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
@@ -657,7 +677,7 @@
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/img-team-player-06.png);
                         background-size: cover;
@@ -669,7 +689,7 @@
                   </div>
                   <div class="parallelogram">
                     <div
-                      class="parallelogram-content"
+                      class="parallelogramContent"
                       style="
                         background-image: url(../assets/images/image19.png);
                         background-size: cover;
