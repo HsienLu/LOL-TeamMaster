@@ -1,0 +1,40 @@
+.memberCard {
+  width: 306px;
+  height: 575px;
+}
+.thumb-text {
+  color: #819eb2;
+
+  /* Body/Small */
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+.btn-getout {
+  border-radius: 2px;
+  border: 1px solid #d6eeff;
+  background: #060818;
+  display: flex;
+  width: 237px;
+  height: 44px;
+  padding: 12px 56px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.member-avatar-style {
+  width: 304px;
+  height: 40px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #06081800 0%, #060818 100%);
+  z-index: 99;
+}
+.metal {
+  bottom: calc(0% - 65px / 2) !important;
+  left: calc(50% - 85px / 2);
+  z-index: 999;
+}

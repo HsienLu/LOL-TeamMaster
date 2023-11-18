@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>已建立的隊伍</title>
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>已建立的隊伍</title>
+  <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
     <h1>我是contact</h1>
+    <div class="m-25">
+      <div class="memberCard border border-primary" style="  border-radius: 2px;">
+        <div class="meber-card-top ">
+          <div class="member-avatar position-relative">
+            <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+              style="width: 306px;height:306px ;">
+            <div class="member-avatar-style position-absolute bottom-0"></div>
+
+            <div class="metal position-absolute" style="width: 85px; height: 65px;">
+              <div class="parallelogram">
+                <div class="parallelogram-content-avatar" style="
+  background-image: url(../assets/images/image19.png);
+  background-size: cover;
+  background-position: center;
+  width: 85px;
+  height: 60px;
+  "></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <h4>無言獨上西樓</h4>
+        <div class="tag-group">
+          <div class="tag"></div>
+          <div class="tag"></div>
+          <div class="tag"></div>
+          <div class="tag"></div>
+          <div class="tag"></div>
+        </div>
+        <div class="thumb">
+          <div class="thum-text">
+            12345
+          </div>
+          <span></span>
+
+        </div>
+        <button class="btn-getout text-primary">剔除
+
+        </button>
+      </div>
+    </div>
+
     <%- include('./layout/footer'); -%>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+      <script type="module" src="../main.js"></script>
+</body>
+
 </html>
