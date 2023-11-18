@@ -1,5 +1,5 @@
 <header>
-  <div class="position-fixed w-100 z-index bg-dark bg-opacity-80 px-lg-26 py-lg-2">
+  <div class="fixed-top w-100 bg-dark bg-opacity-80 px-lg-26 py-lg-2">
     <div class="d-flex align-items-center justify-content-lg-between">
       <a class="logo" href="index.html">
         <h1>LOL組隊大師</h1>
@@ -21,9 +21,14 @@
           <li>
             <a href="memberCentre.html"><i class="fa-solid fa-bell"></i></a>
           </li>
-          <li><a href="#">登入 | 註冊</a></li>
+          <!-- 登入 -->
+          <li class="btnLogin">
+            <a href="#loginModal" class="login" data-bs-toggle="modal">登入 | 註冊</a>
+          </li>
         </ul>
       </nav>
     </div>
   </div>
 </header>
+<!-- 登入 loginＭodal -->
+<%- include('./layout/loginModal'); -%>
