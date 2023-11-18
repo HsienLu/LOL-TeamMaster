@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LOL 組隊大師</title>
   <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
-  <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-efcd9af0.js"></script>
-  <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-a2042a4c.css">
+  <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-11df127f.js"></script>
+  <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-0f106c30.css">
 </head>
 
 <body>
   <header>
-  <div class="position-fixed w-100 z-index bg-dark bg-opacity-80 px-lg-26 py-lg-2">
+  <div class="fixed-top w-100 bg-dark bg-opacity-80 px-lg-26 py-lg-2">
     <div class="d-flex align-items-center justify-content-lg-between">
       <a class="logo" href="index.html">
         <h1>LOL組隊大師</h1>
@@ -35,35 +35,73 @@
           <li>
             <a href="memberCentre.html"><i class="fa-solid fa-bell"></i></a>
           </li>
-          <li><a href="#">登入 | 註冊</a></li>
+          <!-- 登入 -->
+          <li class="btnLogin">
+            <a href="#loginModal" class="login" data-bs-toggle="modal">登入 | 註冊</a>
+          </li>
         </ul>
       </nav>
     </div>
   </div>
-</header>    <div class="container pt-18">
-      <h1 class="bg-primary text-white">我是標題</h1>
-
-      <h2 class="bg-white bg-opacity-90 text-secondary2 text-opacity-90">
-        secondary2
-      </h2>
-      <h2 class="bg-white bg-opacity-80 text-secondary2 text-opacity-80">
-        secondary2
-      </h2>
-      <h2 class="bg-white bg-opacity-70 text-secondary2 text-opacity-70">
-        secondary2
-      </h2>
-      <h2 class="bg-white bg-opacity-60 text-secondary2 text-opacity-60">
-        secondary2
-      </h2>
-      <h2 class="bg-white bg-opacity-50 text-secondary2 text-opacity-50">
-        secondary2
-      </h2>
-      <h2 class="bg-white bg-opacity-40 text-secondary2 text-opacity-40">
-        secondary2
-      </h2>
+</header>
+<!-- 登入 loginＭodal -->
+<!-- 登入 loginＭodal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered  modal-lg py-18">
+        <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+            <div>
+                <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">登入</h3>
+            </div>
+            <div class="modal-body d-flex flex-column px-4 pt-8">
+                <form class="mb-12">
+                    <div class="mb-7">
+						<label for="userEmail" class="form-label fs-5 fw-medium mb-2">帳號</label>
+						<input type="email" class="form-control p-3" id="userEmail" aria-describedby="emailHelp"  placeholder="請輸入電子信箱">
+					</div>
+					<div>
+						<label for="userPassword" class="form-label fs-5 mb-2">密碼</label>
+						<input type="password" class="form-control p-3" id="userPassword" placeholder="請輸入 8-16 位密碼">
+					</div>
+				</form>
+                <div class="submitGroup">
+                    <!-- login-btn -->
+                    <button type="submit"
+                            class="bg-secondary2  bg-opacity-60 border border-0 border-radius p-4 fw-medium text-white  w-100 mb-5 fw-medium submitBtn">登入
+                    </button>
+                    <!-- google-login-btn -->
+                    <button type="submit"
+                    class="bg-dark border border-2 border-radius p-4 fw-medium text-white border-white w-100 submitBtn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALTSURBVHgBvVbPTxNBFH6z3W1BCLYJSvC04FGjJdjEBE0WJOpBI03lQDzQeDUGD17QmLYnjuJf0HoCjIT25sFCSTwQNNqbxgt7MVUIsIiIbnd3nJm2uLvdrStp+A6bmffevG9m3o9ZBP/AxvBFCYN+iwwlhLGIAQWrKpmMi0SWE/y+QujViuzmAzV0jvUEdQ4egDBK8h3qs1C2qHgi2RiKPMUIHsD/QxYE36D9VJzdav1KJH1IAgpRVY24XcibJ+wEAPEGTmRydpkOEIYwsQ2alRijVNfiatK+6OC61ocicTJLO3nGCKcMjc90F6zXUFmDSNxIQrgQWEg2R8+t6VsB0aaWQcfRk4W3RXDBthQOqj6/1JVfzbrZMBI1L8SxIqR/zPeC/q31r1aHvkYEXsECT3J9nDuuQsfdT9B6ucQU9PjNIKCoBV6qCVoufQVK+D3Xm3FaMJLEQSXwKwgeUZhslZG6JISRjj/YdcKwNui0aHhqVzIMtAQeYXC+Hg5puG5XiAa8SeA1TeTgCMBpPC/bhaTIwtBEsBQuv+a3wVS9y2o3PPzdHypGs3XN7vrUvqgaWtzZGxonOxTNoo5yOVQjoYGU6Hh67yzM7Z+mZZ56N/YyCR5RIdfXbGJ58XF7D4sJqYlcST8G93YGKgRsVzgReTHq+drKBnsW7CjQDyMR+HLm/u6A8r7caTUxjAUvRENTewmnxsoZ+Dnbb03QPxcbIZ11wckJMcr4sJBaGZuVzfILM7fJa9meCGzdlPw716xrEMrmH7VFLSSMaDY2TQQT4A7aZmgy0CQRwZQsfuUqtGzeqc6wYnB8H632OhJGNBPLIATjcAhwWie0fZkETj0RzT9pO+jKPrthaf5j9lTsDCl6b2+7GZj7qWiBz2NvJm5Y2r7rjwQLOAk8Bmveu8EtblVdY7DgIjxCfn/Ok73STGNxIOQyQlyR5P9ye0DLFBwKt4Y/jr0YJoUPCDYAAAAASUVORK5CYII=" alt="google-icon" class="me-4 text-align-center"> Login with Google
+                    </button>
+                </div>
+                <div class="mt-8">
+                    <ul class="d-flex justify-content-between">
+                        <li>
+                            <a href="#registerModal" class="register text-decoration-underline" data-bs-toggle="modal">註冊帳號</a>
+                        </li>
+                        <li>
+                            <a href="#forgetPasswordModal" class="forgetPassword text-decoration-underline" data-bs-toggle="modal">忘記密碼？</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    <div class="banner d-flex justify-content-center">
+        <div class="banner-text">
+        <button type="button">
+          <p>立即開始組隊</p>
+        </button>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="container step">
+        <div class="step-bg"></div>
+        <button type="button">
+          <p>立即開始組隊</p>
+        </button>
     </div>
 
-    <footer class="footer text-center my-lg-12">
+  <footer class="footer text-center my-lg-12">
   <img src="/LOL-TeamMaster/assets/logo-blue-5ebf6b92.png" class="mb-lg-6" style="width: 304px; height: 120px" alt="footer-logo" />
   <p class="text-secondary mb-lg-6">
     Copyright©2023 LOL組隊大師 All Rights Reserved.<br />
@@ -81,12 +119,7 @@
     </li>
   </ul>
 </footer>
-    
-</body>
-
-</html>
-
-
+  
 </body>
 
 </html>
