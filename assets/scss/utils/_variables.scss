@@ -328,7 +328,7 @@ $theme-colors: (
   "green": $green,
   "blue": $blue,
   "dark": $dark,
-  "white": $white
+  "white": $white,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -430,6 +430,8 @@ $spacers: (
   // 100
   26: $spacer * 6.5,
   // 104
+  28: $spacer * 7,
+  //112
   34: $spacer * 8.5,
   // 136
   36: $spacer * 9,
@@ -443,7 +445,7 @@ $spacers: (
   // 296
   30: $spacer * 1.875,
   // 30
-  162: $spacer * 10.125 // 162,
+  162: $spacer * 10.125 // 162,,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -675,12 +677,11 @@ $font-sizes: (
   //18px
   8: $h8-font-size,
   //14px
-  9: $h9-font-size, 
+  9: $h9-font-size,
   //12px
   10: $h10-font-size,
   //40
-  11: $h11-font-size
-  //32
+  11: $h11-font-size //32,
 ) !default;
 // scss-docs-end font-sizes
 
