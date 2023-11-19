@@ -1,0 +1,40 @@
+.flag {
+    width: 272px;
+    height: 492px;
+}
+
+.down-triangle { 
+    width: 0; 
+    height: 0;
+    border-top: 80px solid $dark;
+    border-left: 80px solid transparent; 
+    border-right: 80px solid transparent;
+    position: relative; 
+    left: 20%;
+ }
+
+ .left-triangle { 
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid $dark; 
+    border-right: 60px solid transparent;
+    position: absolute;
+    top: -80px;
+    left: -134px;
+ }
+
+ .right-triangle { 
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid $dark; 
+    border-left: 60px solid transparent; 
+    position: absolute;
+    top: -80px;
+    right: -138px;
+ }
+  
+.playerIcon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}

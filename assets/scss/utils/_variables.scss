@@ -410,6 +410,8 @@ $spacers: (
   // 36
   10: $spacer * 2.5,
   // 40
+  11: $spacer * 2.5,
+  // 44
   12: $spacer * 3,
   // 48
   14: $spacer * 3.5,
@@ -459,6 +461,8 @@ $position-values: (
   30: 30%,
   //custom
   33: 33%,
+  //custom
+  40: 40%,
   //custom
   50: 50%,
   100: 100%,
@@ -677,7 +681,7 @@ $font-sizes: (
   //14px
   9: $h9-font-size, 
   //12px
-  10: $h10-font-size
+  10: $h10-font-size,
   //40
   11: $h11-font-size
   //32
