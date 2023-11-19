@@ -38,3 +38,7 @@
     height: 120px;
     border-radius: 50%;
 }
+
+.joinTeamBtn{
+    @include btn(253px,97px,237px,81px);
+}

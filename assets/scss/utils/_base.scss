@@ -77,27 +77,6 @@ ol,ul,dl{
     backdrop-filter: blur(10px);
   }
 
-.outLineBtn1 {
-    width: 352px;
-    height: 53px;
-    position: absolute;
-    left: -8px;
-    top: -8px;
-    outline: 2px solid $white;
-    border-radius: 2px;
-}
-
-.outLineBtn2 {
-    width: 253px;
-    height: 97px;
-    position: absolute;
-    left: -8px;
-    top: -8px;
-    outline: 2px solid $white;
-    border-radius: 2px;
-}
-
-
 // .lightGreenRadialGradientBg {
 //     @include radial-gradient($green, $white);
 // }
@@ -105,3 +84,51 @@ ol,ul,dl{
 // .lightBlueRadialGradientBg {
 //     @include radial-gradient($blue, $white);
 // }
+
+//button
+
+@mixin flex($direction, $justifyContent, $alignItems) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+//第一個button模板
+
+@mixin btn($width,$height,$innerWidth,$innerHeight){
+    width: $width;
+    height: $height;
+    border: 2px solid $white;
+    border-radius: 2px;
+    background: none;
+    p{
+        width: $innerWidth;
+        height: $innerHeight;
+        background: $white;
+        @include flex(row,center,center);
+        border-radius: 2px;
+        font-weight: bold;
+    }
+    &:hover{
+        border: 2px solid $primary;
+        p{
+            background: $primary;
+        }
+    }
+    &:active{
+        border: 2px solid $secondary;
+        p{
+            background: $white;
+            box-shadow: 0px 0px 40px 0px rgba(0, 209, 255, 0.45);
+        }
+    }
+}
+
+.submitBtn:hover{
+    background-color: $secondary !important;
+}
+
+.arrowBtn:hover{
+    color: $primary !important;
+}
