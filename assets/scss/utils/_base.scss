@@ -69,16 +69,13 @@ ol,ul,dl{
     }
 }
 
-.outLine {
-    width: 352px;
-    height: 53px;
-    position: absolute;
-    left: -8px;
-    top: -8px;
-    outline: 2px solid $white;
-    border-radius: 2px;
-}
-
+.glow-circle {
+    width: 1282px;
+    height: 1282px;
+    background-color: #0066FF;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+  }
 
 // .lightGreenRadialGradientBg {
 //     @include radial-gradient($green, $white);

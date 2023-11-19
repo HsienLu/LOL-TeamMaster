@@ -1,9 +1,7 @@
-.titleImg {
+.titleParallelogram {
     background-image: url(../images/img-rectangle-title.png);
     background-position: center;
     background-size: cover;
-    width: 126px;
-    height: 100px;
 }
 
 .teamCard{
@@ -13,12 +11,16 @@
     border-radius: 2px;
 }
 
+.teamCardBtn{
+    @include btn(352px,53px,336px,37px);
+}
+
 .parallelogram {
     border: 2px solid $secondary;
     transform: skew(-16deg);
     overflow: hidden;
 }
 
-.parallelogram-content {
+.parallelogramContent {
     transform: skew(16deg);
 }
