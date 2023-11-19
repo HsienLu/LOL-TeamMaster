@@ -1,0 +1,44 @@
+<!-- 登入 loginＭodal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered  modal-lg py-18">
+        <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+            <div>
+                <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">登入</h3>
+            </div>
+            <div class="modal-body d-flex flex-column px-4 pt-8">
+                <form class="mb-12">
+                    <div class="mb-7">
+						<label for="userEmail" class="form-label fs-5 fw-medium mb-2">帳號</label>
+						<input type="email" class="form-control p-3" id="userEmail" aria-describedby="emailHelp"  placeholder="請輸入電子信箱">
+					</div>
+					<div>
+						<label for="userPassword" class="form-label fs-5 mb-2">密碼</label>
+						<input type="password" class="form-control p-3" id="userPassword" placeholder="請輸入 8-16 位密碼">
+					</div>
+				</form>
+                <div class="submitGroup">
+                    <!-- login-btn -->
+                    <button type="button"
+                            class="bg-secondary2  bg-opacity-60 border border-0 border-radius p-4 fw-medium text-white  w-100 mb-5 fw-medium submitBtn">登入
+                    </button>
+                    <!-- google-login-btn -->
+                    <button type="button"
+                    class="bg-dark border border-2 border-radius p-4 fw-medium text-white border-white w-100 submitBtn"><img src="/assets/images/Icon-Google.png" alt="google-icon" class="me-4 text-align-center"> Login with Google
+                    </button>
+                </div>
+                <div class="mt-8">
+                    <ul class="d-flex justify-content-between">
+                        <li>
+                            <a href="#registerModal" class="register text-decoration-underline" data-bs-toggle="modal">註冊帳號</a>
+                        </li>
+                        <li>
+                            <a href="#forgetPasswordModal" class="forgetPassword text-decoration-underline" data-bs-toggle="modal">忘記密碼？</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 註冊 registerＭodal -->

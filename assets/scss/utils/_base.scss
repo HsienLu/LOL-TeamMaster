@@ -127,3 +127,11 @@ ol,ul,dl{
         }
     }
 }
+
+.submitBtn:hover{
+    background-color: $secondary !important;
+}
+
+.arrowBtn:hover{
+    color: $primary !important;
+}
