@@ -1,0 +1,122 @@
+.memberCard {
+  width: 306px;
+  height: 575px;
+}
+.thumb-text {
+  color: #819eb2;
+
+  /* Body/Small */
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+.btn-getout {
+  border-radius: 2px;
+  border: 1px solid #d6eeff;
+  background: #060818;
+  display: flex;
+  width: 237px;
+  height: 44px;
+  padding: 12px 56px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+
+.member-avatar-style {
+  width: 100%;
+  height: 40px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #06081800 0%, #060818 100%);
+  z-index: 99;
+}
+.metal {
+  bottom: calc(0% - 65px / 2) !important;
+  left: calc(50% - 85px / 2);
+  z-index: 999;
+}
+
+.bage {
+  display: flex;
+  padding: 4.2px 7.8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: #fff;
+}
+.g-8 {
+  gap: 8px;
+}
+.bage-text {
+  color: #060818;
+  text-align: center;
+
+  /* Components/Badge/H6 */
+  // font-family: Helvetica Neue;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 12px */
+}
+
+//title
+.titleImg {
+  background-image: url(../images/img-rectangle-title.png);
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  width: 126px;
+  height: 80px !important;
+}
+
+.parallelogram {
+  border: 2px solid $secondary;
+  transform: skew(-16deg);
+  overflow: hidden;
+}
+
+.parallelogram-content {
+  transform: skew(16deg);
+}
+
+.teamCreated-title {
+  color: #d6eeff;
+  text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45) !important;
+  font-family: Noto Sans TC;
+  font-size: 28px !important;
+  font-style: normal !important;
+  font-weight: 900 !important;
+  line-height: 120% !important; /* 33.6px */
+}
+
+.h2-align-center {
+  top: calc(50% - 33.6px / 2);
+}
+.announcement {
+  // float: left;
+  // width: 100%;
+  padding-inline: 40px;
+  // position: fixed;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+.announcement-text {
+  font-size: 16px !important;
+}
+
+//留言
+.chat-box {
+  height: 300px;
+
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.bg-secondary3 {
+  background: #93b4cc4d;
+  border: 0;
+}

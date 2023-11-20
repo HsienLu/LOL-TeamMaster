@@ -1,18 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>已加入隊伍</title>
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>已建立的隊伍</title>
+  <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="position-relative pb-28">
     <%- include('./layout/header'); -%>
-    <h1>我是contact</h1>
-    <%- include('./layout/footer'); -%>
+  </div>
+
+  <div class="content mx-10 ">
+    <div class="d-flex">
+      <div class="titleImg position-relative mx-auto">
+        <h2 class="position-absolute h2-align-center start-33 teamCreated-title " style="width: 200px; ">
+          已建立隊伍
+        </h2>
+
+      </div>
+      <div class="btn btn-secondary bg-dark  text-primary align-self-center" style="width: 12.3%; height: 50%;">退出退伍
+      </div>
+    </div>
+
+    <div class="announcement bg-secondary py-5  mt-8 d-flex ">
+      <h4 class="fs-6 "><span><i class="fa-solid fa-bullhorn"></i>公告:</span></h4>
+      <h4 class="fs-6">1.不要有會說髒話的加入</h4>
+    </div>
+    <div class="team-information d-flex justify-content-end mb-10" style="gap:48px; margin-top: 68px;">
+      <i class="fa-solid fa-crown mb-0 flex-grow-1" style="font-size: 36px; padding-left: calc(9% - 18px);"></i>
+      <p class="fs-6 fw-blod">遊戲時間:<span>2023/10/16 16:00</span></p>
+
+    </div>
+
+    <div class="meberCardGroup d-flex w-100 justify-content-between " style="gap:16px">
+
+      <%- include('./layout/memberCardJoin'); -%>
+        <%- include('./layout/memberCardJoin'); -%>
+          <%- include('./layout/memberCardJoin'); -%>
+            <%- include('./layout/memberCardJoin'); -%>
+              <%- include('./layout/memberCardJoin'); -%>
+    </div>
+    <div class="message-notify-group d-flex justify-content-between">
+      <div class="message mt-20 rounded " style="width: 50%; height: 326px;">
+        <div class="border border-bottom-0">
+          <h4 class=" h4 py-2 text-center">留言板</h4>
+        </div>
+        <div class="chat-box h-100 p-6">
+          <div class="chat-message d-flex flex-column " style="height: 80%; gap: 12px;">
+            <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
+            <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
+            <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
+            <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
+            <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
+          </div>
+          <div class="input-group">
+            <input class=" bg-dark form-control" type="text" placeholder="輸入訊息">
+            <button class=" btn"><i class="fa-regular fa-paper-plane"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="notify mt-20 rounded " style="width: 40%;">
+        <div class="border border-bottom-0">
+          <h4 class=" h4 py-2 text-center">推薦隊友通知</h4>
+        </div>
+        <div class="notify-box">
+          <div class="chat-message d-flex flex-column border p-6" style="gap:24px; height: 326px;">
+            <div class="notify-button d-flex justify-content-between">
+              <p>魔法狐狸</p>
+              <p class="text-secondary">等待加入中...</p>
+            </div>
+            <div class="notify-button d-flex justify-content-between">
+              <p>魔法狐狸</p>
+              <p class="text-secondary">等待加入中...</p>
+            </div>
+            <div class="notify-button d-flex justify-content-between">
+              <p>魔法狐狸</p>
+              <p class="text-secondary">等待加入中...</p>
+            </div>
+            <div class="notify-button d-flex justify-content-between">
+              <p>魔法狐狸</p>
+              <p class="text-secondary">等待加入中...</p>
+            </div>
+            <div class="notify-button d-flex justify-content-between">
+              <p>魔法狐狸</p>
+              <p class="text-secondary">等待加入中...</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="op-button mt-15 mb-25 d-flex justify-content-between">
+      <div class="btn btn-secondary bg-dark  text-primary" style="width: 12.3%;">上一頁</div>
+      <div class="btn btn-secondary bg-dark  text-primary" style="width: 12.3%;">回列表</div>
+      <div class="btn btn-secondary bg-dark  text-primary" style="width: 12.3%;">下一頁</div>
+    </div>
+
+  </div>
+
+  <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
-  </body>
+</body>
+
 </html>

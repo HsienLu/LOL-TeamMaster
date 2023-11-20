@@ -1,0 +1,24 @@
+.titleImg {
+  background-image: url(../images/img-rectangle-title.png);
+  background-position: center;
+  background-size: cover;
+  width: 126px;
+  height: 100px;
+}
+
+.teamCard {
+  max-height: 703px;
+  max-width: 416px;
+  padding: 24px 40px 40px 40px;
+  border-radius: 2px;
+}
+
+.parallelogram {
+  border: 2px solid $secondary;
+  transform: skew(-16deg);
+  overflow: hidden;
+}
+
+.parallelogram-content {
+  transform: skew(16deg);
+}
