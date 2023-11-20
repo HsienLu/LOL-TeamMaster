@@ -7,16 +7,16 @@
     <title>隊伍列表</title>
     <link
       rel="stylesheet"
-      href="https://pagination.js.org/dist/2.6.0/pagination.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
-    <script
-      src="https://kit.fontawesome.com/8eab62e458.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
     <%- include('./layout/header'); -%>
@@ -38,7 +38,12 @@
               <li><a class="dropdown-item" href="#">讚數少至多</a></li>
             </ul>
           </div>
-          <div class="btn-group border border-white">
+          <input
+            type="text"
+            class="border border-white flatpickr"
+            placeholder="遊戲時間"
+          />
+          <!-- <div class="btn-group border border-white">
             <button
               type="button"
               class="btn btn-transparent dropdown-toggle"
@@ -47,14 +52,14 @@
             >
               遊戲時間
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
-          </div>
+            <div class="dropdown-menu">
+              <input
+                type="text"
+                class="flatpickr dropdown-item"
+                placeholder="請選擇時間"
+              />
+            </div>
+          </div> -->
           <div class="btn-group border border-white">
             <button
               type="button"
@@ -65,11 +70,16 @@
               牌位
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#">菁英</a></li>
+              <li><a class="dropdown-item" href="#">宗師</a></li>
+              <li><a class="dropdown-item" href="#">大師</a></li>
+              <li><a class="dropdown-item" href="#">鑽石</a></li>
+              <li><a class="dropdown-item" href="#">翡翠</a></li>
+              <li><a class="dropdown-item" href="#">白金</a></li>
+              <li><a class="dropdown-item" href="#">金</a></li>
+              <li><a class="dropdown-item" href="#">銀</a></li>
+              <li><a class="dropdown-item" href="#">銅</a></li>
+              <li><a class="dropdown-item" href="#">鐵</a></li>
             </ul>
           </div>
         </div>
@@ -570,10 +580,69 @@
           </div>
         </div>
       </div>
+      <!-- <div id="data-container"></div> -->
+      <div
+        class="d-flex justify-content-center align-items-center mt-lg-15"
+        id="pagination"
+      ></div>
     </div>
 
     <%- include('./layout/footer'); -%>
 
+    <script
+      src="https://kit.fontawesome.com/8eab62e458.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script>
+      axios
+        .get(
+          "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+        )
+        .then((res) => {
+          //   console.log(res.data.data);
+          $(function () {
+            let container = $("#pagination");
+            container.pagination({
+              dataSource: res.data.data,
+              prevText: "&#9668",
+              nextText: "&#9658",
+              // callback: function (data, pagination) {
+              //   var dataHtml = "<ul>";
+
+              //   $.each(data, function (index, item) {
+              //     dataHtml += "<li>" + item.name + "</li>";
+              //   });
+
+              //   dataHtml += "</ul>";
+
+              //   $("#data-container").html(dataHtml);
+              // },
+            });
+          });
+        });
+
+      flatpickr(".flatpickr", {
+        altInput: true,
+        // altInputClass: "fp_Month",
+        // locale: "zh_tw",
+        altFormat: "Y/m/d H:i",
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        // plugins: [
+        //   new monthSelectPlugin({
+        //     shorthand: true,
+        //     dateFormat: "Ym",
+        //     altFormat: "M/Y",
+        //   }),
+        // ],
+        // defaultDate: $(this).val(),
+      });
+    </script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
