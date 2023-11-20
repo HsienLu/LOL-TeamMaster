@@ -4,14 +4,14 @@
     background-size: cover;
 }
 
-.teamCard{
+.teamCard {
     max-height: 703px;
     max-width: 416px;
     padding: 24px 40px 40px 40px;
     border-radius: 2px;
 }
 
-.teamCardBtn{
+.teamCardBtn {
     @include btn(352px,53px,336px,37px);
 }
 
@@ -23,4 +23,18 @@
 
 .parallelogramContent {
     transform: skew(16deg);
+}
+
+.teamCardHeroBg {
+    background-size: cover;
+    background-position: center;
+    width: 266px;
+    height: 60px;
+}
+
+.teamCardRankBg {
+    background-size: cover;
+    background-position: center;
+    width: 85px;
+    height: 60px;
 }
