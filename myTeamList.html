@@ -5,10 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的隊伍列表</title>
+  <title>隊伍列表</title>
   <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
-  <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-8394a6c4.js"></script>
-  <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-7dc74ed2.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-1e978ed3.js"></script>
+  <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-f8f854f2.css">
 </head>
 
 <body>
@@ -102,20 +103,2920 @@
     </div>
   </div>
 </header>
-    <div class="container mt-22">
-      <div class="row">
-        <div class="selectBar">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+    <div class="container pt-lg-38  mb-31">
+
+
+
+
+      <div class="searchGroup d-flex justify-content-between">
+        <div class="searchDropDown d-flex gap-lg-8">
+          <div class="btn-group border border-white">
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              讚數
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group border border-white">
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              遊戲時間
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group border border-white">
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              牌位
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="addedTeame"></div>
-        <div class="createdTeam"></div>
+        <form class="d-flex">
+          <div class="input-group">
+            <input type="search" class="form-control border-end-0" placeholder="What are you looking for?"
+              aria-label="Search" aria-describedby="search-form" />
+            <button class="btn border border-white border-start-0" id="search-form" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
       </div>
+      <!-- 已加入隊伍 -->
+      <div class="titleImg position-relative mt-lg-18 mb-lg-5">
+        <h2 class="position-absolute top-20 start-33 fw-black" style="width: 240px; height: 58px">
+          已加入隊伍
+        </h2>
+      </div>
+      <div class="swi-father1 position-relative blueShadow">
+        <!-- Slider main container -->
+        <div class="swiper" id="swiper1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><div class="d-flex ">
+    <div class="teamCard blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> </div>
+            <div class="swiper-slide"><div class="d-flex ">
+    <div class="teamCard blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> </div>
+            <div class="swiper-slide"><div class="d-flex ">
+    <div class="teamCard blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> </div>
+
+          </div>
+          <!-- If we need pagination -->
+
+
+          <!-- If we need navigation buttons -->
+
+
+
+          <!-- If we need scrollbar -->
+
+        </div>
+        <div class="swiper-button-prev position-absolute" id="swiper-button-prev1" style="left: -60px;"></div>
+        <div class="swiper-button-next position-absolute" id="swiper-button-next1" style="right: -60px;"></div>
+        <div class="swiper-pagination position-absolute" id="swiper-pagination1" style="bottom: -44px;"></div>
+      </div>
+
+
+      <!-- 已建立隊伍 -->
+      <div class="titleImg position-relative mt-lg-26 mb-lg-5">
+        <h2 class="position-absolute top-20 start-33 fw-black" style="width: 240px; height: 58px">
+          已建立隊伍
+        </h2>
+      </div>
+      <div class="swi-father2 position-relative blueShadow">
+        <!-- Slider main container -->
+        <div class="swiper" id="swiper2">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><div class="d-flex ">
+    <div class="teamCard blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> </div>
+            <div class="swiper-slide"><div class="d-flex ">
+    <div class="teamCard blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> </div>
+            <div class="swiper-slide"><div class="d-flex ">
+    <div class="teamCard blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="teamCard  blueShadow mx-lg-3 pb-10">
+        <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between mb-lg-2">
+                <h3 class="card-title">黎明之空a黑夜追逐...</h3>
+                <span class="text-secondary">3526<i class="fa-regular fa-thumbs-up ms-1"></i></span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-lg-8">
+                <p class="card-subtitle text-secondary">
+                    遊戲時間：2023/12/18 20:00
+                </p>
+                <span class="text-secondary"><span class="text-white fs-5">4</span>/5<i
+                        class="fa-solid fa-people-group ms-1"></i></span>
+            </div>
+
+            <button type="button" class="blueShadow btn btn-white position-relative w-100 border-0 fw-bold fs-7 mb-lg-8"
+                style="height: 37px">
+                <div class="outLine"></div>
+                立即加入
+            </button>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary">TOP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary">JG</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary">MID</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-lg-2">
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary">AD</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex justify-content-between mb-lg-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary">SUP</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
+                background-size: cover;
+                background-position: center;
+                width: 266px;
+                height: 60px;
+              "></div>
+                        </div>
+                        <div class="parallelogram">
+                            <div class="parallelogram-content" style="
+                background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+                background-size: cover;
+                background-position: center;
+                width: 85px;
+                height: 60px;
+              "></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> </div>
+
+          </div>
+          <!-- If we need pagination -->
+
+
+          <!-- If we need navigation buttons -->
+
+
+
+          <!-- If we need scrollbar -->
+
+        </div>
+        <div class="swiper-button-prev position-absolute" id="swiper-button-prev2" style="left: -60px;"></div>
+        <div class="swiper-button-next position-absolute" id="swiper-button-next2" style="right: -60px;"></div>
+        <div class="swiper-pagination position-absolute" id="swiper-pagination2" style="bottom: -44px;"></div>
+      </div>
+
+    </div>
+
     <footer class="animate__animated animate__fadeInUp text-center my-lg-12">
   <img
     src="/LOL-TeamMaster/assets/logo-blue-5ebf6b92.png"
@@ -141,6 +3042,45 @@
 </footer>
 
       
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+        const swiper1 = new Swiper('#swiper1', {
+          // Optional parameters
+
+          loop: true,
+
+          // If we need pagination
+          pagination: {
+            el: '#swiper-pagination1',
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '#swiper-button-next1',
+            prevEl: '#swiper-button-prev1',
+          },
+
+        });
+        const swiper2 = new Swiper('#swiper2', {
+          // Optional parameters
+
+          loop: true,
+
+          // If we need pagination
+          pagination: {
+            el: '#swiper-pagination2',
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '#swiper-button-next2',
+            prevEl: '#swiper-button-prev2',
+          },
+
+        });
+
+
+      </script>
 </body>
 
 </html>
