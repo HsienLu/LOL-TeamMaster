@@ -132,3 +132,15 @@ ol,ul,dl{
 .arrowBtn:hover{
     color: $primary !important;
 }
+
+.BG-Light-green{
+    width: 1282px;
+    height: 1282px;
+    border-radius: 1282px;
+    background: var(--themt-colors-green, #0FF);
+    filter: blur(500px);
+    color: rgba(0,255,255,1);
+    position: fixed;
+    bottom: 1032px;
+    right: 453px;
+  }
