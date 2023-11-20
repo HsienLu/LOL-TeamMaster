@@ -136,11 +136,11 @@ ol,ul,dl{
 .BG-Light-green{
     width: 1282px;
     height: 1282px;
+    flex-shrink: 0;
     border-radius: 1282px;
-    background: var(--themt-colors-green, #0FF);
-    filter: blur(500px);
-    color: rgba(0,255,255,1);
-    position: fixed;
-    bottom: 1032px;
-    right: 453px;
+    background: rgba(0,255,255,1);
+    filter: blur(400px);
+    position: absolute;
+    top: 3369px;
+    left: -829px;
   }
