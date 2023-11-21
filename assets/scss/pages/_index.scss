@@ -45,3 +45,16 @@
 .btn-index{
   @include btn(253px,53px,237px,37px);
 }
+.popular-teams{
+  position: relative;
+  &-bg{
+    background: url(../images/img-rectangle-title.png) no-repeat left center;
+    height: 126px;
+  }
+  &-title{
+    position: absolute;
+    top: 21px;
+    left: 40px;
+    text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+  }
+}
