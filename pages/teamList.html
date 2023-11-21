@@ -7,16 +7,16 @@
     <title>隊伍列表</title>
     <link
       rel="stylesheet"
-      href="https://pagination.js.org/dist/2.6.0/pagination.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
-    <script
-      src="https://kit.fontawesome.com/8eab62e458.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
     <%- include('./layout/header'); -%>
@@ -38,7 +38,12 @@
               <li><a class="dropdown-item" href="#">讚數少至多</a></li>
             </ul>
           </div>
-          <div class="btn-group border border-white">
+          <input
+            type="text"
+            class="border border-white flatpickr"
+            placeholder="遊戲時間"
+          />
+          <!-- <div class="btn-group border border-white">
             <button
               type="button"
               class="btn btn-transparent dropdown-toggle"
@@ -47,14 +52,14 @@
             >
               遊戲時間
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
-          </div>
+            <div class="dropdown-menu">
+              <input
+                type="text"
+                class="flatpickr dropdown-item"
+                placeholder="請選擇時間"
+              />
+            </div>
+          </div> -->
           <div class="btn-group border border-white">
             <button
               type="button"
@@ -65,11 +70,16 @@
               牌位
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="#">菁英</a></li>
+              <li><a class="dropdown-item" href="#">宗師</a></li>
+              <li><a class="dropdown-item" href="#">大師</a></li>
+              <li><a class="dropdown-item" href="#">鑽石</a></li>
+              <li><a class="dropdown-item" href="#">翡翠</a></li>
+              <li><a class="dropdown-item" href="#">白金</a></li>
+              <li><a class="dropdown-item" href="#">金</a></li>
+              <li><a class="dropdown-item" href="#">銀</a></li>
+              <li><a class="dropdown-item" href="#">銅</a></li>
+              <li><a class="dropdown-item" href="#">鐵</a></li>
             </ul>
           </div>
         </div>
@@ -104,50 +114,48 @@
           "
         ></span> -->
 
-      <div
-        class="titleParallelogram position-relative mt-lg-18 mb-lg-5"
-        style="width: 126px; height: 100px"
-      >
+      <div class="titleParallelogram position-relative mt-lg-18 mb-lg-5">
         <h2
-          class="position-absolute top-20 start-33 fw-black"
+          class="position-absolute top-20 start-33 fw-black fs-11 fs-md-2"
           style="width: 192px; height: 58px"
         >
           隊伍列表
         </h2>
       </div>
       <div class="d-flex">
-        <div class="teamCard blueShadow mx-lg-3">
-          <div class="card-header">
-            <div
-              class="d-flex align-items-center justify-content-between mb-lg-2"
-            >
-              <h3 class="card-title">黎明之空a黑夜追逐...</h3>
-              <span class="text-secondary"
-                >3526<i class="fa-regular fa-thumbs-up ms-1"></i
-              ></span>
+        <!-- 卡片開始 -->
+        <div class="teamCard blueShadow mx-4 mx-md-3">
+          <div class="card-header mb-4 mb-md-6">
+            <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+              <div class="mb-2 mb-md-0">
+                <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                <p class="card-subtitle text-secondary">
+                  遊戲時間：2023/12/18 20:00
+                </p>
+              </div>
+              <div
+                class="d-flex d-md-block justify-content-between align-items-center"
+              >
+                <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                  3526
+                  <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                </span>
+                <span class="d-block text-secondary fs-6">
+                  <span class="text-white fs-5">4</span>
+                  /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                </span>
+              </div>
             </div>
-            <div
-              class="d-flex align-items-center justify-content-between mb-lg-6"
-            >
-              <p class="card-subtitle text-secondary">
-                遊戲時間：2023/12/18 20:00
-              </p>
-              <span class="text-secondary"
-                ><span class="text-white fs-5">4</span>/5<i
-                  class="fa-solid fa-people-group ms-1"
-                ></i
-              ></span>
-            </div>
-            <button type="button" class="teamCardBtn blueShadow mb-lg-6">
+            <button type="button" class="teamCardBtn blueShadow">
               <p class="fs-7">立即加入</p>
             </button>
           </div>
           <div class="card-body">
             <ul>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
-                  <span class="text-secondary">TOP</span>
+                  <span class="text-secondary fs-8">TOP</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -168,10 +176,10 @@
                   </div>
                 </div>
               </li>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">魔法使者小明</p>
-                  <span class="text-secondary">JG</span>
+                  <span class="text-secondary fs-8">JG</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -192,10 +200,10 @@
                   </div>
                 </div>
               </li>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">無言獨上西樓</p>
-                  <span class="text-secondary">MID</span>
+                  <span class="text-secondary fs-8">MID</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -216,10 +224,10 @@
                   </div>
                 </div>
               </li>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">魔法狐狸</p>
-                  <span class="text-secondary">AD</span>
+                  <span class="text-secondary fs-8">AD</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -241,9 +249,9 @@
                 </div>
               </li>
               <li>
-                <div class="d-flex justify-content-between mb-lg-1">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">51先</p>
-                  <span class="text-secondary">SUP</span>
+                  <span class="text-secondary fs-8">SUP</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -267,38 +275,39 @@
             </ul>
           </div>
         </div>
-        <div class="teamCard blueShadow mx-lg-3">
-          <div class="card-header">
-            <div
-              class="d-flex align-items-center justify-content-between mb-lg-2"
-            >
-              <h3 class="card-title">黎明之空a黑夜追逐...</h3>
-              <span class="text-secondary"
-                >3526<i class="fa-regular fa-thumbs-up ms-1"></i
-              ></span>
+        <!-- 卡片結束 -->
+        <div class="teamCard blueShadow mx-4 mx-md-3">
+          <div class="card-header mb-4 mb-md-6">
+            <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+              <div class="mb-2 mb-md-0">
+                <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                <p class="card-subtitle text-secondary">
+                  遊戲時間：2023/12/18 20:00
+                </p>
+              </div>
+              <div
+                class="d-flex d-md-block justify-content-between align-items-center"
+              >
+                <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                  3526
+                  <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                </span>
+                <span class="d-block text-secondary fs-6">
+                  <span class="text-white fs-5">4</span>
+                  /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                </span>
+              </div>
             </div>
-            <div
-              class="d-flex align-items-center justify-content-between mb-lg-6"
-            >
-              <p class="card-subtitle text-secondary">
-                遊戲時間：2023/12/18 20:00
-              </p>
-              <span class="text-secondary"
-                ><span class="text-white fs-5">4</span>/5<i
-                  class="fa-solid fa-people-group ms-1"
-                ></i
-              ></span>
-            </div>
-            <button type="button" class="teamCardBtn blueShadow mb-lg-6">
+            <button type="button" class="teamCardBtn blueShadow">
               <p class="fs-7">立即加入</p>
             </button>
           </div>
           <div class="card-body">
             <ul>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
-                  <span class="text-secondary">TOP</span>
+                  <span class="text-secondary fs-8">TOP</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -319,10 +328,10 @@
                   </div>
                 </div>
               </li>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">魔法使者小明</p>
-                  <span class="text-secondary">JG</span>
+                  <span class="text-secondary fs-8">JG</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -343,10 +352,10 @@
                   </div>
                 </div>
               </li>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">無言獨上西樓</p>
-                  <span class="text-secondary">MID</span>
+                  <span class="text-secondary fs-8">MID</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -367,10 +376,10 @@
                   </div>
                 </div>
               </li>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">魔法狐狸</p>
-                  <span class="text-secondary">AD</span>
+                  <span class="text-secondary fs-8">AD</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -392,9 +401,9 @@
                 </div>
               </li>
               <li>
-                <div class="d-flex justify-content-between mb-lg-1">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">51先</p>
-                  <span class="text-secondary">SUP</span>
+                  <span class="text-secondary fs-8">SUP</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -418,38 +427,38 @@
             </ul>
           </div>
         </div>
-        <div class="teamCard blueShadow mx-lg-3">
-          <div class="card-header">
-            <div
-              class="d-flex align-items-center justify-content-between mb-lg-2"
-            >
-              <h3 class="card-title">黎明之空a黑夜追逐...</h3>
-              <span class="text-secondary"
-                >3526<i class="fa-regular fa-thumbs-up ms-1"></i
-              ></span>
+        <div class="teamCard blueShadow mx-4 mx-md-3">
+          <div class="card-header mb-4 mb-md-6">
+            <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+              <div class="mb-2 mb-md-0">
+                <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                <p class="card-subtitle text-secondary">
+                  遊戲時間：2023/12/18 20:00
+                </p>
+              </div>
+              <div
+                class="d-flex d-md-block justify-content-between align-items-center"
+              >
+                <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                  3526
+                  <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                </span>
+                <span class="d-block text-secondary fs-6">
+                  <span class="text-white fs-5">4</span>
+                  /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                </span>
+              </div>
             </div>
-            <div
-              class="d-flex align-items-center justify-content-between mb-lg-6"
-            >
-              <p class="card-subtitle text-secondary">
-                遊戲時間：2023/12/18 20:00
-              </p>
-              <span class="text-secondary"
-                ><span class="text-white fs-5">4</span>/5<i
-                  class="fa-solid fa-people-group ms-1"
-                ></i
-              ></span>
-            </div>
-            <button type="button" class="teamCardBtn blueShadow mb-lg-6">
+            <button type="button" class="teamCardBtn blueShadow">
               <p class="fs-7">立即加入</p>
             </button>
           </div>
           <div class="card-body">
             <ul>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
-                  <span class="text-secondary">TOP</span>
+                  <span class="text-secondary fs-8">TOP</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -470,10 +479,10 @@
                   </div>
                 </div>
               </li>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">魔法使者小明</p>
-                  <span class="text-secondary">JG</span>
+                  <span class="text-secondary fs-8">JG</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -494,10 +503,10 @@
                   </div>
                 </div>
               </li>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">無言獨上西樓</p>
-                  <span class="text-secondary">MID</span>
+                  <span class="text-secondary fs-8">MID</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -518,10 +527,10 @@
                   </div>
                 </div>
               </li>
-              <li class="mb-lg-2">
-                <div class="d-flex justify-content-between mb-lg-1">
+              <li class="mb-2">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">魔法狐狸</p>
-                  <span class="text-secondary">AD</span>
+                  <span class="text-secondary fs-8">AD</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -543,9 +552,9 @@
                 </div>
               </li>
               <li>
-                <div class="d-flex justify-content-between mb-lg-1">
+                <div class="d-flex justify-content-between mb-1">
                   <p class="text-secondary">51先</p>
-                  <span class="text-secondary">SUP</span>
+                  <span class="text-secondary fs-8">SUP</span>
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogram">
@@ -570,10 +579,69 @@
           </div>
         </div>
       </div>
+      <!-- <div id="data-container"></div> -->
+      <div
+        class="d-flex justify-content-center align-items-center mt-lg-15"
+        id="pagination"
+      ></div>
     </div>
 
     <%- include('./layout/footer'); -%>
 
+    <script
+      src="https://kit.fontawesome.com/8eab62e458.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script>
+      axios
+        .get(
+          "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+        )
+        .then((res) => {
+          //   console.log(res.data.data);
+          $(function () {
+            let container = $("#pagination");
+            container.pagination({
+              dataSource: res.data.data,
+              prevText: "&#9668",
+              nextText: "&#9658",
+              // callback: function (data, pagination) {
+              //   var dataHtml = "<ul>";
+
+              //   $.each(data, function (index, item) {
+              //     dataHtml += "<li>" + item.name + "</li>";
+              //   });
+
+              //   dataHtml += "</ul>";
+
+              //   $("#data-container").html(dataHtml);
+              // },
+            });
+          });
+        });
+
+      flatpickr(".flatpickr", {
+        altInput: true,
+        // altInputClass: "fp_Month",
+        // locale: "zh_tw",
+        altFormat: "Y/m/d H:i",
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        // plugins: [
+        //   new monthSelectPlugin({
+        //     shorthand: true,
+        //     dateFormat: "Ym",
+        //     altFormat: "M/Y",
+        //   }),
+        // ],
+        // defaultDate: $(this).val(),
+      });
+    </script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
