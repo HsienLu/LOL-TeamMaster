@@ -133,6 +133,7 @@ ol,ul,dl{
     color: $primary !important;
 }
 
+//首頁背景光
 .BG-Light-green{
     width: 1282px;
     height: 1282px;
@@ -143,4 +144,10 @@ ol,ul,dl{
     position: absolute;
     top: 3369px;
     left: -829px;
+  }
+
+
+  //navMenu
+  .navMenu{
+    max-width: 624;
   }
