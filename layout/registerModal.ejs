@@ -1,0 +1,42 @@
+<!-- 註冊 registerAccount -->
+    <div class="modal-dialog  modal-lg py-18">
+        <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+            <div>
+                <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">註冊帳號</h3>
+            </div>
+            <div class="modal-body d-flex flex-column px-4 pt-8">
+                <form class="mb-12">
+                    <div class="mb-7">
+						<label for="userEmail" class="form-label fs-5 fw-medium mb-2">帳號</label>
+						<input type="email" class="form-control p-3" id="userEmail" aria-describedby="emailHelp"  placeholder="請輸入電子信箱">
+					</div>
+					<div class="mb-7">
+						<label for="userPassword" class="form-label fs-5 mb-2">密碼</label>
+						<input type="password" class="form-control p-3" id="userPassword" placeholder="請輸入 8-16 位密碼">
+					</div>
+                    <div>
+						<label for="userName" class="form-label fs-5 mb-2">使用者名稱</label>
+						<input type="name" class="form-control p-3" id="userName" placeholder="請輸入遊戲 ID">
+					</div>
+				</form>
+                <div class="submitGroup">
+                    <!-- account-btn -->
+                    <a href="index.html" class="w-100">
+                        <button type="submit"
+                                class="submitBtn bg-secondary2  bg-opacity-60 border border-0 border-radius p-4 fw-medium text-white w-100">建立帳號
+                        </button>
+                    </a>
+                    <!-- google-Sign up-btn -->
+                    <a href="index.html"></a>
+                        <button type="submit"
+                        class="submitBtn bg-dark border border-2 border-radius p-4 fw-medium text-white border-white w-100"><img src="/assets/images/Icon-Google.png" alt="google-icon" class="me-4 text-align-center"> Sign up with Google
+                        </button>
+                    </a>
+                </div>
+                <div class="mt-8">
+                    <a href="#loginModal" class="login" data-bs-toggle="modal">已經有帳號了? <span class="ms-4">登入</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
