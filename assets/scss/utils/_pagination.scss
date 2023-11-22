@@ -1,31 +1,43 @@
 .paginationjs-pages ul {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    @include pad {
+        gap: 20px;
+    }
 }
 
 .paginationjs-prev a,
 .paginationjs-page a,
 .paginationjs-next a {
     border-radius: 10px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    @include pad {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .paginationjs .paginationjs-pages li>a {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: block;
     background: $white;
-    font-size: 20px;
+    font-size: 16px;
     color: $dark;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    @include pad {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
 }
 
 .paginationjs .paginationjs-pages li {
@@ -62,10 +74,13 @@
 }
 
 .paginationjs .paginationjs-pages li.active>a {
-    height:50px;
+    height: 40px;
     background-color: $primary;
     color: $dark;
-    cursor:default
+    cursor: default;
+    @include pad {
+        height: 50px;
+    }
 }
 
 .paginationjs .paginationjs-pages li>a:hover{

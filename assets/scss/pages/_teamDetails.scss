@@ -1,44 +1,98 @@
+.titleCenter {
+    text-align: center;
+    @include pad {
+    }
+    @include pc {
+        margin-left: calc(50% - 292px);
+    }
+}
+
 .flag {
-    width: 272px;
-    height: 492px;
+    width: 328px;
+    height: 188px;
+    border-radius: 2px;
+    padding: 16px 24px;
+    @include pad {
+        border-radius: 0px;
+        padding: 0px;
+    }
+    @include pc {
+        width: 272px;
+        height: 492px;
+    }
 }
 
 .down-triangle { 
     width: 0; 
     height: 0;
-    border-top: 80px solid $dark;
-    border-left: 80px solid transparent; 
-    border-right: 80px solid transparent;
     position: relative; 
-    left: 20%;
+    
+    @include pad {
+        
+    }
+    @include pc {
+        left: 20%;
+        border-top: 80px solid $dark;
+        border-left: 80px solid transparent; 
+        border-right: 80px solid transparent;
+    }
  }
 
 .left-triangle { 
     width: 0; 
     height: 0; 
-    border-top: 60px solid $dark; 
-    border-right: 60px solid transparent;
     position: absolute;
-    top: -80px;
-    left: -134px;
+    
+    @include pad {
+       
+    }
+    @include pc {
+        top: -80px;
+        left: -134px;
+        border-top: 60px solid $dark; 
+        border-right: 60px solid transparent;
+    }
  }
 
 .right-triangle { 
     width: 0; 
     height: 0; 
-    border-top: 60px solid $dark; 
-    border-left: 60px solid transparent; 
     position: absolute;
-    top: -80px;
-    right: -138px;
+    
+    @include pad {
+       
+    }
+    @include pc {
+        top: -80px;
+        right: -138px;
+        border-top: 60px solid $dark; 
+        border-left: 60px solid transparent; 
+    }
  }
   
 .playerIcon {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
+    @include pad {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.messageCard {
+    width: 328px;
+    @include pad {
+       
+    }
+    @include pc {
+        width: 746px;
+    }
 }
 
 .joinTeamBtn{
-    @include btn(253px,97px,237px,81px);
+    @include btn(296px,53px,280px,37px);
+    @include pad {
+        @include btn(253px,97px,237px,81px);
+    }
 }
