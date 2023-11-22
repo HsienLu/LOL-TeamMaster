@@ -12,230 +12,253 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
+
     <div
-      class="d-flex justify-content-end align-items-center bg-dark px-lg-26 pt-lg-18"
+      class="d-block d-md-flex justify-content-end align-items-center bg-dark px-3 px-lg-26 pt-lg-18"
     >
-      <div
-        class="titleParallelogram position-relative my-lg-7"
-        style="width: 100px; height: 80px"
-      >
-        <h3
-          class="position-absolute top-30 start-50 fw-black"
-          style="width: 192px; height: 58px"
+      <div class="titleParallelogram position-relative mx-auto mx-md-0 my-lg-7">
+        <h2
+          class="position-absolute top-20 start-50 fs-11 fs-md-2 fw-black"
+          style="width: 400px; height: 58px"
         >
           神秘遠征隊
-        </h3>
+        </h2>
       </div>
-      <h4 style="margin-left: calc(50% - 292px)">遊戲時間：2023/10/16 16:00</h4>
+      <h3 class="titleCenter fs-4 fs-md-3">遊戲時間：2023/10/16 16:00</h3>
     </div>
-    <ul class="d-flex justify-content-between px-lg-26">
+    <ul
+      class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4 gap-md-0 px-3 px-lg-26"
+    >
       <li>
         <div
-          class="flag greenShadow d-flex flex-column align-items-center bg-dark bg-opacity-60"
+          class="flag greenShadow d-flex justify-md-content-start flex-md-column align-items-center bg-dark bg-opacity-60"
         >
-          <i class="fa-solid fa-crown text-white fs-3 mt-lg-11"></i>
-          <img
-            class="playerIcon mt-lg-6"
-            src="../assets/images/Member1.png"
-            alt="member"
-          />
-          <h4 class="mt-lg-6">無言獨上西樓</h4>
-          <div class="parallelogram mt-lg-6">
-            <div
-              class="parallelogramContent"
-              style="
-                background-image: url(../assets/images/image19.png);
-                background-size: cover;
-                background-position: center;
-                width: 82px;
-                height: 60px;
-              "
-            ></div>
+          <i
+            class="fa-solid fa-crown d-none d-md-block text-white fs-3 mt-lg-10"
+          ></i>
+          <div class="d-flex flex-column align-items-center">
+            <img
+              class="playerIcon mt-lg-6 mb-3 mb-md-0"
+              src="../assets/images/Member1.png"
+              alt="member"
+            />
+            <h4 class="fs-5 fs-md-4 mt-lg-6">無言獨上西樓</h4>
           </div>
-          <span class="badge bg-white text-dark mt-lg-6">TOP</span>
-          <span class="text-secondary mt-lg-6"
-            >3526<i class="fa-regular fa-thumbs-up ms-1"></i
-          ></span>
+          <div
+            class="d-flex d-md-block flex-column justify-content-between align-items-center ms-15 ms-md-0"
+          >
+            <div class="parallelogramRank mt-lg-6 mb-4 mb-md-0">
+              <div
+                class="parallelogramContent teamCardRankBg"
+                style="background-image: url(../assets/images/image19.png)"
+              ></div>
+            </div>
+            <div
+              class="d-flex flex-column-reverse flex-md-column align-items-center"
+            >
+              <span class="badge bg-white text-dark mt-lg-6">TOP</span>
+              <span class="text-secondary mt-lg-6 mb-5 mb-md-0">
+                3526
+                <i class="fa-regular fa-thumbs-up ms-1"></i>
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="down-triangle">
+        <div class="d-none d-md-block down-triangle">
           <div class="left-triangle"></div>
           <div class="right-triangle"></div>
         </div>
       </li>
       <li>
-        <div class="flag blueShadow">
-          <div
-            class="flag greenShadow d-flex flex-column align-items-center bg-dark bg-opacity-60"
-          >
+        <div
+          class="flag blueShadow d-flex justify-md-content-start flex-md-column align-items-center bg-dark bg-opacity-60"
+        >
+          <div class="d-flex flex-column align-items-center mt-lg-17">
             <img
-              class="playerIcon mt-lg-24"
+              class="playerIcon mt-lg-6 mb-3 mb-md-0"
               src="../assets/images/Member1.png"
               alt="member"
             />
-            <h4 class="mt-lg-6">無言獨上西樓</h4>
-            <div class="parallelogram mt-lg-6">
+            <h4 class="fs-5 fs-md-4 mt-lg-6">無言獨上西樓</h4>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-between d-md-block ms-15 ms-md-0"
+          >
+            <div class="parallelogramRank mt-lg-6 mb-4 mb-md-0">
               <div
-                class="parallelogramContent"
-                style="
-                  background-image: url(../assets/images/image19.png);
-                  background-size: cover;
-                  background-position: center;
-                  width: 82px;
-                  height: 60px;
-                "
+                class="parallelogramContent teamCardRankBg"
+                style="background-image: url(../assets/images/image19.png)"
               ></div>
             </div>
-            <span class="badge bg-white text-dark mt-lg-6">MID</span>
-            <span class="text-secondary mt-lg-6"
-              >3526<i class="fa-regular fa-thumbs-up ms-1"></i
-            ></span>
-          </div>
-          <div class="down-triangle">
-            <div class="left-triangle"></div>
-            <div class="right-triangle"></div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="flag blueShadow">
-          <div
-            class="flag greenShadow d-flex flex-column align-items-center bg-dark bg-opacity-60"
-          >
             <div
-              class="playerIcon d-flex align-items-center justify-content-center border border-primary mt-lg-24"
+              class="d-flex flex-column-reverse flex-md-column align-items-center"
             >
-              <i class="fa-solid fa-plus text-primary fs-3"></i>
+              <span class="badge bg-white text-dark mt-lg-6">TOP</span>
+              <span class="text-secondary mt-lg-6 mb-5 mb-md-0">
+                3526
+                <i class="fa-regular fa-thumbs-up ms-1"></i>
+              </span>
             </div>
-            <h4 class="mt-lg-6">無言獨上西樓</h4>
-            <div class="parallelogram mt-lg-6">
-              <div
-                class="parallelogramContent"
-                style="
-                  background-image: url(../assets/images/image19.png);
-                  background-size: cover;
-                  background-position: center;
-                  width: 82px;
-                  height: 60px;
-                "
-              ></div>
-            </div>
-            <div class="btn-group border border-white mt-lg-6">
-              <button
-                type="button"
-                class="btn btn-transparent dropdown-toggle fs-9"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                擅長位置
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item fs-9" href="#">TOP</a></li>
-                <li><a class="dropdown-item fs-9" href="#">MID</a></li>
-                <li><a class="dropdown-item fs-9" href="#">AD</a></li>
-                <li><a class="dropdown-item fs-9" href="#">SUP</a></li>
-                <li><a class="dropdown-item fs-9" href="#">JG</a></li>
-              </ul>
-            </div>
-            <!-- <span class="badge bg-white text-dark mt-lg-6">TOP</span> -->
-            <span class="text-secondary mt-lg-6"
-              >3526<i class="fa-regular fa-thumbs-up ms-1"></i
-            ></span>
-          </div>
-          <div class="down-triangle">
-            <div class="left-triangle"></div>
-            <div class="right-triangle"></div>
           </div>
         </div>
+        <div class="d-none d-md-block down-triangle">
+          <div class="left-triangle"></div>
+          <div class="right-triangle"></div>
+        </div>
       </li>
-      <li>
-        <div class="flag blueShadow">
+      <li class="order-5 order-md-3">
+        <div
+          class="flag blueShadow d-flex justify-md-content-start flex-md-column align-items-center bg-dark bg-opacity-60"
+        >
+          <div class="d-flex flex-column align-items-center mt-lg-17">
+            <div
+              class="playerIcon d-flex align-items-center justify-content-center border border-primary mt-lg-6 mb-3 mb-md-0"
+            >
+              <i class="fa-solid fa-plus text-primary fs-4 fs-md-3"></i>
+            </div>
+            <h4 class="fs-5 fs-md-4 mt-lg-6">無言獨上西樓</h4>
+          </div>
           <div
-            class="flag greenShadow d-flex flex-column align-items-center bg-dark bg-opacity-60"
+            class="d-flex flex-column justify-content-between d-md-block ms-14 ms-md-0"
           >
+            <div class="parallelogramRank mt-lg-6 mb-4 mb-md-0">
+              <div
+                class="parallelogramContent teamCardRankBg"
+                style="background-image: url(../assets/images/image19.png)"
+              ></div>
+            </div>
+            <div
+              class="d-flex flex-column-reverse flex-md-column align-items-md-center"
+            >
+              <div class="btn-group border border-white mt-lg-6">
+                <button
+                  type="button"
+                  class="btn btn-transparent dropdown-toggle fs-9"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  擅長位置
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item fs-9" href="#">TOP</a></li>
+                  <li><a class="dropdown-item fs-9" href="#">MID</a></li>
+                  <li><a class="dropdown-item fs-9" href="#">AD</a></li>
+                  <li><a class="dropdown-item fs-9" href="#">SUP</a></li>
+                  <li><a class="dropdown-item fs-9" href="#">JG</a></li>
+                </ul>
+              </div>
+              <!-- <span class="badge bg-white text-dark mt-lg-6">TOP</span> -->
+              <span class="text-secondary mt-lg-3 mb-5 mb-md-0"
+                >3526<i class="fa-regular fa-thumbs-up ms-1"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="d-none d-md-block down-triangle">
+          <div class="left-triangle"></div>
+          <div class="right-triangle"></div>
+        </div>
+      </li>
+      <li class="order-3 order-md-4">
+        <div
+          class="flag blueShadow d-flex justify-md-content-start flex-md-column align-items-center bg-dark bg-opacity-60"
+        >
+          <div class="d-flex flex-column align-items-center mt-lg-17">
             <img
-              class="playerIcon mt-lg-24"
+              class="playerIcon mt-lg-6 mb-3 mb-md-0"
               src="../assets/images/Member1.png"
               alt="member"
             />
-            <h4 class="mt-lg-6">無言獨上西樓</h4>
-            <div class="parallelogram mt-lg-6">
+            <h4 class="fs-5 fs-md-4 mt-lg-6">無言獨上西樓</h4>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-between d-md-block ms-15 ms-md-0"
+          >
+            <div class="parallelogramRank mt-lg-6 mb-4 mb-md-0">
               <div
-                class="parallelogramContent"
-                style="
-                  background-image: url(../assets/images/image19.png);
-                  background-size: cover;
-                  background-position: center;
-                  width: 82px;
-                  height: 60px;
-                "
+                class="parallelogramContent teamCardRankBg"
+                style="background-image: url(../assets/images/image19.png)"
               ></div>
             </div>
-            <span class="badge bg-white text-dark mt-lg-6">AD</span>
-            <span class="text-secondary mt-lg-6"
-              >3526<i class="fa-regular fa-thumbs-up ms-1"></i
-            ></span>
-          </div>
-          <div class="down-triangle">
-            <div class="left-triangle"></div>
-            <div class="right-triangle"></div>
+            <div
+              class="d-flex flex-column-reverse flex-md-column align-items-center"
+            >
+              <span class="badge bg-white text-dark mt-lg-6">TOP</span>
+              <span class="text-secondary mt-lg-6 mb-5 mb-md-0">
+                3526
+                <i class="fa-regular fa-thumbs-up ms-1"></i>
+              </span>
+            </div>
           </div>
         </div>
+        <div class="d-none d-md-block down-triangle">
+          <div class="left-triangle"></div>
+          <div class="right-triangle"></div>
+        </div>
       </li>
-      <li>
-        <div class="flag blueShadow">
-          <div
-            class="flag greenShadow d-flex flex-column align-items-center bg-dark bg-opacity-60"
-          >
+      <li class="order-4 order-md-5">
+        <div
+          class="flag blueShadow d-flex justify-md-content-start flex-md-column align-items-center bg-dark bg-opacity-60"
+        >
+          <div class="d-flex flex-column align-items-center mt-lg-17">
             <img
-              class="playerIcon mt-lg-24"
+              class="playerIcon mt-lg-6 mb-3 mb-md-0"
               src="../assets/images/Member1.png"
               alt="member"
             />
-            <h4 class="mt-lg-6">無言獨上西樓</h4>
-            <div class="parallelogram mt-lg-6">
+            <h4 class="fs-5 fs-md-4 mt-lg-6">無言獨上西樓</h4>
+          </div>
+          <div
+            class="d-flex d-md-block flex-column justify-content-between ms-15 ms-md-0"
+          >
+            <div class="parallelogramRank mt-lg-6 mb-4 mb-md-0">
               <div
-                class="parallelogramContent"
-                style="
-                  background-image: url(../assets/images/image19.png);
-                  background-size: cover;
-                  background-position: center;
-                  width: 82px;
-                  height: 60px;
-                "
+                class="parallelogramContent teamCardRankBg"
+                style="background-image: url(../assets/images/image19.png)"
               ></div>
             </div>
-            <span class="badge bg-white text-dark mt-lg-6">SUP</span>
-            <span class="text-secondary mt-lg-6"
-              >3526<i class="fa-regular fa-thumbs-up ms-1"></i
-            ></span>
+            <div
+              class="d-flex flex-column-reverse flex-md-column align-items-center"
+            >
+              <span class="badge bg-white text-dark mt-lg-6">TOP</span>
+              <span class="text-secondary mt-lg-6 mb-5 mb-md-0">
+                3526
+                <i class="fa-regular fa-thumbs-up ms-1"></i>
+              </span>
+            </div>
           </div>
-          <div class="down-triangle">
-            <div class="left-triangle"></div>
-            <div class="right-triangle"></div>
-          </div>
+        </div>
+        <div class="d-none d-md-block down-triangle">
+          <div class="left-triangle"></div>
+          <div class="right-triangle"></div>
         </div>
       </li>
     </ul>
-    <div class="container mt-lg-21">
+    <div class="container mb-20 mb-md-25 mt-lg-21">
       <div class="row d-flex justify-content-center">
         <div class="col-lg-7">
-          <div class="messageCard border border-2 rounded-2 border-white">
+          <div
+            class="messageCard border border-2 rounded-2 border-white mt-6 mt-md-0 mx-auto mx-md-0"
+          >
             <div class="messageHead border-bottom p-1">
-              <h4 class="text-center">公告</h4>
+              <h4 class="text-center fs-5 fs-lg-4">公告</h4>
             </div>
             <div class="messageBody">
-              <ol class="d-flex flex-column p-lg-9 gap-lg-3">
-                <li class="fs-lg-4">1.不要有會說髒話的加入</li>
-                <li class="fs-lg-4">2.最好有上大師</li>
-                <li class="fs-lg-4">3.最近有玩超過10場牌位</li>
-                <li class="fs-lg-4">4.演員地雷勿進</li>
-                <li class="fs-lg-4">5.能對其他線路有理解尤佳</li>
+              <ol class="d-flex flex-column p-5 p-md-9 gap-2 gap-md-3">
+                <li class="fs-5 fs-lg-4">1.不要有會說髒話的加入</li>
+                <li class="fs-5 fs-lg-4">2.最好有上大師</li>
+                <li class="fs-5 fs-lg-4">3.最近有玩超過10場牌位</li>
+                <li class="fs-5 fs-lg-4">4.演員地雷勿進</li>
+                <li class="fs-5 fs-lg-4">5.能對其他線路有理解尤佳</li>
               </ol>
             </div>
           </div>
         </div>
         <div class="d-flex align-items-end col-lg-3">
-          <button type="button" class="joinTeamBtn blueShadow">
+          <button
+            type="button"
+            class="joinTeamBtn blueShadow mt-10 mt-md-0 mx-auto mx-md-0"
+          >
             <p class="fw-bold fs-3">
               加入隊伍<i class="fa-solid fa-arrow-right ms-5"></i>
             </p>
