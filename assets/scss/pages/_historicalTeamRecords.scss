@@ -17,7 +17,7 @@
     width: 232px;
     height: 40px;
     border: 2px solid $secondary;
-    transform: skew(-11.4deg);    
+    transform: skewX(-11.4deg);    
     overflow: hidden;
     margin-right: 2px;
     @include pad {
@@ -30,7 +30,7 @@
     width: 54px;
     height: 40px;
     border: 2px solid $secondary;
-    transform: skew(-11.4deg);   
+    transform: skewX(-11.4deg);   
     overflow: hidden;
     @include pad {
         width: 82px;
@@ -39,12 +39,13 @@
 }
 
 .parallelogramContent-1 {
-    transform: skew(11.4deg);
+    transform: skewX(11.4deg);
 }
 
 .teamCardHeroBg-1 {
     background-size: cover;
     background-position: center;
+    transform: translate(-12px,0px);
     width: 232px;
     height: 40px;
     @include pad {
@@ -56,7 +57,8 @@
 .teamCardRankBg-1 {
     background-size: cover;
     background-position: center;
-    width: 55px;
+    transform: translate(-12px,0px);
+    width: 54px;
     height: 40px;
     @include pad {
         width: 82px;
