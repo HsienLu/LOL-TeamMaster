@@ -1,0 +1,15 @@
+  //navMenu
+  .navMenu{
+    max-width: 624px;
+  }
+
+  .sidebar-menu{
+    width: 164px;
+    li:hover {
+		// background-color: hsla(205, 36%, 69%, 0.1);
+        background-color: rgb($secondary2,0.1);
+        :active{
+          background-color: rgb($secondary2,0.3);
+      }
+	  }
+  }
