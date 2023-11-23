@@ -7,7 +7,6 @@
 }
 
 
-
 .form-select{
     cursor: pointer !important;
     background-color: $dark !important;
@@ -42,3 +41,7 @@
 //     background-color: red !important;
 //     color: white!important;
 //   }
+
+.box-shadow:focus{
+    box-shadow: none;
+}
