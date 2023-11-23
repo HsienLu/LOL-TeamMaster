@@ -4,22 +4,1885 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>歷史組隊紀錄</title>
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+    <title>歷史組隊紀錄</title> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />   
   </head>
   <body>
     <%- include('./layout/header'); -%>
 
     <div class="d-flex">
       <%- include('./layout/navMenu'); -%>
+      <div class="w-100">
+        <div class="container mx-auto pt-md-38">
+          <%- include('./layout/dropdownTimeSearch'); -%>
 
-      <div class="container">
+          <!-- title -->
+          <h2 class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5">
+            <div class="titleParallelogram-1 z-n1"></div>
+            歷史組隊紀錄
+          </h2>
 
+          <!-- card start -->
+          <div class="container">
+            <div class="row mt-10 gap-6">
+              <!-- 卡片開始 -->
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2 fs-3 fw-medium">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 卡片結束 -->
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="teamCard blueShadow col-sm-10 col-md-4">
+                <div class="card-header mb-4 mb-md-6">
+                  <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                    <div class="mb-2 mb-md-0">
+                      <h3 class="card-title mb-2">黎明之空a黑夜追逐...</h3>
+                      <p class="card-subtitle text-secondary">
+                        遊戲時間：2023/12/18 20:00
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex d-md-block justify-content-between align-items-center"
+                    >
+                      <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                        3526
+                        <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                      </span>
+                      <span class="d-block text-secondary fs-6">
+                        <span class="text-white fs-5">5</span>
+                        /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+                        <span class="text-secondary fs-8">TOP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(/assets/images/img-team-player-01-1.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(/assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法使者小明</p>
+                        <span class="text-secondary fs-8">JG</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-03.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">無言獨上西樓</p>
+                        <span class="text-secondary fs-8">MID</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-04.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">魔法狐狸</p>
+                        <span class="text-secondary fs-8">AD</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-05.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex justify-content-between mb-1">
+                        <p class="text-secondary">51先</p>
+                        <span class="text-secondary fs-8">SUP</span>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div class="parallelogramHero-1">
+                          <div
+                            class="parallelogramContent-1 teamCardHeroBg-1"
+                            style="
+                              background-image: url(../assets/images/img-team-player-06.png);
+                            "
+                          ></div>
+                        </div>
+                        <div class="parallelogramRank-1">
+                          <div
+                            class="parallelogramContent-1 teamCardRankBg-1"
+                            style="
+                              background-image: url(../assets/images/image19.png);
+                            "
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card end -->
+
+        <!-- pagination -->
+        <div
+          class="d-flex justify-content-center align-items-center mt-11 mt-md-15 mb-20 mb-md-25"
+          id="pagination">
+        </div>
+        <%- include('./layout/footer'); -%>
       </div>
     </div>
+ 
 
-    <%- include('./layout/footer'); -%>
+    <script
+    src="https://kit.fontawesome.com/8eab62e458.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+  <script>
+    axios
+      .get(
+        "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+      )
+      .then((res) => {
+        //   console.log(res.data.data);
+        $(function () {
+          let container = $("#pagination");
+          container.pagination({
+            dataSource: res.data.data,
+            prevText: "&#9668",
+            nextText: "&#9658",
+            // callback: function (data, pagination) {
+            //   var dataHtml = "<ul>";
 
+            //   $.each(data, function (index, item) {
+            //     dataHtml += "<li>" + item.name + "</li>";
+            //   });
+
+            //   dataHtml += "</ul>";
+
+            //   $("#data-container").html(dataHtml);
+            // },
+          });
+        });
+      });
+
+      flatpickr(".flatpickr", {
+        altInput: true,
+        // altInputClass: "fp_Month",
+        // locale: "zh_tw",
+        altFormat: "Y/m/d H:i",
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        // plugins: [
+        //   new monthSelectPlugin({
+        //     shorthand: true,
+        //     dateFormat: "Ym",
+        //     altFormat: "M/Y",
+        //   }),
+        // ],
+        // defaultDate: $(this).val(),
+      });
+    </script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

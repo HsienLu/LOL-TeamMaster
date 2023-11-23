@@ -1,0 +1,47 @@
+.dropdown-toggle::after {
+    display: none;
+}
+
+.outline{
+    -webkit-text-stroke: 1.2px;
+}
+
+
+.form-select{
+    cursor: pointer !important;
+    background-color: $dark !important;
+}
+
+.selectpicker option {
+    background-color: red;
+}
+
+.selectpicker option:hover {
+    background-color: blue;
+}
+.selectpicker option:active {
+    background-color: yellow;
+}
+.selectpicker option:focus {
+    background-color: green;
+}
+
+// select option{background-color: $dark !important}
+
+// option:not(:checked) {
+//     background-color: #fff;
+//   }
+
+// option:hover{
+//     color: $primary;
+//     background-color: $dark;
+// }
+
+// select option:checked {
+//     background-color: red !important;
+//     color: white!important;
+//   }
+
+.box-shadow:focus{
+    box-shadow: none;
+}

@@ -445,11 +445,16 @@ $spacers: (
   39: $spacer * 9.75,
   // 156
   74: $spacer * 18.5,
-
   // 296
+
   30: $spacer * 1.875,
   // 30
-  162: $spacer * 10.125 // 162,,
+  150: $spacer * 9.375,
+  // 150
+  162: $spacer * 10.125, 
+  // 162
+  300: $spacer * 18.75
+  // 300
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -1062,14 +1067,17 @@ $form-select-indicator-padding: $form-select-padding-x * 3 !default; // Extra pa
 $form-select-font-weight: $input-font-weight !default;
 $form-select-line-height: $input-line-height !default;
 $form-select-color: $input-color !default;
-$form-select-bg: $input-bg !default;
+// $form-select-bg: $input-bg !default;
+$form-select-bg: $dark !default; //custom
 $form-select-disabled-color: null !default;
 $form-select-disabled-bg: $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position: right $form-select-padding-x center !default;
 $form-select-bg-size: 16px 12px !default; // In pixels because image dimensions
-$form-select-indicator-color: $gray-800 !default;
-$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
+// $form-select-indicator-color: $gray-800 !default;
+$form-select-indicator-color: $primary !default; //custom
+// $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
+$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='m2 5 6 6 6-6'/></svg>") !default; //custom stroke-width='4'
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 +
   $form-select-indicator-padding !default;
@@ -1078,14 +1086,18 @@ $form-select-feedback-icon-size: $input-height-inner-half
   $input-height-inner-half !default;
 
 $form-select-border-width: $input-border-width !default;
-$form-select-border-color: $input-border-color !default;
+// $form-select-border-color: $input-border-color !default;
+$form-select-border-color: $white !default; //custom
 $form-select-border-radius: $input-border-radius !default;
 $form-select-box-shadow: $box-shadow-inset !default;
 
-$form-select-focus-border-color: $input-focus-border-color !default;
-$form-select-focus-width: $input-focus-width !default;
+// $form-select-focus-border-color: $input-focus-border-color !default;
+$form-select-focus-border-color: $white !default; //custom
+// $form-select-focus-width: $input-focus-width !default;
+$form-select-focus-width: null !default; //custom
 $form-select-focus-box-shadow: 0 0 0 $form-select-focus-width
   $input-btn-focus-color !default;
+
 
 $form-select-padding-y-sm: $input-padding-y-sm !default;
 $form-select-padding-x-sm: $input-padding-x-sm !default;
@@ -1298,13 +1310,13 @@ $dropdown-link-color: $secondary !default; //custom
 // $dropdown-link-hover-color: shade-color($dropdown-link-color, 10%) !default;
 $dropdown-link-hover-color: $primary !default; //custom
 // $dropdown-link-hover-bg: $gray-200 !default;
-$dropdown-link-hover-bg: rgb($secondary,0.1) !default;
+$dropdown-link-hover-bg: rgb($secondary2,0.1) !default;
 
 
 // $dropdown-link-active-color: $component-active-color !default;
 $dropdown-link-active-color: $primary !default; //custom
 // $dropdown-link-active-bg: $component-active-bg !default;
-$dropdown-link-active-bg: rgb($secondary,0.3) !default; //custom
+$dropdown-link-active-bg: rgb($secondary2,0.3) !default; //custom
 
 $dropdown-link-disabled-color: $gray-500 !default;
 
