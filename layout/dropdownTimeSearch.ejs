@@ -1,0 +1,103 @@
+<div class="searchGroup d-flex justify-content-between">
+    <div class="searchDropDown d-flex gap-lg-8">
+      <div class="btn-group border border-white">
+        <!-- 讚數排序 -->
+        <button
+          type="button"
+          class="btn btn-transparent dropdown-toggle fs-5 fw-medium"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          讚數
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">讚數多至少</a></li>
+          <li><a class="dropdown-item" href="#">讚數少至多</a></li>
+        </ul>
+      </div>
+
+        <!-- 選擇牌位 -->
+        <select class="form-select w-25 text-center fs-5 fw-medium selectpicker" aria-label="Default select example">
+            <option selected disabled  hidden>牌位</option>
+            <option class="text-secondary" value="1">菁英</option>
+            <option class="text-secondary" value="2">宗師</option>
+            <option class="text-secondary" value="3">大師</option>
+            <option class="text-secondary" value="4">鑽石</option>
+            <option class="text-secondary" value="5">翡翠</option>
+            <option class="text-secondary" value="6">白金</option>
+            <option class="text-secondary" value="7">金</option>
+            <option class="text-secondary" value="8">銀</option>
+            <option class="text-secondary" value="9">銅</option>
+            <option class="text-secondary" value="10">鐵</option>
+          </select>
+        <!-- <div class="btn-group border border-white">
+            <button
+                type="button"
+                class="btn btn-transparent dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+            >
+                牌位
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">菁英</a></li>
+                <li><a class="dropdown-item" href="#">宗師</a></li>
+                <li><a class="dropdown-item" href="#">大師</a></li>
+                <li><a class="dropdown-item" href="#">鑽石</a></li>
+                <li><a class="dropdown-item" href="#">翡翠</a></li>
+                <li><a class="dropdown-item" href="#">白金</a></li>
+                <li><a class="dropdown-item" href="#">金</a></li>
+                <li><a class="dropdown-item" href="#">銀</a></li>
+                <li><a class="dropdown-item" href="#">銅</a></li>
+                <li><a class="dropdown-item" href="#">鐵</a></li>
+            </ul>
+        </div> -->
+
+        <!-- 遊戲時間 -->
+        <div class="d-flex">
+        
+        <input
+            type="text"
+            class="border border-white flatpickr w-40 text-center text-primary fs-5 fw-medium"
+            placeholder="請選擇遊戲時間"
+        />
+        <!-- <i class="fa-solid fa-chevron-down" style="color: #d6eeff;"></i> -->
+        
+        </div>
+        <!-- <div class="btn-group border border-white">
+            <button
+            type="button"
+            class="btn btn-transparent dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >
+            遊戲時間
+            </button>
+            <div class="dropdown-menu">
+            <input
+                type="text"
+                class="flatpickr dropdown-item"
+                placeholder="請選擇時間"
+            />
+            </div>
+        </div> -->
+    </div>
+    <form class="d-flex">
+      <div class="input-group">
+        <input
+          type="search"
+          class="form-control border-end-0"
+          placeholder="What are you looking for?"
+          aria-label="Search"
+          aria-describedby="search-form"
+        />
+        <button
+          class="btn border border-white border-start-0"
+          id="search-form"
+          type="submit"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </form>
+  </div>
