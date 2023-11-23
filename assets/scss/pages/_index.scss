@@ -70,45 +70,31 @@
   }
 }
 
-.imgGroup{
-  position: relative;
-  .mask{
-    width: 266px;
-    height: 60px;
-    // background: url(../images/img-team-player-03-1.png) no-repeat center center;
-    background: url(../images/img-wait.png) no-repeat center center;
-    background-size: cover;
-    -webkit-mask: url(../images/mask.png) no-repeat center center;
-    mask: url(../images/mask.png) no-repeat center center;
-    // -webkit-mask-size: contain;
-    // mask-size: contain;
-    &::before{
-      position: absolute;
-      content: '';
-      background: url(../images/mask-line.png) no-repeat center center;
-      width: 266px;
-      height: 60px;
-    }
+.itemImg{
+  @include itemCard;
+  &-playerImg{
+    background: url(../images/img-team-player-03-1.png) no-repeat center center /cover;
   }
-  
-  .mask-ranking{
-    position: absolute;
-    left: 254px;
-    width: 82px;
-    height: 60px;
-    // background: url(../images/img-ranking-07.png) no-repeat center center;
-    background: url(../images/img-ranking-bg.png) no-repeat center center;
-    background: url(../images/img-ranking-07.png) no-repeat center center;
-    background-size: cover;
-    -webkit-mask: url(../images/mask-ranking.png) no-repeat center center;
-    mask: url(../images/mask-ranking.png) no-repeat center center;
-    &::before{
-      position: absolute;
-      content: '';
-      background: url(../images/mask-ranking-line.png) no-repeat center center;
-      width: 82px;
-      height: 60px;
+  &-rankingImg{
+    background: url(../images/img-ranking-07.png) no-repeat center center /cover;
+  }
+}
+.itemCard{
+  width: 416px;
+  height: 703px;
+  border-radius: 2px;
+  padding: 24px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button{
+    @include btn(352px,53px,336px,37px);
+  }
+  &-detail{
+    width: 336px;
+    margin-bottom: 8px;
+    &:last-child{
+      margin-bottom: 0px;
     }
-
   }
 }

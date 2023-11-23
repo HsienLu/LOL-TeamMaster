@@ -132,3 +132,62 @@ ol,ul,dl{
 .arrowBtn:hover{
     color: $primary !important;
 }
+
+//首頁背景光
+.BG-Light-green{
+    width: 1282px;
+    height: 1282px;
+    flex-shrink: 0;
+    border-radius: 1282px;
+    background: rgba(0,255,255,1);
+    filter: blur(400px);
+    position: absolute;
+    top: 3369px;
+    left: -829px;
+  }
+
+
+  //navMenu
+  .navMenu{
+    max-width: 624;
+  }
+
+  //卡片圖像
+
+  @mixin itemCard{
+    position: relative;
+    &-playerImg{
+      width: 266px;
+      height: 60px;
+      background: url(../images/img-wait.png) no-repeat center center;
+      background-size: cover;
+      -webkit-mask: url(../images/mask.png) no-repeat center center;
+      mask: url(../images/mask.png) no-repeat center center;
+      // -webkit-mask-size: contain;
+      // mask-size: contain;
+      &::before{
+        position: absolute;
+        content: '';
+        background: url(../images/mask-line.png) no-repeat center center;
+        width: 266px;
+        height: 60px;
+      }
+    }
+    &-rankingImg{
+      position: absolute;
+      left: 254px;
+      width: 82px;
+      height: 60px;
+      background: url(../images/img-ranking-bg.png) no-repeat center center;
+      background-size: cover;
+      -webkit-mask: url(../images/mask-ranking.png) no-repeat center center;
+      mask: url(../images/mask-ranking.png) no-repeat center center;
+      &::before{
+        position: absolute;
+        content: '';
+        background: url(../images/mask-ranking-line.png) no-repeat center center;
+        width: 82px;
+        height: 60px;
+      }
+    } 
+  }

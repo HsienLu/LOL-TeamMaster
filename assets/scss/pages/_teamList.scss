@@ -29,10 +29,28 @@
     }
 }
 
-.parallelogram {
+.parallelogramHero {
+    width: 229px;
+    height: 40px;
     border: 2px solid $secondary;
     transform: skew(-16deg);
     overflow: hidden;
+    @include pad {
+        width: 266px;
+        height: 60px;
+    }
+}
+
+.parallelogramRank {
+    width: 55px;
+    height: 40px;
+    border: 2px solid $secondary;
+    transform: skew(-16deg);
+    overflow: hidden;
+    @include pad {
+        width: 82px;
+        height: 60px;
+    }
 }
 
 .parallelogramContent {
