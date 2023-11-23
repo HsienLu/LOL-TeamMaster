@@ -1,3 +1,13 @@
+.dropdown-toggle::after {
+    display: none;
+}
+
+.outline{
+    -webkit-text-stroke: 1.2px;
+}
+
+
+
 .form-select{
     cursor: pointer !important;
     background-color: $dark !important;
