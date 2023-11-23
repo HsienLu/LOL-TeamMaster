@@ -46,7 +46,9 @@
   @include btn(253px,53px,237px,37px);
 }
 .popular-teams{
+  width: 232px;
   position: relative;
+  left: -40px;
   &-bg{
     background: url(../images/img-rectangle-title.png) no-repeat left center;
     height: 126px;
@@ -56,5 +58,57 @@
     top: 21px;
     left: 40px;
     text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+  }
+}
+.more-btn{
+  background: none;
+  padding: 12px 56px;
+  border: none;
+  @include flex(row,start,center);
+  p{
+    color: $primary;
+  }
+}
+
+.imgGroup{
+  position: relative;
+  .mask{
+    width: 266px;
+    height: 60px;
+    // background: url(../images/img-team-player-03-1.png) no-repeat center center;
+    background: url(../images/img-wait.png) no-repeat center center;
+    background-size: cover;
+    -webkit-mask: url(../images/mask.png) no-repeat center center;
+    mask: url(../images/mask.png) no-repeat center center;
+    // -webkit-mask-size: contain;
+    // mask-size: contain;
+    &::before{
+      position: absolute;
+      content: '';
+      background: url(../images/mask-line.png) no-repeat center center;
+      width: 266px;
+      height: 60px;
+    }
+  }
+  
+  .mask-ranking{
+    position: absolute;
+    left: 254px;
+    width: 82px;
+    height: 60px;
+    // background: url(../images/img-ranking-07.png) no-repeat center center;
+    background: url(../images/img-ranking-bg.png) no-repeat center center;
+    background: url(../images/img-ranking-07.png) no-repeat center center;
+    background-size: cover;
+    -webkit-mask: url(../images/mask-ranking.png) no-repeat center center;
+    mask: url(../images/mask-ranking.png) no-repeat center center;
+    &::before{
+      position: absolute;
+      content: '';
+      background: url(../images/mask-ranking-line.png) no-repeat center center;
+      width: 82px;
+      height: 60px;
+    }
+
   }
 }
