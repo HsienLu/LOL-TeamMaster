@@ -1,0 +1,96 @@
+.paginationjs-pages ul {
+    display: flex;
+    gap: 10px;
+    @include pad {
+        gap: 20px;
+    }
+}
+
+.paginationjs-prev a,
+.paginationjs-page a,
+.paginationjs-next a {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include pad {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.paginationjs .paginationjs-pages li>a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: $white;
+    font-size: 16px;
+    color: $dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include pad {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+.paginationjs .paginationjs-pages li {
+    border-radius: 10px;
+}
+
+.paginationjs .paginationjs-pages li>a:hover {
+    background: $primary;
+    color: $dark;
+}
+
+.paginationjs .paginationjs-pages li.active {
+    border-radius: 10px;
+    background-color: $primary;
+    color: $dark;
+}
+
+.paginationjs .paginationjs-pages li.disabled {
+    border-radius: 10px;
+    background-color: $secondary;
+    color: $dark;
+    cursor: default;
+}
+
+.paginationjs .paginationjs-pages li.disabled>a {
+    border-radius: 10px;
+    background-color: $secondary;
+    color: $dark;
+    cursor: default;
+}
+
+.paginationjs .paginationjs-pages li.disabled>a:hover{
+    background: 0;
+}
+
+.paginationjs .paginationjs-pages li.active>a {
+    height: 40px;
+    background-color: $primary;
+    color: $dark;
+    cursor: default;
+    @include pad {
+        height: 50px;
+    }
+}
+
+.paginationjs .paginationjs-pages li>a:hover{
+    background-color: $primary;
+}
+
+.paginationjs .paginationjs-pages li:first-child,.paginationjs .paginationjs-pages li:first-child > a {
+    border-radius: 10px;
+}
+
+.paginationjs .paginationjs-pages li:last-child,.paginationjs .paginationjs-pages li:last-child > a {
+    border-radius: 10px;
+}

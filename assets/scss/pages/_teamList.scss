@@ -2,23 +2,55 @@
     background-image: url(../images/img-rectangle-title.png);
     background-position: center;
     background-size: cover;
+    width: 80px;
+    height: 64px;
+    @include pad {
+        width: 126px;
+        height: 100px;
+    }
 }
 
 .teamCard {
-    max-height: 703px;
-    max-width: 416px;
-    padding: 24px 40px 40px 40px;
+    max-height: 598px;
+    max-width: 328px;
+    padding: 16px 24px 24px 24px;
     border-radius: 2px;
+    @include pad {
+        max-height: 703px;
+        max-width: 416px;
+        padding: 24px 40px 40px 40px;
+    }
 }
 
 .teamCardBtn {
-    @include btn(352px,53px,336px,37px);
+    @include btn(296px,53px,280px,37px);
+    @include pad {
+        @include btn(352px,53px,336px,37px);
+    }
 }
 
-.parallelogram {
+.parallelogramHero {
+    width: 229px;
+    height: 40px;
     border: 2px solid $secondary;
     transform: skew(-16deg);
     overflow: hidden;
+    @include pad {
+        width: 266px;
+        height: 60px;
+    }
+}
+
+.parallelogramRank {
+    width: 55px;
+    height: 40px;
+    border: 2px solid $secondary;
+    transform: skew(-16deg);
+    overflow: hidden;
+    @include pad {
+        width: 82px;
+        height: 60px;
+    }
 }
 
 .parallelogramContent {
@@ -28,13 +60,21 @@
 .teamCardHeroBg {
     background-size: cover;
     background-position: center;
-    width: 266px;
-    height: 60px;
+    width: 229px;
+    height: 40px;
+    @include pad {
+        width: 266px;
+        height: 60px;
+    }
 }
 
 .teamCardRankBg {
     background-size: cover;
     background-position: center;
-    width: 85px;
-    height: 60px;
+    width: 55px;
+    height: 40px;
+    @include pad {
+        width: 82px;
+        height: 60px;
+    }
 }

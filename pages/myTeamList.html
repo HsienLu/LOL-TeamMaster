@@ -87,9 +87,9 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
 
           </div>
           <!-- If we need pagination -->
@@ -120,9 +120,9 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
 
           </div>
           <!-- If we need pagination -->
@@ -138,8 +138,9 @@
         <div class="swiper-button-prev position-absolute" id="swiper-button-prev2" style="left: -60px;"></div>
         <div class="swiper-button-next position-absolute" id="swiper-button-next2" style="right: -60px;"></div>
         <div class="swiper-pagination position-absolute" id="swiper-pagination2" style="bottom: -44px;"></div>
-      </div>
 
+      </div>
+      <div class="mb-25"></div>
     </div>
 
     <%- include('./layout/footer'); -%>
@@ -162,6 +163,7 @@
             nextEl: '#swiper-button-next1',
             prevEl: '#swiper-button-prev1',
           },
+
 
         });
         const swiper2 = new Swiper('#swiper2', {
