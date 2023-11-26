@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>玩家列表</title>
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
-    <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-bf2117b0.js"></script>
-    <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-4c4144f1.css">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>玩家列表</title>
+  <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-90987617.js"></script>
+  <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-f4dc80cd.css">
+</head>
+
+<body>
+  <header>
   <div class="fixed-top w-100 bg-dark bg-opacity-80 px-lg-26 py-lg-2">
     <div class="d-flex align-items-center justify-content-lg-between">
       <a class="logo" href="index.html">
@@ -100,8 +105,799 @@
     </div>
   </div>
 </header>
-    <h1>我是about</h1>
-    <footer class="animate__animated animate__fadeInUp text-center mb-12">
+    <div class="container mt-38 ">
+      <!-- 選單 -->
+      <div class="searchGroup d-flex justify-content-between mb-18">
+        <div class="searchDropDown d-flex gap-lg-8">
+          <div class="btn-group border border-white">
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              讚數
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group border border-white">
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              牌位
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+        <form class="d-flex">
+          <div class="input-group">
+            <input type="search" class="form-control border-end-0" placeholder="What are you looking for?"
+              aria-label="Search" aria-describedby="search-form" />
+            <button class="btn border border-white border-start-0" id="search-form" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <!--標題  -->
+      <div class="titleImg position-relative mt-lg-18 mb-lg-5">
+        <h2 class="position-absolute top-20 start-33 fw-black" style="width: 240px; height: 58px">
+          玩家
+        </h2>
+      </div>
+      <!--卡片-->
+      <div class="row">
+        <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>          <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>            <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>              <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>                <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>                  <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>                    <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>                      <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>                        <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>                          <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>                            <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>                              <div class="playerListCard col-4 mt-18 ">
+    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+        <div class="meber-card-top ">
+            <div class="member-avatar position-relative w-100">
+                <div class="avatar w-100">
+                    <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="" class="member-avatar-style  "
+                        style="height: 300px ; object-fit: fill ;">
+                </div>
+
+                <div class="member-avatar-style position-absolute bottom-0"></div>
+
+                <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                    <div class="parallelogram">
+                        <div class="parallelogram-content-avatar" style="
+background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
+background-size: cover;
+background-position: center;
+width: 85px;
+height: 60px;
+"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+        <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+            <div class="tag bage bage-text">TOP</div>
+            <div class="tag bage bage-text">JG</div>
+            <div class="tag bage bage-text">MID</div>
+            <div class="tag bage bage-text">ADC</div>
+            <div class="tag bage bage-text">SUP</div>
+        </div>
+        <div class="thumb my-6 ">
+            <p class="thum-text text-center">
+                12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+            </p>
+        </div>
+        <div class="button-all d-flex justify-content-center gap-4">
+            <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M13 11C13.5933 11 14.1734 10.8241 14.6667 10.4944C15.1601 10.1648 15.5446 9.69623 15.7716 9.14805C15.9987 8.59987 16.0581 7.99667 15.9424 7.41473C15.8266 6.83279 15.5409 6.29824 15.1213 5.87868C14.7018 5.45912 14.1672 5.1734 13.5853 5.05765C13.0033 4.94189 12.4001 5.0013 11.8519 5.22836C11.3038 5.45543 10.8352 5.83994 10.5056 6.33329C10.1759 6.82664 10 7.40666 10 8C10 8.79565 10.3161 9.55871 10.8787 10.1213C11.4413 10.6839 12.2044 11 13 11ZM13 7C13.1978 7 13.3911 7.05865 13.5556 7.16853C13.72 7.27841 13.8482 7.43459 13.9239 7.61732C13.9996 7.80004 14.0194 8.00111 13.9808 8.19509C13.9422 8.38907 13.847 8.56726 13.7071 8.70711C13.5673 8.84696 13.3891 8.9422 13.1951 8.98079C13.0011 9.01937 12.8 8.99957 12.6173 8.92388C12.4346 8.84819 12.2784 8.72002 12.1685 8.55557C12.0586 8.39112 12 8.19778 12 8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7ZM17.11 10.86C17.6951 10.021 18.0087 9.02282 18.0087 8C18.0087 6.97718 17.6951 5.97897 17.11 5.14C17.3976 5.04741 17.6979 5.00018 18 5C18.7956 5 19.5587 5.31607 20.1213 5.87868C20.6839 6.44129 21 7.20435 21 8C21 8.79565 20.6839 9.55871 20.1213 10.1213C19.5587 10.6839 18.7956 11 18 11C17.6979 10.9998 17.3976 10.9526 17.11 10.86ZM13 13C7 13 7 17 7 17V19H19V17C19 17 19 13 13 13ZM9 17C9 16.71 9.32 15 13 15C16.5 15 16.94 16.56 17 17M24 17V19H21V17C20.9766 16.2566 20.8054 15.5254 20.4964 14.8489C20.1873 14.1724 19.7466 13.5643 19.2 13.06C24 13.55 24 17 24 17ZM8 12H5V15H3V12H0V10H3V7H5V10H8V12Z"
+                            fill="#D6EEFF" />
+                    </svg>
+                </span>
+            </button>
+            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+                <span><i class="fa-regular fa-paper-plane"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center mt-11 mt-md-15 mb-20 mb-md-25" id="pagination"></div>
+      <!-- modal -->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        測試用按鈕
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        style="height: 350px;">
+        <div class=" modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class=" bg-dark blueShadow modal-content border-0 ">
+            <div class="modal-header border-0 mx-auto mb-0 pb-0">
+              <h5 class="modal-title border-0 text-center" id="exampleModalLabel">邀請要加入的隊伍</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body flex-column border-0 ">
+              <select class="form-select mx-auto" aria-label="Default select example" style="width: 93%;" multiple>
+                <option selected>預設隊伍</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="modal-footer border-0 d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary " data-bs-dismiss="modal" style="width: 45%;">取消</button>
+              <button type="button" class="btn btn-primary" style="width: 45%;">邀請加入</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal -->
+    </div>
+
+    <footer class="animate__animated animate__fadeInUp text-center mb-12 mt-25">
   <img
     src="/LOL-TeamMaster/assets/logo-blue-5ebf6b92.png"
     class="mb-6"
@@ -125,6 +921,57 @@
   </ul>
 </footer>
 
-    
-  </body>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+      <script>
+        axios
+          .get(
+            "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+          )
+          .then((res) => {
+            //   console.log(res.data.data);
+            $(function () {
+              let container = $("#pagination");
+              container.pagination({
+                dataSource: res.data.data,
+                prevText: "&#9668",
+                nextText: "&#9658",
+                // callback: function (data, pagination) {
+                //   var dataHtml = "<ul>";
+
+                //   $.each(data, function (index, item) {
+                //     dataHtml += "<li>" + item.name + "</li>";
+                //   });
+
+                //   dataHtml += "</ul>";
+
+                //   $("#data-container").html(dataHtml);
+                // },
+              });
+            });
+          });
+
+        flatpickr(".flatpickr", {
+          altInput: true,
+          // altInputClass: "fp_Month",
+          // locale: "zh_tw",
+          altFormat: "Y/m/d H:i",
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          // plugins: [
+          //   new monthSelectPlugin({
+          //     shorthand: true,
+          //     dateFormat: "Ym",
+          //     altFormat: "M/Y",
+          //   }),
+          // ],
+          // defaultDate: $(this).val(),
+        });
+      </script>
+</body>
+
 </html>

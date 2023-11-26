@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://pagination.js.org/dist/2.6.0/pagination.css" />
+  <script>
+    let name = robin
+  </script>
+</head>
+
+<body>
+  
+    
+      <h1>hello world Robin
+                0
+</h1>
+        
+      <h1>hello world Amy
+                1
+</h1>
+        
+      <h1>hello world Ann
+                2
+</h1>
+        
+
+          <div>
+            <section>
+              <div id="data-container"></div>
+              <div id="pagination"></div>
+            </section>
+          </div>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+          <script>
+            axios
+              .get(
+                "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+              )
+              .then((res) => {
+                //   console.log(res.data.data);
+                $(function () {
+                  let container = $("#pagination");
+                  container.pagination({
+                    dataSource: res.data.data,
+                    callback: function (data, pagination) {
+                      var dataHtml = "<ul>";
+
+                      $.each(data, function (index, item) {
+                        dataHtml += "<li>" + item.name + "</li>";
+                      });
+
+                      dataHtml += "</ul>";
+
+                      $("#data-container").html(dataHtml);
+                    },
+                  });
+                });
+              });
+          </script>
+</body>
+
+</html>

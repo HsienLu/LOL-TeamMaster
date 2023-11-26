@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>會員中心</title>
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
-    <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-bf2117b0.js"></script>
-    <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-4c4144f1.css">
+    
+    <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-90987617.js"></script>
+    <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-f4dc80cd.css">
   </head>
   <body>
     <header>
@@ -103,10 +103,10 @@
 
     <div class="layout d-flex">
       <div class="layout-left d-none d-lg-block z-2">
-        <div class="navMenu min-vh-100 pt-38 ps-21">  
+        <div class="navMenu layout-left ps-7 d-none d-xxl-block">  
   <ul class="sidebar-menu">
       <li> 
-        <a href="#" class="d-block py-4 px-4"><i class="fa-solid fa-user align-middle me-2"></i>我的資料</a></li>
+        <a href="#myInfo" class="d-block py-4 px-4"><i class="fa-solid fa-user align-middle me-2"></i>我的資料</a></li>
       <li>
         <a href="#" class="d-block py-4 px-4"><i class="fa-solid fa-thumbs-up align-middle me-2"></i>評價資訊</a></li>
       <li>
@@ -117,13 +117,85 @@
   </ul>
 </div>        </div>
       <div class="layout-content">
-        
+        <div class="container bg-dark border border-2 mt-38 ms-75">
+          <div class="px-21 pt-14 pb-25">
+            <div class="d-flex justify-content-between mb-lg-8">
+              <h5>我的資料</h5>
+              <div>
+                
+                <a href="editMemberProfile.html">編輯<i class="fa-solid fa-pencil fs-7 ms-2"></i></a>
+              </div>
+            </div>
+            <form action="" class="row justify-content-between">
+              <div class="col-3">
+                <label for="memberAccount" class="form-label">帳號</label>
+                <input
+                  type="email"
+                  class="form-control mb-lg-7 box-shadow bg-secondary2 bg-opacity-30 border-0"
+                  id="memberAccount"
+                  value="magicfox@gmail.com"
+                  aria-describedby="memberAccount"
+                  readonly
+                />
+                <label for="memberName" class="form-label">使用者名稱</label>
+                <input
+                  type="text"
+                  class="form-control mb-lg-7 box-shadow bg-secondary2 bg-opacity-30 border-0"
+                  id="memberName"
+                  value="魔法狐狸"
+                  aria-describedby="memberName"
+                  readonly
+                />
+                <label for="memberPassword" class="form-label">密碼</label>
+                <input
+                  type="password"
+                  class="form-control mb-lg-7 box-shadow bg-secondary2 bg-opacity-30 border-0"
+                  id="memberPassword"
+                  value="**********"
+                  aria-describedby="memberPassword"
+                  readonly
+                />
+              </div>
+              <div class="col-4">
+                <div class="d-flex justify-content-between">
+                  <label for="memberAvatar" class="form-label">大頭貼</label>
+                  <span class="text-primary">
+                    3526
+                    <i class="fa-regular fa-thumbs-up ms-1 text-primary"></i>
+                  </span>
+                </div>
+                <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="member-avatar" />
+              </div>
+              <div class="col-3">
+                <div class="mb-lg-7">
+                  <p class="mb-2">牌位</p>
+                  <span class="badge bg-white text-dark fs-6">銅</span>
+                </div>
+                <div class="mb-lg-7">
+                  <p class="mb-2">擅長位置</p>
+                  <span class="badge bg-white text-dark fs-6">TOP</span>
+                </div>
+                <div>
+                  <p class="mb-2">擅長英雄</p>
+                  <div class="parallelogramHero-1 w-100">
+                    <div
+                      class="parallelogramContent-1 teamCardHeroBg-1"
+                      style="
+                        background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
       <div class="layout-right d-none d-lg-block"></div>
     </div>
 
 
-    <footer class="animate__animated animate__fadeInUp text-center mb-12">
+    <footer class="animate__animated animate__fadeInUp text-center mb-12 mt-25">
   <img
     src="/LOL-TeamMaster/assets/logo-blue-5ebf6b92.png"
     class="mb-6"
@@ -146,7 +218,7 @@
     </li>
   </ul>
 </footer>
-
+    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
     
   </body>
 </html>
