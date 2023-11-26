@@ -5,13 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>編輯會員資訊</title>
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <h1>我是contact</h1>
+
+    <div class="layout d-flex">
+      <div class="layout-left d-none d-lg-block z-2">
+        <%- include('./layout/navMenuHistory'); -%>
+      </div>
+      <div class="layout-content">
+        <div class="container bg-dark border border-2 mt-38 ms-75">
+          <!-- 我的資料 -->
+          <div id="myInfo" class="px-21 py-14">
+            <h5 class=" mb-lg-8">我的資料</h5>
+            <form action="" class="row justify-content-between">
+              <div class="col-3">
+                <label for="memberAccount" class="form-label">帳號</label>
+                <input
+                  type="email"
+                  class="form-control mb-lg-7 box-shadow bg-secondary2 bg-opacity-30 border-0 text-dark text-opacity-80"
+                  id="memberAccount"
+                  value="magicfox@gmail.com"
+                  aria-describedby="memberAccount"
+                  readonly
+                />
+                <label for="memberName" class="form-label">使用者名稱</label>
+                <input
+                  type="text"
+                  class="form-control mb-lg-7"
+                  id="memberName"
+                  value="魔法狐狸"
+                  aria-describedby="memberName"
+                />
+                <label for="memberPassword" class="form-label">修改密碼</label>
+                <input
+                  type="password"
+                  class="form-control mb-4"
+                  id="memberPassword"
+                  value=""
+                  placeholder="Current Passwod"
+                  aria-describedby="memberPassword"
+                />
+                <input
+                  type="password"
+                  class="form-control mb-4"
+                  id="memberPassword"
+                  value=""
+                  placeholder="New Passwod"
+                  aria-describedby="memberPassword"
+                />
+                <input
+                  type="password"
+                  class="form-control mb-4"
+                  id="memberPassword"
+                  value=""
+                  placeholder="Confirm New Passwod"
+                  aria-describedby="memberPassword"
+                />
+              </div>
+              <div class="col-4">
+                <div class="d-flex justify-content-between">
+                  <label for="memberAvatar" class="form-label">大頭貼</label>
+                  <span class="text-primary">
+                    3526
+                    <i class="fa-regular fa-thumbs-up ms-1 text-primary"></i>
+                  </span>
+                </div>
+                <img src="../assets/images/Member-avatar.png" alt="member-avatar" />
+              </div>
+              <div class="col-5">
+                <div class="mb-lg-7">
+                  <p class="mb-2">牌位</p>
+                  <div class="mb-3">
+                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 pointer">鐵</span>
+                    <span class="badge bg-white text-dark fs-6 ms-1 pointer">銅</span>
+                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">銀</span>
+                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">金</span>
+                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">白金</span>
+                  </div>
+                  <div>
+                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 pointer">翡翠</span>
+                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">鑽石</span>
+                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">大師</span>
+                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">宗師</span>
+                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">菁英</span>
+                  </div>
+                </div>
+                <div class="mb-lg-7">
+                  <p class="mb-2">擅長位置</p>
+                  <span class="badge bg-white text-dark fs-6">TOP</span>
+                </div>
+                <div>
+                  <p class="mb-2">擅長英雄</p>
+                  <div class="d-flex align-items-center">
+                    <div class="parallelogramHero-1 w-58 me-4">
+                      <div
+                        class="parallelogramContent-1 teamCardHeroBg-1"
+                        style="
+                          background-image: url(../assets/images/img-team-player-05.png);
+                        "
+                      ></div>
+                    </div>
+                    <select class="form-select w-35 h-50 text-center fs-6 fw-medium selectpicker" aria-label="Default select example">
+                      <option selected disabled  hidden>選擇英雄</option>
+                      <option value="吶兒">吶兒</option>
+                      <option value="加里歐">加里歐</option>
+                      <option value="厄薩斯">厄薩斯</option>
+                      <option value="阿姆姆">阿姆姆</option>
+                      <option value="柔依">柔依</option>
+                      <option value="悠咪">悠咪</option>
+                      <option value="提摩">提摩</option>
+                      <option value="薇可絲">薇可絲</option>
+                      <option value="露璐">露璐</option>
+                      <option value="艾希">艾希</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="d-flex justify-content-end">
+              <a href="memberCentre.html" class="btn btn-size btn-outline-white white-bg-btn me-12 py-3 px-12" role="button" data-bs-toggle="button"> Cancel</a>
+
+              <a href="memberCentre.html" class="btn btn-white white-bg-btn active py-3 px-12" role="button" data-bs-toggle="button" aria-pressed="true">Save Changes</a>
+              <!-- <button type="button" class="btn btn-outline-white white-bg-btn me-12">Cancel</button>
+              <button type="button" class="btn btn-white white-bg-btn">Save Changes</button> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="layout-right d-none d-lg-block"></div>
+    </div>
+
     <%- include('./layout/footer'); -%>
 
+    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
