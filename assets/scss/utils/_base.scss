@@ -188,3 +188,20 @@ ol,ul,dl{
       }
     } 
   }
+
+//layout
+.layout-left, .layout-right {
+    width: 15.625%;
+    height: 100vh;
+    position: fixed;
+    top: 152px;
+}
+
+.layout-content {
+    width: 68.75%;
+    margin-left: 15.625%;
+}
+
+.layout-right{
+    right: 0;
+}

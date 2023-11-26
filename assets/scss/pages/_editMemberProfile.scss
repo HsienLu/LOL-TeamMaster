@@ -1,0 +1,12 @@
+.pointer {
+    cursor: pointer;
+}
+
+.white-bg-btn {
+    &:hover{
+        background-color: $primary;
+    }
+    &:focus{
+        background-color: $secondary;
+    }
+}
