@@ -1,8 +1,11 @@
-<div class="memberCard border border-primary " style="  border-radius: 2px; width: 18%;">
+<div class="memberCard border border-primary greenShadow bg-dark" style=" border-radius: 2px ; ">
     <div class="meber-card-top ">
-        <div class="member-avatar position-relative">
-            <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
-                style="width: 306px;height:306px ;">
+        <div class="member-avatar position-relative w-100">
+            <div class="avatar w-100">
+                <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                    style="height: 300px ; object-fit: cover ;">
+            </div>
+
             <div class="member-avatar-style position-absolute bottom-0"></div>
 
             <div class="metal position-absolute" style="width: 85px; height: 65px;">
@@ -23,7 +26,7 @@ height: 60px;
 
 
 
-    <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+    <h5 class="mt-12 text-center mb-4">無言獨上西樓</h5>
     <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
         <div class="tag bage bage-text">TOP</div>
         <div class="tag bage bage-text">JG</div>
@@ -35,10 +38,12 @@ height: 60px;
         <p class="thum-text text-center">
             12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
         </p>
-
-
     </div>
-    <button class="btn-getout text-primary" style="width: 75%;">剔除
+    <div class="button-all d-flex justify-content-center gap-4 mb-8">
 
-    </button>
+        <button class="btn border border-primary text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            style="width: 80%;">剔除
+        </button>
+    </div>
+
 </div>
