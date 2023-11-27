@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>會員中心</title>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <%- include('./layout/header'); -%>
@@ -21,7 +21,7 @@
       </div>
       <div class="layout-content">
         <!-- 我的資料 -->
-        <div class="container blueShadow bg-dark border border-2 mt-38 ms-75">
+        <div id="myInfo" class="container blueShadow bg-dark border border-2 mt-38 ms-75">
           <div class="px-21 pt-14 pb-25">
             <div class="d-flex justify-content-between mb-lg-8">
               <h5>我的資料</h5>
@@ -95,175 +95,176 @@
         </div>
 
         <!-- 評價資訊 -->
-        <h2 class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5">
+        <h2 id="myEvaluate" class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5">
           <div class="titleParallelogram-1 z-n1"></div>
           評價資訊
         </h2>
-        <div class="container">
-          <div class="d-flex gap-6 mt-10">
-            <div class="col-3 memberEvaluateCard border border-2 border-radius border-primary">
-              <div class="meber-card-top ">
-                  <div class="member-avatar position-relative">
-                      <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
-                          style="width: 306px;height:306px ;">
-                      <div class="member-avatar-style position-absolute bottom-0"></div>
-          
-                      <div class="metal position-absolute" style="width: 85px; height: 65px;">
-                          <div class="parallelogram">
-                              <div class="parallelogram-content-avatar" style="
-                                background-image: url(../assets/images/image19.png);
-                                background-size: cover;
-                                background-position: center;
-                                width: 85px;
-                                height: 60px;
-                                "></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
-              <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
-                  <div class="tag bage bage-text">TOP</div>
-                  <div class="tag bage bage-text">JG</div>
-                  <div class="tag bage bage-text">MID</div>
-                  <div class="tag bage bage-text">ADC</div>
-                  <div class="tag bage bage-text">SUP</div>
-              </div>
-              <div class="thumb my-6 ">
-                  <p class="thum-text text-center">
-                      12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
-                  </p>
-              </div>
+        <div class="d-flex justify-content-between gap-6 mt-10">
+          <div class="memberEvaluateCard border border-2 border-radius border-primary w-20 blueShadow">
+            <div class="meber-card-top ">
+                <div class="member-avatar position-relative">
+                    <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                        style="width: 306px;height:306px ;">
+                    <div class="member-avatar-style position-absolute bottom-0"></div>
+        
+                    <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content-avatar" style="
+                              background-image: url(../assets/images/image19.png);
+                              background-size: cover;
+                              background-position: center;
+                              width: 85px;
+                              height: 60px;
+                              "></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-3 memberEvaluateCard border border-primary " style="  border-radius: 2px;">
-              <div class="meber-card-top ">
-                  <div class="member-avatar position-relative">
-                      <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
-                          style="width: 306px;height:306px ;">
-                      <div class="member-avatar-style position-absolute bottom-0"></div>
-          
-                      <div class="metal position-absolute" style="width: 85px; height: 65px;">
-                          <div class="parallelogram">
-                              <div class="parallelogram-content-avatar" style="
-                                background-image: url(../assets/images/image19.png);
-                                background-size: cover;
-                                background-position: center;
-                                width: 85px;
-                                height: 60px;
-                                "></div>
-                          </div>
-          
-                      </div>
-                  </div>
-          
-              </div>
-          
-          
-          
-              <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
-              <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
-                  <div class="tag bage bage-text">TOP</div>
-                  <div class="tag bage bage-text">JG</div>
-                  <div class="tag bage bage-text">MID</div>
-                  <div class="tag bage bage-text">ADC</div>
-                  <div class="tag bage bage-text">SUP</div>
-              </div>
-              <div class="thumb my-6 ">
-                  <p class="thum-text text-center">
-                      12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
-                  </p>
-              </div>
+            <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+            <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                <div class="tag bage bage-text">TOP</div>
+                <div class="tag bage bage-text">JG</div>
+                <div class="tag bage bage-text">MID</div>
+                <div class="tag bage bage-text">ADC</div>
+                <div class="tag bage bage-text">SUP</div>
             </div>
-
-            <div class="col-3 memberEvaluateCard border border-primary " style="  border-radius: 2px;">
-              <div class="meber-card-top ">
-                  <div class="member-avatar position-relative">
-                      <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
-                          style="width: 306px;height:306px ;">
-                      <div class="member-avatar-style position-absolute bottom-0"></div>
-          
-                      <div class="metal position-absolute" style="width: 85px; height: 65px;">
-                          <div class="parallelogram">
-                              <div class="parallelogram-content-avatar" style="
-                                background-image: url(../assets/images/image19.png);
-                                background-size: cover;
-                                background-position: center;
-                                width: 85px;
-                                height: 60px;
-                                "></div>
-                          </div>
-          
-                      </div>
-                  </div>
-          
-              </div>
-          
-          
-          
-              <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
-              <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
-                  <div class="tag bage bage-text">TOP</div>
-                  <div class="tag bage bage-text">JG</div>
-                  <div class="tag bage bage-text">MID</div>
-                  <div class="tag bage bage-text">ADC</div>
-                  <div class="tag bage bage-text">SUP</div>
-              </div>
-              <div class="thumb my-6 ">
-                  <p class="thum-text text-center">
-                      12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
-                  </p>
-              </div>
+            <div class="thumb my-6 ">
+                <p class="thum-text text-center">
+                    12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                </p>
             </div>
+          </div>
 
-            <div class="col-3 memberEvaluateCard border border-primary " style="  border-radius: 2px;">
-              <div class="meber-card-top ">
-                  <div class="member-avatar position-relative">
-                      <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
-                          style="width: 306px;height:306px ;">
-                      <div class="member-avatar-style position-absolute bottom-0"></div>
-          
-                      <div class="metal position-absolute" style="width: 85px; height: 65px;">
-                          <div class="parallelogram">
-                              <div class="parallelogram-content-avatar" style="
-                                background-image: url(../assets/images/image19.png);
-                                background-size: cover;
-                                background-position: center;
-                                width: 85px;
-                                height: 60px;
-                                "></div>
-                          </div>
-          
-                      </div>
-                  </div>
-          
-              </div>
-          
-          
-          
-              <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
-              <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
-                  <div class="tag bage bage-text">TOP</div>
-                  <div class="tag bage bage-text">JG</div>
-                  <div class="tag bage bage-text">MID</div>
-                  <div class="tag bage bage-text">ADC</div>
-                  <div class="tag bage bage-text">SUP</div>
-              </div>
-              <div class="thumb my-6 ">
-                  <p class="thum-text text-center">
-                      12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
-                  </p>
-              </div>
+          <div class="memberEvaluateCard border border-2 border-radius border-primary w-20 blueShadow">
+            <div class="meber-card-top ">
+                <div class="member-avatar position-relative">
+                    <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                        style="width: 306px;height:306px ;">
+                    <div class="member-avatar-style position-absolute bottom-0"></div>
+        
+                    <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content-avatar" style="
+                              background-image: url(../assets/images/image19.png);
+                              background-size: cover;
+                              background-position: center;
+                              width: 85px;
+                              height: 60px;
+                              "></div>
+                        </div>
+        
+                    </div>
+                </div>
+        
+            </div>
+        
+        
+        
+            <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+            <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                <div class="tag bage bage-text">TOP</div>
+                <div class="tag bage bage-text">JG</div>
+                <div class="tag bage bage-text">MID</div>
+                <div class="tag bage bage-text">ADC</div>
+                <div class="tag bage bage-text">SUP</div>
+            </div>
+            <div class="thumb my-6 ">
+                <p class="thum-text text-center">
+                    12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                </p>
+            </div>
+          </div>
+
+          <div class="memberEvaluateCard border border-2 border-radius border-primary w-20 blueShadow">
+            <div class="meber-card-top ">
+                <div class="member-avatar position-relative">
+                    <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                        style="width: 306px;height:306px ;">
+                    <div class="member-avatar-style position-absolute bottom-0"></div>
+        
+                    <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content-avatar" style="
+                              background-image: url(../assets/images/image19.png);
+                              background-size: cover;
+                              background-position: center;
+                              width: 85px;
+                              height: 60px;
+                              "></div>
+                        </div>
+        
+                    </div>
+                </div>
+        
+            </div>
+        
+        
+        
+            <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+            <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                <div class="tag bage bage-text">TOP</div>
+                <div class="tag bage bage-text">JG</div>
+                <div class="tag bage bage-text">MID</div>
+                <div class="tag bage bage-text">ADC</div>
+                <div class="tag bage bage-text">SUP</div>
+            </div>
+            <div class="thumb my-6 ">
+                <p class="thum-text text-center">
+                    12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                </p>
+            </div>
+          </div>
+
+          <div class="memberEvaluateCard border border-2 border-radius border-primary w-20 blueShadow">
+            <div class="meber-card-top ">
+                <div class="member-avatar position-relative">
+                    <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                        style="width: 306px;height:306px ;">
+                    <div class="member-avatar-style position-absolute bottom-0"></div>
+        
+                    <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                        <div class="parallelogram">
+                            <div class="parallelogram-content-avatar" style="
+                              background-image: url(../assets/images/image19.png);
+                              background-size: cover;
+                              background-position: center;
+                              width: 85px;
+                              height: 60px;
+                              "></div>
+                        </div>
+        
+                    </div>
+                </div>
+        
+            </div>
+        
+        
+        
+            <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+            <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                <div class="tag bage bage-text">TOP</div>
+                <div class="tag bage bage-text">JG</div>
+                <div class="tag bage bage-text">MID</div>
+                <div class="tag bage bage-text">ADC</div>
+                <div class="tag bage bage-text">SUP</div>
+            </div>
+            <div class="thumb my-6 ">
+                <p class="thum-text text-center">
+                    12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                </p>
             </div>
           </div>
         </div>
+
       </div>
+
       <div class="layout-right d-none d-lg-block"></div>
     </div>
 
 
     <%- include('./layout/footer'); -%>
+
     <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
     <script type="module" src="../main.js"></script>
   </body>
