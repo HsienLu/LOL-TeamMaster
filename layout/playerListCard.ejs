@@ -1,10 +1,10 @@
-<div class="playerListCard col-4 mt-18 ">
-    <div class="memberCard border border-primary w-100" style="  border-radius: 2px">
+<div class="playerListCard col-lg-4 col-md-6 col-12 mt-18 ">
+    <div class="memberCard border border-primary w-100 h-100 greenShadow bg-dark" style="  border-radius: 2px">
         <div class="meber-card-top ">
             <div class="member-avatar position-relative w-100">
                 <div class="avatar w-100">
                     <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
-                        style="height: 300px ; object-fit: fill ;">
+                        style="height: 300px ; object-fit: cover ;">
                 </div>
 
                 <div class="member-avatar-style position-absolute bottom-0"></div>
@@ -40,7 +40,7 @@ height: 60px;
                 12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
             </p>
         </div>
-        <div class="button-all d-flex justify-content-center gap-4">
+        <div class="button-all d-flex justify-content-center gap-4 mb-8">
             <button class=" btn border border-primary text-primary" style="width: 40%;">加為好友
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -50,7 +50,8 @@ height: 60px;
                     </svg>
                 </span>
             </button>
-            <button class="btn border border-primary text-primary" style="width: 40%;">隊伍邀請
+            <button class="btn border border-primary text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                style="width: 40%;">隊伍邀請
                 <span><i class="fa-regular fa-paper-plane"></i></span>
             </button>
         </div>

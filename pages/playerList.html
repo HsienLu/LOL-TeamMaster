@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
   <%- include('./layout/header'); -%>
     <div class="container mt-38 ">
       <!-- 選單 -->
@@ -82,7 +83,8 @@
 
       </div>
 
-      <div class="d-flex justify-content-center align-items-center mt-11 mt-md-15 mb-20 mb-md-25" id="pagination"></div>
+      <div class="d-flex justify-content-center align-items-center mt-11 mt-md-15 mb-20 mb-md-25" id="pagination">
+      </div>
       <!-- modal -->
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -114,7 +116,7 @@
             </div>
             <div class="modal-footer border-0 d-flex justify-content-center">
               <button type="button" class="btn btn-secondary " data-bs-dismiss="modal" style="width: 45%;">取消</button>
-              <button type="button" class="btn btn-primary" style="width: 45%;">邀請加入</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="width: 45%;">邀請加入</button>
             </div>
           </div>
         </div>
