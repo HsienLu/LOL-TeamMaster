@@ -152,8 +152,104 @@ dl {
   background: rgba(0, 255, 255, 1);
   filter: blur(400px);
   position: absolute;
-  top: 3369px;
+  bottom: 1032px;
   left: -829px;
+}
+
+.BG-Light-blue {
+  width: 1282px;
+  height: 1282px;
+  flex-shrink: 0;
+  border-radius: 1282px;
+  background: rgba(0, 102, 255, 1);
+  filter: blur(500px);
+  position: absolute;
+  bottom: 2169px;
+  right: -613px;
+}
+
+.BG-Light-white {
+  width: 782px;
+  height: 782px;
+  flex-shrink: 0;
+  border-radius: 782px;
+  background: rgba(255, 255, 255, 1);
+  filter: blur(250px);
+}
+
+//其他頁背景光
+// .bg-Light-green{
+//     width: 800px;
+//     height: 800px;
+//     flex-shrink: 0;
+//     border-radius: 800px;
+//     background: rgba(0,255,255,1);
+//     filter: blur(400px);
+//     position: absolute;
+//     top: 1230px;
+//     left: -488px;
+// }
+
+.bg-Light-green {
+  width: 600px;
+  height: 600px;
+  flex-shrink: 0;
+  border-radius: 600px;
+  background: rgba(0, 255, 255, 1);
+  filter: blur(250px);
+  position: fixed;
+  top: 600px;
+  left: -488px;
+}
+
+// .bg-Light-blue{
+//     width: 800px;
+//     height: 800px;
+//     flex-shrink: 0;
+//     border-radius: 800px;
+//     background: rgba(0,102,255,1);
+//     filter: blur(500px);
+//     position: absolute;
+//     top: 243px;
+//     right: -801px;
+// }
+
+.bg-Light-blue {
+  width: 450px;
+  height: 450px;
+  flex-shrink: 0;
+  border-radius: 450px;
+  background: rgba(0, 102, 255, 1);
+  filter: blur(250px);
+  position: fixed;
+  top: 200px;
+  right: -450px;
+}
+
+// .bg-Light-white{
+//     width: 533px;
+//     height: 533px;
+//     flex-shrink: 0;
+//     border-radius: 533px;
+//     background: rgba(255, 255, 255, 1);
+//     filter: blur(250px);
+//     position: absolute;
+//     top: 243px;
+//     right: -690px;
+//     z-index: 2;
+// }
+
+.bg-Light-white {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 250px;
+  background: rgba(255, 255, 255, 1);
+  filter: blur(250px);
+  position: fixed;
+  top: 200px;
+  right: -350px;
+  z-index: 2;
 }
 
 //卡片圖像
@@ -194,4 +290,22 @@ dl {
       height: 60px;
     }
   }
+}
+
+//layout
+.layout-left,
+.layout-right {
+  width: 15.625%;
+  height: 100vh;
+  position: fixed;
+  top: 152px;
+}
+
+.layout-content {
+  width: 68.75%;
+  margin-left: 15.625%;
+}
+
+.layout-right {
+  right: 0;
 }
