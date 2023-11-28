@@ -1,0 +1,19 @@
+//移除 dropdown icon
+.dropdown-toggle::after {
+    display: none;
+}
+
+.outline{
+    -webkit-text-stroke: 1.2px;
+}
+
+//修改 select 的 cursor 樣式
+.form-select{
+    cursor: pointer !important;
+    background-color: $dark !important;
+}
+
+//移除 search input 的 box-shadow:focus
+.box-shadow:focus{
+    box-shadow: none;
+}

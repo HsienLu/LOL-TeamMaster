@@ -1,0 +1,67 @@
+.titleParallelogram-1 {
+    background-image: url(../images/img-rectangle-title.png);
+    background-position: center;
+    background-size: cover;
+    width: 80px;
+    height: 64px;
+    position: absolute;
+    top: -21px;
+    left: -40px;
+    @include pad {
+        width: 126px;
+        height: 100px;
+    }
+}
+
+.parallelogramHero-1 {
+    width: 229px;
+    height: 40px;
+    border: 2px solid $secondary;
+    transform: skewX(-11.4deg);    
+    overflow: hidden;
+    margin-right: 2px;
+    @include pad {
+        width: 266px;
+        height: 60px;
+    }
+}
+
+.parallelogramRank-1 {
+    width: 55px;
+    height: 40px;
+    border: 2px solid $secondary;
+    transform: skewX(-11.4deg);   
+    overflow: hidden;
+    @include pad {
+        width: 82px;
+        height: 60px;
+    }
+}
+
+.parallelogramContent-1 {
+    transform: skewX(11.4deg);
+}
+
+.teamCardHeroBg-1 {
+    background-size: cover;
+    background-position: center;
+    transform: translate(-4px,0px);
+    width: 229px;
+    height: 40px;
+    @include pad {
+        width: 266px;
+        height: 60px;
+    }
+}
+
+.teamCardRankBg-1 {
+    background-size: cover;
+    background-position: center;
+    transform: translate(-4px,0px);
+    width: 55px;
+    height: 40px;
+    @include pad {
+        width: 82px;
+        height: 60px;
+    }
+}

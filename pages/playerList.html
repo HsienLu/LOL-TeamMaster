@@ -1,17 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>玩家列表</title>
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
-    <h1>我是about</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>玩家列表</title>
+  <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+</head>
+
+<body>
+
+  <%- include('./layout/header'); -%>
+    <div class="container mt-38 ">
+      <!-- 選單 -->
+      <div class="searchGroup d-flex justify-content-between mb-18">
+        <div class="searchDropDown d-flex gap-lg-8">
+          <div class="btn-group border border-white">
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              讚數
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group border border-white">
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              牌位
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+        <form class="d-flex">
+          <div class="input-group">
+            <input type="search" class="form-control border-end-0" placeholder="What are you looking for?"
+              aria-label="Search" aria-describedby="search-form" />
+            <button class="btn border border-white border-start-0" id="search-form" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <!--標題  -->
+      <div class="titleImg position-relative mt-lg-18 mb-lg-5">
+        <h2 class="position-absolute top-20 start-33 fw-black" style="width: 240px; height: 58px">
+          玩家
+        </h2>
+      </div>
+      <!--卡片-->
+      <div class="row">
+        <%- include('./layout/playerListCard'); -%>
+          <%- include('./layout/playerListCard'); -%>
+            <%- include('./layout/playerListCard'); -%>
+              <%- include('./layout/playerListCard'); -%>
+                <%- include('./layout/playerListCard'); -%>
+                  <%- include('./layout/playerListCard'); -%>
+                    <%- include('./layout/playerListCard'); -%>
+                      <%- include('./layout/playerListCard'); -%>
+                        <%- include('./layout/playerListCard'); -%>
+                          <%- include('./layout/playerListCard'); -%>
+                            <%- include('./layout/playerListCard'); -%>
+                              <%- include('./layout/playerListCard'); -%>
+
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center mt-11 mt-md-15 mb-20 mb-md-25" id="pagination">
+      </div>
+      <!-- modal -->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        測試用按鈕
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        style="height: 350px;">
+        <div class=" modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class=" bg-dark blueShadow modal-content border-0 ">
+            <div class="modal-header border-0 mx-auto mb-0 pb-0">
+              <h5 class="modal-title border-0 text-center" id="exampleModalLabel">邀請要加入的隊伍</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body flex-column border-0 ">
+              <select class="form-select mx-auto" aria-label="Default select example" style="width: 93%;" multiple>
+                <option selected>預設隊伍</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="modal-footer border-0 d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary " data-bs-dismiss="modal" style="width: 45%;">取消</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="width: 45%;">邀請加入</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal -->
+    </div>
+
     <%- include('./layout/footer'); -%>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+      <script type="module" src="../main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+      <script>
+        axios
+          .get(
+            "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+          )
+          .then((res) => {
+            //   console.log(res.data.data);
+            $(function () {
+              let container = $("#pagination");
+              container.pagination({
+                dataSource: res.data.data,
+                prevText: "&#9668",
+                nextText: "&#9658",
+                // callback: function (data, pagination) {
+                //   var dataHtml = "<ul>";
+
+                //   $.each(data, function (index, item) {
+                //     dataHtml += "<li>" + item.name + "</li>";
+                //   });
+
+                //   dataHtml += "</ul>";
+
+                //   $("#data-container").html(dataHtml);
+                // },
+              });
+            });
+          });
+
+        flatpickr(".flatpickr", {
+          altInput: true,
+          // altInputClass: "fp_Month",
+          // locale: "zh_tw",
+          altFormat: "Y/m/d H:i",
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          // plugins: [
+          //   new monthSelectPlugin({
+          //     shorthand: true,
+          //     dateFormat: "Ym",
+          //     altFormat: "M/Y",
+          //   }),
+          // ],
+          // defaultDate: $(this).val(),
+        });
+      </script>
+</body>
+
 </html>

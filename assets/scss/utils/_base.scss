@@ -1,27 +1,28 @@
-
 // 其他設定
-a{
-    display: inline-block;
-    text-decoration: none;
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-    object-fit: cover;
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
 }
 
 //ol,ul reset
 
-ol,ul{
-    list-style: none;
-    padding: 0;
+ol,
+ul {
+  list-style: none;
+  padding: 0;
 }
-ol,ul,dl{
-    margin: 0;
+ol,
+ul,
+dl {
+  margin: 0;
 }
-
 
 //spacer
 /*
@@ -53,29 +54,31 @@ ol,ul,dl{
 
   30:  30px
   162: 162px
+  150: 150px
+  300: 300px
 */
 
 .blueShadow {
-    box-shadow: 0px 0px 108px 0px rgba(0,102,255,0.55);
-    &:hover {
-        box-shadow: 0px 0px 64px 0px rgba(0,102,255,0.80);
-    }
+  box-shadow: 0px 0px 108px 0px rgba(0, 102, 255, 0.55);
+  &:hover {
+    box-shadow: 0px 0px 64px 0px rgba(0, 102, 255, 0.8);
+  }
 }
 
 .greenShadow {
-    box-shadow: 0px 4px 108px 0px rgba(0,255,255,0.35);
-    &:hover {
-        box-shadow: 0px 4px 64px 0px rgba(0,255,255,0.60);
-    }
+  box-shadow: 0px 4px 108px 0px rgba(0, 255, 255, 0.35);
+  &:hover {
+    box-shadow: 0px 4px 64px 0px rgba(0, 255, 255, 0.6);
+  }
 }
 
 .glow-circle {
-    width: 1282px;
-    height: 1282px;
-    background-color: #0066FF;
-    border-radius: 50%;
-    backdrop-filter: blur(10px);
-  }
+  width: 1282px;
+  height: 1282px;
+  background-color: #0066ff;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
 
 // .lightGreenRadialGradientBg {
 //     @include radial-gradient($green, $white);
@@ -88,59 +91,221 @@ ol,ul,dl{
 //button
 
 @mixin flex($direction, $justifyContent, $alignItems) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justifyContent;
-    align-items: $alignItems;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
 }
 
 //第一個button模板
 
-@mixin btn($width,$height,$innerWidth,$innerHeight){
-    width: $width;
-    height: $height;
-    border: 2px solid $white;
+@mixin btn($width, $height, $innerWidth, $innerHeight) {
+  width: $width;
+  height: $height;
+  border: 2px solid $white;
+  border-radius: 2px;
+  background: none;
+  p {
+    width: $innerWidth;
+    height: $innerHeight;
+    background: $white;
+    @include flex(row, center, center);
     border-radius: 2px;
-    background: none;
-    p{
-        width: $innerWidth;
-        height: $innerHeight;
-        background: $white;
-        @include flex(row,center,center);
-        border-radius: 2px;
-        font-weight: bold;
-    }
-    &:hover{
-        border: 2px solid $primary;
-        p{
-            background: $primary;
-        }
-    }
-    &:active{
-        border: 2px solid $secondary;
-        p{
-            background: $white;
-            box-shadow: 0px 0px 40px 0px rgba(0, 209, 255, 0.45);
-        }
-    }
-}
-
-.submitBtn:hover{
-    background-color: $secondary !important;
-}
-
-.arrowBtn:hover{
-    color: $primary !important;
-}
-
-.BG-Light-green{
-    width: 1282px;
-    height: 1282px;
-    flex-shrink: 0;
-    border-radius: 1282px;
-    background: rgba(0,255,255,1);
-    filter: blur(400px);
-    position: absolute;
-    top: 3369px;
-    left: -829px;
+    font-weight: bold;
   }
+  &:hover {
+    border: 2px solid $primary;
+    p {
+      background: $primary;
+    }
+  }
+  &:active {
+    border: 2px solid $secondary;
+    p {
+      background: $white;
+      box-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+    }
+  }
+}
+
+.submitBtn:hover {
+  background-color: $secondary !important;
+}
+
+.arrowBtn:hover {
+  color: $primary !important;
+}
+// 背景光
+// body {
+//   background-image: url(../assets/images/BG-Light-green.png),
+//     url(../assets/images/BG-Light-blue.png);
+//   background-size: 1282px 1282px, 1282px 1282px;
+//   background-repeat: no-repeat, no-repeat;
+//   background-position: -745px 1168px, right -745px top -260px;
+// }
+//首頁背景光
+.BG-Light-green {
+  width: 1282px;
+  height: 1282px;
+  flex-shrink: 0;
+  border-radius: 1282px;
+  background: rgba(0, 255, 255, 1);
+  filter: blur(400px);
+  position: absolute;
+  bottom: 1032px;
+  left: -829px;
+}
+
+.BG-Light-blue {
+  width: 1282px;
+  height: 1282px;
+  flex-shrink: 0;
+  border-radius: 1282px;
+  background: rgba(0, 102, 255, 1);
+  filter: blur(500px);
+  position: absolute;
+  bottom: 2169px;
+  right: -613px;
+}
+
+.BG-Light-white {
+  width: 782px;
+  height: 782px;
+  flex-shrink: 0;
+  border-radius: 782px;
+  background: rgba(255, 255, 255, 1);
+  filter: blur(250px);
+}
+
+//其他頁背景光
+// .bg-Light-green{
+//     width: 800px;
+//     height: 800px;
+//     flex-shrink: 0;
+//     border-radius: 800px;
+//     background: rgba(0,255,255,1);
+//     filter: blur(400px);
+//     position: absolute;
+//     top: 1230px;
+//     left: -488px;
+// }
+
+.bg-Light-green {
+  width: 600px;
+  height: 600px;
+  flex-shrink: 0;
+  border-radius: 600px;
+  background: rgba(0, 255, 255, 1);
+  filter: blur(250px);
+  position: fixed;
+  top: 600px;
+  left: -488px;
+}
+
+// .bg-Light-blue{
+//     width: 800px;
+//     height: 800px;
+//     flex-shrink: 0;
+//     border-radius: 800px;
+//     background: rgba(0,102,255,1);
+//     filter: blur(500px);
+//     position: absolute;
+//     top: 243px;
+//     right: -801px;
+// }
+
+.bg-Light-blue {
+  width: 450px;
+  height: 450px;
+  flex-shrink: 0;
+  border-radius: 450px;
+  background: rgba(0, 102, 255, 1);
+  filter: blur(250px);
+  position: fixed;
+  top: 200px;
+  right: -450px;
+}
+
+// .bg-Light-white{
+//     width: 533px;
+//     height: 533px;
+//     flex-shrink: 0;
+//     border-radius: 533px;
+//     background: rgba(255, 255, 255, 1);
+//     filter: blur(250px);
+//     position: absolute;
+//     top: 243px;
+//     right: -690px;
+//     z-index: 2;
+// }
+
+.bg-Light-white {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 250px;
+  background: rgba(255, 255, 255, 1);
+  filter: blur(250px);
+  position: fixed;
+  top: 200px;
+  right: -350px;
+  z-index: 2;
+}
+
+//卡片圖像
+
+@mixin itemCard {
+  position: relative;
+  &-playerImg {
+    width: 266px;
+    height: 60px;
+    background: url(../images/img-wait.png) no-repeat center center;
+    background-size: cover;
+    -webkit-mask: url(../images/mask.png) no-repeat center center;
+    mask: url(../images/mask.png) no-repeat center center;
+    // -webkit-mask-size: contain;
+    // mask-size: contain;
+    &::before {
+      position: absolute;
+      content: "";
+      background: url(../images/mask-line.png) no-repeat center center;
+      width: 266px;
+      height: 60px;
+    }
+  }
+  &-rankingImg {
+    position: absolute;
+    left: 254px;
+    width: 82px;
+    height: 60px;
+    background: url(../images/img-ranking-bg.png) no-repeat center center;
+    background-size: cover;
+    -webkit-mask: url(../images/mask-ranking.png) no-repeat center center;
+    mask: url(../images/mask-ranking.png) no-repeat center center;
+    &::before {
+      position: absolute;
+      content: "";
+      background: url(../images/mask-ranking-line.png) no-repeat center center;
+      width: 82px;
+      height: 60px;
+    }
+  }
+}
+
+//layout
+.layout-left,
+.layout-right {
+  width: 15.625%;
+  height: 100vh;
+  position: fixed;
+  top: 152px;
+}
+
+.layout-content {
+  width: 68.75%;
+  margin-left: 15.625%;
+}
+
+.layout-right {
+  right: 0;
+}

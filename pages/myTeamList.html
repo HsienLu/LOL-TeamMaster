@@ -13,10 +13,6 @@
 <body>
   <%- include('./layout/header'); -%>
     <div class="container pt-lg-38  mb-31">
-
-
-
-
       <div class="searchGroup d-flex justify-content-between">
         <div class="searchDropDown d-flex gap-lg-8">
           <div class="btn-group border border-white">
@@ -81,15 +77,15 @@
           已加入隊伍
         </h2>
       </div>
-      <div class="swi-father1 position-relative blueShadow">
+      <div class="swi-father1 position-relative bg-dark  blueShadow">
         <!-- Slider main container -->
-        <div class="swiper" id="swiper1">
+        <div class="swiper  bg-dark  blueShadow" id="swiper1">
           <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper  bg-dark   blueShadow">
             <!-- Slides -->
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark  "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
 
           </div>
           <!-- If we need pagination -->
@@ -114,15 +110,15 @@
           已建立隊伍
         </h2>
       </div>
-      <div class="swi-father2 position-relative blueShadow">
+      <div class="swi-father2 position-relative greenShadow">
         <!-- Slider main container -->
         <div class="swiper" id="swiper2">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/card'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
 
           </div>
           <!-- If we need pagination -->
@@ -138,8 +134,9 @@
         <div class="swiper-button-prev position-absolute" id="swiper-button-prev2" style="left: -60px;"></div>
         <div class="swiper-button-next position-absolute" id="swiper-button-next2" style="right: -60px;"></div>
         <div class="swiper-pagination position-absolute" id="swiper-pagination2" style="bottom: -44px;"></div>
-      </div>
 
+      </div>
+      <div class="mb-25"></div>
     </div>
 
     <%- include('./layout/footer'); -%>
@@ -162,6 +159,7 @@
             nextEl: '#swiper-button-next1',
             prevEl: '#swiper-button-prev1',
           },
+
 
         });
         const swiper2 = new Swiper('#swiper2', {
