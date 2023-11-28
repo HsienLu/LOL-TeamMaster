@@ -2,6 +2,7 @@ import axios from "axios";
 import validate from "validate.js";
 import Swal from "sweetalert2";
 
+const api_path = "http://localhost:3000";
 let hasError = false;
 const jsRegisterForm = document.querySelector(".jsRegisterForm");
 const createAccountBtn = document.querySelector(".jsCreateAccountBtn");
@@ -10,24 +11,24 @@ const constraints = {
   Email: {
     presence: {
       allowEmpty: false,
-      message: "必填",
+      message: "不可空白",
     },
   },
   Password: {
     presence: {
       allowEmpty: false,
-      message: "請輸入 8-16 位密碼",
+      message: "不可空白",
     },
     length: {
       minimum: 8,
       maximum: 16,
-      message: "請輸入 8-16 位密碼1",
+      message: "需要 8-16 碼",
     },
   },
   userName: {
     presence: {
       allowEmpty: false,
-      message: "必填",
+      message: "不可空白",
     },
   },
 };
@@ -56,35 +57,52 @@ createAccountBtn.addEventListener("click", (e) => {
     hasError = 1;
   }
 
-  if (hasError) return;
+  if (hasError) {
+    Swal.fire({
+      icon: "error",
+      title: "資料有錯誤",
+      showConfirmButton: false,
+      timer: 1500,
+      background: "#060818",
+      color: "#D6EEFF",
+    });
+    return;
+  }
 
   axios
-    .post(`http://localhost:3000/register`, {
+    .post(`${api_path}/register`, {
       email: userEmail,
       password: userPassword,
       username: userName,
       createdAt: Date.now(),
-      avatar: "null",
+      avatar: "img-avatar-01.png",
       thumb: 0,
-      userRank: "null",
+      userRank: "bronze",
       likePosition: "MID",
-      likeHero: "null",
+      likeHero: "ashe",
       valid: true,
     })
     .then((res) => {
-      jsRegisterForm.reset();
-      console.log(res);
       Swal.fire({
         icon: "success",
         title: "註冊成功",
         showConfirmButton: false,
-        timer: 1500,
+        timer: 2000,
+        background: "#060818",
+        color: "#D6EEFF",
       });
       setTimeout(() => {
-        location.href = "memberCentre.html";
-      }, 1500);
+        location.href = "index.html";
+      }, 2000);
     })
     .catch((error) => {
-      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: error.response.data,
+        showConfirmButton: false,
+        timer: 2500,
+        background: "#060818",
+        color: "#D6EEFF",
+      });
     });
 });
