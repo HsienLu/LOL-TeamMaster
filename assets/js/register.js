@@ -72,6 +72,7 @@ createAccountBtn.addEventListener("click", (e) => {
       valid: true,
     })
     .then((res) => {
+      jsRegisterForm.reset();
       console.log(res);
       Swal.fire({
         icon: "success",
@@ -79,6 +80,9 @@ createAccountBtn.addEventListener("click", (e) => {
         showConfirmButton: false,
         timer: 1500,
       });
+      setTimeout(() => {
+        location.href = "memberCentre.html";
+      }, 1500);
     })
     .catch((error) => {
       console.log(error);
