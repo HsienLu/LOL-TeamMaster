@@ -3,6 +3,28 @@
     height: 503px;
 }
 
+.friendListCard{
+    width: 416px;
+    height: 575px;
+}
+
+.blackListCard{
+    width: 306px;
+    height: 575px; 
+}
+
+.historicalTeamRecordsCard {
+    width: 416px;
+    height: 634px;
+    padding: 16px 24px 24px 24px;
+}
+
+.parallelogram-1 {
+    border: 2px solid $white;
+    transform: skewX(-11.4deg);
+    overflow: hidden;
+  }
+
 .swiper-button-lock {
     display: inline-block;
 }
