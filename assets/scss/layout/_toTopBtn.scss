@@ -1,0 +1,22 @@
+#totop {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 40px; /* Place the button at the bottom of the page */
+    right: 40px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    border-radius: 800px;
+    outline: none; /* Remove outline */
+    background-color: $dark; /* Set a background color */
+    color: $primary; /* Text color */
+    box-shadow: 0px 0px 40px 0px rgba(0, 209, 255, 0.45);
+    cursor: pointer; /* Add a mouse pointer on hover */
+    // font-size: 18px; /* Increase font size */
+  }
+  
+  #totop:hover {
+    box-shadow: 0px 2px 48px 0px rgba(0, 255, 255, 0.6);
+  }
