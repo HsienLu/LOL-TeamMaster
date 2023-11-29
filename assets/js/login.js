@@ -18,8 +18,10 @@ if (!userIsLogin) {
         password: userPassword,
       })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         localStorage.setItem("user", res.data.accessToken);
+        localStorage.setItem("userId", res.data.user.id);
+        localStorage.setItem("userAvatar", res.data.user.avatar);
         Swal.fire({
           icon: "success",
           title: "登入成功",
