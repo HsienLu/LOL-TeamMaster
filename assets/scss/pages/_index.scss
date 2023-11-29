@@ -71,15 +71,10 @@
 }
 
 .itemImg{
-  @include itemCard;
-  &-playerImg{
-    background: url(../images/img-team-player-03-1.png) no-repeat center center /cover;
-  }
-  &-rankingImg{
-    background: url(../images/img-ranking-07.png) no-repeat center center /cover;
-  }
+  @include teamCard;
 }
-.itemCard{
+
+.teamCard{
   width: 416px;
   height: 703px;
   border-radius: 2px;
@@ -90,7 +85,14 @@
   button{
     @include btn(352px,53px,336px,37px);
   }
-  &-detail{
+  &-title{
+    width: 266px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+  }
+  &-player{
     width: 336px;
     margin-bottom: 8px;
     &:last-child{

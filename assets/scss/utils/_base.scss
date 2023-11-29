@@ -151,7 +151,7 @@ ol,ul,dl{
 
   //卡片圖像
 
-  @mixin itemCard{
+  @mixin teamCard{
     position: relative;
     &-playerImg{
       width: 266px;
@@ -160,8 +160,6 @@ ol,ul,dl{
       background-size: cover;
       -webkit-mask: url(../images/mask.png) no-repeat center center;
       mask: url(../images/mask.png) no-repeat center center;
-      // -webkit-mask-size: contain;
-      // mask-size: contain;
       &::before{
         position: absolute;
         content: '';

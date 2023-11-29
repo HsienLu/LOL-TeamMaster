@@ -39,10 +39,10 @@
           </svg>   
         </button>  
       </div>
-      <div class="itemCard blueShadow">
+      <div class="teamCard blueShadow">
         <div class="d-flex justify-content-between align-items-center mb-6 w-100">
           <div>
-            <h3 class="fs-3 mb-2">黎明之空a黑夜追逐...</h3>
+            <h3 class="teamCard-title fs-3 mb-2">黎明之空a黑夜追逐...</h3>
             <div class="d-flex text-secondary">
               <p>遊戲時間：</p>
               <p>2023/12/18 20:00</p>
@@ -67,23 +67,26 @@
         <button type="button">
           <p>立即加入</p>
         </button>
-        <div class="itemCard-group mt-6" id="itemCardGroup">
-          <div class="itemCard-detail">
+        <div class="mt-6" id="teamCardGroup">
+          <div class="teamCard-player">
             <div class="d-flex justify-content-between mb-1">
-              <div class="fw-lighter text-secondary">等待上路玩家加入</div>
-              <div>TOP</div>
+              <div class="fw-lighter text-secondary text-opacity-50 fs-6">等待上路玩家加入</div>
+              <div class="text-secondary fs-8">TOP</div>
             </div>
             <div class="d-flex itemImg">
-              <div class="itemImg-playerImg"></div>
-              <div class="itemImg-rankingImg"></div>
+              <div class="itemImg-playerImg">
+                <img src="../assets/images/img-team-player-03-1.png" alt="">
+              </div>
+              <div class="itemImg-rankingImg">
+                <img src="../assets/images/img-ranking-08.png" alt="">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <%- include('./layout/footer'); -%>
-    <script>
-      // 獲取元素
+    <!-- <script>
       let itemCardGroup = document.getElementById('itemCardGroup');
   
       let itemCardDetail = document.createElement('div');
@@ -91,7 +94,6 @@
   
     // 迴圈生成五個 itemCard-detail
     for (let i = 0; i < 4; i++) {
-      // 創建元素
       let itemCardDetail = document.createElement('div');
       itemCardDetail.classList.add('itemCard-detail');
   
@@ -106,11 +108,10 @@
           <div class="itemImg-rankingImg"></div>
         </div>
       `;
-  
-      // 將元素添加到父元素中
+
       itemCardGroup.appendChild(itemCardDetail);
     }
-    </script>
+    </script> -->
     <script type="module" src="../main.js"></script>
 </body>
 
