@@ -414,8 +414,8 @@
               </div>
             </div>
           </div>
-          <div class="swiper-button-next position-absolute" id="swiper-button-prev3" style="right: -60px;"></div>
-          <div class="swiper-button-prev position-absolute" id="swiper-button-next3" style="left: -60px;"></div>
+          <div class="swiper-button-next position-absolute" id="swiper-button-next3" style="right: -60px;"></div>
+          <div class="swiper-button-prev position-absolute" id="swiper-button-prev3" style="left: -60px;"></div>
           <div class="swiper-pagination position-absolute" id="swiper-pagination3" style="bottom: -44px;"></div>
         </div>
 
@@ -770,13 +770,13 @@
               </div>
             </div>
           </div>
-          <div class="swiper-button-next position-absolute" id="swiper-button-prev4" style="right: -60px;"></div>
-          <div class="swiper-button-prev position-absolute" id="swiper-button-next4" style="left: -60px;"></div>
+          <div class="swiper-button-next position-absolute" id="swiper-button-next4" style="right: -60px;"></div>
+          <div class="swiper-button-prev position-absolute" id="swiper-button-prev4" style="left: -60px;"></div>
           <div class="swiper-pagination position-absolute" id="swiper-pagination4" style="bottom: -44px;"></div>
         </div>
 
         <!-- 黑名單 -->
-        <h2 id="myEvaluate" class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5">
+        <h2 id="myblackList" class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5">
           <div class="titleParallelogram-1 z-n1"></div>
           黑名單
         </h2>
@@ -1168,8 +1168,8 @@
                 </div>
             </div>
           </div>
-          <div class="swiper-button-next position-absolute" id="swiper-button-prev5" style="right: -60px;"></div>
-          <div class="swiper-button-prev position-absolute" id="swiper-button-next5" style="left: -60px;"></div>
+          <div class="swiper-button-next position-absolute" id="swiper-button-next5" style="right: -60px;"></div>
+          <div class="swiper-button-prev position-absolute" id="swiper-button-prev5" style="left: -60px;"></div>
           <div class="swiper-pagination position-absolute" id="swiper-pagination5" style="bottom: -44px;"></div>
         </div>
 
@@ -2375,8 +2375,8 @@
 
             </div>
           </div>
-          <div class="swiper-button-next position-absolute" id="swiper-button-prev6" style="right: -60px;"></div>
-          <div class="swiper-button-prev position-absolute" id="swiper-button-next6" style="left: -60px;"></div>
+          <div class="swiper-button-next position-absolute" id="swiper-button-next6" style="right: -60px;"></div>
+          <div class="swiper-button-prev position-absolute" id="swiper-button-prev6" style="left: -60px;"></div>
           <div class="swiper-pagination position-absolute" id="swiper-pagination6" style="bottom: -44px;"></div>
         </div>
       </div>
@@ -2384,11 +2384,12 @@
       <div class="layout-right d-none d-lg-block"></div>
     </div>
 
-
-    <%- include('./layout/footer'); -%>
     
+    <%- include('./layout/footer'); -%>
+    <%- include('./layout/toTopBtn'); -%>
 
     <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const evaluateSwiper = new Swiper("#evaluateSwiper", {
