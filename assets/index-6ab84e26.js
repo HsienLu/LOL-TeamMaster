@@ -1,17 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>忘記密碼</title>
-  <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-57dacb3f.js"></script>
-  <script type="module" crossorigin src="/LOL-TeamMaster/assets/register-203d3938.js"></script>
-  <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-bfd6bc9e.css">
-</head>
-<body>
-    <header>
-  <div class="fixed-top w-100 bg-dark bg-opacity-80 px-lg-26 py-lg-2">
+import"./main-57dacb3f.js";import"./register-203d3938.js";const a=localStorage.getItem("user"),e=document.querySelector("header");a?e.innerHTML=`<div class="fixed-top w-100 bg-dark bg-opacity-80 px-lg-26 py-lg-2">
+    <div class="d-flex align-items-center justify-content-lg-between">
+      <a class="logo" href="index.html">
+        <h1>LOL組隊大師</h1>
+      </a>
+      <nav>
+        <ul class="d-flex align-items-center justify-content-lg-between gap-10">
+          <li>
+            <a href="teamList.html" class="text-secondary2-4"
+              ><i class="fa-solid fa-list me-2"></i>隊伍列表</a
+            >
+          </li>
+          <li>
+            <a href="playerList.html"
+              ><i class="fa-solid fa-hat-wizard me-2"></i>玩家列表</a
+            >
+          </li>
+          <li>
+            <a href="buildTeam.html"
+              ><i class="fa-solid fa-flag me-2"></i>建立隊伍</a
+            >
+          </li>
+          <li>
+            <a href="myTeamList.html"
+              ><i class="fa-solid fa-users me-2"></i>我的隊伍</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-bell"></i></a>
+          </li>
+          <!-- member -->
+          <li class="d-flex align-items-center justify-content-lg-between">
+            <a href="memberCentre.html" class="member"
+              ><img
+                class="border border-1 border-white border-radius me-2"
+                src="/assets/images/Member.png"
+                alt="Member.png"
+            /></a>
+            <!-- member dropdown -->
+            <div class="dropdown-center">
+              <a
+                class="btn border-0"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                ><i
+                  class="fa-solid fa-angle-down fa-lg text-secondary arrowBtn"
+                ></i
+              ></a>
+
+              <ul
+                class="dropdown-menu border border-4 border-end-0 border-bottom-0 border-start-0 blueShadow mt-4"
+              >
+                <li>
+                  <a class="dropdown-item" href="memberCentre.html"
+                    ><i class="fa-solid fa-user me-2"></i>我的資料</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa-solid fa-thumbs-up me-2"></i>評價資訊</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa-solid fa-handshake me-2"></i>好友名單</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="historicalTeamRecords.html"
+                    ><i class="fa-solid fa-people-group me-2"></i
+                    >歷史組隊紀錄</a
+                  >
+                </li>
+                <li>
+                  <a class="jsLogout dropdown-item" href="#"
+                    ><i class="fa-solid fa-arrow-right-from-bracket me-2"></i
+                    >登出</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li></li>
+        </ul>
+      </nav>
+    </div>
+  </div>`:e.innerHTML=`<div class="fixed-top w-100 bg-dark bg-opacity-80 px-lg-26 py-lg-2">
     <div class="d-flex align-items-center justify-content-lg-between">
       <a class="logo" href="index.html">
         <h1>LOL組隊大師</h1>
@@ -34,9 +108,7 @@
     </div>
   </div>
   <!-- 登入 loginModal -->
-  <!-- 登入 loginModal -->
-
-<div
+  <div
   class="modal fade"
   id="loginModal"
   tabindex="-1"
@@ -92,7 +164,7 @@
               class="submitBtn bg-dark border border-2 border-radius p-4 fw-medium text-white border-white w-100"
             >
               <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALTSURBVHgBvVbPTxNBFH6z3W1BCLYJSvC04FGjJdjEBE0WJOpBI03lQDzQeDUGD17QmLYnjuJf0HoCjIT25sFCSTwQNNqbxgt7MVUIsIiIbnd3nJm2uLvdrStp+A6bmffevG9m3o9ZBP/AxvBFCYN+iwwlhLGIAQWrKpmMi0SWE/y+QujViuzmAzV0jvUEdQ4egDBK8h3qs1C2qHgi2RiKPMUIHsD/QxYE36D9VJzdav1KJH1IAgpRVY24XcibJ+wEAPEGTmRydpkOEIYwsQ2alRijVNfiatK+6OC61ocicTJLO3nGCKcMjc90F6zXUFmDSNxIQrgQWEg2R8+t6VsB0aaWQcfRk4W3RXDBthQOqj6/1JVfzbrZMBI1L8SxIqR/zPeC/q31r1aHvkYEXsECT3J9nDuuQsfdT9B6ucQU9PjNIKCoBV6qCVoufQVK+D3Xm3FaMJLEQSXwKwgeUZhslZG6JISRjj/YdcKwNui0aHhqVzIMtAQeYXC+Hg5puG5XiAa8SeA1TeTgCMBpPC/bhaTIwtBEsBQuv+a3wVS9y2o3PPzdHypGs3XN7vrUvqgaWtzZGxonOxTNoo5yOVQjoYGU6Hh67yzM7Z+mZZ56N/YyCR5RIdfXbGJ58XF7D4sJqYlcST8G93YGKgRsVzgReTHq+drKBnsW7CjQDyMR+HLm/u6A8r7caTUxjAUvRENTewmnxsoZ+Dnbb03QPxcbIZ11wckJMcr4sJBaGZuVzfILM7fJa9meCGzdlPw716xrEMrmH7VFLSSMaDY2TQQT4A7aZmgy0CQRwZQsfuUqtGzeqc6wYnB8H632OhJGNBPLIATjcAhwWie0fZkETj0RzT9pO+jKPrthaf5j9lTsDCl6b2+7GZj7qWiBz2NvJm5Y2r7rjwQLOAk8Bmveu8EtblVdY7DgIjxCfn/Ok73STGNxIOQyQlyR5P9ye0DLFBwKt4Y/jr0YJoUPCDYAAAAASUVORK5CYII="
+                src="/assets/images/Icon-Google.png"
                 alt="google-icon"
                 class="me-4 text-align-center"
               />
@@ -125,11 +197,8 @@
   </div>
 </div>
 
-
-
   <!-- 註冊 registerModal -->
-  <!-- 註冊 registerModal -->
-<div
+  <div
   class="modal fade"
   id="registerModal"
   tabindex="-1"
@@ -208,7 +277,7 @@
               class="submitBtn bg-dark border border-2 border-radius p-4 fw-medium text-white border-white w-100"
             >
               <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALTSURBVHgBvVbPTxNBFH6z3W1BCLYJSvC04FGjJdjEBE0WJOpBI03lQDzQeDUGD17QmLYnjuJf0HoCjIT25sFCSTwQNNqbxgt7MVUIsIiIbnd3nJm2uLvdrStp+A6bmffevG9m3o9ZBP/AxvBFCYN+iwwlhLGIAQWrKpmMi0SWE/y+QujViuzmAzV0jvUEdQ4egDBK8h3qs1C2qHgi2RiKPMUIHsD/QxYE36D9VJzdav1KJH1IAgpRVY24XcibJ+wEAPEGTmRydpkOEIYwsQ2alRijVNfiatK+6OC61ocicTJLO3nGCKcMjc90F6zXUFmDSNxIQrgQWEg2R8+t6VsB0aaWQcfRk4W3RXDBthQOqj6/1JVfzbrZMBI1L8SxIqR/zPeC/q31r1aHvkYEXsECT3J9nDuuQsfdT9B6ucQU9PjNIKCoBV6qCVoufQVK+D3Xm3FaMJLEQSXwKwgeUZhslZG6JISRjj/YdcKwNui0aHhqVzIMtAQeYXC+Hg5puG5XiAa8SeA1TeTgCMBpPC/bhaTIwtBEsBQuv+a3wVS9y2o3PPzdHypGs3XN7vrUvqgaWtzZGxonOxTNoo5yOVQjoYGU6Hh67yzM7Z+mZZ56N/YyCR5RIdfXbGJ58XF7D4sJqYlcST8G93YGKgRsVzgReTHq+drKBnsW7CjQDyMR+HLm/u6A8r7caTUxjAUvRENTewmnxsoZ+Dnbb03QPxcbIZ11wckJMcr4sJBaGZuVzfILM7fJa9meCGzdlPw716xrEMrmH7VFLSSMaDY2TQQT4A7aZmgy0CQRwZQsfuUqtGzeqc6wYnB8H632OhJGNBPLIATjcAhwWie0fZkETj0RzT9pO+jKPrthaf5j9lTsDCl6b2+7GZj7qWiBz2NvJm5Y2r7rjwQLOAk8Bmveu8EtblVdY7DgIjxCfn/Ok73STGNxIOQyQlyR5P9ye0DLFBwKt4Y/jr0YJoUPCDYAAAAASUVORK5CYII="
+                src="/assets/images/Icon-Google.png"
                 alt="google-icon"
                 class="me-4 text-align-center"
               />
@@ -226,11 +295,8 @@
   </div>
 </div>
 
-
-
   <!-- 忘記密碼 forgetPasswordModal -->
-  <!-- 忘記密碼 forgetPasswordModal -->
-<div
+  <div
   class="modal fade"
   id="forgetPasswordModal"
   tabindex="-1"
@@ -274,37 +340,4 @@
       </div>
     </div>
   </div>
-</div>
-</header>
-    
-    <div class="forgetPassword">
-        
-    </div>
-
-    <footer class="animate__animated animate__fadeInUp text-center mb-12 mt-25">
-  <img
-    src="/LOL-TeamMaster/assets/logo-blue-5ebf6b92.png"
-    class="mb-6"
-    style="width: 304px; height: 120px"
-    alt="footer-logo"
-  />
-  <p class="text-secondary fs-8 mb-6">
-    Copyright©2023 LOL組隊大師 All Rights Reserved.<br />
-    本網站僅作為個人練習作品，非商業用途
-  </p>
-  <ul class="d-flex justify-content-center align-items-center gap-6">
-    <li>
-      <a href="#"><i class="fa-brands fa-facebook fs-4"></i></a>
-    </li>
-    <li>
-      <a href="#"><i class="fa-brands fa-x-twitter fs-4"></i></a>
-    </li>
-    <li>
-      <a href="#"><i class="fa-brands fa-instagram fs-4"></i></a>
-    </li>
-  </ul>
-</footer>
-
-    
-</body>
-</html>
+</div>`;const l=document.querySelector(".jsLogout");l.addEventListener("click",s=>{localStorage.removeItem("user"),location.reload()});
