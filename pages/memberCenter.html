@@ -27,6 +27,7 @@
         <div
           id="myInfo"
           class="container blueShadow bg-dark border border-2 mt-38 ms-75"
+          style="scroll-margin-top: 152px"
         >
           <!-- <div class="px-21 pt-14 pb-25">
             <div class="d-flex justify-content-between mb-lg-8">
@@ -109,6 +110,7 @@
         <h2
           id="myEvaluate"
           class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5"
+          style="scroll-margin-top: 152px"
         >
           <div class="titleParallelogram-1 z-n1"></div>
           評價資訊
@@ -534,12 +536,12 @@
           </div>
           <div
             class="swiper-button-next position-absolute"
-            id="swiper-button-prev3"
+            id="swiper-button-next3"
             style="right: -60px"
           ></div>
           <div
             class="swiper-button-prev position-absolute"
-            id="swiper-button-next3"
+            id="swiper-button-prev3"
             style="left: -60px"
           ></div>
           <div
@@ -553,6 +555,7 @@
         <h2
           id="myfriendList"
           class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5"
+          style="scroll-margin-top: 152px"
         >
           <div class="titleParallelogram-1 z-n1"></div>
           好友名單
@@ -995,12 +998,12 @@
           </div>
           <div
             class="swiper-button-next position-absolute"
-            id="swiper-button-prev4"
+            id="swiper-button-next4"
             style="right: -60px"
           ></div>
           <div
             class="swiper-button-prev position-absolute"
-            id="swiper-button-next4"
+            id="swiper-button-prev4"
             style="left: -60px"
           ></div>
           <div
@@ -1012,8 +1015,9 @@
 
         <!-- 黑名單 -->
         <h2
-          id="myEvaluate"
+          id="myblackList"
           class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5"
+          style="scroll-margin-top: 152px"
         >
           <div class="titleParallelogram-1 z-n1"></div>
           黑名單
@@ -1551,12 +1555,12 @@
           </div>
           <div
             class="swiper-button-next position-absolute"
-            id="swiper-button-prev5"
+            id="swiper-button-next5"
             style="right: -60px"
           ></div>
           <div
             class="swiper-button-prev position-absolute"
-            id="swiper-button-next5"
+            id="swiper-button-prev5"
             style="left: -60px"
           ></div>
           <div
@@ -2820,12 +2824,12 @@
           </div>
           <div
             class="swiper-button-next position-absolute"
-            id="swiper-button-prev6"
+            id="swiper-button-next6"
             style="right: -60px"
           ></div>
           <div
             class="swiper-button-prev position-absolute"
-            id="swiper-button-next6"
+            id="swiper-button-prev6"
             style="left: -60px"
           ></div>
           <div
@@ -2839,12 +2843,13 @@
       <div class="layout-right d-none d-lg-block"></div>
     </div>
 
-    <%- include('./layout/footer'); -%>
+    <%- include('./layout/footer'); -%> <%- include('./layout/toTopBtn'); -%>
 
     <script
       src="https://kit.fontawesome.com/8eab62e458.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const evaluateSwiper = new Swiper("#evaluateSwiper", {

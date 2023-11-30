@@ -30,7 +30,7 @@ if (userIsLogin) {
   </li>
   <!-- member -->
   <li class="d-flex align-items-center justify-content-lg-between">
-    <a href="memberCentre.html" class="member"
+    <a href="memberCenter.html" class="member"
       ><img
         class="headerAvatar border border-1 border-white border-radius me-2"
         src="/assets/images/${memberAvatar}.png"
@@ -52,7 +52,7 @@ if (userIsLogin) {
         class="dropdown-menu border border-4 border-end-0 border-bottom-0 border-start-0 blueShadow mt-4"
       >
         <li>
-          <a class="dropdown-item" href="memberCentre.html"
+          <a class="dropdown-item" href="memberCenter.html"
             ><i class="fa-solid fa-user me-2"></i>我的資料</a
           >
         </li>

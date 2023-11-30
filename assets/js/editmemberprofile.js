@@ -1,5 +1,5 @@
 import axios from "axios";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 import { api_path, userIsLogin } from "./config";
 
 const memberId = localStorage.getItem("userId");
@@ -104,7 +104,7 @@ jsChengeInfoBtn.addEventListener("click", (e) => {
     .patch(
       `${api_path}/600/users/${memberId}`,
       {
-        password: changeMemberPassword.value,
+        // password: changeMemberPassword.value,
         username: setMemberName.value,
         avatar: avatarSelect,
         userRank: rankSelect,
@@ -119,9 +119,26 @@ jsChengeInfoBtn.addEventListener("click", (e) => {
     )
     .then((res) => {
       localStorage.setItem("userAvatar", avatarSelect);
-      console.log(res);
+      Swal.fire({
+        icon: "success",
+        title: "修改成功",
+        showConfirmButton: false,
+        timer: 2000,
+        background: "#060818",
+        color: "#D6EEFF",
+      });
+      setTimeout(() => {
+        location.href = "memberCenter.html";
+      }, 2000);
     })
     .catch((error) => {
-      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: error.response.data,
+        showConfirmButton: false,
+        timer: 2500,
+        background: "#060818",
+        color: "#D6EEFF",
+      });
     });
 });

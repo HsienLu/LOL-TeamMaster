@@ -25,7 +25,7 @@ $utilities: map-merge(
 @import './utils/base';
 @import './utils/pagination';
 
-
+@import './layout/toTopBtn';
 @import './layout/header.scss';
 @import './layout/navMenu';
 @import './layout/dropdownTimeSearch';
@@ -37,7 +37,7 @@ $utilities: map-merge(
 @import './pages/buildTeam';
 @import './pages/editMemberProfile';
 @import './pages/historicalTeamRecords';
-@import './pages/memberCentre';
+@import './pages/memberCenter';
 @import './pages/myTeamList';
 @import './pages/playerList';
 @import './pages/teamCreated';
