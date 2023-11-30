@@ -2,6 +2,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { api_path, userIsLogin } from "./config";
 
+if (!userIsLogin) location.href = "index.html";
 const memberId = localStorage.getItem("userId");
 
 let avatarSelect;
