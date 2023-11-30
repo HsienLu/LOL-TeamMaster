@@ -151,7 +151,7 @@ ol,ul,dl{
 
   //卡片圖像
 
-  @mixin teamCard{
+  @mixin teamCardImg{
     position: relative;
     &-playerImg{
       width: 266px;
