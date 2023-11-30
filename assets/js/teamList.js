@@ -12,8 +12,21 @@ axios.get("http://localhost:3000/teams").then((res) => {
     let countPeople = v.teamMerberId.filter((v) => v > 0);
     console.log(countPeople.length);
     axios.get(`http://localhost:3000/teamsMember/${v.id}`).then((res) => {
+      let teamMemeberName = [];
+      let teamMemeberAvatar = [];
+      let teamMemeberRank = [];
       console.log("BBBBB");
       console.log(res.data);
+      res.data.map((v) => {
+        v === null
+          ? teamMemeberAvatar.push(0)
+          : teamMemeberAvatar.push(v.avatar);
+        v === null ? teamMemeberName.push(0) : teamMemeberName.push(v.username);
+        v === null ? teamMemeberRank.push(0) : teamMemeberRank.push(v.userRank);
+      });
+      console.log(teamMemeberAvatar);
+      console.log(teamMemeberName);
+      console.log(teamMemeberRank);
     });
 
     return (teamListBoxText += `        
