@@ -1,0 +1,2503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>會員中心</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <!-- 背景光源 -->
+    <div class="bg-Light-blue">
+      <div class="bg-Light-white"></div>
+    </div>
+    <div class="bg-Light-green"></div>
+    <!-- 內容開始 -->
+    <div class="layout d-flex">
+      <div class="layout-left d-none d-lg-block z-2">
+        <%- include('./layout/navMenu'); -%>
+      </div>
+      <div class="layout-content">
+        <!-- 我的資料 -->
+        <div id="myInfo" class="container blueShadow bg-dark border border-2 mt-38 ms-75">
+          <div class="px-21 pt-14 pb-25">
+            <div class="d-flex justify-content-between mb-lg-8">
+              <h5>我的資料</h5>
+              <div>
+                <a href="editMemberProfile.html">編輯<i class="fa-solid fa-pencil fs-7 ms-2"></i></a>
+              </div>
+            </div>
+            <form action="" class="row justify-content-between">
+              <div class="col-3">
+                <label for="memberAccount" class="form-label">帳號</label>
+                <input
+                  type="email"
+                  class="form-control mb-lg-7 box-shadow bg-secondary2 bg-opacity-30 border-0"
+                  id="memberAccount"
+                  value="magicfox@gmail.com"
+                  aria-describedby="memberAccount"
+                  readonly
+                />
+                <label for="memberName" class="form-label">使用者名稱</label>
+                <input
+                  type="text"
+                  class="form-control mb-lg-7 box-shadow bg-secondary2 bg-opacity-30 border-0"
+                  id="memberName"
+                  value="魔法狐狸"
+                  aria-describedby="memberName"
+                  readonly
+                />
+                <label for="memberPassword" class="form-label">密碼</label>
+                <input
+                  type="password"
+                  class="form-control mb-lg-7 box-shadow bg-secondary2 bg-opacity-30 border-0"
+                  id="memberPassword"
+                  value="**********"
+                  aria-describedby="memberPassword"
+                  readonly
+                />
+              </div>
+              <div class="col-4">
+                <div class="d-flex justify-content-between">
+                  <label for="memberAvatar" class="form-label">大頭貼</label>
+                  <span class="text-primary">
+                    3526
+                    <i class="fa-regular fa-thumbs-up ms-1 text-primary"></i>
+                  </span>
+                </div>
+                <img src="../assets/images/Member-avatar.png" alt="member-avatar" />
+              </div>
+              <div class="col-3">
+                <div class="mb-lg-7">
+                  <p class="mb-2">牌位</p>
+                  <span class="badge bg-white text-dark fs-6">銅</span>
+                </div>
+                <div class="mb-lg-7">
+                  <p class="mb-2">擅長位置</p>
+                  <span class="badge bg-white text-dark fs-6">TOP</span>
+                </div>
+                <div>
+                  <p class="mb-2">擅長英雄</p>
+                  <div class="parallelogramHero-1 w-100">
+                    <div
+                      class="parallelogramContent-1 teamCardHeroBg-1"
+                      style="
+                        background-image: url(../assets/images/img-team-player-05.png);
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- 評價資訊 -->
+        <h2 id="myEvaluate" class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5">
+          <div class="titleParallelogram-1 z-n1"></div>
+          評價資訊
+        </h2>
+        <div class="swiper-father position-relative mt-10">
+          <div id="evaluateSwiper" class="swiper blueShadow">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
+                <div class="meber-card-top ">
+                    <div class="member-avatar position-relative">
+                        <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                            style="width: 306px;height:306px ;">
+                        <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                        <div class="metal position-absolute" style="width: 82px; height: 60px;">
+                            <div class="parallelogram-1">
+                                <div class="parallelogram-content-avatar" style="
+                                  background-image: url(../assets/images/image19.png);
+                                  background-size: cover;
+                                  background-position: center;
+                                  width: 82px;
+                                  height: 60px;
+                                  "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                    <div class="tag bage bage-text">TOP</div>
+                    <div class="tag bage bage-text">JG</div>
+                    <div class="tag bage bage-text">MID</div>
+                    <div class="tag bage bage-text">ADC</div>
+                    <div class="tag bage bage-text">SUP</div>
+                </div>
+                <div class="thumb my-6 ">
+                    <p class="thum-text text-center">
+                        12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                    </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
+                <div class="meber-card-top ">
+                    <div class="member-avatar position-relative">
+                        <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                            style="width: 306px;height:306px ;">
+                        <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                        <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                            <div class="parallelogram">
+                                <div class="parallelogram-content-avatar" style="
+                                  background-image: url(../assets/images/image19.png);
+                                  background-size: cover;
+                                  background-position: center;
+                                  width: 85px;
+                                  height: 60px;
+                                  "></div>
+                            </div>
+            
+                        </div>
+                    </div>
+            
+                </div>
+            
+            
+            
+                <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                    <div class="tag bage bage-text">TOP</div>
+                    <div class="tag bage bage-text">JG</div>
+                    <div class="tag bage bage-text">MID</div>
+                    <div class="tag bage bage-text">ADC</div>
+                    <div class="tag bage bage-text">SUP</div>
+                </div>
+                <div class="thumb my-6 ">
+                    <p class="thum-text text-center">
+                        12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                    </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
+                <div class="meber-card-top ">
+                    <div class="member-avatar position-relative">
+                        <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                            style="width: 306px;height:306px ;">
+                        <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                        <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                            <div class="parallelogram">
+                                <div class="parallelogram-content-avatar" style="
+                                  background-image: url(../assets/images/image19.png);
+                                  background-size: cover;
+                                  background-position: center;
+                                  width: 85px;
+                                  height: 60px;
+                                  "></div>
+                            </div>
+            
+                        </div>
+                    </div>
+            
+                </div>
+            
+            
+            
+                <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                    <div class="tag bage bage-text">TOP</div>
+                    <div class="tag bage bage-text">JG</div>
+                    <div class="tag bage bage-text">MID</div>
+                    <div class="tag bage bage-text">ADC</div>
+                    <div class="tag bage bage-text">SUP</div>
+                </div>
+                <div class="thumb my-6 ">
+                    <p class="thum-text text-center">
+                        12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                    </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
+                <div class="meber-card-top ">
+                    <div class="member-avatar position-relative">
+                        <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                            style="width: 306px;height:306px ;">
+                        <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                        <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                            <div class="parallelogram">
+                                <div class="parallelogram-content-avatar" style="
+                                  background-image: url(../assets/images/image19.png);
+                                  background-size: cover;
+                                  background-position: center;
+                                  width: 85px;
+                                  height: 60px;
+                                  "></div>
+                            </div>
+            
+                        </div>
+                    </div>
+            
+                </div>
+            
+            
+            
+                <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                    <div class="tag bage bage-text">TOP</div>
+                    <div class="tag bage bage-text">JG</div>
+                    <div class="tag bage bage-text">MID</div>
+                    <div class="tag bage bage-text">ADC</div>
+                    <div class="tag bage bage-text">SUP</div>
+                </div>
+                <div class="thumb my-6 ">
+                    <p class="thum-text text-center">
+                        12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                    </p>
+                </div>
+              </div>
+              <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
+                <div class="meber-card-top ">
+                    <div class="member-avatar position-relative">
+                        <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                            style="width: 306px;height:306px ;">
+                        <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                        <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                            <div class="parallelogram">
+                                <div class="parallelogram-content-avatar" style="
+                                  background-image: url(../assets/images/image19.png);
+                                  background-size: cover;
+                                  background-position: center;
+                                  width: 85px;
+                                  height: 60px;
+                                  "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                    <div class="tag bage bage-text">TOP</div>
+                    <div class="tag bage bage-text">JG</div>
+                    <div class="tag bage bage-text">MID</div>
+                    <div class="tag bage bage-text">ADC</div>
+                    <div class="tag bage bage-text">SUP</div>
+                </div>
+                <div class="thumb my-6 ">
+                    <p class="thum-text text-center">
+                        12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                    </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
+                <div class="meber-card-top ">
+                    <div class="member-avatar position-relative">
+                        <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                            style="width: 306px;height:306px ;">
+                        <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                        <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                            <div class="parallelogram">
+                                <div class="parallelogram-content-avatar" style="
+                                  background-image: url(../assets/images/image19.png);
+                                  background-size: cover;
+                                  background-position: center;
+                                  width: 85px;
+                                  height: 60px;
+                                  "></div>
+                            </div>
+            
+                        </div>
+                    </div>
+            
+                </div>
+            
+            
+            
+                <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                    <div class="tag bage bage-text">TOP</div>
+                    <div class="tag bage bage-text">JG</div>
+                    <div class="tag bage bage-text">MID</div>
+                    <div class="tag bage bage-text">ADC</div>
+                    <div class="tag bage bage-text">SUP</div>
+                </div>
+                <div class="thumb my-6 ">
+                    <p class="thum-text text-center">
+                        12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                    </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
+                <div class="meber-card-top ">
+                    <div class="member-avatar position-relative">
+                        <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                            style="width: 306px;height:306px ;">
+                        <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                        <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                            <div class="parallelogram">
+                                <div class="parallelogram-content-avatar" style="
+                                  background-image: url(../assets/images/image19.png);
+                                  background-size: cover;
+                                  background-position: center;
+                                  width: 85px;
+                                  height: 60px;
+                                  "></div>
+                            </div>
+            
+                        </div>
+                    </div>
+            
+                </div>
+            
+            
+            
+                <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                    <div class="tag bage bage-text">TOP</div>
+                    <div class="tag bage bage-text">JG</div>
+                    <div class="tag bage bage-text">MID</div>
+                    <div class="tag bage bage-text">ADC</div>
+                    <div class="tag bage bage-text">SUP</div>
+                </div>
+                <div class="thumb my-6 ">
+                    <p class="thum-text text-center">
+                        12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                    </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
+                <div class="meber-card-top ">
+                    <div class="member-avatar position-relative">
+                        <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style "
+                            style="width: 306px;height:306px ;">
+                        <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                        <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                            <div class="parallelogram">
+                                <div class="parallelogram-content-avatar" style="
+                                  background-image: url(../assets/images/image19.png);
+                                  background-size: cover;
+                                  background-position: center;
+                                  width: 85px;
+                                  height: 60px;
+                                  "></div>
+                            </div>
+            
+                        </div>
+                    </div>
+            
+                </div>
+            
+            
+            
+                <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                    <div class="tag bage bage-text">TOP</div>
+                    <div class="tag bage bage-text">JG</div>
+                    <div class="tag bage bage-text">MID</div>
+                    <div class="tag bage bage-text">ADC</div>
+                    <div class="tag bage bage-text">SUP</div>
+                </div>
+                <div class="thumb my-6 ">
+                    <p class="thum-text text-center">
+                        12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next position-absolute" id="swiper-button-next3" style="right: -60px;"></div>
+          <div class="swiper-button-prev position-absolute" id="swiper-button-prev3" style="left: -60px;"></div>
+          <div class="swiper-pagination position-absolute" id="swiper-pagination3" style="bottom: -44px;"></div>
+        </div>
+
+        <!-- 好友名單 -->
+        <h2 id="myfriendList" class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5">
+          <div class="titleParallelogram-1 z-n1"></div>
+          好友名單
+        </h2>
+        <div class="swiper-father position-relative mt-10">
+          <div id="friendListSwiper" class="swiper blueShadow">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                    <div class="meber-card-top ">
+                        <div class="member-avatar position-relative">
+                            <div class="avatar">
+                                <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                    style="height: 300px ; object-fit: cover ;">
+                            </div>
+            
+                            <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                            <div class="metal position-absolute" style="width: 82px; height: 60px;">
+                                <div class="parallelogram-1">
+                                    <div class="parallelogram-content-avatar" style="
+                                      background-image: url(../assets/images/image19.png);
+                                      background-size: cover;
+                                      background-position: center;
+                                      width: 82px;
+                                      height: 60px;
+                                      ">
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+            
+                    </div>
+            
+            
+            
+                    <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                        <button class="btn border border-primary text-primary w-46">列為黑名單
+                            <span>
+                              <i class="fa-solid fa-ban ms-1"></i>
+                            </span>
+                        </button>
+                        <button class="btn border border-primary text-primary w-40">移除好友
+                            <span>
+                              <i class="fa-solid fa-user-minus ms-1"></i>
+                            </span>
+                        </button>
+                    </div>
+            
+                </div>
+
+                <div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative">
+                          <div class="avatar">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+          
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+          
+                          <div class="metal position-absolute" style="width: 82px; height: 60px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                    background-image: url(../assets/images/image19.png);
+                                    background-size: cover;
+                                    background-position: center;
+                                    width: 82px;
+                                    height: 60px;
+                                    ">
+                                  </div>
+                              </div>
+          
+                          </div>
+                      </div>
+          
+                  </div>
+          
+          
+          
+                  <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                  <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                      <div class="tag bage bage-text">TOP</div>
+                      <div class="tag bage bage-text">JG</div>
+                      <div class="tag bage bage-text">MID</div>
+                      <div class="tag bage bage-text">ADC</div>
+                      <div class="tag bage bage-text">SUP</div>
+                  </div>
+                  <div class="thumb my-6 ">
+                      <p class="thum-text text-center">
+                          12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                      </p>
+                  </div>
+                  <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                      <button class="btn border border-primary text-primary w-46">列為黑名單
+                          <span>
+                            <i class="fa-solid fa-ban ms-1"></i>
+                          </span>
+                      </button>
+                      <button class="btn border border-primary text-primary w-40">移除好友
+                          <span>
+                            <i class="fa-solid fa-user-minus ms-1"></i>
+                          </span>
+                      </button>
+                  </div>
+          
+               </div>
+
+                <div class="swiper-slide friendListCard border border-2     border-radius border-primary bg-dark blueShadow">
+                    <div class="meber-card-top ">
+                        <div class="member-avatar position-relative">
+                            <div class="avatar">
+                                <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                    style="height: 300px ; object-fit: cover ;">
+                            </div>
+            
+                            <div class="member-avatar-style position-absolute bottom-0"></div>
+            
+                            <div class="metal position-absolute" style="width: 82px; height: 60px;">
+                                <div class="parallelogram-1">
+                                    <div class="parallelogram-content-avatar" style="
+                                      background-image: url(../assets/images/image19.png);
+                                      background-size: cover;
+                                      background-position: center;
+                                      width: 82px;
+                                      height: 60px;
+                                      ">
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+            
+                    </div>
+            
+            
+            
+                    <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                        <button class="btn border border-primary text-primary w-46">列為黑名單
+                            <span>
+                              <i class="fa-solid fa-ban ms-1"></i>
+                            </span>
+                        </button>
+                        <button class="btn border border-primary text-primary w-40">移除好友
+                            <span>
+                              <i class="fa-solid fa-user-minus ms-1"></i>
+                            </span>
+                        </button>
+                    </div>
+            
+                </div>
+
+                <div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative">
+                          <div class="avatar">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+          
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+          
+                          <div class="metal position-absolute" style="width: 82px; height: 60px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                    background-image: url(../assets/images/image19.png);
+                                    background-size: cover;
+                                    background-position: center;
+                                    width: 82px;
+                                    height: 60px;
+                                    ">
+                                  </div>
+                              </div>
+          
+                          </div>
+                      </div>
+          
+                  </div>
+          
+          
+          
+                  <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                  <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                      <div class="tag bage bage-text">TOP</div>
+                      <div class="tag bage bage-text">JG</div>
+                      <div class="tag bage bage-text">MID</div>
+                      <div class="tag bage bage-text">ADC</div>
+                      <div class="tag bage bage-text">SUP</div>
+                  </div>
+                  <div class="thumb my-6 ">
+                      <p class="thum-text text-center">
+                          12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                      </p>
+                  </div>
+                  <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                      <button class="btn border border-primary text-primary w-46">列為黑名單
+                          <span>
+                            <i class="fa-solid fa-ban ms-1"></i>
+                          </span>
+                      </button>
+                      <button class="btn border border-primary text-primary w-40">移除好友
+                          <span>
+                            <i class="fa-solid fa-user-minus ms-1"></i>
+                          </span>
+                      </button>
+                  </div>
+          
+              </div>
+
+              <div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                <div class="meber-card-top ">
+                    <div class="member-avatar position-relative">
+                        <div class="avatar">
+                            <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                style="height: 300px ; object-fit: cover ;">
+                        </div>
+        
+                        <div class="member-avatar-style position-absolute bottom-0"></div>
+        
+                        <div class="metal position-absolute" style="width: 82px; height: 60px;">
+                            <div class="parallelogram-1">
+                                <div class="parallelogram-content-avatar" style="
+                                  background-image: url(../assets/images/image19.png);
+                                  background-size: cover;
+                                  background-position: center;
+                                  width: 82px;
+                                  height: 60px;
+                                  ">
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+        
+                </div>
+        
+        
+        
+                <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                    <div class="tag bage bage-text">TOP</div>
+                    <div class="tag bage bage-text">JG</div>
+                    <div class="tag bage bage-text">MID</div>
+                    <div class="tag bage bage-text">ADC</div>
+                    <div class="tag bage bage-text">SUP</div>
+                </div>
+                <div class="thumb my-6 ">
+                    <p class="thum-text text-center">
+                        12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                    </p>
+                </div>
+                <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                    <button class="btn border border-primary text-primary w-46">列為黑名單
+                        <span>
+                          <i class="fa-solid fa-ban ms-1"></i>
+                        </span>
+                    </button>
+                    <button class="btn border border-primary text-primary w-40">移除好友
+                        <span>
+                          <i class="fa-solid fa-user-minus ms-1"></i>
+                        </span>
+                    </button>
+                </div>
+        
+             </div>
+
+              <div class="swiper-slide friendListCard border border-2     border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative">
+                          <div class="avatar">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+          
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+          
+                          <div class="metal position-absolute" style="width: 82px; height: 60px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                    background-image: url(../assets/images/image19.png);
+                                    background-size: cover;
+                                    background-position: center;
+                                    width: 82px;
+                                    height: 60px;
+                                    ">
+                                  </div>
+                              </div>
+          
+                          </div>
+                      </div>
+          
+                  </div>
+          
+          
+          
+                  <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+                  <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                      <div class="tag bage bage-text">TOP</div>
+                      <div class="tag bage bage-text">JG</div>
+                      <div class="tag bage bage-text">MID</div>
+                      <div class="tag bage bage-text">ADC</div>
+                      <div class="tag bage bage-text">SUP</div>
+                  </div>
+                  <div class="thumb my-6 ">
+                      <p class="thum-text text-center">
+                          12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                      </p>
+                  </div>
+                  <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                      <button class="btn border border-primary text-primary w-46">列為黑名單
+                          <span>
+                            <i class="fa-solid fa-ban ms-1"></i>
+                          </span>
+                      </button>
+                      <button class="btn border border-primary text-primary w-40">移除好友
+                          <span>
+                            <i class="fa-solid fa-user-minus ms-1"></i>
+                          </span>
+                      </button>
+                  </div>
+          
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next position-absolute" id="swiper-button-next4" style="right: -60px;"></div>
+          <div class="swiper-button-prev position-absolute" id="swiper-button-prev4" style="left: -60px;"></div>
+          <div class="swiper-pagination position-absolute" id="swiper-pagination4" style="bottom: -44px;"></div>
+        </div>
+
+        <!-- 黑名單 -->
+        <h2 id="myblackList" class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5">
+          <div class="titleParallelogram-1 z-n1"></div>
+          黑名單
+        </h2>
+        <div class="swiper-father position-relative mt-10">
+          <div id="blackListSwiper" class="swiper blueShadow">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative w-100">
+                          <div class="avatar w-100">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+              
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+              
+                          <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                              background-image: url(../assets/images/image19.png);
+                                              background-size: cover;
+                                              background-position: center;
+                                              width: 85px;
+                                              height: 60px;
+                                              ">
+                                  </div>
+                              </div>             
+                          </div>
+                      </div>
+                    </div>
+                
+                    <h5 class="mt-12 text-center mb-4">無言獨上西樓</h5>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                        <button class="btn border border-primary text-primary w-80">剔除
+                          <span>
+                            <i class="fa-solid fa-user-slash ms-1"></i>
+                          </span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative w-100">
+                          <div class="avatar w-100">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+              
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+              
+                          <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                              background-image: url(../assets/images/image19.png);
+                                              background-size: cover;
+                                              background-position: center;
+                                              width: 85px;
+                                              height: 60px;
+                                              ">
+                                  </div>
+                              </div>             
+                          </div>
+                      </div>
+                    </div>
+                
+                    <h5 class="mt-12 text-center mb-4">無言獨上西樓</h5>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                        <button class="btn border border-primary text-primary w-80">剔除
+                          <span>
+                            <i class="fa-solid fa-user-slash ms-1"></i>
+                          </span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative w-100">
+                          <div class="avatar w-100">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+              
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+              
+                          <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                              background-image: url(../assets/images/image19.png);
+                                              background-size: cover;
+                                              background-position: center;
+                                              width: 85px;
+                                              height: 60px;
+                                              ">
+                                  </div>
+                              </div>             
+                          </div>
+                      </div>
+                    </div>
+                
+                    <h5 class="mt-12 text-center mb-4">無言獨上西樓</h5>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                        <button class="btn border border-primary text-primary w-80">剔除
+                          <span>
+                            <i class="fa-solid fa-user-slash ms-1"></i>
+                          </span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative w-100">
+                          <div class="avatar w-100">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+              
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+              
+                          <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                              background-image: url(../assets/images/image19.png);
+                                              background-size: cover;
+                                              background-position: center;
+                                              width: 85px;
+                                              height: 60px;
+                                              ">
+                                  </div>
+                              </div>             
+                          </div>
+                      </div>
+                    </div>
+                
+                    <h5 class="mt-12 text-center mb-4">無言獨上西樓</h5>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                        <button class="btn border border-primary text-primary w-80">剔除
+                          <span>
+                            <i class="fa-solid fa-user-slash ms-1"></i>
+                          </span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative w-100">
+                          <div class="avatar w-100">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+              
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+              
+                          <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                              background-image: url(../assets/images/image19.png);
+                                              background-size: cover;
+                                              background-position: center;
+                                              width: 85px;
+                                              height: 60px;
+                                              ">
+                                  </div>
+                              </div>             
+                          </div>
+                      </div>
+                    </div>
+                
+                    <h5 class="mt-12 text-center mb-4">無言獨上西樓</h5>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                        <button class="btn border border-primary text-primary w-80">剔除
+                          <span>
+                            <i class="fa-solid fa-user-slash ms-1"></i>
+                          </span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative w-100">
+                          <div class="avatar w-100">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+              
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+              
+                          <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                              background-image: url(../assets/images/image19.png);
+                                              background-size: cover;
+                                              background-position: center;
+                                              width: 85px;
+                                              height: 60px;
+                                              ">
+                                  </div>
+                              </div>             
+                          </div>
+                      </div>
+                    </div>
+                
+                    <h5 class="mt-12 text-center mb-4">無言獨上西樓</h5>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8">
+                        <button class="btn border border-primary text-primary w-80">剔除
+                          <span>
+                            <i class="fa-solid fa-user-slash ms-1"></i>
+                          </span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative w-100">
+                          <div class="avatar w-100">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+              
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+              
+                          <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                              background-image: url(../assets/images/image19.png);
+                                              background-size: cover;
+                                              background-position: center;
+                                              width: 85px;
+                                              height: 60px;
+                                              ">
+                                  </div>
+                              </div>             
+                          </div>
+                      </div>
+                    </div>
+                
+                    <h5 class="mt-12 text-center mb-4">無言獨上西樓</h5>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                        <button class="btn border border-primary text-primary w-80">剔除
+                          <span>
+                            <i class="fa-solid fa-user-slash ms-1"></i>
+                          </span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="meber-card-top ">
+                      <div class="member-avatar position-relative w-100">
+                          <div class="avatar w-100">
+                              <img src="../assets/images/Member-avatar.png" alt="" class="member-avatar-style  "
+                                  style="height: 300px ; object-fit: cover ;">
+                          </div>
+              
+                          <div class="member-avatar-style position-absolute bottom-0"></div>
+              
+                          <div class="metal position-absolute" style="width: 85px; height: 65px;">
+                              <div class="parallelogram-1">
+                                  <div class="parallelogram-content-avatar" style="
+                                              background-image: url(../assets/images/image19.png);
+                                              background-size: cover;
+                                              background-position: center;
+                                              width: 85px;
+                                              height: 60px;
+                                              ">
+                                  </div>
+                              </div>             
+                          </div>
+                      </div>
+                    </div>
+                
+                    <h5 class="mt-12 text-center mb-4">無言獨上西樓</h5>
+                    <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
+                        <div class="tag bage bage-text">TOP</div>
+                        <div class="tag bage bage-text">JG</div>
+                        <div class="tag bage bage-text">MID</div>
+                        <div class="tag bage bage-text">ADC</div>
+                        <div class="tag bage bage-text">SUP</div>
+                    </div>
+                    <div class="thumb my-6 ">
+                        <p class="thum-text text-center">
+                            12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+                        </p>
+                    </div>
+                    <div class="button-all d-flex justify-content-center gap-4 mb-8" style="height: 48px;">
+                        <button class="btn border border-primary text-primary w-80">剔除
+                          <span>
+                            <i class="fa-solid fa-user-slash ms-1"></i>
+                          </span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+          <div class="swiper-button-next position-absolute" id="swiper-button-next5" style="right: -60px;"></div>
+          <div class="swiper-button-prev position-absolute" id="swiper-button-prev5" style="left: -60px;"></div>
+          <div class="swiper-pagination position-absolute" id="swiper-pagination5" style="bottom: -44px;"></div>
+        </div>
+
+        <!-- 歷史組隊紀錄 -->
+        <h2 id="myHistoricalTeamRecords" class="position-relative fw-black fs-11 fs-md-2 mt-md-18 mb-md-5">
+          <div class="titleParallelogram-1 z-n1"></div>
+          歷史組隊紀錄
+        </h2>
+        <div class="swiper-father position-relative mt-10">
+          <div id="historicalTeamRecordsSwiper" class="swiper blueShadow">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="card-header mb-4 mb-md-6">
+                    <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                      <div class="mb-2 mb-md-0">
+                        <h3 class="card-title mb-2 fs-3 fw-medium">黎明之空a黑夜追逐...</h3>
+                        <p class="card-subtitle text-secondary">
+                          遊戲時間：2023/12/18 20:00
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex d-md-block justify-content-between align-items-center"
+                      >
+                        <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                          3526
+                          <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                        </span>
+                        <span class="d-block text-secondary fs-6">
+                          <span class="text-white fs-5">5</span>
+                          /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">守護者</p>
+                          <span class="text-secondary fs-8">TOP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(/assets/images/img-team-player-01-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(/assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法使者小明</p>
+                          <span class="text-secondary fs-8">JG</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-03-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">無言獨上西樓</p>
+                          <span class="text-secondary fs-8">MID</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-04-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法狐狸</p>
+                          <span class="text-secondary fs-8">AD</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-05-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">51先</p>
+                          <span class="text-secondary fs-8">SUP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-06-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="card-header mb-4 mb-md-6">
+                    <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                      <div class="mb-2 mb-md-0">
+                        <h3 class="card-title mb-2 fs-3 fw-medium">黎明之空a黑夜追逐...</h3>
+                        <p class="card-subtitle text-secondary">
+                          遊戲時間：2023/12/18 20:00
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex d-md-block justify-content-between align-items-center"
+                      >
+                        <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                          3526
+                          <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                        </span>
+                        <span class="d-block text-secondary fs-6">
+                          <span class="text-white fs-5">5</span>
+                          /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">守護者</p>
+                          <span class="text-secondary fs-8">TOP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(/assets/images/img-team-player-01-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(/assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法使者小明</p>
+                          <span class="text-secondary fs-8">JG</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-03-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">無言獨上西樓</p>
+                          <span class="text-secondary fs-8">MID</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-04-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法狐狸</p>
+                          <span class="text-secondary fs-8">AD</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-05-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">51先</p>
+                          <span class="text-secondary fs-8">SUP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-06-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="card-header mb-4 mb-md-6">
+                    <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                      <div class="mb-2 mb-md-0">
+                        <h3 class="card-title mb-2 fs-3 fw-medium">黎明之空a黑夜追逐...</h3>
+                        <p class="card-subtitle text-secondary">
+                          遊戲時間：2023/12/18 20:00
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex d-md-block justify-content-between align-items-center"
+                      >
+                        <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                          3526
+                          <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                        </span>
+                        <span class="d-block text-secondary fs-6">
+                          <span class="text-white fs-5">5</span>
+                          /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">守護者</p>
+                          <span class="text-secondary fs-8">TOP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(/assets/images/img-team-player-01-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(/assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法使者小明</p>
+                          <span class="text-secondary fs-8">JG</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-03-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">無言獨上西樓</p>
+                          <span class="text-secondary fs-8">MID</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-04-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法狐狸</p>
+                          <span class="text-secondary fs-8">AD</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-05-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">51先</p>
+                          <span class="text-secondary fs-8">SUP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-06-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="card-header mb-4 mb-md-6">
+                    <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                      <div class="mb-2 mb-md-0">
+                        <h3 class="card-title mb-2 fs-3 fw-medium">黎明之空a黑夜追逐...</h3>
+                        <p class="card-subtitle text-secondary">
+                          遊戲時間：2023/12/18 20:00
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex d-md-block justify-content-between align-items-center"
+                      >
+                        <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                          3526
+                          <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                        </span>
+                        <span class="d-block text-secondary fs-6">
+                          <span class="text-white fs-5">5</span>
+                          /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">守護者</p>
+                          <span class="text-secondary fs-8">TOP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(/assets/images/img-team-player-01-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(/assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法使者小明</p>
+                          <span class="text-secondary fs-8">JG</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-03-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">無言獨上西樓</p>
+                          <span class="text-secondary fs-8">MID</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-04-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法狐狸</p>
+                          <span class="text-secondary fs-8">AD</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-05-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">51先</p>
+                          <span class="text-secondary fs-8">SUP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-06-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="card-header mb-4 mb-md-6">
+                    <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                      <div class="mb-2 mb-md-0">
+                        <h3 class="card-title mb-2 fs-3 fw-medium">黎明之空a黑夜追逐...</h3>
+                        <p class="card-subtitle text-secondary">
+                          遊戲時間：2023/12/18 20:00
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex d-md-block justify-content-between align-items-center"
+                      >
+                        <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                          3526
+                          <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                        </span>
+                        <span class="d-block text-secondary fs-6">
+                          <span class="text-white fs-5">5</span>
+                          /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">守護者</p>
+                          <span class="text-secondary fs-8">TOP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(/assets/images/img-team-player-01-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(/assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法使者小明</p>
+                          <span class="text-secondary fs-8">JG</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-03-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">無言獨上西樓</p>
+                          <span class="text-secondary fs-8">MID</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-04-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法狐狸</p>
+                          <span class="text-secondary fs-8">AD</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-05-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">51先</p>
+                          <span class="text-secondary fs-8">SUP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-06-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="card-header mb-4 mb-md-6">
+                    <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                      <div class="mb-2 mb-md-0">
+                        <h3 class="card-title mb-2 fs-3 fw-medium">黎明之空a黑夜追逐...</h3>
+                        <p class="card-subtitle text-secondary">
+                          遊戲時間：2023/12/18 20:00
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex d-md-block justify-content-between align-items-center"
+                      >
+                        <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                          3526
+                          <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                        </span>
+                        <span class="d-block text-secondary fs-6">
+                          <span class="text-white fs-5">5</span>
+                          /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">守護者</p>
+                          <span class="text-secondary fs-8">TOP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(/assets/images/img-team-player-01-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(/assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法使者小明</p>
+                          <span class="text-secondary fs-8">JG</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-03-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">無言獨上西樓</p>
+                          <span class="text-secondary fs-8">MID</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-04-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法狐狸</p>
+                          <span class="text-secondary fs-8">AD</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-05-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">51先</p>
+                          <span class="text-secondary fs-8">SUP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-06-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="card-header mb-4 mb-md-6">
+                    <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                      <div class="mb-2 mb-md-0">
+                        <h3 class="card-title mb-2 fs-3 fw-medium">黎明之空a黑夜追逐...</h3>
+                        <p class="card-subtitle text-secondary">
+                          遊戲時間：2023/12/18 20:00
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex d-md-block justify-content-between align-items-center"
+                      >
+                        <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                          3526
+                          <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                        </span>
+                        <span class="d-block text-secondary fs-6">
+                          <span class="text-white fs-5">5</span>
+                          /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">守護者</p>
+                          <span class="text-secondary fs-8">TOP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(/assets/images/img-team-player-01-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(/assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法使者小明</p>
+                          <span class="text-secondary fs-8">JG</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-03-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">無言獨上西樓</p>
+                          <span class="text-secondary fs-8">MID</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-04-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法狐狸</p>
+                          <span class="text-secondary fs-8">AD</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-05-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">51先</p>
+                          <span class="text-secondary fs-8">SUP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-06-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow">
+                  <div class="card-header mb-4 mb-md-6">
+                    <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
+                      <div class="mb-2 mb-md-0">
+                        <h3 class="card-title mb-2 fs-3 fw-medium">黎明之空a黑夜追逐...</h3>
+                        <p class="card-subtitle text-secondary">
+                          遊戲時間：2023/12/18 20:00
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex d-md-block justify-content-between align-items-center"
+                      >
+                        <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
+                          3526
+                          <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
+                        </span>
+                        <span class="d-block text-secondary fs-6">
+                          <span class="text-white fs-5">5</span>
+                          /5<i class="fa-solid fa-people-group fs-7 ms-1"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">守護者</p>
+                          <span class="text-secondary fs-8">TOP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(/assets/images/img-team-player-01-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(/assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法使者小明</p>
+                          <span class="text-secondary fs-8">JG</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-03-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">無言獨上西樓</p>
+                          <span class="text-secondary fs-8">MID</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-04-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">魔法狐狸</p>
+                          <span class="text-secondary fs-8">AD</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-05-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between mb-1">
+                          <p class="text-secondary">51先</p>
+                          <span class="text-secondary fs-8">SUP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div class="parallelogramHero-1">
+                            <div
+                              class="parallelogramContent-1 teamCardHeroBg-1"
+                              style="
+                                background-image: url(../assets/images/img-team-player-06-1.png);
+                              "
+                            ></div>
+                          </div>
+                          <div class="parallelogramRank-1">
+                            <div
+                              class="parallelogramContent-1 teamCardRankBg-1"
+                              style="
+                                background-image: url(../assets/images/image19.png);
+                              "
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+          <div class="swiper-button-next position-absolute" id="swiper-button-next6" style="right: -60px;"></div>
+          <div class="swiper-button-prev position-absolute" id="swiper-button-prev6" style="left: -60px;"></div>
+          <div class="swiper-pagination position-absolute" id="swiper-pagination6" style="bottom: -44px;"></div>
+        </div>
+      </div>
+
+      <div class="layout-right d-none d-lg-block"></div>
+    </div>
+
+    
+    <%- include('./layout/footer'); -%>
+    <%- include('./layout/toTopBtn'); -%>
+
+    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const evaluateSwiper = new Swiper("#evaluateSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        loop: true,
+        grabCursor: 'true',
+        pagination: {
+          el: "#swiper-pagination3",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: "#swiper-button-next3",
+          prevEl: "#swiper-button-prev3",
+        },
+    
+        breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+      });
+      const friendListSwiper = new Swiper("#friendListSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        loop: true,
+        grabCursor: 'true',
+        pagination: {
+          el: "#swiper-pagination4",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: "#swiper-button-next4",
+          prevEl: "#swiper-button-prev4",
+        },
+    
+        breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+      });
+      const blackListSwiper = new Swiper("#blackListSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        loop: true,
+        grabCursor: 'true',
+        pagination: {
+          el: "#swiper-pagination5",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: "#swiper-button-next5",
+          prevEl: "#swiper-button-prev5",
+        },
+    
+        breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+      });
+      const historicalTeamRecordsSwiper = new Swiper("#historicalTeamRecordsSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        loop: true,
+        grabCursor: 'true',
+        pagination: {
+          el: "#swiper-pagination6",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: "#swiper-button-next6",
+          prevEl: "#swiper-button-prev6",
+        },
+    
+        breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+      });
+    </script>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

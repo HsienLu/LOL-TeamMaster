@@ -1,0 +1,88 @@
+.memberEvaluateCard{
+    width: 306px;
+    height: 503px;
+}
+
+.friendListCard{
+    width: 416px;
+    height: 575px;
+}
+
+.blackListCard{
+    width: 306px;
+    height: 575px; 
+}
+
+.historicalTeamRecordsCard {
+    width: 416px;
+    height: 634px;
+    padding: 16px 24px 24px 24px;
+}
+
+.parallelogram-1 {
+    border: 2px solid $white;
+    transform: skewX(-11.4deg);
+    overflow: hidden;
+}
+
+.swiper-button-lock {
+    display: inline-block;
+}
+.swiper-pagination-lock {
+    display: inline-block;
+}
+
+.swiper-button-prev:after{
+    display: none;
+}
+.swiper-button-next:after{
+    display: none;
+}
+
+.swiper-button-next{
+    background-image: url('/assets/images/button-next.png');
+    background-size: contain;
+    width: 56px;
+    height: 76px;
+    top: 50%;
+    transform: translate(0,-50%);
+    color: $secondary;
+    &:hover{
+        color: $primary;
+    }
+  }
+
+.swiper-button-prev{
+    background-image: url('/assets/images/button-prev.png');
+    background-size: contain;
+    width: 56px;
+    height: 76px;
+    top: 50%;
+    transform: translate(0,-50%);
+    color: $secondary;
+    &:hover{
+        color: $primary;
+    }
+}
+
+.swiper-pagination-bullet{
+    background-color: $secondary;
+    width: 8px;
+    height: 8px;
+    border-radius: 800px;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: $primary;
+    width: 24px;
+    height: 8px;
+    border-radius: 800px;
+}
+
+// .swiper-pagination{
+//     bottom: -40px;
+// }
+
+// .swiper-horizontal,.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{
+//     bottom: 0; 
+//   }

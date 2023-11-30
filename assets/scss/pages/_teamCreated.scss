@@ -120,3 +120,15 @@
   background: #93b4cc4d;
   border: 0;
 }
+
+@media screen and (max-width: 991px) {
+  .messageRWD {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .buttonRWD {
+    width: 80% !important;
+    margin-bottom: 20px !important;
+  }
+}

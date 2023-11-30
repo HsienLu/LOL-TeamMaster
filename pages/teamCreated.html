@@ -31,7 +31,9 @@
 
     </div>
 
-    <div class="meberCardGroup d-flex w-100 justify-content-between " style="gap:16px">
+    <div
+      class="meberCardGroup  d-flex w-100 justify-content-lg-between justify-content-center flex-lg-nowrap flex-wrap "
+      style="gap: 8px;">
 
       <%- include('./layout/memberCard'); -%>
         <%- include('./layout/memberCard'); -%>
@@ -39,20 +41,21 @@
             <%- include('./layout/memberCard'); -%>
               <%- include('./layout/memberCard'); -%>
     </div>
-    <div class="message-notify-group d-flex justify-content-between">
-      <div class="message mt-20 rounded " style="width: 50%; height: 326px;">
+    <div
+      class="message-notify-group d-flex justify-content-lg-between justify-content-center flex-lg-nowrap flex-wrap ">
+      <div class="message mt-20 rounded messageRWD" style="width: 50%;">
         <div class="border border-bottom-0">
           <h4 class=" h4 py-2 text-center">留言板</h4>
         </div>
-        <div class="chat-box h-100">
-          <div class="chat-message d-flex flex-column " style="height: 80%; gap: 12px;">
+        <div class="chat-box h-100 d-flex flex-column justify-content-between">
+          <div class="chat-message d-flex flex-column h-80" style=" gap: 12px;">
             <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
             <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
             <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
             <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
             <p>無言獨上西樓:最近世界賽開打了大家有看嗎?<span class="float-end">10/15 20:15</span></p>
           </div>
-          <div class="input-group">
+          <div class="input-group h-20">
             <input class=" bg-dark form-control" type="text" placeholder="輸入訊息">
             <button class=" btn"><i class="fa-regular fa-paper-plane"></i></button>
           </div>
@@ -60,7 +63,7 @@
         </div>
       </div>
 
-      <div class="notify mt-20 rounded " style="width: 40%;">
+      <div class="notify mt-20 rounded messageRWD" style="width: 40%;">
         <div class="border border-bottom-0">
           <h4 class=" h4 py-2 text-center">推薦隊友通知</h4>
         </div>
@@ -109,10 +112,11 @@
 
     </div>
 
-    <div class="op-button mt-15 mb-25 d-flex justify-content-between">
-      <div class="btn btn-secondary bg-dark  text-primary" style="width: 12.3%;">上一頁</div>
-      <div class="btn btn-secondary bg-dark  text-primary" style="width: 12.3%;">回列表</div>
-      <div class="btn btn-secondary bg-dark  text-primary" style="width: 12.3%;">下一頁</div>
+    <div
+      class="op-button mt-15 mb-25 d-flex justify-content-lg-between justify-content-center flex-lg-nowrap flex-wrap">
+      <div class="btn btn-secondary bg-dark  text-primary buttonRWD" style="width: 12.3%;">上一頁</div>
+      <div class="btn btn-secondary bg-dark  text-primary buttonRWD" style="width: 12.3%;">回列表</div>
+      <div class="btn btn-secondary bg-dark  text-primary buttonRWD" style="width: 12.3%;">下一頁</div>
     </div>
 
   </div>
