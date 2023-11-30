@@ -62,7 +62,7 @@ axios
       </span>
     </div>
     <img
-      src="../assets/images/${res.data.avatar}"
+      src="../assets/images/${res.data.avatar}.png"
       alt="member-avatar"
     />
   </div>

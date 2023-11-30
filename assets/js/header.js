@@ -33,8 +33,8 @@ if (userIsLogin) {
     <a href="memberCentre.html" class="member"
       ><img
         class="headerAvatar border border-1 border-white border-radius me-2"
-        src="/assets/images/${memberAvatar}"
-        alt="Avatar.png"
+        src="/assets/images/${memberAvatar}.png"
+        alt="avatar"
     /></a>
     <!-- member dropdown -->
     <div class="dropdown-center">
@@ -117,7 +117,7 @@ if (userIsLogin) {
       background: "#060818",
       color: "#D6EEFF",
     });
-    localStorage.removeItem("user");
+    localStorage.clear();
     setTimeout(() => {
       location.href = "index.html";
     }, 2000);
