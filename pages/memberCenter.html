@@ -29,7 +29,7 @@
           class="container blueShadow bg-dark border border-2 mt-38 ms-75"
           style="scroll-margin-top: 152px"
         >
-          <!-- <div class="px-21 pt-14 pb-25">
+          <div class="px-21 pt-14 pb-25">
             <div class="d-flex justify-content-between mb-lg-8">
               <h5>我的資料</h5>
               <div>
@@ -71,12 +71,13 @@
               <div class="col-4">
                 <div class="d-flex justify-content-between">
                   <label for="memberAvatar" class="form-label">大頭貼</label>
-                  <span class="text-primary">
+                  <span id="memberThumb" class="text-primary">
                     3526
                     <i class="fa-regular fa-thumbs-up ms-1 text-primary"></i>
                   </span>
                 </div>
                 <img
+                  id="memberAvatar"
                   src="../assets/images/Member-avatar.png"
                   alt="member-avatar"
                 />
@@ -84,10 +85,12 @@
               <div class="col-3">
                 <div class="mb-lg-7">
                   <p class="mb-2">牌位</p>
-                  <span class="badge bg-white text-dark fs-6">銅</span>
+                  <span id="memberRank" class="badge bg-white text-dark fs-6"
+                    >銅</span
+                  >
                 </div>
                 <div class="mb-lg-7">
-                  <p class="mb-2">擅長位置</p>
+                  <p id="memberPosition" class="mb-2">擅長位置</p>
                   <span class="badge bg-white text-dark fs-6">TOP</span>
                 </div>
                 <div>
@@ -103,7 +106,7 @@
                 </div>
               </div>
             </form>
-          </div> -->
+          </div>
         </div>
 
         <!-- 評價資訊 -->
