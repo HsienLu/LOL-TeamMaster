@@ -28,7 +28,7 @@ axios
   .then((res) => {
     setMemberAccount.value = res.data.email;
     setMemberName.value = res.data.username;
-    selectActiveMd.src = `../assets/avatar/images/${res.data.avatar}.png`;
+    selectActiveMd.src = `../assets/images/avatar/${res.data.avatar}.png`;
 
     avatarSelect = document.querySelector(`[data-avatar='${res.data.avatar}']`);
     avatarSelect.classList.add("avatarActive");
@@ -67,7 +67,7 @@ jsAvatarWrap.addEventListener("click", (e) => {
   avatarSelect = e.target.getAttribute("data-avatar");
   e.target.classList.add("avatarActive");
 
-  selectActiveMd.src = `../assets/avatar/images/${avatarSelect}.png`;
+  selectActiveMd.src = `../assets/images/avatar/${avatarSelect}.png`;
 });
 
 jsRankWrap.addEventListener("click", (e) => {
