@@ -1,20 +1,24 @@
+import { api_path, userIsLogin } from "./config";
+console.log(api_path);
 const teamListBox = document.querySelector("#teamListBox");
 let teamUser = [];
 let teamListBoxText = "";
-axios.get("http://localhost:3000/teams").then((res) => {
+
+axios.get(`${api_path}/teams`).then((res) => {
   console.log("AAAAAA");
-  teamDetail = res.data;
+  console.log(res);
+  let teamDetail = res.data;
   teamDetail.forEach((v) => {
     console.log(v.id);
     console.log(v.rankLimt);
     console.log(v.teamName);
     console.log(v.playTime);
+    let teamMemeberName = [];
+    let teamMemeberAvatar = [];
+    let teamMemeberRank = [];
     let countPeople = v.teamMerberId.filter((v) => v > 0);
     console.log(countPeople.length);
-    axios.get(`http://localhost:3000/teamsMember/${v.id}`).then((res) => {
-      let teamMemeberName = [];
-      let teamMemeberAvatar = [];
-      let teamMemeberRank = [];
+    axios.get(`${api_path}/teamsMember/${v.id}`).then((res) => {
       console.log("BBBBB");
       console.log(res.data);
       res.data.map((v) => {
@@ -25,10 +29,14 @@ axios.get("http://localhost:3000/teams").then((res) => {
         v === null ? teamMemeberRank.push(0) : teamMemeberRank.push(v.userRank);
       });
       console.log(teamMemeberAvatar);
+      console.log("SSSSSSSSSSSSSSSS");
       console.log(teamMemeberName);
+      console.log(teamMemeberName[0]);
       console.log(teamMemeberRank);
     });
-
+    console.log("SSSSSSSSSSSSSSSS");
+    console.log(teamMemeberName);
+    console.log(teamMemeberName[0]);
     return (teamListBoxText += `        
 <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
   <div class="card-header mb-4 mb-md-6">
@@ -58,7 +66,9 @@ axios.get("http://localhost:3000/teams").then((res) => {
     <ul>
       <li class="mb-2">
         <div class="d-flex justify-content-between mb-1">
-          <p class="text-secondary text-opacity-50">等待上路玩家加入</p>
+          <p class="text-secondary text-opacity-50">${
+            teamMemeberName[0] === 0 ? "等待上路玩家加入" : teamMemeberName[0]
+          }</p>
           <span class="text-secondary fs-8">TOP</span>
         </div>
         <div class="d-flex justify-content-between">
