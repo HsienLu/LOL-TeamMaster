@@ -23,11 +23,11 @@
               讚數
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">讚數多至少</a></li>
-              <li><a class="dropdown-item" href="#">讚數少至多</a></li>
+              <li id="thumbDesc"><a class="dropdown-item" href="#">讚數多至少</a></li>
+              <li id="thumbAsc"><a class="dropdown-item" href="#">讚數少至多</a></li>
             </ul>
           </div>
-          <input type="text" class="border border-white flatpickr" placeholder="遊戲時間" />
+          <input id="dateLte" type="text" class="border border-white flatpickr" placeholder="遊戲時間" />
           <!-- <div class="btn-group border border-white">
             <button
               type="button"
@@ -50,25 +50,25 @@
               aria-expanded="false">
               牌位
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">菁英</a></li>
-              <li><a class="dropdown-item" href="#">宗師</a></li>
-              <li><a class="dropdown-item" href="#">大師</a></li>
-              <li><a class="dropdown-item" href="#">鑽石</a></li>
-              <li><a class="dropdown-item" href="#">翡翠</a></li>
-              <li><a class="dropdown-item" href="#">白金</a></li>
-              <li><a class="dropdown-item" href="#">金</a></li>
-              <li><a class="dropdown-item" href="#">銀</a></li>
-              <li><a class="dropdown-item" href="#">銅</a></li>
-              <li><a class="dropdown-item" href="#">鐵</a></li>
+            <ul id="rankSelect" class="dropdown-menu">
+              <li><a class="dropdown-item" data-rank="Challenger" href="#">菁英</a></li>
+              <li><a class="dropdown-item" data-rank="Grandmaster" href="#">宗師</a></li>
+              <li><a class="dropdown-item" data-rank="Master" href="#">大師</a></li>
+              <li><a class="dropdown-item" data-rank="Diamond" href="#">鑽石</a></li>
+              <li><a class="dropdown-item" data-rank="Emerald" href="#">翡翠</a></li>
+              <li><a class="dropdown-item" data-rank="Platinum" href="#">白金</a></li>
+              <li><a class="dropdown-item" data-rank="Gold" href="#">金</a></li>
+              <li><a class="dropdown-item" data-rank="Silver" href="#">銀</a></li>
+              <li><a class="dropdown-item" data-rank="Bronze" href="#">銅</a></li>
+              <li><a class="dropdown-item" data-rank="Iron" href="#">鐵</a></li>
             </ul>
           </div>
         </div>
         <form class="d-flex">
           <div class="input-group">
-            <input type="search" class="form-control border-end-0" placeholder="What are you looking for?"
-              aria-label="Search" aria-describedby="search-form" />
-            <button class="btn border border-white border-start-0" id="search-form" type="submit">
+            <input type="search" class="form-control border-end-0" id="teamQuery"
+              placeholder="What are you looking for?" aria-label="Search" aria-describedby="search-form" />
+            <button class="btn border border-white border-start-0" id="search-form" type="button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -499,7 +499,10 @@
         });
       </script>
       <script type="module" src="../main.js"></script>
-      <script type="module" src="../assets/js/teamList.js"></script>
+      <script type="module" src="../assets/js/teamList.js">
+
+      </script>
+
 </body>
 
 </html>
