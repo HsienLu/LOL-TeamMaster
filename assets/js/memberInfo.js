@@ -34,7 +34,7 @@ axios
     memberAccount.value = res.data.email;
     memberName.value = res.data.username;
     memberThumb.textContent = res.data.thumb;
-    memberAvatar.src = `../assets/avatar/images/${res.data.avatar}.png`;
+    memberAvatar.src = `../assets/images/avatar/${res.data.avatar}.png`;
     memberRank.textContent = rankMap[res.data.userRank];
     memberPosition.textContent = res.data.likePosition;
     memberHero.style = `background-image: url(../assets/images/champion/${res.data.likeHero}.jpg)`;
