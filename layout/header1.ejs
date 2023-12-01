@@ -5,10 +5,134 @@
         <h1>LOL組隊大師</h1>
       </a>
       <nav>
-        <ul class="d-flex align-items-center justify-content-lg-between gap-10">
+        <!-- login -->
+        <ul
+          class="jsHeaderLogin align-items-center justify-content-lg-between gap-10"
+        >
           <li>
             <a href="teamList.html" class="text-secondary2-4"
               ><i class="fa-solid fa-list me-2"></i>隊伍列表</a
+            >
+          </li>
+          <li>
+            <a href="playerList.html"
+              ><i class="fa-solid fa-hat-wizard me-2"></i>玩家列表</a
+            >
+          </li>
+          <li>
+            <a href="buildTeam.html"
+              ><i class="fa-solid fa-flag me-2"></i>建立隊伍</a
+            >
+          </li>
+          <li>
+            <a href="myTeamList.html"
+              ><i class="fa-solid fa-users me-2"></i>我的隊伍</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-bell"></i></a>
+          </li>
+          <!-- member -->
+          <li class="d-flex align-items-center justify-content-lg-between">
+            <a href="memberCenter.html" class="member"
+              ><img
+                class="headerAvatar border border-1 border-white border-radius me-2"
+                src="/assets/images/${memberAvatar}.png"
+                alt="avatar"
+            /></a>
+            <!-- member dropdown -->
+            <div class="dropdown-center">
+              <a
+                class="btn border-0"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                ><i
+                  class="fa-solid fa-angle-down fa-lg text-secondary arrowBtn"
+                ></i
+              ></a>
+
+              <ul
+                class="dropdown-menu border border-4 border-end-0 border-bottom-0 border-start-0 blueShadow mt-4"
+              >
+                <li>
+                  <a class="dropdown-item" href="memberCenter.html"
+                    ><i class="fa-solid fa-user me-2"></i>我的資料</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa-solid fa-thumbs-up me-2"></i>評價資訊</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa-solid fa-handshake me-2"></i>好友名單</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa-solid fa-ban align-middle me-2"></i>黑名單</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="historicalTeamRecords.html"
+                    ><i class="fa-solid fa-people-group me-2"></i
+                    >歷史組隊紀錄</a
+                  >
+                </li>
+                <li>
+                  <a class="jsLogout dropdown-item" href="#"
+                    ><i class="fa-solid fa-arrow-right-from-bracket me-2"></i
+                    >登出</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- logout -->
+        <ul
+          class="jsHeaderLogout align-items-center justify-content-lg-between gap-10"
+        >
+          <li>
+            <a href="teamList.html" class="text-secondary2-4"
+              ><i class="fa-solid fa-list me-2"></i>隊伍列表</a
+            >
+          </li>
+          <!-- 登入 -->
+          <li class="btnLogin">
+            <a href="#loginModal" class="login" data-bs-toggle="modal"
+              >登入 | 註冊</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- 登入 loginModal -->
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModal"
+  aria-hidden="true"
+  data-backdrop="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg py-18">
+    <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+      <div>
+        <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">
+          登入
+        </h3>
+      </div>
+      <div class="modal-body d-flex flex-column px-4 pt-8">
+        <form class="jsLoginForm mb-12">
+          <div class="mb-7">
+            <label for="userEmail" class="form-label fs-5 fw-medium mb-2"
+              >帳號</label
             >
           </li>
           <li>
