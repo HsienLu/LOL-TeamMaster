@@ -78,7 +78,7 @@ if (!userIsLogin) {
         createdAt: Date.now(),
         avatar: "img-avatar-01",
         thumb: 0,
-        userRank: "銅",
+        userRank: "Bronze",
         likePosition: "MID",
         likeHero: "艾希",
         valid: true,

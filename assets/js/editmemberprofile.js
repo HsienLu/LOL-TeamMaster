@@ -1,9 +1,7 @@
+if (!userIsLogin) location.href = "index.html";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { api_path, userIsLogin } from "./config";
-
-if (!userIsLogin) location.href = "index.html";
-const memberId = localStorage.getItem("userId");
+import { api_path, userIsLogin, memberId } from "./config";
 
 let avatarSelect;
 let rankSelect;
@@ -18,7 +16,8 @@ const changeMemberPassword = document.querySelector("#checkMemberPassword");
 const setMemberName = document.querySelector("#editMemberName");
 const selectActiveMd = document.querySelector(".avatarMd");
 const selectHero = document.querySelector("select");
-const jsChengeInfoBtn = document.querySelector(".jsChengeInfoBtn");
+const setMemberHero = document.querySelector("#editMemberHero");
+const jsChangeInfoBtn = document.querySelector(".jsChangeInfoBtn");
 
 axios
   .get(`${api_path}/600/users/${memberId}`, {
@@ -29,17 +28,24 @@ axios
   .then((res) => {
     setMemberAccount.value = res.data.email;
     setMemberName.value = res.data.username;
-    selectActiveMd.src = `../assets/images/${res.data.avatar}.png`;
-    document
-      .querySelector(`[data-avatar='${res.data.avatar}']`)
-      .classList.add("avatarActive");
-    document
-      .querySelector(`[data-rank='${res.data.userRank}']`)
-      .classList.remove("bg-opacity-20");
-    document
-      .querySelector(`[data-position='${res.data.likePosition}']`)
-      .classList.remove("bg-opacity-20");
+    selectActiveMd.src = `../assets/avatar/images/${res.data.avatar}.png`;
+
+    avatarSelect = document.querySelector(`[data-avatar='${res.data.avatar}']`);
+    avatarSelect.classList.add("avatarActive");
+    avatarSelect = avatarSelect.getAttribute("data-avatar");
+
+    rankSelect = document.querySelector(`[data-rank='${res.data.userRank}']`);
+    rankSelect.classList.remove("bg-opacity-20");
+    rankSelect = rankSelect.getAttribute("data-rank");
+
+    positionSelect = document.querySelector(
+      `[data-position='${res.data.likePosition}']`
+    );
+    positionSelect.classList.remove("bg-opacity-20");
+    positionSelect = positionSelect.getAttribute("data-position");
+
     selectHero.value = res.data.likeHero;
+    setMemberHero.style = `background-image: url(../assets/images/champion/${res.data.likeHero}.jpg)`;
   })
   .catch((error) => {
     console.log(error);
@@ -61,7 +67,7 @@ jsAvatarWrap.addEventListener("click", (e) => {
   avatarSelect = e.target.getAttribute("data-avatar");
   e.target.classList.add("avatarActive");
 
-  selectActiveMd.src = `../assets/images/${avatarSelect}.png`;
+  selectActiveMd.src = `../assets/avatar/images/${avatarSelect}.png`;
 });
 
 jsRankWrap.addEventListener("click", (e) => {
@@ -98,7 +104,11 @@ jsPositionWrap.addEventListener("click", (e) => {
   e.target.classList.remove("bg-opacity-20");
 });
 
-jsChengeInfoBtn.addEventListener("click", (e) => {
+selectHero.addEventListener("change", (e) => {
+  setMemberHero.style = `background-image: url(../assets/images/champion/${selectHero.value}.jpg)`;
+});
+
+jsChangeInfoBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   axios
