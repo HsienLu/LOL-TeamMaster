@@ -1,5 +1,4 @@
 import { api_path, userIsLogin } from "./config";
-
 const fetchDataAll = async () => {
   try {
     const teamListBox = document.querySelector("#teamListBox");
@@ -1632,6 +1631,5 @@ document.querySelectorAll("#rankSelect li").forEach((v) => {
   });
 });
 document.querySelector("#teamQuery").addEventListener("change", (e) => {
-  console.log(e.target.value);
   fetchDataQuery(`${e.target.value}`);
 });
