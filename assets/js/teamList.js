@@ -1,4 +1,4 @@
-import { api_path, userIsLogin } from "./config";
+import { api_path, userIsLogin, localhost } from "./config";
 const fetchDataAll = async () => {
   try {
     const teamListBox = document.querySelector("#teamListBox");
@@ -45,7 +45,9 @@ const fetchDataAll = async () => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+        v.id
+      }'">
             <p class="fs-7 w-100">立即加入</p>
           </button>
         </div>
@@ -276,9 +278,11 @@ const fetchDataPlayTimeAsc = async () => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+        v.id
+      }'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>
@@ -507,9 +511,11 @@ const fetchDataPlayTimeDesc = async () => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+        v.id
+      }'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>
@@ -738,9 +744,11 @@ const fetchDataRankLimit = async (rank) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+        v.id
+      }'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>
@@ -969,9 +977,11 @@ const fetchDataPlayTimeLimit = async (time) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+        v.id
+      }'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>
@@ -1200,9 +1210,11 @@ const fetchDataQuery = async (query) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+        v.id
+      }'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>
@@ -1429,9 +1441,11 @@ const fetchDataThumbSort = async (sort) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+        v.id
+      }'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>

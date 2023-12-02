@@ -457,14 +457,14 @@
       <script>
         axios
           .get(
-            "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+            "http://localhost:3000/teams"
           )
           .then((res) => {
             //   console.log(res.data.data);
             $(function () {
               let container = $("#pagination");
               container.pagination({
-                dataSource: res.data.data,
+                dataSource: res.data,
                 prevText: "&#9668",
                 nextText: "&#9658",
                 // callback: function (data, pagination) {
