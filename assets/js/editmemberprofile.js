@@ -6,18 +6,20 @@ import { api_path, userIsLogin, memberId } from "./config";
 let avatarSelect;
 let rankSelect;
 let positionSelect;
+
 const jsAvatarWrap = document.querySelector(".jsAvatarWrap");
 const jsRankWrap = document.querySelector(".jsRankWrap");
 const jsPositionWrap = document.querySelector(".jsPositionWrap");
 
 const setMemberAccount = document.querySelector("#editMemberAccount");
-const setMemberPassword = document.querySelector("#changeMemberPassword");
-const changeMemberPassword = document.querySelector("#checkMemberPassword");
+const newMemberPassword = document.querySelector("#newMemberPassword");
+const checkMemberPassword = document.querySelector("#checkMemberPassword");
 const setMemberName = document.querySelector("#editMemberName");
 const selectActiveMd = document.querySelector(".avatarMd");
 const selectHero = document.querySelector("select");
 const setMemberHero = document.querySelector("#editMemberHero");
 const jsChangeInfoBtn = document.querySelector(".jsChangeInfoBtn");
+const jsChangePasswordBtn = document.querySelector(".jsChangePasswordBtn");
 
 axios
   .get(`${api_path}/600/users/${memberId}`, {
@@ -115,7 +117,6 @@ jsChangeInfoBtn.addEventListener("click", (e) => {
     .patch(
       `${api_path}/600/users/${memberId}`,
       {
-        // password: changeMemberPassword.value,
         username: setMemberName.value,
         avatar: avatarSelect,
         userRank: rankSelect,
@@ -152,4 +153,55 @@ jsChangeInfoBtn.addEventListener("click", (e) => {
         color: "#D6EEFF",
       });
     });
+});
+
+jsChangePasswordBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (newMemberPassword.value === checkMemberPassword.value) {
+    axios
+      .patch(
+        `${api_path}/600/users/${memberId}`,
+        {
+          password: newMemberPassword.value,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${userIsLogin}`,
+          },
+        }
+      )
+      .then((res) => {
+        Swal.fire({
+          icon: "success",
+          title: "修改成功",
+          showConfirmButton: false,
+          timer: 2000,
+          background: "#060818",
+          color: "#D6EEFF",
+        });
+        setTimeout(() => {
+          location.href = "memberCenter.html";
+        }, 2000);
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: error.response.data,
+          showConfirmButton: false,
+          timer: 2500,
+          background: "#060818",
+          color: "#D6EEFF",
+        });
+      });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "新密碼與確認新密碼不相同",
+      showConfirmButton: false,
+      timer: 2500,
+      background: "#060818",
+      color: "#D6EEFF",
+    });
+  }
 });
