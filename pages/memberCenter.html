@@ -11,7 +11,7 @@
     />
   </head>
   <body>
-    <%- include('./layout/header1'); -%>
+    <%- include('./layout/header'); -%>
     <!-- 背景光源 -->
     <div class="bg-Light-blue">
       <div class="bg-Light-white"></div>
@@ -78,7 +78,7 @@
                 </div>
                 <img
                   id="memberAvatar"
-                  src="../assets/images/Member-avatar.png"
+                  src="../assets/images/avatar/img-avatar-01.png"
                   alt="member-avatar"
                 />
               </div>
@@ -90,16 +90,21 @@
                   >
                 </div>
                 <div class="mb-lg-7">
-                  <p id="memberPosition" class="mb-2">擅長位置</p>
-                  <span class="badge bg-white text-dark fs-6">TOP</span>
+                  <p class="mb-2">擅長位置</p>
+                  <span
+                    id="memberPosition"
+                    class="badge bg-white text-dark fs-6"
+                    >TOP</span
+                  >
                 </div>
                 <div>
                   <p class="mb-2">擅長英雄</p>
                   <div class="parallelogramHero-1 w-100">
                     <div
+                      id="memberHero"
                       class="parallelogramContent-1 teamCardHeroBg-1"
                       style="
-                        background-image: url(../assets/images/img-team-player-05.png);
+                        background-image: url(../assets/images/champion/ashe.jpg);
                       "
                     ></div>
                   </div>

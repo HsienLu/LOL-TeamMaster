@@ -5,17 +5,11 @@ const headerAvatar = document.querySelector(".headerAvatar");
 const jsHeaderLogin = document.querySelector(".jsHeaderLogin");
 const jsHeaderLogout = document.querySelector(".jsHeaderLogout");
 
-headerAvatar.src = `/assets/images/${memberAvatar}.png`;
-
 if (userIsLogin) {
   jsHeaderLogin.classList.add("d-flex");
   jsHeaderLogout.classList.add("d-none");
-} else {
-  jsHeaderLogin.classList.add("d-none");
-  jsHeaderLogout.classList.add("d-flex");
-}
 
-if (userIsLogin) {
+  headerAvatar.src = `/assets/images/avatar/${memberAvatar}.png`;
   const jsLogout = document.querySelector(".jsLogout");
 
   jsLogout.addEventListener("click", (e) => {
@@ -33,4 +27,7 @@ if (userIsLogin) {
       location.href = "index.html";
     }, 2000);
   });
+} else {
+  jsHeaderLogin.classList.add("d-none");
+  jsHeaderLogout.classList.add("d-flex");
 }

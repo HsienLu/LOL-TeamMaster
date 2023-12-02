@@ -64,15 +64,50 @@
   background: none;
   padding: 12px 56px;
   border: none;
-  @include flex(row,start,center);
+  @include flex(row,flex-start,center);
   p{
     color: $primary;
   }
 }
 
-.itemImg{
-  @include teamCardImg;
+//圖版
+@mixin teamCardImg{
+  @include flex(row,flex-start,flex-start);
+  position: relative;
+  &-playerImg{
+    width: 266px;
+    height: 60px;
+    background: url(../images/img-wait.png) no-repeat center center;
+    background-size: cover;
+    -webkit-mask: url(../images/mask.png) no-repeat center center;
+    mask: url(../images/mask.png) no-repeat center center;
+    &::before{
+      position: absolute;
+      content: '';
+      background: url(../images/mask-line.png) no-repeat center center;
+      width: 266px;
+      height: 60px;
+    }
+  }
+  &-rankingImg {
+    position: absolute;
+    left: 254px;
+    width: 82px;
+    height: 60px;
+    background: url(../images/img-ranking-bg.png) no-repeat center center;
+    background-size: cover;
+    -webkit-mask: url(../images/mask-ranking.png) no-repeat center center;
+    mask: url(../images/mask-ranking.png) no-repeat center center;
+    &::before {
+      position: absolute;
+      content: "";
+      background: url(../images/mask-ranking-line.png) no-repeat center center;
+      width: 82px;
+      height: 60px;
+    }
+  }
 }
+
 
 .teamCard{
   width: 416px;
@@ -84,46 +119,97 @@
   &:hover {
       box-shadow: 0px 0px 64px 0px rgba(0,102,255,0.80);
   }
-  &-information{
-    @include flex(row,space-between,center);
-    margin-bottom: 24px;
-    width: 100%;
-  }
-  &-content{
-    h3{
-      width: 266px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      margin-bottom: 8px; 
-    }
-    div{
-      display: flex;
-      color: $secondary;
-    }
-  }
-  &-icon{
-    div{
-      @include flex(row,start,center);
-      &:first-child{
-        margin-bottom: 8px;
-      }
-      p,h5{
-        margin-right: 4px;
-      }
-    }
-  }
   button{
     @include btn(352px,53px,336px,37px);
   }
-  &-group{
-    margin-top: 24px;
+}
+
+.teamDetail{
+  @include flex(row,space-between,center);
+  margin-bottom: 24px;
+  width: 100%;
+&-content{
+  h3{
+    width: 266px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 8px; 
   }
-  &-player{
+  div{
+    display: flex;
+    color: $secondary;
+  }
+}
+&-icon{
+  div{
+    @include flex(row,flex-start,center);
+    &:first-child{
+      margin-bottom: 8px;
+    }
+    p,h5{
+      margin-right: 4px;
+    }
+  }
+}
+}
+.teamGroup{
+  margin-top: 24px;
+}
+
+//狀態
+.teamState{
     width: 336px;
     margin-bottom: 8px;
     &:last-child{
       margin-bottom: 0px;
     }
+  &-wait{
+    @include flex(row,space-between,flex-end);
+    margin-bottom: 4px;
+    p{
+      font-size: 16px;
+      color: rgba($secondary, 0.5);
+      font-weight: lighter;
+    }
+    span{
+      color: $secondary;
+      font-size: 14px;
+    }
   }
+  &-join{
+    @include flex(row,space-between,flex-end);
+    margin-bottom: 4px;
+    p{
+      font-size: 16px;
+      color: $secondary;
+      font-weight: bold;
+    }
+    span{
+      color: $secondary;
+      font-size: 14px;
+    }
+
+  }
+  &-img{
+    @include teamCardImg;
+  }
+}
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper{
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
