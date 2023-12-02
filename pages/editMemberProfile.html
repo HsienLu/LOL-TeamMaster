@@ -7,95 +7,261 @@
     <title>編輯會員資訊</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
+    <%- include('./layout/header1'); -%>
 
     <div class="layout d-flex">
       <div class="layout-left d-none d-lg-block z-2">
         <%- include('./layout/navMenuHistory'); -%>
       </div>
       <div class="layout-content">
-        <!-- 我的資料 -->
-        <div class="container blueShadow bg-dark border border-2 mt-38 ms-75"> 
-          <div id="myInfo" class="px-21 py-14">
-            <h5 class=" mb-lg-8">我的資料</h5>
-            <form action="" class="row justify-content-between">
+        <!-- 編輯資料 -->
+        <div class="container blueShadow bg-dark border border-2 mt-38 ms-75">
+          <div class="px-21 py-14">
+            <h5 class="mb-lg-8">編輯資料</h5>
+            <form id="myInfo" class="row justify-content-between">
               <div class="col-3">
                 <label for="memberAccount" class="form-label">帳號</label>
                 <input
                   type="email"
-                  class="form-control mb-lg-7 box-shadow bg-secondary2 bg-opacity-30 border-0 text-dark text-opacity-80"
-                  id="memberAccount"
-                  value="magicfox@gmail.com"
+                  class="form-control mb-lg-12 box-shadow bg-secondary2 bg-opacity-30 border-0 text-dark text-opacity-80"
+                  id="editMemberAccount"
+                  value=""
                   aria-describedby="memberAccount"
                   readonly
                 />
                 <label for="memberName" class="form-label">使用者名稱</label>
                 <input
                   type="text"
-                  class="form-control mb-lg-7"
-                  id="memberName"
-                  value="魔法狐狸"
+                  class="form-control mb-lg-12"
+                  id="editMemberName"
+                  value=""
                   aria-describedby="memberName"
                 />
                 <label for="memberPassword" class="form-label">修改密碼</label>
                 <input
                   type="password"
-                  class="form-control mb-4"
-                  id="memberPassword"
+                  class="form-control mb-5"
+                  id="changeMemberPassword"
                   value=""
-                  placeholder="Current Passwod"
+                  placeholder="Current Password"
                   aria-describedby="memberPassword"
                 />
                 <input
                   type="password"
-                  class="form-control mb-4"
-                  id="memberPassword"
+                  class="form-control mb-5"
+                  id="checkMemberPassword"
                   value=""
-                  placeholder="New Passwod"
+                  placeholder="New Password"
                   aria-describedby="memberPassword"
                 />
                 <input
                   type="password"
-                  class="form-control mb-4"
-                  id="memberPassword"
+                  class="form-control"
+                  id="doubleCheckMemberPassword"
                   value=""
-                  placeholder="Confirm New Passwod"
+                  placeholder="Confirm New Password"
                   aria-describedby="memberPassword"
                 />
               </div>
               <div class="col-4">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column">
                   <label for="memberAvatar" class="form-label">大頭貼</label>
-                  <span class="text-primary">
-                    3526
-                    <i class="fa-regular fa-thumbs-up ms-1 text-primary"></i>
-                  </span>
+                  <img
+                    class="avatarMd mb-4"
+                    src="../assets/images/Member-avatar.png"
+                    alt="member-avatar"
+                  />
                 </div>
-                <img src="../assets/images/Member-avatar.png" alt="member-avatar" />
+                <div class="jsAvatarWrap">
+                  <div class="d-flex justify-content-around mb-2">
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-01.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-01"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-02.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-02"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-03.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-03"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-04.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-04"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-05.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-05"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-around mb-2">
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-06.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-06"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-07.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-07"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-08.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-08"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-09.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-09"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-10.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-10"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-around">
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-11.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-11"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-12.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-12"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-13.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-13"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-14.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-14"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="../assets/images/img-avatar-15.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-15"
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="col-5">
-                <div class="mb-lg-7">
+              <div class="col-4 d-flex flex-column">
+                <div class="mb-lg-10">
                   <p class="mb-2">牌位</p>
-                  <div class="mb-3">
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 pointer">鐵</span>
-                    <span class="badge bg-white text-dark fs-6 ms-1 pointer">銅</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">銀</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">金</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">白金</span>
-                  </div>
-                  <div>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 pointer">翡翠</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">鑽石</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">大師</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">宗師</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">菁英</span>
+                  <div class="jsRankWrap">
+                    <div class="d-flex gap-2 mb-3">
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="鐵"
+                        >鐵
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="銅"
+                        >銅
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="銀"
+                        >銀
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="金"
+                        >金
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="白金"
+                        >白金
+                      </span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="翡翠"
+                        >翡翠
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="鑽石"
+                        >鑽石
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="大師"
+                        >大師
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="宗師"
+                        >宗師
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="菁英"
+                        >菁英
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div class="mb-lg-7">
+                <div class="mb-lg-10">
                   <p class="mb-2">擅長位置</p>
-                  <span class="badge bg-white text-dark fs-6">TOP</span>
+                  <div class="jsPositionWrap d-flex gap-2">
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="TOP"
+                      >TOP</span
+                    >
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="MID"
+                      >MID</span
+                    >
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="AD"
+                      >AD</span
+                    >
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="SUP"
+                      >SUP</span
+                    >
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="JG"
+                      >JG</span
+                    >
+                  </div>
                 </div>
-                <div>
+                <div class="mb-lg-25">
                   <p class="mb-2">擅長英雄</p>
                   <div class="d-flex align-items-center">
                     <div class="parallelogramHero-1 w-58 me-4">
@@ -106,8 +272,11 @@
                         "
                       ></div>
                     </div>
-                    <select class="form-select w-35 h-50 text-center fs-6 fw-medium selectpicker" aria-label="Default select example">
-                      <option selected disabled  hidden>選擇英雄</option>
+                    <select
+                      class="form-select w-35 h-50 text-center fs-6 fw-medium selectPicker"
+                      aria-label="select hero"
+                    >
+                      <option selected disabled hidden>選擇英雄</option>
                       <option value="吶兒">吶兒</option>
                       <option value="加里歐">加里歐</option>
                       <option value="厄薩斯">厄薩斯</option>
@@ -121,17 +290,27 @@
                     </select>
                   </div>
                 </div>
+                <div class="mx-auto">
+                  <a
+                    href="memberCenter.html"
+                    class="btn btn-size btn-outline-white white-bg-btn me-12 py-3 px-12"
+                    role="button"
+                  >
+                    取消</a
+                  >
+
+                  <a
+                    href="#"
+                    class="jsChengeInfoBtn btn btn-white white-bg-btn active py-3 px-12"
+                    role="button"
+                    >保存</a
+                  >
+                  <!-- <button type="button" class="btn btn-outline-white white-bg-btn me-12">Cancel</button>
+                  <button type="button" class="btn btn-white white-bg-btn">Save Changes</button> -->
+                </div>
               </div>
             </form>
-            <div class="d-flex justify-content-end">
-              <a href="memberCentre.html" class="btn btn-size btn-outline-white white-bg-btn me-12 py-3 px-12" role="button"> Cancel</a>
-
-              <a href="memberCentre.html" class="btn btn-white white-bg-btn active py-3 px-12" role="button">Save Changes</a>
-              <!-- <button type="button" class="btn btn-outline-white white-bg-btn me-12">Cancel</button>
-              <button type="button" class="btn btn-white white-bg-btn">Save Changes</button> -->
-            </div>
           </div>
-
         </div>
       </div>
       <div class="layout-right d-none d-lg-block"></div>
@@ -139,7 +318,11 @@
 
     <%- include('./layout/footer'); -%>
 
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/8eab62e458.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/editmemberprofile.js"></script>
   </body>
 </html>

@@ -97,19 +97,22 @@
       </div>
     </div>
     <%- include('./layout/footer'); -%>
-    <!-- <script>
-      let itemCardGroup = document.getElementById('itemCardGroup');
-  
-      let itemCardDetail = document.createElement('div');
-      itemCardDetail.classList.add('itemCard-detail');
-  
-    // 迴圈生成五個 itemCard-detail
-    for (let i = 0; i < 4; i++) {
-      let itemCardDetail = document.createElement('div');
-      itemCardDetail.classList.add('itemCard-detail');
-  
-      // 內部 HTML 內容
-      itemCardDetail.innerHTML = `
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // 獲取元素
+      let itemCardGroup = document.getElementById("itemCardGroup");
+
+      let itemCardDetail = document.createElement("div");
+      itemCardDetail.classList.add("itemCard-detail");
+
+      // 迴圈生成五個 itemCard-detail
+      for (let i = 0; i < 4; i++) {
+        // 創建元素
+        let itemCardDetail = document.createElement("div");
+        itemCardDetail.classList.add("itemCard-detail");
+
+        // 內部 HTML 內容
+        itemCardDetail.innerHTML = `
         <div class="d-flex justify-content-between mb-1">
           <div class="fw-bold">魔法狐狸uwu</div>
           <div>TOP</div>
@@ -122,7 +125,7 @@
 
       itemCardGroup.appendChild(itemCardDetail);
     }
-    </script> -->
+    </script> 
     <script type="module" src="../main.js"></script>
     <script type="module" src="../assets/js/login.js"></script>
     <script type="module" src="../assets/js/register.js"></script>

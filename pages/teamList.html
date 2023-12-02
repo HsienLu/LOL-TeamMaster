@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>隊伍列表</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隊伍列表</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
 
     <div class="container pt-md-38">
       <div class="searchGroup d-flex justify-content-between">
         <div class="searchDropDown d-flex gap-lg-8">
           <div class="btn-group border border-white">
-            <button
-              type="button"
-              class="btn btn-transparent dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
               讚數
             </button>
             <ul class="dropdown-menu">
@@ -38,11 +27,7 @@
               <li><a class="dropdown-item" href="#">讚數少至多</a></li>
             </ul>
           </div>
-          <input
-            type="text"
-            class="border border-white flatpickr"
-            placeholder="遊戲時間"
-          />
+          <input type="text" class="border border-white flatpickr" placeholder="遊戲時間" />
           <!-- <div class="btn-group border border-white">
             <button
               type="button"
@@ -61,12 +46,8 @@
             </div>
           </div> -->
           <div class="btn-group border border-white">
-            <button
-              type="button"
-              class="btn btn-transparent dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
               牌位
             </button>
             <ul class="dropdown-menu">
@@ -85,44 +66,21 @@
         </div>
         <form class="d-flex">
           <div class="input-group">
-            <input
-              type="search"
-              class="form-control border-end-0"
-              placeholder="What are you looking for?"
-              aria-label="Search"
-              aria-describedby="search-form"
-            />
-            <button
-              class="btn border border-white border-start-0"
-              id="search-form"
-              type="submit"
-            >
+            <input type="search" class="form-control border-end-0" placeholder="What are you looking for?"
+              aria-label="Search" aria-describedby="search-form" />
+            <button class="btn border border-white border-start-0" id="search-form" type="submit">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
         </form>
       </div>
 
-      <!-- <span
-          class="position-absolute top-50 end-0"
-          style="
-            background-image: url(../assets/images/BG-Light-blue.png);
-            background-position: center;
-            background-size: cover;
-            width: 800px;
-            height: 800px;
-          "
-        ></span> -->
-
       <div class="titleParallelogram position-relative mt-md-18 mb-md-5">
-        <h2
-          class="position-absolute top-20 start-33 fw-black fs-11 fs-md-2"
-          style="width: 192px; height: 58px"
-        >
+        <h2 class="position-absolute top-20 start-33 fw-black fs-11 fs-md-2" style="width: 192px; height: 58px">
           隊伍列表
         </h2>
       </div>
-      <div class="d-flex">
+      <div class="d-flex flex-wrap" id="teamListBox">
         <!-- 卡片開始 -->
         <div class="teamCard blueShadow mx-4 mx-md-3">
           <div class="card-header mb-4 mb-md-6">
@@ -133,9 +91,7 @@
                   遊戲時間：2023/12/18 20:00
                 </p>
               </div>
-              <div
-                class="d-flex d-md-block justify-content-between align-items-center"
-              >
+              <div class="d-flex d-md-block justify-content-between align-items-center">
                 <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
                   3526
                   <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
@@ -159,20 +115,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player@2x.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/img-team-badge@2x.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -183,20 +133,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-03.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -207,20 +151,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-04.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -231,20 +169,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-05.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -255,20 +187,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-06.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -285,9 +211,7 @@
                   遊戲時間：2023/12/18 20:00
                 </p>
               </div>
-              <div
-                class="d-flex d-md-block justify-content-between align-items-center"
-              >
+              <div class="d-flex d-md-block justify-content-between align-items-center">
                 <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
                   3526
                   <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
@@ -311,20 +235,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player@2x.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/img-team-badge@2x.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -335,20 +253,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-03.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -359,20 +271,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-04.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -383,20 +289,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-05.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -407,20 +307,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-06.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -436,9 +330,7 @@
                   遊戲時間：2023/12/18 20:00
                 </p>
               </div>
-              <div
-                class="d-flex d-md-block justify-content-between align-items-center"
-              >
+              <div class="d-flex d-md-block justify-content-between align-items-center">
                 <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
                   3526
                   <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
@@ -462,20 +354,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player@2x.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/img-team-badge@2x.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -486,20 +372,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-03.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -510,20 +390,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-04.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -534,20 +408,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-05.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -558,20 +426,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(../assets/images/img-team-player-06.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(../assets/images/image19.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -580,68 +442,64 @@
         </div>
       </div>
       <!-- <div id="data-container"></div> -->
-      <div
-        class="d-flex justify-content-center align-items-center mt-11 mt-md-15 mb-20 mb-md-25"
-        id="pagination"
-      ></div>
+      <div class="d-flex justify-content-center align-items-center mt-11 mt-md-15 mb-20 mb-md-25" id="pagination"></div>
     </div>
 
     <%- include('./layout/footer'); -%>
 
-    <script
-      src="https://kit.fontawesome.com/8eab62e458.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
-    <script>
-      axios
-        .get(
-          "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
-        )
-        .then((res) => {
-          //   console.log(res.data.data);
-          $(function () {
-            let container = $("#pagination");
-            container.pagination({
-              dataSource: res.data.data,
-              prevText: "&#9668",
-              nextText: "&#9658",
-              // callback: function (data, pagination) {
-              //   var dataHtml = "<ul>";
+      <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+      <script>
+        axios
+          .get(
+            "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+          )
+          .then((res) => {
+            //   console.log(res.data.data);
+            $(function () {
+              let container = $("#pagination");
+              container.pagination({
+                dataSource: res.data.data,
+                prevText: "&#9668",
+                nextText: "&#9658",
+                // callback: function (data, pagination) {
+                //   var dataHtml = "<ul>";
 
-              //   $.each(data, function (index, item) {
-              //     dataHtml += "<li>" + item.name + "</li>";
-              //   });
+                //   $.each(data, function (index, item) {
+                //     dataHtml += "<li>" + item.name + "</li>";
+                //   });
 
-              //   dataHtml += "</ul>";
+                //   dataHtml += "</ul>";
 
-              //   $("#data-container").html(dataHtml);
-              // },
+                //   $("#data-container").html(dataHtml);
+                // },
+              });
             });
           });
-        });
 
-      flatpickr(".flatpickr", {
-        altInput: true,
-        // altInputClass: "fp_Month",
-        // locale: "zh_tw",
-        altFormat: "Y/m/d H:i",
-        enableTime: true,
-        dateFormat: "Y-m-d H:i",
-        // plugins: [
-        //   new monthSelectPlugin({
-        //     shorthand: true,
-        //     dateFormat: "Ym",
-        //     altFormat: "M/Y",
-        //   }),
-        // ],
-        // defaultDate: $(this).val(),
-      });
-    </script>
-    <script type="module" src="../main.js"></script>
-  </body>
+        flatpickr(".flatpickr", {
+          altInput: true,
+          // altInputClass: "fp_Month",
+          // locale: "zh_tw",
+          altFormat: "Y/m/d H:i",
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          // plugins: [
+          //   new monthSelectPlugin({
+          //     shorthand: true,
+          //     dateFormat: "Ym",
+          //     altFormat: "M/Y",
+          //   }),
+          // ],
+          // defaultDate: $(this).val(),
+        });
+      </script>
+      <script type="module" src="../main.js"></script>
+      <script src="../assets/js/teamList.js"></script>
+</body>
+
 </html>
