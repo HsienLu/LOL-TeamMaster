@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>隊伍列表</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-57dacb3f.js"></script>
-    <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-bfd6bc9e.css">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隊伍列表</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+  <script type="module" crossorigin src="/LOL-TeamMaster/assets/teamList-2303aa50.js"></script>
+  <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/main-552c3467.js">
+  <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/header-4e9731a3.js">
+  <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-a0e6b9ba.css">
+</head>
+
+<body>
+  <header>
   <div class="fixed-top w-100 bg-dark bg-opacity-80 px-lg-26 py-lg-2">
     <div class="d-flex align-items-center justify-content-lg-between">
       <a class="logo" href="index.html">
         <h1>LOL組隊大師</h1>
       </a>
       <nav>
-        <ul class="d-flex align-items-center justify-content-lg-between gap-10">
+        <!-- login -->
+        <ul
+          class="jsHeaderLogin align-items-center justify-content-lg-between gap-10"
+        >
           <li>
             <a href="teamList.html" class="text-secondary2-4"
               ><i class="fa-solid fa-list me-2"></i>隊伍列表</a
@@ -56,9 +55,9 @@
           <li class="d-flex align-items-center justify-content-lg-between">
             <a href="memberCenter.html" class="member"
               ><img
-                class="border border-1 border-white border-radius me-2"
-                src="/LOL-TeamMaster/assets/Member-31de5c8c.png"
-                alt="Member.png"
+                class="headerAvatar border border-1 border-white border-radius me-2"
+                src="/LOL-TeamMaster/assets/img-avatar-01-f1ae6358.png"
+                alt="avatar"
             /></a>
             <!-- member dropdown -->
             <div class="dropdown-center">
@@ -102,7 +101,7 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#"
+                  <a class="jsLogout dropdown-item" href="#"
                     ><i class="fa-solid fa-arrow-right-from-bracket me-2"></i
                     >登出</a
                   >
@@ -110,35 +109,280 @@
               </ul>
             </div>
           </li>
-          <li></li>
+        </ul>
+        <!-- logout -->
+        <ul
+          class="jsHeaderLogout align-items-center justify-content-lg-between gap-10"
+        >
+          <li>
+            <a href="teamList.html" class="text-secondary2-4"
+              ><i class="fa-solid fa-list me-2"></i>隊伍列表</a
+            >
+          </li>
+          <!-- 登入 -->
+          <li class="btnLogin">
+            <a href="#loginModal" class="login" data-bs-toggle="modal"
+              >登入 | 註冊</a
+            >
+          </li>
         </ul>
       </nav>
     </div>
   </div>
 </header>
 
+<!-- 登入 loginModal -->
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModal"
+  aria-hidden="true"
+  data-backdrop="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg py-18">
+    <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+      <div>
+        <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">
+          登入
+        </h3>
+      </div>
+      <div class="modal-body d-flex flex-column px-4 pt-8">
+        <form class="jsLoginForm mb-12">
+          <div class="mb-7">
+            <label for="userEmail" class="form-label fs-5 fw-medium mb-2"
+              >帳號</label
+            >
+            <input
+              type="email"
+              class="form-control p-3"
+              id="userEmail-login"
+              aria-describedby="emailHelp"
+              placeholder="請輸入電子信箱"
+            />
+          </div>
+          <div>
+            <label for="userPassword" class="form-label fs-5 mb-2">密碼</label>
+            <input
+              type="password"
+              class="form-control p-3"
+              id="userPassword-login"
+              placeholder="請輸入 8-16 位密碼"
+            />
+          </div>
+        </form>
+        <div class="submitGroup">
+          <!-- login-btn -->
+          <a href="#" class="jsLoginBtn w-100 mb-5">
+            <button
+              type="submit"
+              class="submitBtn bg-secondary2 bg-opacity-60 border border-0 border-radius p-4 fw-medium text-white w-100"
+            >
+              登入
+            </button>
+          </a>
+          <!-- google-login-btn -->
+          <a href="index.html" class="w-100">
+            <button
+              type="submit"
+              class="submitBtn bg-dark border border-2 border-radius p-4 fw-medium text-white border-white w-100"
+            >
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALTSURBVHgBvVbPTxNBFH6z3W1BCLYJSvC04FGjJdjEBE0WJOpBI03lQDzQeDUGD17QmLYnjuJf0HoCjIT25sFCSTwQNNqbxgt7MVUIsIiIbnd3nJm2uLvdrStp+A6bmffevG9m3o9ZBP/AxvBFCYN+iwwlhLGIAQWrKpmMi0SWE/y+QujViuzmAzV0jvUEdQ4egDBK8h3qs1C2qHgi2RiKPMUIHsD/QxYE36D9VJzdav1KJH1IAgpRVY24XcibJ+wEAPEGTmRydpkOEIYwsQ2alRijVNfiatK+6OC61ocicTJLO3nGCKcMjc90F6zXUFmDSNxIQrgQWEg2R8+t6VsB0aaWQcfRk4W3RXDBthQOqj6/1JVfzbrZMBI1L8SxIqR/zPeC/q31r1aHvkYEXsECT3J9nDuuQsfdT9B6ucQU9PjNIKCoBV6qCVoufQVK+D3Xm3FaMJLEQSXwKwgeUZhslZG6JISRjj/YdcKwNui0aHhqVzIMtAQeYXC+Hg5puG5XiAa8SeA1TeTgCMBpPC/bhaTIwtBEsBQuv+a3wVS9y2o3PPzdHypGs3XN7vrUvqgaWtzZGxonOxTNoo5yOVQjoYGU6Hh67yzM7Z+mZZ56N/YyCR5RIdfXbGJ58XF7D4sJqYlcST8G93YGKgRsVzgReTHq+drKBnsW7CjQDyMR+HLm/u6A8r7caTUxjAUvRENTewmnxsoZ+Dnbb03QPxcbIZ11wckJMcr4sJBaGZuVzfILM7fJa9meCGzdlPw716xrEMrmH7VFLSSMaDY2TQQT4A7aZmgy0CQRwZQsfuUqtGzeqc6wYnB8H632OhJGNBPLIATjcAhwWie0fZkETj0RzT9pO+jKPrthaf5j9lTsDCl6b2+7GZj7qWiBz2NvJm5Y2r7rjwQLOAk8Bmveu8EtblVdY7DgIjxCfn/Ok73STGNxIOQyQlyR5P9ye0DLFBwKt4Y/jr0YJoUPCDYAAAAASUVORK5CYII="
+                alt="google-icon"
+                class="me-4 text-align-center"
+              />
+              Login with Google
+            </button>
+          </a>
+        </div>
+        <div class="mt-8">
+          <ul class="d-flex justify-content-between">
+            <li>
+              <a
+                href="#registerModal"
+                class="register text-decoration-underline link-offset-2"
+                data-bs-toggle="modal"
+                >註冊帳號</a
+              >
+            </li>
+            <li>
+              <a
+                href="#forgetPasswordModal"
+                class="forgetPassword text-decoration-underline link-offset-2"
+                data-bs-toggle="modal"
+                >忘記密碼？</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 註冊 registerModal -->
+<div
+  class="modal fade"
+  id="registerModal"
+  tabindex="-1"
+  aria-labelledby="registerModal"
+  aria-hidden="true"
+  data-backdrop="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg py-18">
+    <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+      <div>
+        <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">
+          註冊帳號
+        </h3>
+      </div>
+      <div class="modal-body d-flex flex-column px-4 pt-8">
+        <form class="jsRegisterForm mb-12">
+          <div class="mb-7">
+            <label for="userEmail" class="form-label fs-5 fw-medium mb-2"
+              >帳號</label
+            >
+            <input
+              type="email"
+              class="form-control p-3"
+              id="userEmail-register"
+              aria-describedby="emailHelp"
+              placeholder="請輸入電子信箱"
+              name="Email"
+            />
+            <div class="alertMessage">
+              <p data-message="Email"></p>
+            </div>
+          </div>
+          <div class="mb-7">
+            <label for="userPassword" class="form-label fs-5 mb-2">密碼</label>
+            <input
+              type="password"
+              class="form-control p-3"
+              id="userPassword-register"
+              placeholder="請輸入 8-16 位密碼"
+              name="Password"
+            />
+            <div class="alertMessage">
+              <p data-message="Password"></p>
+            </div>
+          </div>
+          <div>
+            <label for="userName" class="form-label fs-5 mb-2"
+              >使用者名稱</label
+            >
+            <input
+              type="name"
+              class="form-control p-3"
+              id="userName-register"
+              placeholder="請輸入遊戲 ID"
+              name="userName"
+            />
+            <div class="alertMessage">
+              <p data-message="userName"></p>
+            </div>
+          </div>
+        </form>
+        <div class="submitGroup">
+          <!-- account-btn -->
+          <a href="#" class="jsCreateAccountBtn w-100 mb-5">
+            <button
+              type="submit"
+              class="submitBtn bg-secondary2 bg-opacity-60 border border-0 border-radius p-4 fw-medium text-white w-100"
+            >
+              建立帳號
+            </button>
+          </a>
+          <!-- google-Sign up-btn -->
+          <a href="#" class="w-100">
+            <button
+              type="submit"
+              class="submitBtn bg-dark border border-2 border-radius p-4 fw-medium text-white border-white w-100"
+            >
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALTSURBVHgBvVbPTxNBFH6z3W1BCLYJSvC04FGjJdjEBE0WJOpBI03lQDzQeDUGD17QmLYnjuJf0HoCjIT25sFCSTwQNNqbxgt7MVUIsIiIbnd3nJm2uLvdrStp+A6bmffevG9m3o9ZBP/AxvBFCYN+iwwlhLGIAQWrKpmMi0SWE/y+QujViuzmAzV0jvUEdQ4egDBK8h3qs1C2qHgi2RiKPMUIHsD/QxYE36D9VJzdav1KJH1IAgpRVY24XcibJ+wEAPEGTmRydpkOEIYwsQ2alRijVNfiatK+6OC61ocicTJLO3nGCKcMjc90F6zXUFmDSNxIQrgQWEg2R8+t6VsB0aaWQcfRk4W3RXDBthQOqj6/1JVfzbrZMBI1L8SxIqR/zPeC/q31r1aHvkYEXsECT3J9nDuuQsfdT9B6ucQU9PjNIKCoBV6qCVoufQVK+D3Xm3FaMJLEQSXwKwgeUZhslZG6JISRjj/YdcKwNui0aHhqVzIMtAQeYXC+Hg5puG5XiAa8SeA1TeTgCMBpPC/bhaTIwtBEsBQuv+a3wVS9y2o3PPzdHypGs3XN7vrUvqgaWtzZGxonOxTNoo5yOVQjoYGU6Hh67yzM7Z+mZZ56N/YyCR5RIdfXbGJ58XF7D4sJqYlcST8G93YGKgRsVzgReTHq+drKBnsW7CjQDyMR+HLm/u6A8r7caTUxjAUvRENTewmnxsoZ+Dnbb03QPxcbIZ11wckJMcr4sJBaGZuVzfILM7fJa9meCGzdlPw716xrEMrmH7VFLSSMaDY2TQQT4A7aZmgy0CQRwZQsfuUqtGzeqc6wYnB8H632OhJGNBPLIATjcAhwWie0fZkETj0RzT9pO+jKPrthaf5j9lTsDCl6b2+7GZj7qWiBz2NvJm5Y2r7rjwQLOAk8Bmveu8EtblVdY7DgIjxCfn/Ok73STGNxIOQyQlyR5P9ye0DLFBwKt4Y/jr0YJoUPCDYAAAAASUVORK5CYII="
+                alt="google-icon"
+                class="me-4 text-align-center"
+              />
+              Sign up with Google
+            </button>
+          </a>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="#loginModal" class="login" data-bs-toggle="modal"
+            >已經有帳號了? <span class="ms-4">登入</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 忘記密碼 forgetPasswordModal -->
+<div
+  class="modal fade"
+  id="forgetPasswordModal"
+  tabindex="-1"
+  aria-labelledby="forgetPasswordModal"
+  aria-hidden="true"
+  data-backdrop="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg py-18">
+    <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+      <div>
+        <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">
+          忘記密碼
+        </h3>
+      </div>
+      <div class="modal-body d-flex flex-column px-4 pt-8">
+        <form class="mb-12">
+          <div>
+            <label for="userEmail" class="form-label fs-5 fw-medium mb-2"
+              >電子信箱</label
+            >
+            <input
+              type="email"
+              class="form-control p-3"
+              id="userEmail-forget"
+              aria-describedby="emailHelp"
+              placeholder="請輸入帳號電子信箱"
+            />
+          </div>
+        </form>
+        <div class="submitGroup text-center align-items-center">
+          <!--reset password-btn -->
+          <a href="index.html">
+            <button
+              type="submit"
+              class="submitBtn bg-secondary2 bg-opacity-60 border border-0 border-radius py-4 px-12 fw-medium text-white"
+            >
+              重設密碼
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
     <div class="container pt-md-38">
       <div class="searchGroup d-flex justify-content-between">
         <div class="searchDropDown d-flex gap-lg-8">
           <div class="btn-group border border-white">
-            <button
-              type="button"
-              class="btn btn-transparent dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
               讚數
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">讚數多至少</a></li>
-              <li><a class="dropdown-item" href="#">讚數少至多</a></li>
+              <li id="thumbDesc"><a class="dropdown-item" href="#">讚數多至少</a></li>
+              <li id="thumbAsc"><a class="dropdown-item" href="#">讚數少至多</a></li>
             </ul>
           </div>
-          <input
-            type="text"
-            class="border border-white flatpickr"
-            placeholder="遊戲時間"
-          />
+          <input id="dateLte" type="text" class="border border-white flatpickr" placeholder="遊戲時間" />
           <!-- <div class="btn-group border border-white">
             <button
               type="button"
@@ -157,68 +401,41 @@
             </div>
           </div> -->
           <div class="btn-group border border-white">
-            <button
-              type="button"
-              class="btn btn-transparent dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
               牌位
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">菁英</a></li>
-              <li><a class="dropdown-item" href="#">宗師</a></li>
-              <li><a class="dropdown-item" href="#">大師</a></li>
-              <li><a class="dropdown-item" href="#">鑽石</a></li>
-              <li><a class="dropdown-item" href="#">翡翠</a></li>
-              <li><a class="dropdown-item" href="#">白金</a></li>
-              <li><a class="dropdown-item" href="#">金</a></li>
-              <li><a class="dropdown-item" href="#">銀</a></li>
-              <li><a class="dropdown-item" href="#">銅</a></li>
-              <li><a class="dropdown-item" href="#">鐵</a></li>
+            <ul id="rankSelect" class="dropdown-menu">
+              <li><a class="dropdown-item" data-rank="Challenger" href="#">菁英</a></li>
+              <li><a class="dropdown-item" data-rank="Grandmaster" href="#">宗師</a></li>
+              <li><a class="dropdown-item" data-rank="Master" href="#">大師</a></li>
+              <li><a class="dropdown-item" data-rank="Diamond" href="#">鑽石</a></li>
+              <li><a class="dropdown-item" data-rank="Emerald" href="#">翡翠</a></li>
+              <li><a class="dropdown-item" data-rank="Platinum" href="#">白金</a></li>
+              <li><a class="dropdown-item" data-rank="Gold" href="#">金</a></li>
+              <li><a class="dropdown-item" data-rank="Silver" href="#">銀</a></li>
+              <li><a class="dropdown-item" data-rank="Bronze" href="#">銅</a></li>
+              <li><a class="dropdown-item" data-rank="Iron" href="#">鐵</a></li>
             </ul>
           </div>
         </div>
         <form class="d-flex">
           <div class="input-group">
-            <input
-              type="search"
-              class="form-control border-end-0"
-              placeholder="What are you looking for?"
-              aria-label="Search"
-              aria-describedby="search-form"
-            />
-            <button
-              class="btn border border-white border-start-0"
-              id="search-form"
-              type="submit"
-            >
+            <input type="search" class="form-control border-end-0" id="teamQuery"
+              placeholder="What are you looking for?" aria-label="Search" aria-describedby="search-form" />
+            <button class="btn border border-white border-start-0" id="search-form" type="button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
         </form>
       </div>
 
-      <!-- <span
-          class="position-absolute top-50 end-0"
-          style="
-            background-image: url(../assets/images/BG-Light-blue.png);
-            background-position: center;
-            background-size: cover;
-            width: 800px;
-            height: 800px;
-          "
-        ></span> -->
-
       <div class="titleParallelogram position-relative mt-md-18 mb-md-5">
-        <h2
-          class="position-absolute top-20 start-33 fw-black fs-11 fs-md-2"
-          style="width: 192px; height: 58px"
-        >
+        <h2 class="position-absolute top-20 start-33 fw-black fs-11 fs-md-2" style="width: 192px; height: 58px">
           隊伍列表
         </h2>
       </div>
-      <div class="d-flex">
+      <div class="d-flex flex-wrap" id="teamListBox">
         <!-- 卡片開始 -->
         <div class="teamCard blueShadow mx-4 mx-md-3">
           <div class="card-header mb-4 mb-md-6">
@@ -229,9 +446,7 @@
                   遊戲時間：2023/12/18 20:00
                 </p>
               </div>
-              <div
-                class="d-flex d-md-block justify-content-between align-items-center"
-              >
+              <div class="d-flex d-md-block justify-content-between align-items-center">
                 <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
                   3526
                   <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
@@ -255,20 +470,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -279,20 +488,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -303,20 +506,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -327,20 +524,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -351,20 +542,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -381,9 +566,7 @@
                   遊戲時間：2023/12/18 20:00
                 </p>
               </div>
-              <div
-                class="d-flex d-md-block justify-content-between align-items-center"
-              >
+              <div class="d-flex d-md-block justify-content-between align-items-center">
                 <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
                   3526
                   <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
@@ -407,20 +590,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -431,20 +608,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -455,20 +626,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -479,20 +644,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -503,20 +662,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -532,9 +685,7 @@
                   遊戲時間：2023/12/18 20:00
                 </p>
               </div>
-              <div
-                class="d-flex d-md-block justify-content-between align-items-center"
-              >
+              <div class="d-flex d-md-block justify-content-between align-items-center">
                 <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
                   3526
                   <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
@@ -558,20 +709,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player@2x-b604fd0b.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAB4CAYAAAB8SVkVAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgB7dJBAQAQAAAx5BNPFTF0UuMeW4bNc98eELEGhAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKQISYqQpAhJipCkCEmKkKR8kxQDUh/DdL4AAAAASUVORK5CYII=);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -582,20 +727,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-03-1e1eebd9.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -606,20 +745,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-04-235e9bd0.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -630,20 +763,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -654,20 +781,14 @@
                 </div>
                 <div class="d-flex justify-content-between">
                   <div class="parallelogramHero">
-                    <div
-                      class="parallelogramContent teamCardHeroBg"
-                      style="
+                    <div class="parallelogramContent teamCardHeroBg" style="
                         background-image: url(/LOL-TeamMaster/assets/img-team-player-06-f417f72a.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                   <div class="parallelogramRank">
-                    <div
-                      class="parallelogramContent teamCardRankBg"
-                      style="
+                    <div class="parallelogramContent teamCardRankBg" style="
                         background-image: url(/LOL-TeamMaster/assets/image19-cc880135.png);
-                      "
-                    ></div>
+                      "></div>
                   </div>
                 </div>
               </li>
@@ -676,10 +797,7 @@
         </div>
       </div>
       <!-- <div id="data-container"></div> -->
-      <div
-        class="d-flex justify-content-center align-items-center mt-11 mt-md-15 mb-20 mb-md-25"
-        id="pagination"
-      ></div>
+      <div class="d-flex justify-content-center align-items-center mt-11 mt-md-15 mb-20 mb-md-25" id="pagination"></div>
     </div>
 
     <footer class="animate__animated animate__fadeInUp text-center mb-12 mt-25">
@@ -706,60 +824,60 @@
   </ul>
 </footer>
 
-    <script
-      src="https://kit.fontawesome.com/8eab62e458.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
-    <script>
-      axios
-        .get(
-          "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
-        )
-        .then((res) => {
-          //   console.log(res.data.data);
-          $(function () {
-            let container = $("#pagination");
-            container.pagination({
-              dataSource: res.data.data,
-              prevText: "&#9668",
-              nextText: "&#9658",
-              // callback: function (data, pagination) {
-              //   var dataHtml = "<ul>";
+      <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+      <script>
+        axios
+          .get(
+            "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+          )
+          .then((res) => {
+            //   console.log(res.data.data);
+            $(function () {
+              let container = $("#pagination");
+              container.pagination({
+                dataSource: res.data.data,
+                prevText: "&#9668",
+                nextText: "&#9658",
+                // callback: function (data, pagination) {
+                //   var dataHtml = "<ul>";
 
-              //   $.each(data, function (index, item) {
-              //     dataHtml += "<li>" + item.name + "</li>";
-              //   });
+                //   $.each(data, function (index, item) {
+                //     dataHtml += "<li>" + item.name + "</li>";
+                //   });
 
-              //   dataHtml += "</ul>";
+                //   dataHtml += "</ul>";
 
-              //   $("#data-container").html(dataHtml);
-              // },
+                //   $("#data-container").html(dataHtml);
+                // },
+              });
             });
           });
-        });
 
-      flatpickr(".flatpickr", {
-        altInput: true,
-        // altInputClass: "fp_Month",
-        // locale: "zh_tw",
-        altFormat: "Y/m/d H:i",
-        enableTime: true,
-        dateFormat: "Y-m-d H:i",
-        // plugins: [
-        //   new monthSelectPlugin({
-        //     shorthand: true,
-        //     dateFormat: "Ym",
-        //     altFormat: "M/Y",
-        //   }),
-        // ],
-        // defaultDate: $(this).val(),
-      });
-    </script>
-    
-  </body>
+        flatpickr(".flatpickr", {
+          altInput: true,
+          // altInputClass: "fp_Month",
+          // locale: "zh_tw",
+          altFormat: "Y/m/d H:i",
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          // plugins: [
+          //   new monthSelectPlugin({
+          //     shorthand: true,
+          //     dateFormat: "Ym",
+          //     altFormat: "M/Y",
+          //   }),
+          // ],
+          // defaultDate: $(this).val(),
+        });
+      </script>
+      
+      
+
+</body>
+
 </html>

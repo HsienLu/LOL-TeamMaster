@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>編輯會員資訊</title>
-    <script type="module" crossorigin src="/LOL-TeamMaster/assets/main-57dacb3f.js"></script>
-    <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-bfd6bc9e.css">
+    <script type="module" crossorigin src="/LOL-TeamMaster/assets/editMemberProfile-54495891.js"></script>
+    <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/main-552c3467.js">
+    <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/header-4e9731a3.js">
+    <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-a0e6b9ba.css">
   </head>
   <body>
     <header>
@@ -16,7 +18,10 @@
         <h1>LOL組隊大師</h1>
       </a>
       <nav>
-        <ul class="d-flex align-items-center justify-content-lg-between gap-10">
+        <!-- login -->
+        <ul
+          class="jsHeaderLogin align-items-center justify-content-lg-between gap-10"
+        >
           <li>
             <a href="teamList.html" class="text-secondary2-4"
               ><i class="fa-solid fa-list me-2"></i>隊伍列表</a
@@ -44,9 +49,9 @@
           <li class="d-flex align-items-center justify-content-lg-between">
             <a href="memberCenter.html" class="member"
               ><img
-                class="border border-1 border-white border-radius me-2"
-                src="/LOL-TeamMaster/assets/Member-31de5c8c.png"
-                alt="Member.png"
+                class="headerAvatar border border-1 border-white border-radius me-2"
+                src="/LOL-TeamMaster/assets/img-avatar-01-f1ae6358.png"
+                alt="avatar"
             /></a>
             <!-- member dropdown -->
             <div class="dropdown-center">
@@ -90,7 +95,7 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#"
+                  <a class="jsLogout dropdown-item" href="#"
                     ><i class="fa-solid fa-arrow-right-from-bracket me-2"></i
                     >登出</a
                   >
@@ -98,12 +103,265 @@
               </ul>
             </div>
           </li>
-          <li></li>
+        </ul>
+        <!-- logout -->
+        <ul
+          class="jsHeaderLogout align-items-center justify-content-lg-between gap-10"
+        >
+          <li>
+            <a href="teamList.html" class="text-secondary2-4"
+              ><i class="fa-solid fa-list me-2"></i>隊伍列表</a
+            >
+          </li>
+          <!-- 登入 -->
+          <li class="btnLogin">
+            <a href="#loginModal" class="login" data-bs-toggle="modal"
+              >登入 | 註冊</a
+            >
+          </li>
         </ul>
       </nav>
     </div>
   </div>
 </header>
+
+<!-- 登入 loginModal -->
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModal"
+  aria-hidden="true"
+  data-backdrop="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg py-18">
+    <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+      <div>
+        <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">
+          登入
+        </h3>
+      </div>
+      <div class="modal-body d-flex flex-column px-4 pt-8">
+        <form class="jsLoginForm mb-12">
+          <div class="mb-7">
+            <label for="userEmail" class="form-label fs-5 fw-medium mb-2"
+              >帳號</label
+            >
+            <input
+              type="email"
+              class="form-control p-3"
+              id="userEmail-login"
+              aria-describedby="emailHelp"
+              placeholder="請輸入電子信箱"
+            />
+          </div>
+          <div>
+            <label for="userPassword" class="form-label fs-5 mb-2">密碼</label>
+            <input
+              type="password"
+              class="form-control p-3"
+              id="userPassword-login"
+              placeholder="請輸入 8-16 位密碼"
+            />
+          </div>
+        </form>
+        <div class="submitGroup">
+          <!-- login-btn -->
+          <a href="#" class="jsLoginBtn w-100 mb-5">
+            <button
+              type="submit"
+              class="submitBtn bg-secondary2 bg-opacity-60 border border-0 border-radius p-4 fw-medium text-white w-100"
+            >
+              登入
+            </button>
+          </a>
+          <!-- google-login-btn -->
+          <a href="index.html" class="w-100">
+            <button
+              type="submit"
+              class="submitBtn bg-dark border border-2 border-radius p-4 fw-medium text-white border-white w-100"
+            >
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALTSURBVHgBvVbPTxNBFH6z3W1BCLYJSvC04FGjJdjEBE0WJOpBI03lQDzQeDUGD17QmLYnjuJf0HoCjIT25sFCSTwQNNqbxgt7MVUIsIiIbnd3nJm2uLvdrStp+A6bmffevG9m3o9ZBP/AxvBFCYN+iwwlhLGIAQWrKpmMi0SWE/y+QujViuzmAzV0jvUEdQ4egDBK8h3qs1C2qHgi2RiKPMUIHsD/QxYE36D9VJzdav1KJH1IAgpRVY24XcibJ+wEAPEGTmRydpkOEIYwsQ2alRijVNfiatK+6OC61ocicTJLO3nGCKcMjc90F6zXUFmDSNxIQrgQWEg2R8+t6VsB0aaWQcfRk4W3RXDBthQOqj6/1JVfzbrZMBI1L8SxIqR/zPeC/q31r1aHvkYEXsECT3J9nDuuQsfdT9B6ucQU9PjNIKCoBV6qCVoufQVK+D3Xm3FaMJLEQSXwKwgeUZhslZG6JISRjj/YdcKwNui0aHhqVzIMtAQeYXC+Hg5puG5XiAa8SeA1TeTgCMBpPC/bhaTIwtBEsBQuv+a3wVS9y2o3PPzdHypGs3XN7vrUvqgaWtzZGxonOxTNoo5yOVQjoYGU6Hh67yzM7Z+mZZ56N/YyCR5RIdfXbGJ58XF7D4sJqYlcST8G93YGKgRsVzgReTHq+drKBnsW7CjQDyMR+HLm/u6A8r7caTUxjAUvRENTewmnxsoZ+Dnbb03QPxcbIZ11wckJMcr4sJBaGZuVzfILM7fJa9meCGzdlPw716xrEMrmH7VFLSSMaDY2TQQT4A7aZmgy0CQRwZQsfuUqtGzeqc6wYnB8H632OhJGNBPLIATjcAhwWie0fZkETj0RzT9pO+jKPrthaf5j9lTsDCl6b2+7GZj7qWiBz2NvJm5Y2r7rjwQLOAk8Bmveu8EtblVdY7DgIjxCfn/Ok73STGNxIOQyQlyR5P9ye0DLFBwKt4Y/jr0YJoUPCDYAAAAASUVORK5CYII="
+                alt="google-icon"
+                class="me-4 text-align-center"
+              />
+              Login with Google
+            </button>
+          </a>
+        </div>
+        <div class="mt-8">
+          <ul class="d-flex justify-content-between">
+            <li>
+              <a
+                href="#registerModal"
+                class="register text-decoration-underline link-offset-2"
+                data-bs-toggle="modal"
+                >註冊帳號</a
+              >
+            </li>
+            <li>
+              <a
+                href="#forgetPasswordModal"
+                class="forgetPassword text-decoration-underline link-offset-2"
+                data-bs-toggle="modal"
+                >忘記密碼？</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 註冊 registerModal -->
+<div
+  class="modal fade"
+  id="registerModal"
+  tabindex="-1"
+  aria-labelledby="registerModal"
+  aria-hidden="true"
+  data-backdrop="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg py-18">
+    <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+      <div>
+        <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">
+          註冊帳號
+        </h3>
+      </div>
+      <div class="modal-body d-flex flex-column px-4 pt-8">
+        <form class="jsRegisterForm mb-12">
+          <div class="mb-7">
+            <label for="userEmail" class="form-label fs-5 fw-medium mb-2"
+              >帳號</label
+            >
+            <input
+              type="email"
+              class="form-control p-3"
+              id="userEmail-register"
+              aria-describedby="emailHelp"
+              placeholder="請輸入電子信箱"
+              name="Email"
+            />
+            <div class="alertMessage">
+              <p data-message="Email"></p>
+            </div>
+          </div>
+          <div class="mb-7">
+            <label for="userPassword" class="form-label fs-5 mb-2">密碼</label>
+            <input
+              type="password"
+              class="form-control p-3"
+              id="userPassword-register"
+              placeholder="請輸入 8-16 位密碼"
+              name="Password"
+            />
+            <div class="alertMessage">
+              <p data-message="Password"></p>
+            </div>
+          </div>
+          <div>
+            <label for="userName" class="form-label fs-5 mb-2"
+              >使用者名稱</label
+            >
+            <input
+              type="name"
+              class="form-control p-3"
+              id="userName-register"
+              placeholder="請輸入遊戲 ID"
+              name="userName"
+            />
+            <div class="alertMessage">
+              <p data-message="userName"></p>
+            </div>
+          </div>
+        </form>
+        <div class="submitGroup">
+          <!-- account-btn -->
+          <a href="#" class="jsCreateAccountBtn w-100 mb-5">
+            <button
+              type="submit"
+              class="submitBtn bg-secondary2 bg-opacity-60 border border-0 border-radius p-4 fw-medium text-white w-100"
+            >
+              建立帳號
+            </button>
+          </a>
+          <!-- google-Sign up-btn -->
+          <a href="#" class="w-100">
+            <button
+              type="submit"
+              class="submitBtn bg-dark border border-2 border-radius p-4 fw-medium text-white border-white w-100"
+            >
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALTSURBVHgBvVbPTxNBFH6z3W1BCLYJSvC04FGjJdjEBE0WJOpBI03lQDzQeDUGD17QmLYnjuJf0HoCjIT25sFCSTwQNNqbxgt7MVUIsIiIbnd3nJm2uLvdrStp+A6bmffevG9m3o9ZBP/AxvBFCYN+iwwlhLGIAQWrKpmMi0SWE/y+QujViuzmAzV0jvUEdQ4egDBK8h3qs1C2qHgi2RiKPMUIHsD/QxYE36D9VJzdav1KJH1IAgpRVY24XcibJ+wEAPEGTmRydpkOEIYwsQ2alRijVNfiatK+6OC61ocicTJLO3nGCKcMjc90F6zXUFmDSNxIQrgQWEg2R8+t6VsB0aaWQcfRk4W3RXDBthQOqj6/1JVfzbrZMBI1L8SxIqR/zPeC/q31r1aHvkYEXsECT3J9nDuuQsfdT9B6ucQU9PjNIKCoBV6qCVoufQVK+D3Xm3FaMJLEQSXwKwgeUZhslZG6JISRjj/YdcKwNui0aHhqVzIMtAQeYXC+Hg5puG5XiAa8SeA1TeTgCMBpPC/bhaTIwtBEsBQuv+a3wVS9y2o3PPzdHypGs3XN7vrUvqgaWtzZGxonOxTNoo5yOVQjoYGU6Hh67yzM7Z+mZZ56N/YyCR5RIdfXbGJ58XF7D4sJqYlcST8G93YGKgRsVzgReTHq+drKBnsW7CjQDyMR+HLm/u6A8r7caTUxjAUvRENTewmnxsoZ+Dnbb03QPxcbIZ11wckJMcr4sJBaGZuVzfILM7fJa9meCGzdlPw716xrEMrmH7VFLSSMaDY2TQQT4A7aZmgy0CQRwZQsfuUqtGzeqc6wYnB8H632OhJGNBPLIATjcAhwWie0fZkETj0RzT9pO+jKPrthaf5j9lTsDCl6b2+7GZj7qWiBz2NvJm5Y2r7rjwQLOAk8Bmveu8EtblVdY7DgIjxCfn/Ok73STGNxIOQyQlyR5P9ye0DLFBwKt4Y/jr0YJoUPCDYAAAAASUVORK5CYII="
+                alt="google-icon"
+                class="me-4 text-align-center"
+              />
+              Sign up with Google
+            </button>
+          </a>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="#loginModal" class="login" data-bs-toggle="modal"
+            >已經有帳號了? <span class="ms-4">登入</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 忘記密碼 forgetPasswordModal -->
+<div
+  class="modal fade"
+  id="forgetPasswordModal"
+  tabindex="-1"
+  aria-labelledby="forgetPasswordModal"
+  aria-hidden="true"
+  data-backdrop="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg py-18">
+    <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+      <div>
+        <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">
+          忘記密碼
+        </h3>
+      </div>
+      <div class="modal-body d-flex flex-column px-4 pt-8">
+        <form class="mb-12">
+          <div>
+            <label for="userEmail" class="form-label fs-5 fw-medium mb-2"
+              >電子信箱</label
+            >
+            <input
+              type="email"
+              class="form-control p-3"
+              id="userEmail-forget"
+              aria-describedby="emailHelp"
+              placeholder="請輸入帳號電子信箱"
+            />
+          </div>
+        </form>
+        <div class="submitGroup text-center align-items-center">
+          <!--reset password-btn -->
+          <a href="index.html">
+            <button
+              type="submit"
+              class="submitBtn bg-secondary2 bg-opacity-60 border border-0 border-radius py-4 px-12 fw-medium text-white"
+            >
+              重設密碼
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
     <div class="layout d-flex">
       <div class="layout-left d-none d-lg-block z-2">
@@ -129,124 +387,304 @@
   </ul>
 </div>        </div>
       <div class="layout-content">
-        <!-- 我的資料 -->
-        <div class="container blueShadow bg-dark border border-2 mt-38 ms-75"> 
-          <div id="myInfo" class="px-21 py-14">
-            <h5 class=" mb-lg-8">我的資料</h5>
-            <form action="" class="row justify-content-between">
+        <!-- 編輯資料 -->
+        <div class="container blueShadow bg-dark border border-2 mt-38 ms-75">
+          <div class="px-21 py-14">
+            <h5 class="mb-lg-8">編輯資料</h5>
+            <form id="myInfo" class="row justify-content-between">
               <div class="col-3">
                 <label for="memberAccount" class="form-label">帳號</label>
                 <input
                   type="email"
-                  class="form-control mb-lg-7 box-shadow bg-secondary2 bg-opacity-30 border-0 text-dark text-opacity-80"
-                  id="memberAccount"
-                  value="magicfox@gmail.com"
+                  class="form-control mb-lg-12 box-shadow bg-secondary2 bg-opacity-30 border-0 text-dark text-opacity-80"
+                  id="editMemberAccount"
+                  value=""
                   aria-describedby="memberAccount"
                   readonly
                 />
                 <label for="memberName" class="form-label">使用者名稱</label>
                 <input
                   type="text"
-                  class="form-control mb-lg-7"
-                  id="memberName"
-                  value="魔法狐狸"
+                  class="form-control mb-lg-12"
+                  id="editMemberName"
+                  value=""
                   aria-describedby="memberName"
                 />
                 <label for="memberPassword" class="form-label">修改密碼</label>
                 <input
                   type="password"
-                  class="form-control mb-4"
-                  id="memberPassword"
+                  class="form-control mb-5"
+                  id="changeMemberPassword"
                   value=""
-                  placeholder="Current Passwod"
+                  placeholder="Current Password"
                   aria-describedby="memberPassword"
                 />
                 <input
                   type="password"
-                  class="form-control mb-4"
-                  id="memberPassword"
+                  class="form-control mb-5"
+                  id="checkMemberPassword"
                   value=""
-                  placeholder="New Passwod"
+                  placeholder="New Password"
                   aria-describedby="memberPassword"
                 />
                 <input
                   type="password"
-                  class="form-control mb-4"
-                  id="memberPassword"
+                  class="form-control"
+                  id="doubleCheckMemberPassword"
                   value=""
-                  placeholder="Confirm New Passwod"
+                  placeholder="Confirm New Password"
                   aria-describedby="memberPassword"
                 />
               </div>
               <div class="col-4">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column">
                   <label for="memberAvatar" class="form-label">大頭貼</label>
-                  <span class="text-primary">
-                    3526
-                    <i class="fa-regular fa-thumbs-up ms-1 text-primary"></i>
-                  </span>
+                  <img
+                    class="avatarMd mb-4"
+                    src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png"
+                    alt="member-avatar"
+                  />
                 </div>
-                <img src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png" alt="member-avatar" />
+                <div class="jsAvatarWrap">
+                  <div class="d-flex justify-content-around mb-2">
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-01-f1ae6358.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-01"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-02-06c0db6c.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-02"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-03-83798d40.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-03"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-04-bee5df4c.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-04"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-05-6283ab20.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-05"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-around mb-2">
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-06-b66c2275.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-06"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-07-75d74216.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-07"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-08-23f8da02.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-08"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-09-21bcdf88.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-09"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-10-82095724.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-10"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-around">
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-11-a7ffddf6.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-11"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-12-4c9c1154.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-12"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-13-f8c37612.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-13"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-14-bcb54498.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-14"
+                    />
+                    <img
+                      class="avatarSmall pointer"
+                      src="/LOL-TeamMaster/assets/img-avatar-15-50ca0468.png"
+                      alt="avatarSmall"
+                      data-avatar="img-avatar-15"
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="col-5">
-                <div class="mb-lg-7">
+              <div class="col-4 d-flex flex-column">
+                <div class="mb-lg-10">
                   <p class="mb-2">牌位</p>
-                  <div class="mb-3">
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 pointer">鐵</span>
-                    <span class="badge bg-white text-dark fs-6 ms-1 pointer">銅</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">銀</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">金</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">白金</span>
-                  </div>
-                  <div>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 pointer">翡翠</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">鑽石</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">大師</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">宗師</span>
-                    <span class="badge bg-white bg-opacity-20 text-dark fs-6 ms-1 pointer">菁英</span>
+                  <div class="jsRankWrap">
+                    <div class="d-flex gap-2 mb-3">
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Iron"
+                        >鐵
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Bronze"
+                        >銅
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Silver"
+                        >銀
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Gold"
+                        >金
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Platinum"
+                        >白金
+                      </span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Emerald"
+                        >翡翠
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Diamond"
+                        >鑽石
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Master"
+                        >大師
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Grandmaster"
+                        >宗師
+                      </span>
+                      <span
+                        class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                        data-rank="Challenger"
+                        >菁英
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div class="mb-lg-7">
+                <div class="mb-lg-10">
                   <p class="mb-2">擅長位置</p>
-                  <span class="badge bg-white text-dark fs-6">TOP</span>
+                  <div class="jsPositionWrap d-flex gap-2">
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="TOP"
+                      >TOP</span
+                    >
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="MID"
+                      >MID</span
+                    >
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="AD"
+                      >AD</span
+                    >
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="SUP"
+                      >SUP</span
+                    >
+                    <span
+                      class="badge bg-white text-dark fs-6 pointer bg-opacity-20"
+                      data-position="JG"
+                      >JG</span
+                    >
+                  </div>
                 </div>
-                <div>
+                <div class="mb-lg-25">
                   <p class="mb-2">擅長英雄</p>
                   <div class="d-flex align-items-center">
-                    <div class="parallelogramHero-1 w-58 me-4">
+                    <div class="parallelogramHero w-58 me-4">
                       <div
-                        class="parallelogramContent-1 teamCardHeroBg-1"
+                        id="editMemberHero"
+                        class="parallelogramContent teamCardHeroBg"
                         style="
-                          background-image: url(/LOL-TeamMaster/assets/img-team-player-05-fb93a92a.png);
+                          background-image: url(/LOL-TeamMaster/assets/ashe-ff7f41db.jpg);
                         "
                       ></div>
                     </div>
-                    <select class="form-select w-35 h-50 text-center fs-6 fw-medium selectpicker" aria-label="Default select example">
-                      <option selected disabled  hidden>選擇英雄</option>
-                      <option value="吶兒">吶兒</option>
-                      <option value="加里歐">加里歐</option>
-                      <option value="厄薩斯">厄薩斯</option>
-                      <option value="阿姆姆">阿姆姆</option>
-                      <option value="柔依">柔依</option>
-                      <option value="悠咪">悠咪</option>
-                      <option value="提摩">提摩</option>
-                      <option value="薇可絲">薇可絲</option>
-                      <option value="露璐">露璐</option>
-                      <option value="艾希">艾希</option>
+                    <select
+                      class="form-select w-35 h-50 text-center fs-6 fw-medium selectPicker"
+                      aria-label="select hero"
+                    >
+                      <option selected disabled hidden>選擇英雄</option>
+                      <option value="gnar">吶兒</option>
+                      <option value="galio">加里歐</option>
+                      <option value="aatrox">厄薩斯</option>
+                      <option value="amumu">阿姆姆</option>
+                      <option value="zoe">柔依</option>
+                      <option value="yuumi">悠咪</option>
+                      <option value="teemo">提摩</option>
+                      <option value="vex">薇可絲</option>
+                      <option value="lulu">露璐</option>
+                      <option value="ashe">艾希</option>
                     </select>
                   </div>
                 </div>
+                <div class="mx-auto">
+                  <a
+                    href="memberCenter.html"
+                    class="btn btn-size btn-outline-white white-bg-btn me-12 py-3 px-12"
+                    role="button"
+                  >
+                    取消</a
+                  >
+
+                  <a
+                    href="#"
+                    class="jsChangeInfoBtn btn btn-white white-bg-btn active py-3 px-12"
+                    role="button"
+                    >保存</a
+                  >
+                  <!-- <button type="button" class="btn btn-outline-white white-bg-btn me-12">Cancel</button>
+                  <button type="button" class="btn btn-white white-bg-btn">Save Changes</button> -->
+                </div>
               </div>
             </form>
-            <div class="d-flex justify-content-end">
-              <a href="memberCentre.html" class="btn btn-size btn-outline-white white-bg-btn me-12 py-3 px-12" role="button"> Cancel</a>
-
-              <a href="memberCentre.html" class="btn btn-white white-bg-btn active py-3 px-12" role="button">Save Changes</a>
-              <!-- <button type="button" class="btn btn-outline-white white-bg-btn me-12">Cancel</button>
-              <button type="button" class="btn btn-white white-bg-btn">Save Changes</button> -->
-            </div>
           </div>
-
         </div>
       </div>
       <div class="layout-right d-none d-lg-block"></div>
@@ -276,7 +714,11 @@
   </ul>
 </footer>
 
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/8eab62e458.js"
+      crossorigin="anonymous"
+    ></script>
+    
     
   </body>
 </html>
