@@ -1,9 +1,11 @@
 import { api_path, userIsLogin } from "./config";
-let id = 1;
-const fetchDataAll = async (id) => {
+let idc = location.search.toString().split("=")[1];
+const fetchDataAll = async (idc) => {
   try {
-    const teamDetails = await axios.get(`${api_path}/teams/${id}?_expand=user`);
-    const memberDetails = await axios.get(`${api_path}/teamsMember/${id}`);
+    const teamDetails = await axios.get(
+      `${api_path}/teams/${idc}?_expand=user`
+    );
+    const memberDetails = await axios.get(`${api_path}/teamsMember/${idc}`);
     console.log(teamDetails.data);
     console.log(memberDetails.data);
     console.log(teamDetails.data.teamNotice);
@@ -12,8 +14,11 @@ const fetchDataAll = async (id) => {
         return `<li class="fs-5 fs-lg-4">${v}</li>`;
       })
       .join("");
-
-    let memberComponent = memberDetails.data
+    let memberDetailsData = memberDetails.data.map((v) => {
+      return v === null ? (v = 0) : (v = v);
+    });
+    console.log(memberDetailsData);
+    let memberComponent = memberDetailsData
       .map((v) => {
         return `
     <li>
@@ -28,28 +33,33 @@ const fetchDataAll = async (id) => {
      
           <div class="d-flex flex-column align-items-center">
             <img class="playerIcon mt-lg-6 mb-3 mb-md-0" src="../assets/images/avatar/${
-              v.avatar
+              v === 0 ? "undefined" : v.avatar
             }.png" alt="member" />
-            <h4 class="fs-5 fs-md-4 mt-lg-6">${v.username}</h4>
+            <h4 class="fs-5 fs-md-4 mt-lg-6">${
+              v === 0 ? "等待加入" : v.username
+            }</h4>
           </div>
+
+
           <div class="d-flex d-md-block flex-column justify-content-between align-items-center ms-15 ms-md-0">
             <div class="parallelogramRank mt-lg-6 mb-4 mb-md-0">
               <div class="parallelogramContent teamCardRankBg"
                 style="background-image: url(../assets/images/ranking/${
-                  v.userRank
+                  v === 0 ? "" : v.userRank
                 }.png)"></div>
             </div>
             <div class="d-flex flex-column-reverse flex-md-column align-items-center">
               <span class="badge bg-white text-dark mt-lg-6">${
-                v.likePosition
+                v === 0 ? "尚未加入" : v.likePosition
               }</span>
               <span class="text-secondary mt-lg-6 mb-5 mb-md-0">
-                ${v.thumb}
+                ${v === 0 ? "" : v.thumb}
                 <i class="fa-regular fa-thumbs-up ms-1"></i>
               </span>
             </div>
           </div>
         </div>
+        
         <div class="d-none d-md-block down-triangle">
           <div class="left-triangle"></div>
           <div class="right-triangle"></div>
@@ -100,4 +110,4 @@ const fetchDataAll = async (id) => {
     console.error("Error fetching data:", error);
   }
 };
-fetchDataAll(id);
+fetchDataAll(idc);
