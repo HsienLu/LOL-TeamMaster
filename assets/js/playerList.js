@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import { api_path, userIsLogin, memberId } from "./config";
 
 let playerData = [];
+let container = $("#pagination");
 
 const playerThumbDesc = document.querySelector("#playerThumbDesc");
 const playerThumbAsc = document.querySelector("#playerThumbAsc");
@@ -96,35 +97,31 @@ function renderPlayerListCard(playerData) {
   playerWrap.innerHTML = str;
 }
 
+function setPagination(playerData, container) {
+  container.pagination({
+    dataSource: playerData,
+    //locator: "data", // 資料來源中的屬性
+    totalNumber: playerData.length,
+    pageSize: 9,
+    prevText: "&#9668",
+    nextText: "&#9658",
+    // showPageNumbers: true,
+    // showPrevious: true,
+    // showNext: true,
+
+    // 頁碼渲染與監聽
+    callback: (playerData, pagination) => {
+      renderPlayerListCard(playerData);
+    },
+  });
+}
+
 function allPlayerRender() {
   axios
     .get(`${api_path}/users/`)
     .then((res) => {
       playerData = res.data;
-      //   $(function () {
-      let container = $("#pagination");
-      container.pagination({
-        dataSource: res.data,
-        totalNumber: res.data.length,
-        pageSize: 9,
-        prevText: "&#9668",
-        nextText: "&#9658",
-        callback: renderPlayerListCard(playerData, container),
-        // callback: function (data, pagination) {
-        //   var dataHtml = "<ul>";
-
-        //   $.each(data, function (index, item) {
-        //     dataHtml += "<li>" + item.name + "</li>";
-        //   });
-
-        //   dataHtml += "</ul>";
-
-        //   $("#data-container").html(dataHtml);
-        // },
-      });
-      //   });
-
-      //   renderPlayerListCard(playerData);
+      setPagination(playerData, container);
     })
     .catch((error) => {
       console.log(error);
@@ -138,7 +135,7 @@ playerThumbAsc.addEventListener("click", (e) => {
     .get(`${api_path}/users?_sort=thumb&_order=asc`)
     .then((res) => {
       playerData = res.data;
-      renderPlayerListCard(playerData);
+      setPagination(playerData, container);
     })
     .catch((error) => {
       console.log(error);
@@ -152,7 +149,7 @@ playerThumbDesc.addEventListener("click", (e) => {
     .get(`${api_path}/users?_sort=thumb&_order=desc`)
     .then((res) => {
       playerData = res.data;
-      renderPlayerListCard(playerData);
+      setPagination(playerData, container);
     })
     .catch((error) => {
       console.log(error);
@@ -173,7 +170,7 @@ playerRankSelect.addEventListener("click", (e) => {
     .get(`${api_path}/users?userRank=${rankSelectValue}`)
     .then((res) => {
       playerData = res.data;
-      renderPlayerListCard(playerData);
+      setPagination(playerData, container);
     })
     .catch((error) => {
       console.log(error);
@@ -193,7 +190,7 @@ jsPlayerSearchBtn.addEventListener("click", (e) => {
     .get(`${api_path}/users?username=${playerNameSearch}`)
     .then((res) => {
       playerData = res.data;
-      renderPlayerListCard(playerData);
+      setPagination(playerData, container);
     })
     .catch((error) => {
       console.log(error);
