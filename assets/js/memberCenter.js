@@ -69,12 +69,12 @@ function renderCommentList(){
 
       <h4 class="mt-12 text-center mb-4">${item.username}</h4>
       <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
-        <div class="bage bage-text bageGroup" data-position="Top">TOP</div>
-        <div class="bage bage-text bageGroup" data-position="Jungle">JG</div>
-        <div class="bage bage-text bageGroup" data-position="Mid">MID</div>
-        <div class="bage bage-text bageGroup" data-position="Bot">ADC</div>
-        <div class="bage bage-text bageGroup" data-position="Support">SUP</div>
-      </div>
+        <div class="bage bage-text bageGroup" data-likePosition="Top">TOP</div>
+        <div class="bage bage-text bageGroup" data-likePosition="Jungle">JG</div>
+        <div class="bage bage-text bageGroup" data-likePosition="Mid">MID</div>
+        <div class="bage bage-text bageGroup" data-likePosition="Bot">ADC</div>
+        <div class="bage bage-text bageGroup" data-likePosition="Support">SUP</div>
+      </div>      
       <div class="thumb my-6">
         <p class="thum-text text-center">
           ${item.thumb} <span><i class="fa-regular fa-thumbs-up"></i></span>
@@ -82,7 +82,7 @@ function renderCommentList(){
       </div>
     </div>
     `
-    // positionSelected = positionSelect.getAttribute("data-position");
+    // positionSelected = positionSelect.getAttribute("data-likePosition");
     // if (positionSelected === ${item.likePosition}){
     //   positionSelected.remove("bageGroup");
     // }
