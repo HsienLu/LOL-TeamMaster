@@ -1,9 +1,20 @@
-import { api_path, userIsLogin } from "./config";
-let id = 1;
-const fetchDataAll = async (id) => {
+import { async } from "validate.js";
+import { api_path, memberId, userIsLogin } from "./config";
+import Swal from "sweetalert2";
+let idc = location.search.toString().split("=")[1];
+const posList = {
+  TOP: 0,
+  JG: 1,
+  MID: 2,
+  AD: 3,
+  SUP: 4,
+};
+const fetchDataAll = async (idc) => {
   try {
-    const teamDetails = await axios.get(`${api_path}/teams/${id}?_expand=user`);
-    const memberDetails = await axios.get(`${api_path}/teamsMember/${id}`);
+    const teamDetails = await axios.get(
+      `${api_path}/teams/${idc}?_expand=user`
+    );
+    const memberDetails = await axios.get(`${api_path}/teamsMember/${idc}`);
     console.log(teamDetails.data);
     console.log(memberDetails.data);
     console.log(teamDetails.data.teamNotice);
@@ -12,8 +23,11 @@ const fetchDataAll = async (id) => {
         return `<li class="fs-5 fs-lg-4">${v}</li>`;
       })
       .join("");
-
-    let memberComponent = memberDetails.data
+    let memberDetailsData = memberDetails.data.map((v) => {
+      return v === null ? (v = 0) : (v = v);
+    });
+    console.log(memberDetailsData);
+    let memberComponent = memberDetailsData
       .map((v) => {
         return `
     <li>
@@ -28,28 +42,33 @@ const fetchDataAll = async (id) => {
      
           <div class="d-flex flex-column align-items-center">
             <img class="playerIcon mt-lg-6 mb-3 mb-md-0" src="../assets/images/avatar/${
-              v.avatar
+              v === 0 ? "undefined" : v.avatar
             }.png" alt="member" />
-            <h4 class="fs-5 fs-md-4 mt-lg-6">${v.username}</h4>
+            <h4 class="fs-5 fs-md-4 mt-lg-6">${
+              v === 0 ? "等待加入" : v.username
+            }</h4>
           </div>
+
+
           <div class="d-flex d-md-block flex-column justify-content-between align-items-center ms-15 ms-md-0">
             <div class="parallelogramRank mt-lg-6 mb-4 mb-md-0">
               <div class="parallelogramContent teamCardRankBg"
                 style="background-image: url(../assets/images/ranking/${
-                  v.userRank
+                  v === 0 ? "" : v.userRank
                 }.png)"></div>
             </div>
             <div class="d-flex flex-column-reverse flex-md-column align-items-center">
               <span class="badge bg-white text-dark mt-lg-6">${
-                v.likePosition
+                v === 0 ? "尚未加入" : v.likePosition
               }</span>
               <span class="text-secondary mt-lg-6 mb-5 mb-md-0">
-                ${v.thumb}
+                ${v === 0 ? "" : v.thumb}
                 <i class="fa-regular fa-thumbs-up ms-1"></i>
               </span>
             </div>
           </div>
         </div>
+        
         <div class="d-none d-md-block down-triangle">
           <div class="left-triangle"></div>
           <div class="right-triangle"></div>
@@ -88,7 +107,7 @@ const fetchDataAll = async (id) => {
           </div>
         </div>
         <div class="d-flex align-items-end col-lg-3">
-          <button type="button" class="joinTeamBtn blueShadow mt-10 mt-md-0 mx-auto mx-md-0">
+          <button type="button" class="joinTeamBtn blueShadow mt-10 mt-md-0 mx-auto mx-md-0" id="addTeamButtom">
             <p class="fw-bold fs-3">
               加入隊伍<i class="fa-solid fa-arrow-right ms-5"></i>
             </p>
@@ -96,8 +115,68 @@ const fetchDataAll = async (id) => {
         </div>
       </div>
       </div>;`;
+
+    document.querySelector("#addTeamButtom").addEventListener("click", () => {
+      addTeam();
+    });
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 };
-fetchDataAll(id);
+fetchDataAll(idc);
+async function addTeam() {
+  let loginUserId;
+  if (!userIsLogin) {
+    console.log(123);
+    Swal.fire({
+      title: "無法加入隊伍",
+      text: "請先進行登入",
+      icon: "warning",
+    });
+  } else {
+    console.log(123);
+    loginUserId = localStorage.getItem("userId");
+  }
+  let reqObj = {}; //更新資料需要傳送的物件
+  async function addTeamAPI(reqObj) {
+    try {
+      const addTeamAPI = await axios.patch(
+        `http://localhost:3000/teams/${idc}`,
+        reqObj
+      );
+      console.log(addTeamAPI);
+      Swal.fire({
+        title: "確認加入",
+        icon: "success",
+      }).then((res) => {
+        fetchDataAll(idc);
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  const teamDetails = await axios.get(`${api_path}/teams/${idc}?_expand=user`); //取得隊伍成員資訊
+  let newTeamDetails = teamDetails.data.teamMerberId; //確認隊伍成員資訊
+  const loginUserDetails = await axios.get(`${api_path}/users/${loginUserId}`); //取得登入的會員資訊
+  let newLoginUserPos = loginUserDetails.data.likePosition; //取得喜歡位置的indx
+  console.log(newLoginUserPos);
+  console.log(posList);
+  let positionIndex = posList[newLoginUserPos]; //取得當前position 的index
+  let checkAdd = newTeamDetails[positionIndex]; //取得當前隊伍位置的玩家id,若無玩家此值為0
+  console.log(positionIndex);
+  console.log(checkAdd);
+  if (checkAdd === 0) {
+    newTeamDetails[checkAdd] = parseInt(loginUserId);
+    console.log(newTeamDetails);
+    reqObj = { teamMerberId: newTeamDetails };
+    console.log(reqObj);
+    addTeamAPI(reqObj);
+  } else {
+    Swal.fire({
+      title: "無法加入隊伍",
+      text: "此位置已被選擇，請選擇其他位置",
+      icon: "warning",
+    });
+  }
+}

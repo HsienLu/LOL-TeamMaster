@@ -80,7 +80,7 @@ if (!userIsLogin) {
         thumb: 0,
         userRank: "Bronze",
         likePosition: "MID",
-        likeHero: "艾希",
+        likeHero: "ashe",
         valid: true,
       })
       .then((res) => {
