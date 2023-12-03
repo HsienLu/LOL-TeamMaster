@@ -23,9 +23,9 @@
 }
 
 .teamCardBtn {
-    @include btn(296px,53px,280px,37px);
+    @include btn(296px,53px,280px,37px,18px);
     @include pad {
-        @include btn(352px,53px,336px,37px);
+        @include btn(352px,53px,336px,37px,18px);
     }
 }
 
