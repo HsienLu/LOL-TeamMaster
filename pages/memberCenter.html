@@ -125,7 +125,7 @@
         </h2>
         <div class="swiper-father position-relative mt-10">
           <div id="evaluateSwiper" class="swiper blueShadow">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper evaluateCard">
               <div
                 class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow"
               >
@@ -570,7 +570,7 @@
         </h2>
         <div class="swiper-father position-relative mt-10">
           <div id="friendListSwiper" class="swiper blueShadow">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper friendCard">
               <div
                 class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow"
               >
@@ -1032,7 +1032,7 @@
         </h2>
         <div class="swiper-father position-relative mt-10">
           <div id="blackListSwiper" class="swiper blueShadow">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper blackCard">
               <div
                 class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow"
               >
@@ -1588,7 +1588,7 @@
         </h2>
         <div class="swiper-father position-relative mt-10">
           <div id="historicalTeamRecordsSwiper" class="swiper blueShadow">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper historicalCard">
               <div
                 class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow"
               >
@@ -2859,117 +2859,10 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const evaluateSwiper = new Swiper("#evaluateSwiper", {
-        slidesPerView: 4,
-        spaceBetween: 24,
-        loop: true,
-        grabCursor: "true",
-        pagination: {
-          el: "#swiper-pagination3",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: "#swiper-button-next3",
-          prevEl: "#swiper-button-prev3",
-        },
 
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
-        },
-      });
-      const friendListSwiper = new Swiper("#friendListSwiper", {
-        slidesPerView: 3,
-        spaceBetween: 24,
-        loop: true,
-        grabCursor: "true",
-        pagination: {
-          el: "#swiper-pagination4",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: "#swiper-button-next4",
-          prevEl: "#swiper-button-prev4",
-        },
-
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        },
-      });
-      const blackListSwiper = new Swiper("#blackListSwiper", {
-        slidesPerView: 4,
-        spaceBetween: 24,
-        loop: true,
-        grabCursor: "true",
-        pagination: {
-          el: "#swiper-pagination5",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: "#swiper-button-next5",
-          prevEl: "#swiper-button-prev5",
-        },
-
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
-        },
-      });
-      const historicalTeamRecordsSwiper = new Swiper(
-        "#historicalTeamRecordsSwiper",
-        {
-          slidesPerView: 3,
-          spaceBetween: 24,
-          loop: true,
-          grabCursor: "true",
-          pagination: {
-            el: "#swiper-pagination6",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: "#swiper-button-next6",
-            prevEl: "#swiper-button-prev6",
-          },
-
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          },
-        }
-      );
-    </script>
 
     <script type="module" src="../main.js"></script>
     <script type="module" src="../assets/js/memberInfo.js"></script>
+    <script type="module" src="../assets/js/memberCenter.js"></script>
   </body>
 </html>
