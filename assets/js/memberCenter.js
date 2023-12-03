@@ -15,9 +15,7 @@ const historicalTeamList = document.querySelector('.historicalCard');
 
 function init(){
   getCommentList();
-  renderCommentList();
   getFriendList();
-  renderFriendList();
 }
 init();
 
