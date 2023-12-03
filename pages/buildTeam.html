@@ -1,17 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>建立隊伍</title>
-    <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
-    <h1>我是contact</h1>
-    <%- include('./layout/footer'); -%>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>建立隊伍</title>
+  <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
+    <div class="container pt-md-38">
+      <div class="row">
+        <h2 class="col-2">隊伍名稱</h2>
+        <input class="col-3 offset-4" type="text" placeholder="請輸入隊伍名稱">
+      </div>
+      <div class="row mt-14">
+        <h3 class="col-2">遊戲時間</h3>
+        <input id="dateLte" type="text" class="col-3 offset-4 border border-white flatpickr " placeholder="遊戲時間" />
+      </div>
+      <div class="row">
+
+        <h3>牌位限定</h3>
+        <div class="tag-group d-flex ">
+          <%- include('./layout/rankTag') -%>
+        </div>
+      </div>
+      <div class="row">
+        <div class="messageCard border border-2 rounded-2 border-white mt-6 mt-md-0 mx-auto mx-md-0">
+          <div class="messageHead border-bottom p-1">
+            <h4 class="text-center fs-5 fs-lg-4">公告</h4>
+          </div>
+          <div class="messageBody">
+            <ol class="d-flex flex-column p-5 p-md-9 gap-2 gap-md-3">
+              <li class="fs-5 fs-lg-4">1.不要有會說髒話的加入</li>
+              <li class="fs-5 fs-lg-4">2.最好有上大師</li>
+              <li class="fs-5 fs-lg-4">3.最近有玩超過10場牌位</li>
+              <li class="fs-5 fs-lg-4">4.演員地雷勿進</li>
+              <li class="fs-5 fs-lg-4">5.能對其他線路有理解尤佳</li>
+            </ol>
+          </div>
+        </div>
+        <button type="button" class="joinTeamBtn blueShadow mt-10 mt-md-0 mx-auto mx-md-0" id="addTeamButtom">
+          <p class="fw-bold fs-3">
+            加入隊伍<i class="fa-solid fa-arrow-right ms-5"></i>
+          </p>
+        </button>
+      </div>
+
+
+    </div>
+
+
+
+    <%- include('./layout/footer'); -%>
+      <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+      <script>
+        const rankMap = {
+          Iron: "鐵",
+          Bronze: "銅",
+          Silver: "銀",
+          Gold: "金",
+          Platinum: "白金",
+          Emerald: "翡翠",
+          Diamond: "鑽石",
+          Master: "大師",
+          Grandmaster: "宗師",
+          Challenger: "菁英",
+        };
+        flatpickr(".flatpickr", {
+          altInput: true,
+          // altInputClass: "fp_Month",
+          // locale: "zh_tw",
+          altFormat: "Y/m/d H:i",
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          // plugins: [
+          //   new monthSelectPlugin({
+          //     shorthand: true,
+          //     dateFormat: "Ym",
+          //     altFormat: "M/Y",
+          //   }),
+          // ],
+          // defaultDate: $(this).val(),
+        });
+      </script>
+      <script type="module" src="../main.js"></script>
+</body>
+
 </html>
