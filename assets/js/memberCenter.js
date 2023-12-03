@@ -129,7 +129,7 @@ function renderFriendList(){
               <div
                 class="parallelogram-content-avatar"
                 style="
-                  background-image: url(../assets/images/image19.png);
+                  background-image: url(../assets/images/ranking/${item.userRank}.png);
                   background-size: cover;
                   background-position: center;
                   width: 82px;
@@ -141,19 +141,19 @@ function renderFriendList(){
         </div>
       </div>
 
-      <h4 class="mt-12 text-center mb-4">無言獨上西樓</h4>
+      <h4 class="mt-12 text-center mb-4">${item.username}</h4>
       <div
         class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap"
       >
-        <div class="tag bage bage-text">TOP</div>
-        <div class="tag bage bage-text">JG</div>
-        <div class="tag bage bage-text">MID</div>
-        <div class="tag bage bage-text">ADC</div>
-        <div class="tag bage bage-text">SUP</div>
+        <div class="bage bage-text">TOP</div>
+        <div class="bage bage-text">JG</div>
+        <div class="bage bage-text">MID</div>
+        <div class="bage bage-text">ADC</div>
+        <div class="bage bage-text">SUP</div>
       </div>
       <div class="thumb my-6">
         <p class="thum-text text-center">
-          12345 <span><i class="fa-regular fa-thumbs-up"></i></span>
+        ${item.thumb} <span><i class="fa-regular fa-thumbs-up"></i></span>
         </p>
       </div>
       <div
