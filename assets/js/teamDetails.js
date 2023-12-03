@@ -1,14 +1,13 @@
 import { async } from "validate.js";
-import { api_path, userIsLogin } from "./config";
+import { api_path, memberId, userIsLogin } from "./config";
 import Swal from "sweetalert2";
-let loginUserId = 1;
 let idc = location.search.toString().split("=")[1];
 const posList = {
-  Top: 0,
-  Jungle: 1,
-  Mid: 2,
-  Ad: 3,
-  Sup: 4,
+  TOP: 0,
+  JG: 1,
+  MID: 2,
+  AD: 3,
+  SUP: 4,
 };
 const fetchDataAll = async (idc) => {
   try {
@@ -126,14 +125,18 @@ const fetchDataAll = async (idc) => {
 };
 fetchDataAll(idc);
 async function addTeam() {
-  //   if (!userIsLogin) {
-  //     console.log(123);
-  //     Swal.fire({
-  //       title: "無法加入隊伍",
-  //       text: "請先進行登入",
-  //       icon: "warning",
-  //     });
-  //   }
+  let loginUserId;
+  if (!userIsLogin) {
+    console.log(123);
+    Swal.fire({
+      title: "無法加入隊伍",
+      text: "請先進行登入",
+      icon: "warning",
+    });
+  } else {
+    console.log(123);
+    loginUserId = localStorage.getItem("userId");
+  }
   let reqObj = {}; //更新資料需要傳送的物件
   async function addTeamAPI(reqObj) {
     try {
@@ -157,11 +160,14 @@ async function addTeam() {
   let newTeamDetails = teamDetails.data.teamMerberId; //確認隊伍成員資訊
   const loginUserDetails = await axios.get(`${api_path}/users/${loginUserId}`); //取得登入的會員資訊
   let newLoginUserPos = loginUserDetails.data.likePosition; //取得喜歡位置的indx
-
-  let checkAdd = newTeamDetails[posList[newLoginUserPos]]; //取得當前隊伍位置的玩家id,若無玩家此值為0
+  console.log(newLoginUserPos);
+  console.log(posList);
+  let positionIndex = posList[newLoginUserPos]; //取得當前position 的index
+  let checkAdd = newTeamDetails[positionIndex]; //取得當前隊伍位置的玩家id,若無玩家此值為0
+  console.log(positionIndex);
   console.log(checkAdd);
   if (checkAdd === 0) {
-    newTeamDetails[checkAdd] = loginUserId;
+    newTeamDetails[checkAdd] = parseInt(loginUserId);
     console.log(newTeamDetails);
     reqObj = { teamMerberId: newTeamDetails };
     console.log(reqObj);
