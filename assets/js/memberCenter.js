@@ -87,7 +87,7 @@ function renderCommentList(){
 }
 
 function getFriendList(){
-  axios.get(`${api_path}/600/users/${memberId}/friends?_expand=user`, {
+  axios.get(`${api_path}/friendLists?_expand=user`, {
     headers: {
       Authorization: `Bearer ${userIsLogin}`,
     },
