@@ -28,7 +28,7 @@
         <p>立即開始組隊</p>
       </button>
     </div>
-    <div class="BG-Light-green"></div>
+    <!-- <div class="BG-Light-green"></div> -->
     <div class="container">
       <div class="d-flex justify-content-between align-items-center">
         <div class="popular-teams">
@@ -36,7 +36,7 @@
           <div class="popular-teams-title fs-2 fw-bold">熱門隊伍</div>
         </div>
         <button type="button" class="more-btn">
-          <p class="more-teams fs-4 me-4">更多隊伍</p>
+          <p>更多隊伍</p>
           <svg
             width="10"
             height="15"
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="popular-team">
-      <div class="swiper mySwiper">
+      <div class="swiper mySwiper" id="popular-team-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
               <div><%- include('./layout/popularTeams') -%></div>
@@ -81,19 +81,19 @@
             <div><%- include('./layout/popularTeams') -%></div>
           </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" id="swiper-button-prev1" ></div>
+        <div class="swiper-button-next" id="swiper-button-next1"></div>
+        <div class="swiper-pagination" id="swiper-pagination1"></div>
       </div>
     </div>
-    <div class="container">
+    <div class="container mt-38">
       <div class="d-flex justify-content-between align-items-center">
-        <div class="popular-teams">
-          <div class="popular-teams-bg"></div>
-          <div class="popular-teams-title fs-2 fw-bold">熱門隊友</div>
+        <div class="popular-palyers">
+          <div class="popular-palyers-bg"></div>
+          <div class="popular-palyers-title fs-2 fw-bold">熱門隊友</div>
         </div>
         <button type="button" class="more-btn">
-          <p class="more-teams fs-4 me-4">更多玩家</p>
+          <p>更多玩家</p>
           <svg
             width="10"
             height="15"
@@ -103,48 +103,74 @@
           >
             <path
               d="M2 14.5C1.71875 14.5 1.46875 14.4062 1.28125 14.2188C0.875 13.8438 0.875 13.1875 1.28125 12.8125L6.5625 7.5L1.28125 2.21875C0.875 1.84375 0.875 1.1875 1.28125 0.8125C1.65625 0.40625 2.3125 0.40625 2.6875 0.8125L8.6875 6.8125C9.09375 7.1875 9.09375 7.84375 8.6875 8.21875L2.6875 14.2188C2.5 14.4062 2.25 14.5 2 14.5Z"
-              fill="#D6EEFF"
+              fill=""
             />
           </svg>
         </button>
       </div>
     </div>
-    <!-- <div class="popular-player">
-      <div class="swiper mySwiper">
+    <div class="popular-player">
+      <div class="swiper mySwiper" id="popular-player-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-              <div><%- include('./layout/popularTeams') -%></div>
-              <div><%- include('./layout/popularTeams') -%></div>
-              <div><%- include('./layout/popularTeams') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
           </div>
           <div class="swiper-slide">
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
           </div>
           <div class="swiper-slide">
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
           </div>
           <div class="swiper-slide">
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
           </div>
           <div class="swiper-slide">
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
+            <div><%- include('./layout/popularPlayers') -%></div>
           </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" id="swiper-button-prev2"></div>
+        <div class="swiper-button-next" id="swiper-button-next2"></div>
+        <div class="swiper-pagination" id="swiper-pagination2"></div>
       </div>
-    </div> -->
-    <div><%- include('./layout/popularPlayers') -%></div>
+    </div>
 
+    <div class="cta-banner mt-20 mb-20">
+      <div class="container">
+          <div class="cta">
+            <div class="cta-bg"></div>
+            <div class="cta-title fs-2 fw-bold">加入LOL組隊大師，你可以...</div>
+          </div>
+      </div>
+      <div class="cta-content-group container d-flex justify-content-between">
+        <div class="cta-content">
+          <h3 class="text-primary ">加入隊伍</h3>
+          <i class="fa-solid fa-people-group"></i>
+        </div>
+        <div class="cta-content">
+          <h3 class="text-primary ">加入隊伍</h3>
+          <i class="fa-solid fa-people-group"></i>
+        </div>
+        <div class="cta-content">
+          <h3 class="text-primary ">加入隊伍</h3>
+          <i class="fa-solid fa-people-group"></i>
+        </div>
+      </div>
+    </div>
 
       <%- include('./layout/footer'); -%>
 
@@ -154,14 +180,28 @@
 
 
     <script>
-      const swiper = new Swiper(".mySwiper", {
+      const swiper = new Swiper("#popular-team-swiper", {
         cssMode: true,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: "#swiper-button-next1",
+          prevEl: "#swiper-button-prev1",
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: "#swiper-pagination1",
+          clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+
+      const swiper2 = new Swiper("#popular-player-swiper", {
+        cssMode: true,
+        navigation: {
+          nextEl: "#swiper-button-next2",
+          prevEl: "#swiper-button-prev2",
+        },
+        pagination: {
+          el: "#swiper-pagination2",
           clickable: true,
         },
         mousewheel: true,

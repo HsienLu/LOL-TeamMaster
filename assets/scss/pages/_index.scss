@@ -17,7 +17,7 @@
     top: 234px;
   }
   button{
-    @include btn(253px,53px,237px,37px);
+    @include btn(253px,53px,237px,37px,18px);
     margin-top: 169px;
   }
 }
@@ -37,16 +37,18 @@
     height: 684px;
   }
   button{
-    @include btn(253px,53px,237px,37px);
+    @include btn(253px,53px,237px,37px,18px);
     margin-top: 96px;
   }
 }
 
 .btn-index{
-  @include btn(253px,53px,237px,37px);
+  @include btn(253px,53px,237px,37px,18px);
 }
-.popular-teams{
-  width: 232px;
+
+@mixin title($width){
+  // width: 232px;
+  width: $width;
   position: relative;
   left: -40px;
   &-bg{
@@ -60,14 +62,11 @@
     text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
   }
 }
+.popular-teams{
+  @include title(232px);
+}
 .more-btn{
-  background: none;
-  padding: 12px 56px;
-  border: none;
-  @include flex(row,flex-start,center);
-  p{
-    color: $primary;
-  }
+  @include btnFourth(234px,53px,24px);
 }
 
 //圖版
@@ -121,7 +120,7 @@
       box-shadow: 0px 0px 12px 0px rgba(0,102,255,0.80),inset 0px 0px 12px 0px rgba(0,102,255,0.80);
   }
   button{
-    @include btn(352px,53px,336px,37px);
+    @include btn(352px,53px,336px,37px,18px);
   }
 }
 
@@ -147,9 +146,6 @@
     @include flex(row,flex-start,center);
     &:first-child{
       margin-bottom: 8px;
-    }
-    p,h5{
-      margin-right: 4px;
     }
   }
 }
@@ -208,7 +204,7 @@
 
 .swiper-slide {
   box-sizing: border-box;
-  padding: 40px 12px 48px 12px;
+  padding: 19px 12px 48px 12px;
   max-width: 1320px;
   margin: 0 auto;
   @include flex(row,space-between,center);
@@ -224,12 +220,35 @@
   margin: 0 12px 0 0;
 }
 
+.popular-palyers{
+  @include title(232px);
+}
+
+@mixin tag($tagColor){
+  background-color: $tagColor;
+  font-size: 12px;
+  color: $dark;
+  border-radius: 4px;
+  padding: 4.2px 7.8px;
+  line-height: 12px;
+}
 .playerCard{
   box-sizing: border-box;
   position: relative;
   width: 306px;
   height: 575px;
   border: 2px solid $primary;
+  border-radius: 2px;
+  box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.35),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.35);
+  &:hover{
+    box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.8),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.8);
+  }
+  img{
+    box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.35),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.35);
+    &:hover{
+      box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.8),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.8);
+    }
+  }
   &-rankingImg {
     position: absolute;
     z-index: 2;
@@ -248,5 +267,76 @@
       width: 82px;
       height: 60px;
     }
+  }
+  .tagGroup{
+    @include flex(row,flex-start,center);
+    margin-top: 16px;
+    .show{
+      @include tag($white);
+      margin-right: 8px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    .invalid{
+      @include tag(rgba($white,0.2));
+      margin-right: 8px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  button{
+    @include btnThird(242px,48px,18px);
+  }
+}
+.cta-banner {
+  background: url(../images/BG-CTA.png) center/ cover;
+  max-width: 100%;
+  height: 1026px;
+  position: relative;
+}
+.cta{
+  @include title(664px);
+  position: absolute;
+  top: 296px;
+  left: 272px;
+}
+.cta-content-group{
+  position: absolute;
+  top: 474px;
+  left: 272px;
+}
+.cta-content{
+  width: 384px;
+  height: 384px;
+  border-radius: 800px;
+  background-color: rgba($dark,0.7);
+  border: 1px solid white;
+  position: relative;
+  h3{
+    position: absolute;
+    top: 111px;
+    left: 136px;
+    text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+  }
+  i{
+    position: absolute;
+    left: 142px;
+    bottom: 111px;
+    font-size: 80px;
+    text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+  }
+  &::before{
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
+    content: '';
+    width: 416px;
+    height: 416px;
+    border-radius: 800px;
+    border: 1px solid white;
   }
 }

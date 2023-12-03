@@ -91,8 +91,8 @@
 }
 
 .joinTeamBtn{
-    @include btn(296px,53px,280px,37px);
+    @include btn(296px,53px,280px,37px,18px);
     @include pad {
-        @include btn(253px,97px,237px,81px);
+        @include btn(253px,97px,237px,81px,18px);
     }
 }

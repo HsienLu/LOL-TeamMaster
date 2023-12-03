@@ -99,7 +99,7 @@ dl {
 
 //第一個button模板
 
-@mixin btn($width, $height, $innerWidth, $innerHeight) {
+@mixin btn($width, $height, $innerWidth, $innerHeight, $fontSize) {
   width: $width;
   height: $height;
   border: 2px solid $white;
@@ -112,6 +112,7 @@ dl {
     @include flex(row, center, center);
     border-radius: 2px;
     font-weight: bold;
+    font-size: $fontSize;
   }
   &:hover {
     border: 2px solid $primary;
@@ -124,6 +125,14 @@ dl {
     p {
       background: $white;
       box-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+    }
+  }
+  &:disabled{
+    border: 2px solid rgba($secondary, 0.4);
+    p {
+      background: rgba($secondary, 0.4);
+      color: rgba($secondary, 0.4);
+      box-shadow: none;
     }
   }
 }
@@ -172,4 +181,138 @@ dl {
 
 .layout-right {
   right: 0;
+}
+
+//第二個按鈕
+@mixin btnSecond($width, $height, $fontSize){
+  border: 0px;
+  padding: 0px;
+  border-radius: 2px;
+  background-color: $secondary;
+  width: $width;
+  height: $height;
+  @include flex(row, center, center);
+  p {
+    color:$white;
+    font-weight: medium;
+    font-size: $fontSize;
+  }
+  svg{
+     fill: $white; 
+     margin-left: 16px;
+  }
+  &:hover {
+    background-color: $primary;
+    box-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+    p {
+      color:$secondary;
+    }
+    svg{
+      fill: $secondary; 
+   }
+  }
+  &:active {
+    background-color: $secondary;
+    box-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+    p {
+      color:$primary;
+    }
+    svg{
+      fill: $primary; 
+   }
+  }
+  &:disabled{
+    background-color: rgba($secondary, 0.4);
+    box-shadow: none;
+    p {
+      color:rgba($secondary, 0.4);
+    }
+    svg{
+      fill:rgba($secondary, 0.4);
+   }
+  }
+}
+//第三個按鈕
+@mixin btnThird($width, $height, $fontSize){
+  box-sizing: border-box;
+  border: 1px solid $primary;
+  border-radius: 2px;
+  padding: 0px;
+  background-color: $dark;
+  width: $width;
+  height: $height;
+  @include flex(row, center, center);
+  p {
+    color:$primary;
+    font-weight: medium;
+    font-size: $fontSize;
+  }
+  svg{
+     fill: $primary; 
+     margin-left: 16px;
+  }
+  &:hover {
+    box-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+  }
+  &:active {
+    border: 2px solid $primary;
+    box-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+  }
+  &:disabled{
+    border: 1px solid rgba($secondary, 0.5);
+    box-shadow: none;
+    p {
+      color:rgba($secondary, 0.5);
+    }
+    svg{
+      fill:rgba($secondary, 0.5);
+   }
+  }
+}
+
+//第四個按鈕
+@mixin btnFourth($width, $height,$fontSize){
+  box-sizing: border-box;
+  border: 0px;
+  padding: 0px;
+  background-color: $dark;
+  width: $width;
+  height: $height;
+  @include flex(row, center, center);
+  p {
+    color:$primary;
+    font-weight: medium;
+    font-size: $fontSize;
+  }
+  svg{
+     fill: $primary; 
+     margin-left: 16px;
+  }
+  &:hover {
+    p {
+      color:$white;
+      text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+    }
+    svg{
+       fill: $white;
+    }
+  }
+  &:active {
+    p {
+      color:$white;
+      text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.8);
+    }
+    svg{
+       fill: $white;
+    }
+  }
+  &:disabled{
+    p {
+      color: rgba($secondary, 0.5);
+      text-shadow: none;
+    }
+    svg{
+       fill: rgba($secondary, 0.5);
+    }
+  }
 }
