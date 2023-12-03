@@ -7,7 +7,7 @@ let commentData = [];
 let friendListData = [];
 let blackListData = [];
 let historicalTeamListData = [];
-let positionSelect;
+let positionSelected;
 const commentList = document.querySelector('.evaluateCard');
 const friendList = document.querySelector('.friendCard');
 const blackList = document.querySelector('.blackCard');
@@ -28,7 +28,7 @@ function getCommentList(){
     for(let i = 0; i < data.length; i++) {
       commentData.push(data[i].user);
     }
-    // positionSelect = document.querySelector(
+    // positionSelected = document.querySelector(
     //   `[data-position='${commentData.likePosition}']`
     // );   
     renderCommentList();
@@ -82,9 +82,9 @@ function renderCommentList(){
       </div>
     </div>
     `
-    // positionSelect = positionSelect.getAttribute("data-position");
-    // if (positionSelect === ${item.likePosition}){
-    //   positionSelect.remove("bageGroup");
+    // positionSelected = positionSelect.getAttribute("data-position");
+    // if (positionSelected === ${item.likePosition}){
+    //   positionSelected.remove("bageGroup");
     // }
   })
   commentList.innerHTML = str;
