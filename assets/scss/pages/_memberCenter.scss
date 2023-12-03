@@ -79,10 +79,16 @@
     border-radius: 800px;
 }
 
-// .swiper-pagination{
-//     bottom: -40px;
-// }
+.bageGroup{
+    background-color: rgba($white,0.2) !important;
+}
 
-// .swiper-horizontal,.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{
-//     bottom: 0; 
-//   }
+.btnShadow{
+    &:hover{
+        box-shadow: 0px 0px 40px 0px rgba(0, 209, 255, 0.45);
+    }
+    &:focus{
+        border: 2px solid $primary !important;
+        box-shadow: 0px 0px 40px 0px rgba(0, 209, 255, 0.45);
+    }
+}
