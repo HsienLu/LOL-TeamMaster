@@ -1,5 +1,15 @@
+import { async } from "validate.js";
 import { api_path, userIsLogin } from "./config";
+import Swal from "sweetalert2";
+let loginUserId = 1;
 let idc = location.search.toString().split("=")[1];
+const posList = {
+  Top: 0,
+  Jungle: 1,
+  Mid: 2,
+  Ad: 3,
+  Sup: 4,
+};
 const fetchDataAll = async (idc) => {
   try {
     const teamDetails = await axios.get(
@@ -98,7 +108,7 @@ const fetchDataAll = async (idc) => {
           </div>
         </div>
         <div class="d-flex align-items-end col-lg-3">
-          <button type="button" class="joinTeamBtn blueShadow mt-10 mt-md-0 mx-auto mx-md-0">
+          <button type="button" class="joinTeamBtn blueShadow mt-10 mt-md-0 mx-auto mx-md-0" id="addTeamButtom">
             <p class="fw-bold fs-3">
               加入隊伍<i class="fa-solid fa-arrow-right ms-5"></i>
             </p>
@@ -106,8 +116,61 @@ const fetchDataAll = async (idc) => {
         </div>
       </div>
       </div>;`;
+
+    document.querySelector("#addTeamButtom").addEventListener("click", () => {
+      addTeam();
+    });
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 };
 fetchDataAll(idc);
+async function addTeam() {
+  //   if (!userIsLogin) {
+  //     console.log(123);
+  //     Swal.fire({
+  //       title: "無法加入隊伍",
+  //       text: "請先進行登入",
+  //       icon: "warning",
+  //     });
+  //   }
+  let reqObj = {}; //更新資料需要傳送的物件
+  async function addTeamAPI(reqObj) {
+    try {
+      const addTeamAPI = await axios.patch(
+        `http://localhost:3000/teams/${idc}`,
+        reqObj
+      );
+      console.log(addTeamAPI);
+      Swal.fire({
+        title: "確認加入",
+        icon: "success",
+      }).then((res) => {
+        fetchDataAll(idc);
+        console.log(res);
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  const teamDetails = await axios.get(`${api_path}/teams/${idc}?_expand=user`); //取得隊伍成員資訊
+  let newTeamDetails = teamDetails.data.teamMerberId; //確認隊伍成員資訊
+  const loginUserDetails = await axios.get(`${api_path}/users/${loginUserId}`); //取得登入的會員資訊
+  let newLoginUserPos = loginUserDetails.data.likePosition; //取得喜歡位置的indx
+
+  let checkAdd = newTeamDetails[posList[newLoginUserPos]]; //取得當前隊伍位置的玩家id,若無玩家此值為0
+  console.log(checkAdd);
+  if (checkAdd === 0) {
+    newTeamDetails[checkAdd] = loginUserId;
+    console.log(newTeamDetails);
+    reqObj = { teamMerberId: newTeamDetails };
+    console.log(reqObj);
+    addTeamAPI(reqObj);
+  } else {
+    Swal.fire({
+      title: "無法加入隊伍",
+      text: "此位置已被選擇，請選擇其他位置",
+      icon: "warning",
+    });
+  }
+}
