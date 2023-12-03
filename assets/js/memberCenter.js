@@ -7,9 +7,6 @@ let commentData = [];
 let friendListData = [];
 let blackListData = [];
 let historicalTeamListData = [];
-let userObj;
-let avatarSelect;
-let rankSelect;
 let positionSelect;
 const commentList = document.querySelector('.evaluateCard');
 const friendList = document.querySelector('.friendCard');
@@ -31,6 +28,9 @@ function getCommentList(){
     for(let i = 0; i < data.length; i++) {
       commentData.push(data[i].user);
     }
+    // positionSelect = document.querySelector(
+    //   `[data-position='${commentData.likePosition}']`
+    // );   
     renderCommentList();
   })
 }
@@ -69,11 +69,11 @@ function renderCommentList(){
 
       <h4 class="mt-12 text-center mb-4">${item.username}</h4>
       <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
-        <div class="bage bage-text">TOP</div>
-        <div class="bage bage-text">JG</div>
-        <div class="bage bage-text">MID</div>
-        <div class="bage bage-text">ADC</div>
-        <div class="bage bage-text">SUP</div>
+        <div class="bage bage-text bageGroup" data-position="Top">TOP</div>
+        <div class="bage bage-text bageGroup" data-position="Jungle">JG</div>
+        <div class="bage bage-text bageGroup" data-position="Mid">MID</div>
+        <div class="bage bage-text bageGroup" data-position="Bot">ADC</div>
+        <div class="bage bage-text bageGroup" data-position="Support">SUP</div>
       </div>
       <div class="thumb my-6">
         <p class="thum-text text-center">
@@ -82,6 +82,10 @@ function renderCommentList(){
       </div>
     </div>
     `
+    // positionSelect = positionSelect.getAttribute("data-position");
+    // if (positionSelect === ${item.likePosition}){
+    //   positionSelect.remove("bageGroup");
+    // }
   })
   commentList.innerHTML = str;
 }
