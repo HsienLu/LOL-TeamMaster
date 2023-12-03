@@ -164,13 +164,13 @@ function renderFriendList(){
         class="button-all d-flex justify-content-center gap-4 mb-8"
         style="height: 48px"
       >
-        <button class="btn border border-primary text-primary w-46">
+        <button class="btn btnShadow border border-primary text-primary w-46">
           列為黑名單
           <span>
             <i class="fa-solid fa-ban ms-1"></i>
           </span>
         </button>
-        <button class="btn border border-primary text-primary w-40">
+        <button class="btn btnShadow border border-primary text-primary w-40">
           移除好友
           <span>
             <i class="fa-solid fa-user-minus ms-1"></i>
