@@ -193,16 +193,24 @@
   }
 }
 
-.swiper {
+.popularSwiper {
   max-width: 1468px;
+  // max-height: 751px;
   position: relative;
+  margin: 0 auto;
+  background-color: palegoldenrod;
 }
-.swiper-wrapper{
+.popularSwiper-wrapper{
   margin: 0 auto;
   max-width: 1320px;
+  padding: 0;
+  height: 751px;
+  background-color: paleturquoise;
 }
 
-.swiper-slide {
+.popularSwiper-slide {
+  background-color: pink;
+  height: 703px;
   box-sizing: border-box;
   padding: 19px 12px 48px 12px;
   max-width: 1320px;
