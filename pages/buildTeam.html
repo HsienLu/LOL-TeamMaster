@@ -33,42 +33,7 @@
     </div>
 
     <%- include('./layout/footer'); -%>
-      <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-      <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
-      <script>
-        const rankMap = {
-          Iron: "鐵",
-          Bronze: "銅",
-          Silver: "銀",
-          Gold: "金",
-          Platinum: "白金",
-          Emerald: "翡翠",
-          Diamond: "鑽石",
-          Master: "大師",
-          Grandmaster: "宗師",
-          Challenger: "菁英",
-        };
-        flatpickr(".flatpickr", {
-          altInput: true,
-          // altInputClass: "fp_Month",
-          // locale: "zh_tw",
-          altFormat: "Y/m/d H:i",
-          enableTime: true,
-          dateFormat: "Y-m-d H:i",
-          // plugins: [
-          //   new monthSelectPlugin({
-          //     shorthand: true,
-          //     dateFormat: "Ym",
-          //     altFormat: "M/Y",
-          //   }),
-          // ],
-          // defaultDate: $(this).val(),
-        });
-      </script>
+
       <script type="module" src="../main.js"></script>
 </body>
 
