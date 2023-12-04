@@ -1,7 +1,16 @@
-.teamName{
-    input{
-        width: 336px;
-        height: 60px;
-        margin-left: 468px;
-    }
+.teamName {
+  input {
+    width: 336px;
+    height: 60px;
+    margin-left: 468px;
+  }
+}
+.buildTeamBtn {
+  @include btn(296px, 53px, 280px, 37px, 18px);
+  @include pad {
+    @include btn(352px, 53px, 324px, 37px, 18px);
+  }
+}
+.buildTeamBorder {
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }

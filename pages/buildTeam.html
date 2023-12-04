@@ -7,33 +7,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>建立隊伍</title>
   <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 </head>
 
 <body>
   <%- include('./layout/header'); -%>
-    <div class="container mt-20 teamName d-flex align-items-center">
-      <h2>隊伍名稱</h2>
-      <input type="text" class="form-control" placeholder="Teamname" aria-label="Teamname">
+    <div class="container pt-md-38">
+      <div class="row">
+        <h2 class="col-2">隊伍名稱</h2>
+        <input class="col-3 offset-4 bg-dark border border-white" type="text" placeholder="請輸入隊伍名稱">
+      </div>
+      <div class="row mt-14">
+        <h3 class="col-2">遊戲時間</h3>
+        <div class="col-3 offset-4 p-0"><input id="dateLte" type="text" class="border border-white flatpickr "
+            placeholder="遊戲時間" />
+        </div>
+
+      </div>
+      <div class="row mt-14">
+
+        <h3 class="col-2">牌位限定</h3>
+        <div class="col-6 offset-4 p-0 align-self-center ">
+
+          <div class=" tag-group p-0 d-flex ">
+            <%- include('./layout/rankTag') -%>
+          </div>
+
+        </div>
+      </div>
+      <div class=" row mt-16">
+        <div class="col-6 border border-2 rounded-2 border-white mt-6 mt-md-0 p-0">
+          <div class="messageHead border-bottom border-1 p-1 ">
+            <h4 class="text-center fs-5 fs-lg-4">公告</h4>
+          </div>
+          <div class="messageBody ">
+            <ol class="d-flex flex-column p-5 p-md-5 gap-2 gap-md-3">
+              <div class="input-box d-flex">
+                <h6 class="fs-5">1.</h6>
+                <input style="height: 1.75rem;" placeholder="請輸入公告"
+                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+              </div>
+              <div class="input-box d-flex">
+                <h6 class="fs-5">2.</h6><input style="height: 1.75rem;" placeholder="請輸入公告"
+                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+              </div>
+              <div class="input-box d-flex">
+                <h6 class="fs-5">3.</h6><input style="height: 1.75rem;" placeholder="請輸入公告"
+                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+              </div>
+              <div class="input-box d-flex">
+                <h6 class="fs-5">4.</h6><input style="height: 1.75rem;" placeholder="請輸入公告"
+                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+              </div>
+              <div class="input-box d-flex">
+                <h6 class="fs-5">5.</h6><input style="height: 1.75rem;" placeholder="請輸入公告"
+                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+              </div>
+            </ol>
+          </div>
+        </div>
+        <button type="button" class="col-3 offset-1 align-self-end buildTeamBtn blueShadow mt-10 mt-md-0 "
+          id="addTeamButtom">
+          <p class="fw-bold fs-5">
+            建立隊伍
+          </p>
+        </button>
+      </div>
+
+
     </div>
-    <div class="container mt-14">
-      <h3>遊戲時間(Date Picker)</h3>
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-    </div>
-    <div class="container mt-12">
-      <h3>牌位限定(Tag)</h3>
-    </div>
+
+
 
     <%- include('./layout/footer'); -%>
-
+      <script src="https://kit.fontawesome.com/8eab62e458.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <!-- <script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/zh-tw.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+      <script>
+        const rankMap = {
+          Iron: "鐵",
+          Bronze: "銅",
+          Silver: "銀",
+          Gold: "金",
+          Platinum: "白金",
+          Emerald: "翡翠",
+          Diamond: "鑽石",
+          Master: "大師",
+          Grandmaster: "宗師",
+          Challenger: "菁英",
+        };
+        flatpickr(".flatpickr", {
+          altInput: true,
+          // altInputClass: "fp_Month",
+          // locale: "zh_tw",
+          altFormat: "Y/m/d H:i",
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          // plugins: [
+          //   new monthSelectPlugin({
+          //     shorthand: true,
+          //     dateFormat: "Ym",
+          //     altFormat: "M/Y",
+          //   }),
+          // ],
+          // defaultDate: $(this).val(),
+        });
+      </script>
       <script type="module" src="../main.js"></script>
 </body>
 
