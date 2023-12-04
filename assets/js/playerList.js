@@ -62,7 +62,7 @@ function renderPlayerListCard(playerData) {
             </p>
           </div>
           <div class="button-all d-flex justify-content-center gap-4 mb-8">
-            <button class="btn border border-primary text-primary" style="width: 40%" data-friendInvite="${item.id}">
+            <button class="jsAddFriendBtn btn border border-primary text-primary" style="width: 40%" data-friendInvite="${item.id}">
               加為好友
               <span>
                 <svg
@@ -120,7 +120,9 @@ function allPlayerRender() {
   axios
     .get(`${api_path}/users/`)
     .then((res) => {
-      playerData = res.data;
+      playerData = res.data.filter((item) => {
+        return item.id !== memberId;
+      });
       setPagination(playerData, container);
     })
     .catch((error) => {
@@ -191,6 +193,37 @@ jsPlayerSearchBtn.addEventListener("click", (e) => {
     .then((res) => {
       playerData = res.data;
       setPagination(playerData, container);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+playerWrap.addEventListener("click", (e) => {
+  let addFriendBtn = e.target.getAttribute("class");
+  if (
+    addFriendBtn !== "jsAddFriendBtn btn border border-primary text-primary"
+  ) {
+    return;
+  }
+
+  let selectAddFriend = e.target.getAttribute("data-friendinvite");
+
+  axios
+    .post(`${api_path}/friendLists`, {
+      userId: memberId,
+      friendId: selectAddFriend,
+      status: 1,
+    })
+    .then((res) => {
+      Swal.fire({
+        icon: "success",
+        title: "成功加入好友",
+        showConfirmButton: false,
+        timer: 2000,
+        background: "#060818",
+        color: "#D6EEFF",
+      });
     })
     .catch((error) => {
       console.log(error);

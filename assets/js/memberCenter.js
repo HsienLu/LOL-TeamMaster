@@ -8,41 +8,47 @@ let friendListData = [];
 let banListData = [];
 let historicalTeamListData = [];
 let positionSelected;
-const commentList = document.querySelector('.evaluateCard');
-const friendList = document.querySelector('.friendCard');
-const banList = document.querySelector('.blackCard');
-const historicalTeamList = document.querySelector('.historicalCard');
+const commentList = document.querySelector(".evaluateCard");
+const friendList = document.querySelector(".friendCard");
+const banList = document.querySelector(".blackCard");
+const historicalTeamList = document.querySelector(".historicalCard");
 
-function init(){
+function init() {
   getCommentList();
   getFriendList();
   getBanList();
 }
 init();
 
-function getCommentList(){
-  axios.get(`${api_path}/comments?_expand=user`)
-  .then((res) => {
+function getCommentList() {
+  axios.get(`${api_path}/comments?_expand=user`).then((res) => {
     data = res.data;
-    for(let i = 0; i < data.length; i++) {
-      commentData.push(data[i].user);
-    }
-    // positionSelected = document.querySelector(
-    //   `[data-position='${commentData.likePosition}']`
-    // );   
+    console.log(data);
     renderCommentList();
-  })
+    // for (let i = 0; i < data.length; i++) {
+    //   commentData.push(data[i].user);
+    // }
+    positionSelected = document.querySelectorAll("[data-likePosition]");
+    console.log(positionSelected);
+    // positionSelected = positionSelected.getAttribute("data-likePosition");
+
+    // commentData.forEach((item) => {
+    //   if (positionSelected.value === item.likePosition){
+    //     positionSelected.add("bageGroup");
+    //   }
+    // })
+  });
 }
 
-function renderCommentList(){
+function renderCommentList() {
   let str = "";
-  commentData.forEach((item) => {
+  data.forEach((item, index) => {
     str += `
     <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
       <div class="meber-card-top">
         <div class="member-avatar position-relative">
           <img
-            src="../assets/images/avatar/${item.avatar}.png"
+            src="../assets/images/avatar/${item.user.avatar}.png"
             alt=""
             class="member-avatar-style"
             style="width: 306px; height: 306px"/>
@@ -55,7 +61,7 @@ function renderCommentList(){
               <div
                 class="parallelogram-content-avatar"
                 style="
-                  background-image: url(../assets/images/ranking/${item.userRank}.png);
+                  background-image: url(../assets/images/ranking/${item.user.userRank}.png);
                   background-size: cover;
                   background-position: center;
                   width: 82px;
@@ -66,41 +72,37 @@ function renderCommentList(){
         </div>
       </div>
 
-      <h4 class="mt-12 text-center mb-4">${item.username}</h4>
+      <h4 class="mt-12 text-center mb-4">${item.user.username}</h4>
       <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
-        <div class="bage bage-text bageGroup" data-likePosition="Top">TOP</div>
-        <div class="bage bage-text bageGroup" data-likePosition="Jungle">JG</div>
-        <div class="bage bage-text bageGroup" data-likePosition="Mid">MID</div>
-        <div class="bage bage-text bageGroup" data-likePosition="Bot">ADC</div>
-        <div class="bage bage-text bageGroup" data-likePosition="Support">SUP</div>
+        <div class="bage bage-text" data-likePosition="TOP">TOP</div>
+        <div class="bage bage-text" data-likePosition="JG">JG</div>
+        <div class="bage bage-text" data-likePosition="MID">MID</div>
+        <div class="bage bage-text" data-likePosition="AD">AD</div>
+        <div class="bage bage-text" data-likePosition="SUP">SUP</div>
       </div>      
       <div class="thumb my-6">
         <p class="thum-text text-center">
-          ${item.thumb} <span><i class="fa-regular fa-thumbs-up"></i></span>
+          ${item.user.thumb} <span><i class="fa-regular fa-thumbs-up"></i></span>
         </p>
       </div>
     </div>
-    `
-    // positionSelected = positionSelect.getAttribute("data-likePosition");
-    // if (positionSelected === ${item.likePosition}){
-    //   positionSelected.remove("bageGroup");
-    // }
-  })
+    `;
+  });
+
   commentList.innerHTML = str;
 }
 
-function getFriendList(){
-  axios.get(`${api_path}/friendLists?_expand=user`)
-  .then((res) => {
+function getFriendList() {
+  axios.get(`${api_path}/friendLists?_expand=user`).then((res) => {
     data = res.data;
-    for(let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       friendListData.push(data[i].user);
     }
     renderFriendList();
-  })
+  });
 }
 
-function renderFriendList(){
+function renderFriendList() {
   let str = "";
   friendListData.forEach((item) => {
     str += `
@@ -174,23 +176,22 @@ function renderFriendList(){
       </div>
     </div>
   </div>
-    `
-  })
+    `;
+  });
   friendList.innerHTML = str;
 }
 
-function getBanList(){
-  axios.get(`${api_path}/banLists?_expand=user`)
-  .then((res) => {
+function getBanList() {
+  axios.get(`${api_path}/banLists?_expand=user`).then((res) => {
     data = res.data;
-    for(let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       banListData.push(data[i].user);
     }
     renderBanList();
-  })
+  });
 }
 
-function renderBanList(){
+function renderBanList() {
   let str = "";
   banListData.forEach((item) => {
     str += `
@@ -248,117 +249,113 @@ function renderBanList(){
         </button>
       </div>
     </div>
-    `
-  })
+    `;
+  });
   banList.innerHTML = str;
 }
 
-
 //Swiper
-const evaluateSwiper = new Swiper("#evaluateSwiper", {
-    slidesPerView: 4,
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: "true",
-    pagination: {
-      el: "#swiper-pagination3",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: "#swiper-button-next3",
-      prevEl: "#swiper-button-prev3",
-    },
+// const evaluateSwiper = new Swiper("#evaluateSwiper", {
+//   slidesPerView: 4,
+//   spaceBetween: 24,
+//   loop: true,
+//   grabCursor: "true",
+//   pagination: {
+//     el: "#swiper-pagination3",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: "#swiper-button-next3",
+//     prevEl: "#swiper-button-prev3",
+//   },
 
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-  const friendListSwiper = new Swiper("#friendListSwiper", {
-    slidesPerView: 3,
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: "true",
-    pagination: {
-      el: "#swiper-pagination4",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: "#swiper-button-next4",
-      prevEl: "#swiper-button-prev4",
-    },
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//     },
+//     768: {
+//       slidesPerView: 2,
+//     },
+//     1024: {
+//       slidesPerView: 4,
+//     },
+//   },
+// });
+// const friendListSwiper = new Swiper("#friendListSwiper", {
+//   slidesPerView: 3,
+//   spaceBetween: 24,
+//   loop: true,
+//   grabCursor: "true",
+//   pagination: {
+//     el: "#swiper-pagination4",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: "#swiper-button-next4",
+//     prevEl: "#swiper-button-prev4",
+//   },
 
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-  const blackListSwiper = new Swiper("#blackListSwiper", {
-    slidesPerView: 4,
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: "true",
-    pagination: {
-      el: "#swiper-pagination5",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: "#swiper-button-next5",
-      prevEl: "#swiper-button-prev5",
-    },
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//     },
+//     768: {
+//       slidesPerView: 2,
+//     },
+//     1024: {
+//       slidesPerView: 3,
+//     },
+//   },
+// });
+// const blackListSwiper = new Swiper("#blackListSwiper", {
+//   slidesPerView: 4,
+//   spaceBetween: 24,
+//   loop: true,
+//   grabCursor: "true",
+//   pagination: {
+//     el: "#swiper-pagination5",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: "#swiper-button-next5",
+//     prevEl: "#swiper-button-prev5",
+//   },
 
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-  const historicalTeamRecordsSwiper = new Swiper(
-    "#historicalTeamRecordsSwiper",
-    {
-      slidesPerView: 3,
-      spaceBetween: 24,
-      loop: true,
-      grabCursor: "true",
-      pagination: {
-        el: "#swiper-pagination6",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: "#swiper-button-next6",
-        prevEl: "#swiper-button-prev6",
-      },
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//     },
+//     768: {
+//       slidesPerView: 2,
+//     },
+//     1024: {
+//       slidesPerView: 4,
+//     },
+//   },
+// });
+// const historicalTeamRecordsSwiper = new Swiper("#historicalTeamRecordsSwiper", {
+//   slidesPerView: 3,
+//   spaceBetween: 24,
+//   loop: true,
+//   grabCursor: "true",
+//   pagination: {
+//     el: "#swiper-pagination6",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: "#swiper-button-next6",
+//     prevEl: "#swiper-button-prev6",
+//   },
 
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-    }
-  );
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//     },
+//     768: {
+//       slidesPerView: 2,
+//     },
+//     1024: {
+//       slidesPerView: 3,
+//     },
+//   },
+// });
