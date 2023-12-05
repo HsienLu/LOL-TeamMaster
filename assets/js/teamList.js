@@ -93,7 +93,7 @@ const fetchDataAll = async () => {
                   ? "<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>"
                   : `<p class="text-secondary">${teamMemeberName[1]}</p>`
               }
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -126,7 +126,7 @@ const fetchDataAll = async () => {
                 ? "<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>"
                 : `<p class="text-secondary">${teamMemeberName[2]}</p>`
             }
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -159,7 +159,7 @@ const fetchDataAll = async () => {
               ? "<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>"
               : `<p class="text-secondary">${teamMemeberName[3]}</p>`
           }
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -192,7 +192,7 @@ const fetchDataAll = async () => {
             ? "<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>"
             : `<p class="text-secondary">${teamMemeberName[4]}</p>`
         }
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -326,7 +326,7 @@ const fetchDataPlayTimeAsc = async () => {
                   ? "<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>"
                   : `<p class="text-secondary">${teamMemeberName[1]}</p>`
               }
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -359,7 +359,7 @@ const fetchDataPlayTimeAsc = async () => {
                 ? "<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>"
                 : `<p class="text-secondary">${teamMemeberName[2]}</p>`
             }
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -392,7 +392,7 @@ const fetchDataPlayTimeAsc = async () => {
               ? "<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>"
               : `<p class="text-secondary">${teamMemeberName[3]}</p>`
           }
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -425,7 +425,7 @@ const fetchDataPlayTimeAsc = async () => {
             ? "<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>"
             : `<p class="text-secondary">${teamMemeberName[4]}</p>`
         }
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -559,7 +559,7 @@ const fetchDataPlayTimeDesc = async () => {
                   ? "<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>"
                   : `<p class="text-secondary">${teamMemeberName[1]}</p>`
               }
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -592,7 +592,7 @@ const fetchDataPlayTimeDesc = async () => {
                 ? "<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>"
                 : `<p class="text-secondary">${teamMemeberName[2]}</p>`
             }
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -625,7 +625,7 @@ const fetchDataPlayTimeDesc = async () => {
               ? "<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>"
               : `<p class="text-secondary">${teamMemeberName[3]}</p>`
           }
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -658,7 +658,7 @@ const fetchDataPlayTimeDesc = async () => {
             ? "<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>"
             : `<p class="text-secondary">${teamMemeberName[4]}</p>`
         }
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -792,7 +792,7 @@ const fetchDataRankLimit = async (rank) => {
                   ? "<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>"
                   : `<p class="text-secondary">${teamMemeberName[1]}</p>`
               }
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -825,7 +825,7 @@ const fetchDataRankLimit = async (rank) => {
                 ? "<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>"
                 : `<p class="text-secondary">${teamMemeberName[2]}</p>`
             }
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -858,7 +858,7 @@ const fetchDataRankLimit = async (rank) => {
               ? "<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>"
               : `<p class="text-secondary">${teamMemeberName[3]}</p>`
           }
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -891,7 +891,7 @@ const fetchDataRankLimit = async (rank) => {
             ? "<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>"
             : `<p class="text-secondary">${teamMemeberName[4]}</p>`
         }
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -1025,7 +1025,7 @@ const fetchDataPlayTimeLimit = async (time) => {
                   ? "<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>"
                   : `<p class="text-secondary">${teamMemeberName[1]}</p>`
               }
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -1058,7 +1058,7 @@ const fetchDataPlayTimeLimit = async (time) => {
                 ? "<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>"
                 : `<p class="text-secondary">${teamMemeberName[2]}</p>`
             }
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -1091,7 +1091,7 @@ const fetchDataPlayTimeLimit = async (time) => {
               ? "<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>"
               : `<p class="text-secondary">${teamMemeberName[3]}</p>`
           }
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -1124,7 +1124,7 @@ const fetchDataPlayTimeLimit = async (time) => {
             ? "<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>"
             : `<p class="text-secondary">${teamMemeberName[4]}</p>`
         }
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -1258,7 +1258,7 @@ const fetchDataQuery = async (query) => {
                   ? "<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>"
                   : `<p class="text-secondary">${teamMemeberName[1]}</p>`
               }
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -1291,7 +1291,7 @@ const fetchDataQuery = async (query) => {
                 ? "<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>"
                 : `<p class="text-secondary">${teamMemeberName[2]}</p>`
             }
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -1324,7 +1324,7 @@ const fetchDataQuery = async (query) => {
               ? "<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>"
               : `<p class="text-secondary">${teamMemeberName[3]}</p>`
           }
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -1357,7 +1357,7 @@ const fetchDataQuery = async (query) => {
             ? "<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>"
             : `<p class="text-secondary">${teamMemeberName[4]}</p>`
         }
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -1489,7 +1489,7 @@ const fetchDataThumbSort = async (sort) => {
                   ? "<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>"
                   : `<p class="text-secondary">${teamMemeberName[1]}</p>`
               }
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -1522,7 +1522,7 @@ const fetchDataThumbSort = async (sort) => {
                 ? "<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>"
                 : `<p class="text-secondary">${teamMemeberName[2]}</p>`
             }
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -1555,7 +1555,7 @@ const fetchDataThumbSort = async (sort) => {
               ? "<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>"
               : `<p class="text-secondary">${teamMemeberName[3]}</p>`
           }
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -1588,7 +1588,7 @@ const fetchDataThumbSort = async (sort) => {
             ? "<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>"
             : `<p class="text-secondary">${teamMemeberName[4]}</p>`
         }
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">

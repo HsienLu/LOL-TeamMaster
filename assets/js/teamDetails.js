@@ -142,7 +142,7 @@ async function addTeam() {
         `http://localhost:3000/teams/${idc}`,
         reqObj
       );
-      console.log(addTeamAPI);
+
       Swal.fire({
         title: "確認加入",
         icon: "success",
@@ -165,7 +165,7 @@ async function addTeam() {
   console.log(positionIndex);
   console.log(checkAdd);
   if (checkAdd === 0) {
-    newTeamDetails[checkAdd] = parseInt(loginUserId);
+    newTeamDetails[positionIndex] = parseInt(loginUserId);
     console.log(newTeamDetails);
     reqObj = { teamMerberId: newTeamDetails };
     console.log(reqObj);
