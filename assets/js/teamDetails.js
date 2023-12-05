@@ -127,14 +127,12 @@ fetchDataAll(idc);
 async function addTeam() {
   let loginUserId;
   if (!userIsLogin) {
-    console.log(123);
     Swal.fire({
       title: "無法加入隊伍",
       text: "請先進行登入",
       icon: "warning",
     });
   } else {
-    console.log(123);
     loginUserId = localStorage.getItem("userId");
   }
   let reqObj = {}; //更新資料需要傳送的物件
