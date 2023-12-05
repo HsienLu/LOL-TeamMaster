@@ -2,7 +2,8 @@
     Master: "大師" , Grandmaster: "宗師" , Challenger: "菁英" }; %>
 
     <% for (const v in rankMap1) { %>
-        <div class="tag bage bage-text me-2">
+
+        <div class="tag bage bage-text me-2 buildTeamTag" style="cursor: pointer; " data-rank=<%=v %>>
             <%= rankMap1[v] %>
         </div>
         <% } %>

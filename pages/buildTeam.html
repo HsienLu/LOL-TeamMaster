@@ -16,54 +16,63 @@
   <%- include('./layout/header'); -%>
     <div class="container pt-md-38">
       <div class="row">
-        <h2 class="col-2">隊伍名稱</h2>
-        <input class="col-3 offset-4 bg-dark border border-white" type="text" placeholder="請輸入隊伍名稱">
+        <label class="col-2 h2 " for="buildTeamName">隊伍名稱</label>
+        <input class="col-3 offset-4 bg-dark border border-white text-white" id="buildTeamName" type="text"
+          placeholder="請輸入隊伍名稱">
       </div>
       <div class="row mt-14">
-        <h3 class="col-2">遊戲時間</h3>
-        <div class="col-3 offset-4 p-0"><input id="dateLte" type="text" class="border border-white flatpickr "
-            placeholder="遊戲時間" />
+        <label class="col-2 h3" for="buildTeamTime">遊戲時間</label>
+        <div class="col-3 offset-4 p-0">
+          <input id="buildTeamTime" type="text" class="border border-white flatpickr " placeholder="遊戲時間" />
         </div>
 
       </div>
       <div class="row mt-14">
 
-        <h3 class="col-2">牌位限定</h3>
+        <label class="col-2 h3">牌位限定</label>
         <div class="col-6 offset-4 p-0 align-self-center ">
 
-          <div class=" tag-group p-0 d-flex ">
+          <div class=" tag-group p-0 d-flex " id="buildTeamTagGroup">
             <%- include('./layout/rankTag') -%>
           </div>
 
         </div>
+        <div class="row">
+          <hr class="mt-14 col-11 ">
+        </div>
+
       </div>
-      <div class=" row mt-16">
+      <div class=" row mt-14">
         <div class="col-6 border border-2 rounded-2 border-white mt-6 mt-md-0 p-0">
           <div class="messageHead border-bottom border-1 p-1 ">
             <h4 class="text-center fs-5 fs-lg-4">公告</h4>
           </div>
           <div class="messageBody ">
-            <ol class="d-flex flex-column p-5 p-md-5 gap-2 gap-md-3">
+            <ol class="d-flex flex-column p-5 p-md-5 gap-2 gap-md-3" id="noticeGroup">
               <div class="input-box d-flex">
-                <h6 class="fs-5">1.</h6>
-                <input style="height: 1.75rem;" placeholder="請輸入公告"
-                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+                <label class="fs-5" for="messageItem1">1.</label>
+                <input style="height: 1.75rem;" placeholder="請輸入公告" id="messageItem1"
+                  class="messageItem ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
               </div>
               <div class="input-box d-flex">
-                <h6 class="fs-5">2.</h6><input style="height: 1.75rem;" placeholder="請輸入公告"
-                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+                <label class="fs-5" for="messageItem2">2.</label>
+                <input style="height: 1.75rem;" id="messageItem2" placeholder="請輸入公告"
+                  class="messageItem ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
               </div>
               <div class="input-box d-flex">
-                <h6 class="fs-5">3.</h6><input style="height: 1.75rem;" placeholder="請輸入公告"
-                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+                <label class="fs-5" for="messageItem3">3.</label>
+                <input style="height: 1.75rem;" id="messageItem3" placeholder="請輸入公告"
+                  class="messageItem ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
               </div>
               <div class="input-box d-flex">
-                <h6 class="fs-5">4.</h6><input style="height: 1.75rem;" placeholder="請輸入公告"
-                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+                <label class="fs-5" for="messageItem4">4.</label>
+                <input style="height: 1.75rem;" id="messageItem4" placeholder="請輸入公告"
+                  class="messageItem ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
               </div>
               <div class="input-box d-flex">
-                <h6 class="fs-5">5.</h6><input style="height: 1.75rem;" placeholder="請輸入公告"
-                  class="ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
+                <label class="fs-5" for="messageItem5">5.</label>
+                <input style="height: 1.75rem;" id="messageItem5" placeholder="請輸入公告"
+                  class="messageItem ms-4 text-white w-100 fs-6 fs-lg-6 bg-dark border buildTeamBorder">
               </div>
             </ol>
           </div>
@@ -119,6 +128,7 @@
         });
       </script>
       <script type="module" src="../main.js"></script>
+      <script type="module" src="../assets/js/buildTeam.js"></script>
 </body>
 
 </html>
