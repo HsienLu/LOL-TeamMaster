@@ -1,3 +1,4 @@
+if (!userIsLogin) location.href = "index.html";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { api_path, userIsLogin, memberId } from "./config";
@@ -248,79 +249,67 @@ jsPlayerSearchBtn.addEventListener("click", (e) => {
     });
 });
 
-if (!userIsLogin) {
-  playerWrap.addEventListener("click", (e) => {
-    isFriend = 0;
+playerWrap.addEventListener("click", (e) => {
+  isFriend = 0;
 
-    let selectAddFriend = Number(e.target.getAttribute("data-friendinvite"));
+  let selectAddFriend = Number(e.target.getAttribute("data-friendinvite"));
+  if (selectAddFriend) {
+    axios.get(`${api_path}/friendLists`).then((res) => {
+      res.data.forEach((item) => {
+        if (item.userId === memberId && item.friendId === selectAddFriend)
+          isFriend = 1;
+      });
 
-    if (selectAddFriend) {
-      axios.get(`${api_path}/friendLists`).then((res) => {
-        res.data.forEach((item) => {
-          if (item.userId === memberId && item.friendId === selectAddFriend)
-            isFriend = 1;
+      if (isFriend) {
+        Swal.fire({
+          icon: "error",
+          title: "已經是好友",
+          showConfirmButton: false,
+          timer: 2000,
+          background: "#060818",
+          color: "#D6EEFF",
         });
+        return;
+      }
+    });
 
-        if (isFriend) {
-          Swal.fire({
-            icon: "error",
-            title: "已經是好友",
-            showConfirmButton: false,
-            timer: 2000,
-            background: "#060818",
-            color: "#D6EEFF",
-          });
-          return;
-        }
-      });
-
-      Swal.fire({
-        title: "確定要加入好友?",
-        icon: "question",
-        background: "#060818",
-        color: "#D6EEFF",
-        showCancelButton: true,
-        customClass: {
-          confirmButton: "bg-white text-dark me-4",
-          cancelButton: "border border-2 border-white bg-transparent",
-        },
-        confirmButtonText: "確定",
-        cancelButtonText: "取消",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          axios
-            .post(`${api_path}/friendLists`, {
-              userId: memberId,
-              friendId: selectAddFriend,
-              status: 1,
-            })
-            .then((res) => {
-              Swal.fire({
-                icon: "success",
-                title: "已送出好友邀請",
-                showConfirmButton: false,
-                timer: 2000,
-                background: "#060818",
-                color: "#D6EEFF",
-              });
-              allPlayerRender();
-            })
-            .catch((error) => {
-              console.log(error);
+    Swal.fire({
+      title: "確定要加入好友?",
+      icon: "question",
+      background: "#060818",
+      color: "#D6EEFF",
+      showCancelButton: true,
+      customClass: {
+        confirmButton: "bg-white text-dark me-4",
+        cancelButton: "border border-2 border-white bg-transparent",
+      },
+      confirmButtonText: "確定",
+      cancelButtonText: "取消",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .post(`${api_path}/friendLists`, {
+            userId: memberId,
+            friendId: selectAddFriend,
+            status: 1,
+          })
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "已送出好友邀請",
+              showConfirmButton: false,
+              timer: 2000,
+              background: "#060818",
+              color: "#D6EEFF",
             });
-        }
-      });
-    }
-  });
-} else {
-  Swal.fire({
-    icon: "error",
-    title: "請先登入",
-    showConfirmButton: false,
-    timer: 2000,
-    background: "#060818",
-    color: "#D6EEFF",
-  });
-  return;
-}
+            allPlayerRender();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    });
+  }
+});
+
 allPlayerRender();
