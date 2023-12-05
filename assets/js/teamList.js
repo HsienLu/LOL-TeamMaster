@@ -25,7 +25,7 @@ const fetchDataAll = async () => {
           : teamMemeLikeHero.push(v.likeHero);
       });
       teamListBoxText += `        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -258,7 +258,7 @@ const fetchDataPlayTimeAsc = async () => {
           : teamMemeLikeHero.push(v.likeHero);
       });
       teamListBoxText += `        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -491,7 +491,7 @@ const fetchDataPlayTimeDesc = async () => {
           : teamMemeLikeHero.push(v.likeHero);
       });
       teamListBoxText += `        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -724,7 +724,7 @@ const fetchDataRankLimit = async (rank) => {
           : teamMemeLikeHero.push(v.likeHero);
       });
       teamListBoxText += `        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -957,7 +957,7 @@ const fetchDataPlayTimeLimit = async (time) => {
           : teamMemeLikeHero.push(v.likeHero);
       });
       teamListBoxText += `        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -1190,7 +1190,7 @@ const fetchDataQuery = async (query) => {
           : teamMemeLikeHero.push(v.likeHero);
       });
       teamListBoxText += `        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -1421,7 +1421,7 @@ const fetchDataThumbSort = async (sort) => {
           : teamMemeLikeHero.push(v.likeHero);
       });
       teamListBoxText += `        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
