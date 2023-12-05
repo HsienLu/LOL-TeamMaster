@@ -8,33 +8,32 @@ let friendListData = [];
 let banListData = [];
 let historicalTeamListData = [];
 let positionSelected;
-const commentList = document.querySelector('.evaluateCard');
-const friendList = document.querySelector('.friendCard');
-const banList = document.querySelector('.blackCard');
-const historicalTeamList = document.querySelector('.historicalCard');
+const commentList = document.querySelector(".evaluateCard");
+const friendList = document.querySelector(".friendCard");
+const banList = document.querySelector(".blackCard");
+const historicalTeamList = document.querySelector(".historicalCard");
 
-function init(){
+function init() {
   getCommentList();
   getFriendList();
   getBanList();
 }
 init();
 
-function getCommentList(){
-  axios.get(`${api_path}/comments?_expand=user`)
-  .then((res) => {
+function getCommentList() {
+  axios.get(`${api_path}/comments?_expand=user`).then((res) => {
     data = res.data;
-    for(let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       commentData.push(data[i].user);
     }
     // positionSelected = document.querySelector(
     //   `[data-position='${commentData.likePosition}']`
-    // );   
+    // );
     renderCommentList();
-  })
+  });
 }
 
-function renderCommentList(){
+function renderCommentList() {
   let str = "";
   commentData.forEach((item) => {
     str += `
@@ -80,27 +79,26 @@ function renderCommentList(){
         </p>
       </div>
     </div>
-    `
+    `;
     // positionSelected = positionSelect.getAttribute("data-likePosition");
     // if (positionSelected === ${item.likePosition}){
     //   positionSelected.remove("bageGroup");
     // }
-  })
+  });
   commentList.innerHTML = str;
 }
 
-function getFriendList(){
-  axios.get(`${api_path}/friendLists?_expand=user`)
-  .then((res) => {
+function getFriendList() {
+  axios.get(`${api_path}/friendLists?_expand=user`).then((res) => {
     data = res.data;
-    for(let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       friendListData.push(data[i].user);
     }
     renderFriendList();
-  })
+  });
 }
 
-function renderFriendList(){
+function renderFriendList() {
   let str = "";
   friendListData.forEach((item) => {
     str += `
@@ -174,23 +172,22 @@ function renderFriendList(){
       </div>
     </div>
   </div>
-    `
-  })
+    `;
+  });
   friendList.innerHTML = str;
 }
 
-function getBanList(){
-  axios.get(`${api_path}/banLists?_expand=user`)
-  .then((res) => {
+function getBanList() {
+  axios.get(`${api_path}/banLists?_expand=user`).then((res) => {
     data = res.data;
-    for(let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       banListData.push(data[i].user);
     }
     renderBanList();
-  })
+  });
 }
 
-function renderBanList(){
+function renderBanList() {
   let str = "";
   banListData.forEach((item) => {
     str += `
@@ -248,117 +245,113 @@ function renderBanList(){
         </button>
       </div>
     </div>
-    `
-  })
+    `;
+  });
   banList.innerHTML = str;
 }
 
-
 //Swiper
 const evaluateSwiper = new Swiper("#evaluateSwiper", {
-    slidesPerView: 4,
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: "true",
-    pagination: {
-      el: "#swiper-pagination3",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: "#swiper-button-next3",
-      prevEl: "#swiper-button-prev3",
-    },
+  slidesPerView: 4,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: "true",
+  pagination: {
+    el: "#swiper-pagination3",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: "#swiper-button-next3",
+    prevEl: "#swiper-button-prev3",
+  },
 
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-  });
-  const friendListSwiper = new Swiper("#friendListSwiper", {
-    slidesPerView: 3,
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: "true",
-    pagination: {
-      el: "#swiper-pagination4",
-      clickable: true,
+    768: {
+      slidesPerView: 2,
     },
-    navigation: {
-      nextEl: "#swiper-button-next4",
-      prevEl: "#swiper-button-prev4",
+    1024: {
+      slidesPerView: 4,
     },
+  },
+});
+const friendListSwiper = new Swiper("#friendListSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: "true",
+  pagination: {
+    el: "#swiper-pagination4",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: "#swiper-button-next4",
+    prevEl: "#swiper-button-prev4",
+  },
 
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-  });
-  const blackListSwiper = new Swiper("#blackListSwiper", {
-    slidesPerView: 4,
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: "true",
-    pagination: {
-      el: "#swiper-pagination5",
-      clickable: true,
+    768: {
+      slidesPerView: 2,
     },
-    navigation: {
-      nextEl: "#swiper-button-next5",
-      prevEl: "#swiper-button-prev5",
-    },
-
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-  const historicalTeamRecordsSwiper = new Swiper(
-    "#historicalTeamRecordsSwiper",
-    {
+    1024: {
       slidesPerView: 3,
-      spaceBetween: 24,
-      loop: true,
-      grabCursor: "true",
-      pagination: {
-        el: "#swiper-pagination6",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: "#swiper-button-next6",
-        prevEl: "#swiper-button-prev6",
-      },
+    },
+  },
+});
+const blackListSwiper = new Swiper("#blackListSwiper", {
+  slidesPerView: 4,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: "true",
+  pagination: {
+    el: "#swiper-pagination5",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: "#swiper-button-next5",
+    prevEl: "#swiper-button-prev5",
+  },
 
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-    }
-  );
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+const historicalTeamRecordsSwiper = new Swiper("#historicalTeamRecordsSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: "true",
+  pagination: {
+    el: "#swiper-pagination6",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: "#swiper-button-next6",
+    prevEl: "#swiper-button-prev6",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
