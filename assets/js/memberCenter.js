@@ -23,32 +23,25 @@ init();
 function getCommentList() {
   axios.get(`${api_path}/comments?_expand=user`).then((res) => {
     data = res.data;
-    console.log(data);
+    for (let i = 0; i < data.length; i++) {
+      commentData.push(data[i].user);
+    }
+    // positionSelected = document.querySelector(
+    //   `[data-position='${commentData.likePosition}']`
+    // );
     renderCommentList();
-    // for (let i = 0; i < data.length; i++) {
-    //   commentData.push(data[i].user);
-    // }
-    positionSelected = document.querySelectorAll("[data-likePosition]");
-    console.log(positionSelected);
-    // positionSelected = positionSelected.getAttribute("data-likePosition");
-
-    // commentData.forEach((item) => {
-    //   if (positionSelected.value === item.likePosition){
-    //     positionSelected.add("bageGroup");
-    //   }
-    // })
   });
 }
 
 function renderCommentList() {
   let str = "";
-  data.forEach((item, index) => {
+  commentData.forEach((item) => {
     str += `
     <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
       <div class="meber-card-top">
         <div class="member-avatar position-relative">
           <img
-            src="../assets/images/avatar/${item.user.avatar}.png"
+            src="../assets/images/avatar/${item.avatar}.png"
             alt=""
             class="member-avatar-style"
             style="width: 306px; height: 306px"/>
@@ -61,7 +54,7 @@ function renderCommentList() {
               <div
                 class="parallelogram-content-avatar"
                 style="
-                  background-image: url(../assets/images/ranking/${item.user.userRank}.png);
+                  background-image: url(../assets/images/ranking/${item.userRank}.png);
                   background-size: cover;
                   background-position: center;
                   width: 82px;
@@ -72,23 +65,26 @@ function renderCommentList() {
         </div>
       </div>
 
-      <h4 class="mt-12 text-center mb-4">${item.user.username}</h4>
+      <h4 class="mt-12 text-center mb-4">${item.username}</h4>
       <div class="tag-group d-flex justify-content-center g-8 w-100 flex-wrap">
-        <div class="bage bage-text" data-likePosition="TOP">TOP</div>
-        <div class="bage bage-text" data-likePosition="JG">JG</div>
-        <div class="bage bage-text" data-likePosition="MID">MID</div>
-        <div class="bage bage-text" data-likePosition="AD">AD</div>
-        <div class="bage bage-text" data-likePosition="SUP">SUP</div>
+        <div class="bage bage-text bageGroup" data-likePosition="Top">TOP</div>
+        <div class="bage bage-text bageGroup" data-likePosition="Jungle">JG</div>
+        <div class="bage bage-text bageGroup" data-likePosition="Mid">MID</div>
+        <div class="bage bage-text bageGroup" data-likePosition="Bot">ADC</div>
+        <div class="bage bage-text bageGroup" data-likePosition="Support">SUP</div>
       </div>      
       <div class="thumb my-6">
         <p class="thum-text text-center">
-          ${item.user.thumb} <span><i class="fa-regular fa-thumbs-up"></i></span>
+          ${item.thumb} <span><i class="fa-regular fa-thumbs-up"></i></span>
         </p>
       </div>
     </div>
     `;
+    // positionSelected = positionSelect.getAttribute("data-likePosition");
+    // if (positionSelected === ${item.likePosition}){
+    //   positionSelected.remove("bageGroup");
+    // }
   });
-
   commentList.innerHTML = str;
 }
 
@@ -255,107 +251,107 @@ function renderBanList() {
 }
 
 //Swiper
-// const evaluateSwiper = new Swiper("#evaluateSwiper", {
-//   slidesPerView: 4,
-//   spaceBetween: 24,
-//   loop: true,
-//   grabCursor: "true",
-//   pagination: {
-//     el: "#swiper-pagination3",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: "#swiper-button-next3",
-//     prevEl: "#swiper-button-prev3",
-//   },
+const evaluateSwiper = new Swiper("#evaluateSwiper", {
+  slidesPerView: 4,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: "true",
+  pagination: {
+    el: "#swiper-pagination3",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: "#swiper-button-next3",
+    prevEl: "#swiper-button-prev3",
+  },
 
-//   breakpoints: {
-//     0: {
-//       slidesPerView: 1,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//     },
-//     1024: {
-//       slidesPerView: 4,
-//     },
-//   },
-// });
-// const friendListSwiper = new Swiper("#friendListSwiper", {
-//   slidesPerView: 3,
-//   spaceBetween: 24,
-//   loop: true,
-//   grabCursor: "true",
-//   pagination: {
-//     el: "#swiper-pagination4",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: "#swiper-button-next4",
-//     prevEl: "#swiper-button-prev4",
-//   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+const friendListSwiper = new Swiper("#friendListSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: "true",
+  pagination: {
+    el: "#swiper-pagination4",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: "#swiper-button-next4",
+    prevEl: "#swiper-button-prev4",
+  },
 
-//   breakpoints: {
-//     0: {
-//       slidesPerView: 1,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//     },
-//     1024: {
-//       slidesPerView: 3,
-//     },
-//   },
-// });
-// const blackListSwiper = new Swiper("#blackListSwiper", {
-//   slidesPerView: 4,
-//   spaceBetween: 24,
-//   loop: true,
-//   grabCursor: "true",
-//   pagination: {
-//     el: "#swiper-pagination5",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: "#swiper-button-next5",
-//     prevEl: "#swiper-button-prev5",
-//   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+const blackListSwiper = new Swiper("#blackListSwiper", {
+  slidesPerView: 4,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: "true",
+  pagination: {
+    el: "#swiper-pagination5",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: "#swiper-button-next5",
+    prevEl: "#swiper-button-prev5",
+  },
 
-//   breakpoints: {
-//     0: {
-//       slidesPerView: 1,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//     },
-//     1024: {
-//       slidesPerView: 4,
-//     },
-//   },
-// });
-// const historicalTeamRecordsSwiper = new Swiper("#historicalTeamRecordsSwiper", {
-//   slidesPerView: 3,
-//   spaceBetween: 24,
-//   loop: true,
-//   grabCursor: "true",
-//   pagination: {
-//     el: "#swiper-pagination6",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: "#swiper-button-next6",
-//     prevEl: "#swiper-button-prev6",
-//   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+const historicalTeamRecordsSwiper = new Swiper("#historicalTeamRecordsSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: "true",
+  pagination: {
+    el: "#swiper-pagination6",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: "#swiper-button-next6",
+    prevEl: "#swiper-button-prev6",
+  },
 
-//   breakpoints: {
-//     0: {
-//       slidesPerView: 1,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//     },
-//     1024: {
-//       slidesPerView: 3,
-//     },
-//   },
-// });
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
