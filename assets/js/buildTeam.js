@@ -82,7 +82,7 @@ switch (data.likePosition) {
     posHash = 4;
     break;
 }
-posArr[posHash] = idc;
+posArr[posHash] = parseInt(idc);
 console.log(posHash);
 addTeamButtom.addEventListener("click", () => {
   let teamDetalis = {
