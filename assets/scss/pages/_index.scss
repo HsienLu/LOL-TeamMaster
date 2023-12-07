@@ -195,38 +195,30 @@
 
 .popularSwiper {
   max-width: 1468px;
-  // max-height: 751px;
-  position: relative;
   margin: 0 auto;
-  background-color: palegoldenrod;
 }
 .popularSwiper-wrapper{
   margin: 0 auto;
   max-width: 1320px;
-  padding: 0;
-  height: 751px;
-  background-color: paleturquoise;
 }
 
 .popularSwiper-slide {
-  background-color: pink;
-  height: 703px;
   box-sizing: border-box;
   padding: 19px 12px 48px 12px;
   max-width: 1320px;
   margin: 0 auto;
   @include flex(row,space-between,center);
 }
-// .swiper-button-prev{
-//   left: 0;
-// }
-// .swiper-button-next{
-//   right: 0;
-// }
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-button-next{
+  right: 0;
+}
 
-// .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
-//   margin: 0 12px 0 0;
-// }
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0 12px 0 0;
+}
 
 .popular-palyers{
   @include title(232px);
@@ -314,11 +306,13 @@
   position: absolute;
   top: 474px;
   left: 272px;
+  // display: flex;
+  // gap: 20px;
 }
 .cta-content{
   width: 384px;
   height: 384px;
-  border-radius: 800px;
+  border-radius: 50%;
   background-color: rgba($dark,0.7);
   border: 1px solid white;
   position: relative;
@@ -344,7 +338,7 @@
     content: '';
     width: 416px;
     height: 416px;
-    border-radius: 800px;
+    border-radius: 50%;
     border: 1px solid white;
   }
 }
