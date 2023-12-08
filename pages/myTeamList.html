@@ -77,30 +77,26 @@
           已加入隊伍
         </h2>
       </div>
-      <div class="swi-father1 position-relative bg-dark  blueShadow">
+      <div class="swi-father1 position-relative blueShadow">
+
         <!-- Slider main container -->
-        <div class="swiper  bg-dark  blueShadow" id="swiper1">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper  bg-dark   blueShadow">
-            <!-- Slides -->
-            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
-            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
-            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+        <div class="swiper " id="mySwiper1">
+          <div class="swiper-wrapper">
 
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
           </div>
-          <!-- If we need pagination -->
 
-
-          <!-- If we need navigation buttons -->
-
-
-
-          <!-- If we need scrollbar -->
 
         </div>
-        <div class="swiper-button-prev position-absolute" id="swiper-button-prev1" style="left: -60px;"></div>
-        <div class="swiper-button-next position-absolute" id="swiper-button-next1" style="right: -60px;"></div>
-        <div class="swiper-pagination position-absolute" id="swiper-pagination1" style="bottom: -44px;"></div>
+
+        <div class="swiper-pagination position-absolute" id="swiper-pagination1" style="bottom:-40px;"></div>
+        <div class="swiper-button-prev position-absolute" id="swiper-button-prev1" style="left:-80px;"></div>
+        <div class="swiper-button-next position-absolute ;" style="right:-80px;" id="swiper-button-next1"></div>
       </div>
 
 
@@ -111,30 +107,25 @@
         </h2>
       </div>
       <div class="swi-father2 position-relative greenShadow">
+
         <!-- Slider main container -->
-        <div class="swiper" id="swiper2">
-          <!-- Additional required wrapper -->
+        <div class="swiper " id="mySwiper2">
           <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
-            <div class="swiper-slide"><%- include('./layout/myTeamListCard'); -%> </div>
 
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
+            <div class="swiper-slide  bg-dark "><%- include('./layout/myTeamListCard'); -%> </div>
           </div>
-          <!-- If we need pagination -->
 
-
-          <!-- If we need navigation buttons -->
-
-
-
-          <!-- If we need scrollbar -->
 
         </div>
-        <div class="swiper-button-prev position-absolute" id="swiper-button-prev2" style="left: -60px;"></div>
-        <div class="swiper-button-next position-absolute" id="swiper-button-next2" style="right: -60px;"></div>
-        <div class="swiper-pagination position-absolute" id="swiper-pagination2" style="bottom: -44px;"></div>
 
+        <div class="swiper-pagination position-absolute" id="swiper-pagination2" style="bottom:-40px;"></div>
+        <div class="swiper-button-prev position-absolute" id="swiper-button-prev2" style="left:-80px;"></div>
+        <div class="swiper-button-next position-absolute ;" style="right:-80px;" id="swiper-button-next2"></div>
       </div>
       <div class="mb-25"></div>
     </div>
@@ -144,42 +135,56 @@
       <script type="module" src="../main.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <script>
-        const swiper1 = new Swiper('#swiper1', {
-          // Optional parameters
-
+        var swiper = new Swiper("#mySwiper2", {
           loop: true,
-
-          // If we need pagination
+          slidesPerView: 3,
+          spaceBetween: 30,
           pagination: {
-            el: '#swiper-pagination1',
+            el: "#swiper-pagination2",
+            clickable: true,
           },
 
-          // Navigation arrows
           navigation: {
-            nextEl: '#swiper-button-next1',
-            prevEl: '#swiper-button-prev1',
+            nextEl: "#swiper-button-next2",
+            prevEl: "#swiper-button-prev2",
           },
-
-
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          },
         });
-        const swiper2 = new Swiper('#swiper2', {
-          // Optional parameters
-
+        var swiper = new Swiper("#mySwiper1", {
           loop: true,
-
-          // If we need pagination
+          slidesPerView: 3,
+          spaceBetween: 30,
           pagination: {
-            el: '#swiper-pagination2',
+            el: "#swiper-pagination1",
+            clickable: true,
           },
 
-          // Navigation arrows
           navigation: {
-            nextEl: '#swiper-button-next2',
-            prevEl: '#swiper-button-prev2',
+            nextEl: "#swiper-button-next1",
+            prevEl: "#swiper-button-prev1",
           },
-
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          },
         });
-
 
       </script>
 </body>
