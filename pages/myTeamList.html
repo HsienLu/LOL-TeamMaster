@@ -13,7 +13,7 @@
 <body>
   <%- include('./layout/header'); -%>
     <div class="container pt-lg-38  mb-31">
-      <div class="searchGroup d-flex justify-content-between">
+      <!-- <div class="searchGroup d-flex justify-content-between">
         <div class="searchDropDown d-flex gap-lg-8">
           <div class="btn-group border border-white">
             <button type="button" class="btn btn-transparent dropdown-toggle" data-bs-toggle="dropdown"
@@ -70,7 +70,7 @@
             </button>
           </div>
         </form>
-      </div>
+      </div> -->
       <!-- 已加入隊伍 -->
       <div class="titleImg position-relative mt-lg-18 mb-lg-5">
         <h2 class="position-absolute top-20 start-33 fw-black" style="width: 240px; height: 58px">
@@ -81,9 +81,15 @@
 
         <!-- Slider main container -->
         <div class="swiper " id="mySwiper1">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" id="joinMyTeamList">
 
-            <%- include('./layout/myTeamListCard'); -%>
+            <!-- 卡片開始 -->
+            <div class="swiper-slide  bg-dark ">
+              <h4 class="pt-12 fw-black align-middle text-center w-100 p-0" style=" height: 608px">
+                並無建立隊伍
+              </h4>
+            </div>
+            <!-- 卡片結束 -->
           </div>
 
 
@@ -105,9 +111,13 @@
 
         <!-- Slider main container -->
         <div class="swiper " id="mySwiper2">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper " id="buildMyTeamList">
+            <div class="swiper-slide  bg-dark ">
 
-            <%- include('./layout/myTeamListCard'); -%>
+              <h4 class="pt-12 fw-black align-middle text-center w-100 p-0" style=" height: 608px">
+                並無建立隊伍
+              </h4>
+            </div>
 
           </div>
 
