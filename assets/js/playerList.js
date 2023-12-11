@@ -1,9 +1,10 @@
 if (!userIsLogin) location.href = "index.html";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { async } from "validate.js";
 import { api_path, userIsLogin, memberId } from "./config";
 
-let userFriends = []; //存放會員好友ID
+let userPickIds = []; //存放會員要排除的ID
 let playerData = [];
 let isFriend = 0;
 let container = $("#pagination");
@@ -65,9 +66,9 @@ function renderPlayerListCard(playerData) {
             </p>
           </div>
           <div class="button-all d-flex justify-content-center gap-4 mb-8">
-            <button class="jsAddFriendBtn btn border border-primary text-primary" style="width: 40%" data-friendInvite="${item.id}">
+            <button class="jsAddFriendBtn btn border border-primary text-primary w-40" data-friendInvite="${item.id}">
               加為好友
-              <span data-friendInvite="${item.id}">
+              <span class="ms-1" data-friendInvite="${item.id}">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -84,15 +85,11 @@ function renderPlayerListCard(playerData) {
                 </svg>
               </span>
             </button>
-            <button
-              class="btn border border-primary text-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              style="width: 40%"
-              data-teamInvite="${item.id}"
-            >
-              隊伍邀請
-              <span><i class="fa-regular fa-paper-plane"></i></span>
+            <button class="jsCancelCommentBtn btn border border-primary text-primary w-40" data-thumbId="${item.id}">
+              按讚玩家
+              <span data-thumbId="${item.id}">
+                <i class="fa-regular fa-thumbs-up ms-1" data-thumbId="${item.id}"></i>
+              </span>
             </button>
           </div>
         </div>
@@ -123,25 +120,36 @@ function setPagination(playerData, container) {
 
 function allPlayerRender() {
   axios
-    .get(`${api_path}/users?_embed=friendLists`)
+    .get(`${api_path}/users?_embed=friendLists&_embed=banLists`)
     .then((res) => {
       let filterUser;
+      let filterFriends;
+      let filterBans;
+
       // 找出登入的會員資料
       filterUser = res.data.find((item) => {
         return item.id === memberId;
       });
 
       // 取得該會員的好友資料表
-      filterUser = filterUser.friendLists;
+      filterFriends = filterUser.friendLists;
 
-      // 將 好友資料表 中的 friendId 放入 userFriends 陣列
-      filterUser.forEach((item) => {
-        userFriends.push(item.friendId);
+      // 將 好友資料表 中的 friendId 放入 userPickIds 陣列
+      filterFriends.forEach((item) => {
+        userPickIds.push(item.friendId);
       });
 
-      // 將玩家資料中含有好友的資料排除
+      // 取得該會員的黑名單資料表
+      filterBans = filterUser.banLists;
+
+      // 將 黑名單資料表 中的 friendId 放入 userPickIds 陣列
+      filterBans.forEach((item) => {
+        userPickIds.push(item.friendId);
+      });
+
+      // 將玩家資料中要排除的資料排除
       let filteredUserData = res.data.filter((user) => {
-        return !userFriends.includes(user.id);
+        return !userPickIds.includes(user.id);
       });
 
       // 將會員資料排除
@@ -253,6 +261,9 @@ playerWrap.addEventListener("click", (e) => {
   isFriend = 0;
 
   let selectAddFriend = Number(e.target.getAttribute("data-friendinvite"));
+
+  let selectAddComment = Number(e.target.getAttribute("data-thumbId"));
+
   if (selectAddFriend) {
     axios.get(`${api_path}/friendLists`).then((res) => {
       res.data.forEach((item) => {
@@ -309,6 +320,51 @@ playerWrap.addEventListener("click", (e) => {
           });
       }
     });
+  }
+
+  if (selectAddComment) {
+    axios
+      .get(
+        `${api_path}/600/comments?userId=${memberId}&commentedId=${selectAddComment}`,
+        {
+          headers: {
+            Authorization: `Bearer ${userIsLogin}`,
+          },
+        }
+      )
+      .then((res) => {
+        if (res.data.length !== 0) {
+          Swal.fire({
+            icon: "error",
+            title: "已經點讚過此玩家",
+            showConfirmButton: false,
+            timer: 2000,
+            background: "#060818",
+            color: "#D6EEFF",
+          });
+          return;
+        } else {
+          axios.post(
+            `${api_path}/600/comments`,
+            {
+              userId: memberId,
+              commentedId: selectAddComment,
+            },
+            { headers: { Authorization: `Bearer ${userIsLogin}` } }
+          );
+          Swal.fire({
+            icon: "success",
+            title: "點讚成功",
+            showConfirmButton: false,
+            timer: 1500,
+            background: "#060818",
+            color: "#D6EEFF",
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 });
 
