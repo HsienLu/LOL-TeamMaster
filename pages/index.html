@@ -9,7 +9,10 @@
       src="https://kit.fontawesome.com/8eab62e458.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -56,9 +59,9 @@
       <div class="swiper mySwiper popularSwiper" id="popular-team-swiper">
         <div class="swiper-wrapper popularSwiper-wrapper">
           <div class="swiper-slide popularSwiper-slide">
-              <div><%- include('./layout/popularTeams') -%></div>
-              <div><%- include('./layout/popularTeams') -%></div>
-              <div><%- include('./layout/popularTeams') -%></div>
+            <div><%- include('./layout/popularTeams') -%></div>
+            <div><%- include('./layout/popularTeams') -%></div>
+            <div><%- include('./layout/popularTeams') -%></div>
           </div>
           <div class="swiper-slide">
             <div><%- include('./layout/popularTeams') -%></div>
@@ -81,7 +84,7 @@
             <div><%- include('./layout/popularTeams') -%></div>
           </div>
         </div>
-        <div class="swiper-button-prev" id="swiper-button-prev1" ></div>
+        <div class="swiper-button-prev" id="swiper-button-prev1"></div>
         <div class="swiper-button-next" id="swiper-button-next1"></div>
         <div class="swiper-pagination" id="swiper-pagination1"></div>
       </div>
@@ -151,33 +154,32 @@
 
     <div class="cta-banner mt-20 mb-20">
       <div class="container">
-          <div class="cta">
-            <div class="cta-bg"></div>
-            <div class="cta-title fs-2 fw-bold">加入LOL組隊大師，你可以...</div>
-          </div>
+        <div class="cta">
+          <div class="cta-bg"></div>
+          <div class="cta-title fs-2 fw-bold">加入LOL組隊大師，你可以...</div>
+        </div>
       </div>
       <div class="cta-content-group container d-flex justify-content-between">
         <div class="cta-content">
-          <h3 class="text-primary ">加入隊伍</h3>
+          <h3 class="text-primary">加入隊伍</h3>
           <i class="fa-solid fa-people-group"></i>
         </div>
         <div class="cta-content">
-          <h3 class="text-primary ">加入隊伍</h3>
+          <h3 class="text-primary">加入隊伍</h3>
           <i class="fa-solid fa-people-group"></i>
         </div>
         <div class="cta-content">
-          <h3 class="text-primary ">加入隊伍</h3>
+          <h3 class="text-primary">加入隊伍</h3>
           <i class="fa-solid fa-people-group"></i>
         </div>
       </div>
     </div>
 
-      <%- include('./layout/footer'); -%>
+    <%- include('./layout/footer'); -%>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 
     <script>
       const swiper = new Swiper("#popular-team-swiper", {
