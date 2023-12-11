@@ -95,7 +95,7 @@ addTeamButtom.addEventListener("click", () => {
     teamMerberId: posArr,
     createAt: `${new Date()}`,
   };
-  axios.post("http://localhost:3000/teams", teamDetalis).then((res) => {
+  axios.post(`${api_path}/teams`, teamDetalis).then((res) => {
     console.log(res);
     Swal.fire({
       title: "建立隊伍成功",
