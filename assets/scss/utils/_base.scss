@@ -197,9 +197,9 @@ dl {
     font-weight: medium;
     font-size: $fontSize;
   }
-  svg{
-     fill: $white; 
-     margin-left: 16px;
+  i{
+    color: $white;
+    margin-left: 16px;
   }
   &:hover {
     background-color: $primary;
@@ -207,9 +207,9 @@ dl {
     p {
       color:$secondary;
     }
-    svg{
-      fill: $secondary; 
-   }
+    i {
+      color: $secondary;
+    }
   }
   &:active {
     background-color: $secondary;
@@ -217,9 +217,9 @@ dl {
     p {
       color:$primary;
     }
-    svg{
-      fill: $primary; 
-   }
+    i {
+      color: $primary; 
+    }
   }
   &:disabled{
     background-color: rgba($secondary, 0.4);
@@ -227,9 +227,9 @@ dl {
     p {
       color:rgba($secondary, 0.4);
     }
-    svg{
-      fill:rgba($secondary, 0.4);
-   }
+    i {
+      color:rgba($secondary, 0.4);
+    }
   }
 }
 //第三個按鈕
@@ -247,9 +247,10 @@ dl {
     font-weight: medium;
     font-size: $fontSize;
   }
-  svg{
-     fill: $primary; 
-     margin-left: 16px;
+  i{
+    color: $primary;
+    font-size: 20px;
+    margin-left: 16px;
   }
   &:hover {
     box-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
@@ -264,9 +265,11 @@ dl {
     p {
       color:rgba($secondary, 0.5);
     }
-    svg{
-      fill:rgba($secondary, 0.5);
-   }
+    i{
+      color: rgba($secondary, 0.5);
+      font-size: 20px;
+      margin-left: 16px;
+    }
   }
 }
 
@@ -284,17 +287,19 @@ dl {
     font-weight: medium;
     font-size: $fontSize;
   }
-  svg{
-     fill: $primary; 
-     margin-left: 16px;
+  i{
+    color: $primary;
+    font-size: 20px;
+    margin-left: 16px;
   }
   &:hover {
     p {
       color:$white;
       text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
     }
-    svg{
-       fill: $white;
+    i{
+      color: $white;
+      text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
     }
   }
   &:active {
@@ -302,8 +307,9 @@ dl {
       color:$white;
       text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.8);
     }
-    svg{
-       fill: $white;
+    i{
+      color: $white;
+      text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.8);
     }
   }
   &:disabled{
@@ -311,8 +317,9 @@ dl {
       color: rgba($secondary, 0.5);
       text-shadow: none;
     }
-    svg{
-       fill: rgba($secondary, 0.5);
+    i{
+      color:rgba($secondary, 0.5);
+      text-shadow: none;
     }
   }
 }

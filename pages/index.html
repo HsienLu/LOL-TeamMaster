@@ -11,7 +11,6 @@
     ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
-
   <body>
     <%- include('./layout/header'); -%>
     <div class="banner d-flex justify-content-center">
@@ -23,36 +22,24 @@
     </div>
     <div class="line"></div>
     <div class="container step">
-      <div class="step-bg"></div>
+      <div class="step-bg">
+      </div>
       <button type="button">
         <p>立即開始組隊</p>
       </button>
     </div>
     <!-- <div class="BG-Light-green"></div> -->
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center">
+    <div class="container d-flex justify-content-between align-items-center">
         <div class="popular-teams">
           <div class="popular-teams-bg"></div>
-          <div class="popular-teams-title fs-2 fw-bold">熱門隊伍</div>
+          <div class="popular-teams-title fw-bold">熱門隊伍</div>
         </div>
         <button type="button" class="more-btn">
           <p>更多隊伍</p>
-          <svg
-            width="10"
-            height="15"
-            viewBox="0 0 10 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2 14.5C1.71875 14.5 1.46875 14.4062 1.28125 14.2188C0.875 13.8438 0.875 13.1875 1.28125 12.8125L6.5625 7.5L1.28125 2.21875C0.875 1.84375 0.875 1.1875 1.28125 0.8125C1.65625 0.40625 2.3125 0.40625 2.6875 0.8125L8.6875 6.8125C9.09375 7.1875 9.09375 7.84375 8.6875 8.21875L2.6875 14.2188C2.5 14.4062 2.25 14.5 2 14.5Z"
-              fill="#D6EEFF"
-            />
-          </svg>
+          <i class="fa-solid fa-angle-right"></i>
         </button>
-      </div>
     </div>
-    <div class="popular-team">
+    <div class="popular-teams-card">
       <div class="swiper mySwiper popularSwiper" id="popular-team-swiper">
         <div class="swiper-wrapper popularSwiper-wrapper">
           <div class="swiper-slide popularSwiper-slide">
@@ -60,22 +47,22 @@
               <div><%- include('./layout/popularTeams') -%></div>
               <div><%- include('./layout/popularTeams') -%></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide popularSwiper-slide">
             <div><%- include('./layout/popularTeams') -%></div>
             <div><%- include('./layout/popularTeams') -%></div>
             <div><%- include('./layout/popularTeams') -%></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide popularSwiper-slide">
             <div><%- include('./layout/popularTeams') -%></div>
             <div><%- include('./layout/popularTeams') -%></div>
             <div><%- include('./layout/popularTeams') -%></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide popularSwiper-slide">
             <div><%- include('./layout/popularTeams') -%></div>
             <div><%- include('./layout/popularTeams') -%></div>
             <div><%- include('./layout/popularTeams') -%></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide popularSwiper-slide">
             <div><%- include('./layout/popularTeams') -%></div>
             <div><%- include('./layout/popularTeams') -%></div>
             <div><%- include('./layout/popularTeams') -%></div>
@@ -86,57 +73,50 @@
         <div class="swiper-pagination" id="swiper-pagination1"></div>
       </div>
     </div>
-    <div class="container mt-38">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="popular-palyers">
-          <div class="popular-palyers-bg"></div>
-          <div class="popular-palyers-title fs-2 fw-bold">熱門隊友</div>
+    <div class="mobile-button">
+      <button type="button" class="more-btn">
+        <p>更多隊伍</p>
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </div>
+    <div class="container mt-38 d-flex justify-content-between align-items-center">
+        <div class="popular-players">
+          <div class="popular-players-bg"></div>
+          <div class="popular-players-title fs-2 fw-bold">熱門隊友</div>
         </div>
         <button type="button" class="more-btn">
-          <p>更多玩家</p>
-          <svg
-            width="10"
-            height="15"
-            viewBox="0 0 10 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2 14.5C1.71875 14.5 1.46875 14.4062 1.28125 14.2188C0.875 13.8438 0.875 13.1875 1.28125 12.8125L6.5625 7.5L1.28125 2.21875C0.875 1.84375 0.875 1.1875 1.28125 0.8125C1.65625 0.40625 2.3125 0.40625 2.6875 0.8125L8.6875 6.8125C9.09375 7.1875 9.09375 7.84375 8.6875 8.21875L2.6875 14.2188C2.5 14.4062 2.25 14.5 2 14.5Z"
-              fill=""
-            />
-          </svg>
+          <p>更多隊友</p>
+          <i class="fa-solid fa-angle-right"></i>
         </button>
-      </div>
     </div>
-    <div class="popular-player">
-      <div class="swiper mySwiper" id="popular-player-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
+    <div class="popular-players-card">
+      <div class="swiper mySwiper popularSwiper" id="popular-player-swiper">
+        <div class="swiper-wrapper popularSwiper-wrapper">
+          <div class="swiper-slide popularSwiper-slide">
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide popularSwiper-slide">
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide popularSwiper-slide">
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide popularSwiper-slide">
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide popularSwiper-slide">
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
             <div><%- include('./layout/popularPlayers') -%></div>
@@ -148,29 +128,113 @@
         <div class="swiper-pagination" id="swiper-pagination2"></div>
       </div>
     </div>
-
-    <div class="cta-banner mt-20 mb-20">
-      <div class="container">
-          <div class="cta">
-            <div class="cta-bg"></div>
-            <div class="cta-title fs-2 fw-bold">加入LOL組隊大師，你可以...</div>
-          </div>
-      </div>
-      <div class="cta-content-group container d-flex justify-content-between">
-        <div class="cta-content">
-          <h3 class="text-primary ">加入隊伍</h3>
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-        <div class="cta-content">
-          <h3 class="text-primary ">加入隊伍</h3>
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-        <div class="cta-content">
-          <h3 class="text-primary ">加入隊伍</h3>
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-      </div>
+    <div class="mobile-button">
+      <button type="button" class="more-btn">
+        <p>更多隊友</p>
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
     </div>
+    <div class="cta-container">
+      <div class="cta-banner mt-20 mb-20">
+        <div class="container">
+            <div class="cta">
+              <div class="cta-bg"></div>
+              <div class="cta-title fs-2 fw-bold">加入LOL組隊大師，你可以...</div>
+            </div>
+        </div>
+          <div class="container">
+            <div class="cta-group">
+              <a href="" class="cta-content">
+                <div class="cta-detail">
+                  <h3 class="text-primary text-center">建立隊伍</h3>
+                  <i class="text-primary fa-solid fa-hand-fist"></i>
+                  <p>提供一個平台，玩家可以根據他們的遊戲需求，如遊玩時間、遊戲模式和技能水平，快速找到合適的隊友。</p>
+                  <svg width="100" height="40" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3032_1169)">
+                    <g filter="url(#filter0_d_3032_1169)">
+                    <path d="M20.2899 23.1579H74.6377L63.7681 40L100 19.6491L63.7681 0L71.0145 10.5263M52.8986 15.4386H0" stroke="#D6EEFF"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_3032_1169" x="-8" y="-8.43945" width="117.035" height="56.8755" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="4"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.82 0 0 0 0 1 0 0 0 1 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3032_1169"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3032_1169" result="shape"/>
+                    </filter>
+                    <clipPath id="clip0_3032_1169">
+                    <rect width="100" height="40" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </a>
+              <a href="" class="cta-content">
+                <div class="cta-detail">
+                  <h3 class="text-primary text-center">加入隊伍</h3>
+                  <i class="text-primary fa-solid fa-people-group"></i>
+                  <p>選擇心儀的隊伍，跟著其他玩家享受遊戲！</p>
+                  <svg width="100" height="40" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3032_1169)">
+                    <g filter="url(#filter0_d_3032_1169)">
+                    <path d="M20.2899 23.1579H74.6377L63.7681 40L100 19.6491L63.7681 0L71.0145 10.5263M52.8986 15.4386H0" stroke="#D6EEFF"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_3032_1169" x="-8" y="-8.43945" width="117.035" height="56.8755" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="4"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.82 0 0 0 0 1 0 0 0 1 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3032_1169"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3032_1169" result="shape"/>
+                    </filter>
+                    <clipPath id="clip0_3032_1169">
+                    <rect width="100" height="40" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </a>
+              <a href="" class="cta-content">
+                <div class="cta-detail">
+                  <h3 class="text-primary text-center">認識更多人</h3>
+                  <i class="text-primary fa-solid fa-handshake"></i>
+                  <p>來看看都有哪些高手！</p>
+                  <svg width="100" height="40" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3032_1169)">
+                    <g filter="url(#filter0_d_3032_1169)">
+                    <path d="M20.2899 23.1579H74.6377L63.7681 40L100 19.6491L63.7681 0L71.0145 10.5263M52.8986 15.4386H0" stroke="#D6EEFF"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_3032_1169" x="-8" y="-8.43945" width="117.035" height="56.8755" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="4"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.82 0 0 0 0 1 0 0 0 1 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3032_1169"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3032_1169" result="shape"/>
+                    </filter>
+                    <clipPath id="clip0_3032_1169">
+                    <rect width="100" height="40" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>  
 
       <%- include('./layout/footer'); -%>
 
