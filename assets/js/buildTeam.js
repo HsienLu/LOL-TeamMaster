@@ -27,8 +27,8 @@ const userlogin = async () => {
 
   return data;
 };
-// let data = await userlogin();
-// data = data.data;
+let data = await userlogin();
+data = data.data;
 console.log(data);
 buildTeamName.addEventListener("input", (e) => {
   buildTeamNameText = e.target.value;
