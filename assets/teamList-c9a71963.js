@@ -1,16 +1,16 @@
-import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=async()=>{try{const i=document.querySelector("#teamListBox");let r=[],g="";const u=(await axios.get(`${m}/teams?_expand=user`)).data;for(const o of u){let l=[],e=[],n=[],a=[],s=o.teamMerberId.filter(d=>d>0);(await axios.get(`${m}/teamsMember/${o.id}`)).data.forEach(d=>{d===null?e.push(0):e.push(d.avatar),d===null?l.push(0):l.push(d.username),d===null?n.push(0):n.push(d.userRank),d===null?a.push(0):a.push(d.likeHero)}),g+=`        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+import{a as m,l as b}from"./main-b6541567.js";import"./header-1de78961.js";const x=async()=>{try{const n=document.querySelector("#teamListBox");let r=[],g="";const u=(await axios.get(`${m}/teams?_expand=user`)).data;for(const d of u){let l=[],e=[],i=[],a=[],s=d.teamMerberId.filter(o=>o>0);(await axios.get(`${m}/teamsMember/${d.id}`)).data.forEach(o=>{o===null?e.push(0):e.push(o.avatar),o===null?l.push(0):l.push(o.username),o===null?i.push(0):i.push(o.userRank),o===null?a.push(0):a.push(o.likeHero)}),g+=`        
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
-              <h3 class="card-title mb-2">${o.teamName}</h3>
+              <h3 class="card-title mb-2">${d.teamName}</h3>
               <p class="card-subtitle text-secondary">
-                遊戲時間：${o.playTime}
+                遊戲時間：${d.playTime}
               </p>
             </div>
             <div class="d-flex d-md-block justify-content-between align-items-center">
               <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
-                ${o.user.thumb}
+                ${d.user.thumb}
                 <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
               </span>
               <span class="d-block text-secondary fs-6">
@@ -19,7 +19,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${d.id}'">
             <p class="fs-7 w-100">立即加入</p>
           </button>
         </div>
@@ -41,7 +41,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${n[0]===0?"img-team-badge.png":`ranking/${n[0]}.png`});
+                      background-image: url(../assets/images/${i[0]===0?"img-team-badge.png":`ranking/${i[0]}.png`});
                     "></div>
                 </div>
               </div>
@@ -49,7 +49,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
             <li class="mb-2">
             <div class="d-flex justify-content-between mb-1">
               ${l[1]===0?"<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>":`<p class="text-secondary">${l[1]}</p>`}
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -62,7 +62,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${n[1]===0?"img-team-badge.png":`ranking/${n[1]}.png`});
+                    background-image: url(../assets/images/${i[1]===0?"img-team-badge.png":`ranking/${i[1]}.png`});
                   "></div>
               </div>
             </div>
@@ -70,7 +70,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
           <li class="mb-2">
           <div class="d-flex justify-content-between mb-1">
             ${l[2]===0?"<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>":`<p class="text-secondary">${l[2]}</p>`}
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -83,7 +83,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${n[2]===0?"img-team-badge.png":`ranking/${n[2]}.png`});
+                  background-image: url(../assets/images/${i[2]===0?"img-team-badge.png":`ranking/${i[2]}.png`});
                 "></div>
             </div>
           </div>
@@ -91,7 +91,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
         <li class="mb-2">
         <div class="d-flex justify-content-between mb-1">
           ${l[3]===0?"<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>":`<p class="text-secondary">${l[3]}</p>`}
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -104,7 +104,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${n[3]===0?"img-team-badge.png":`ranking/${n[3]}.png`});
+                background-image: url(../assets/images/${i[3]===0?"img-team-badge.png":`ranking/${i[3]}.png`});
               "></div>
           </div>
         </div>
@@ -112,7 +112,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
       <li class="mb-2">
       <div class="d-flex justify-content-between mb-1">
         ${l[4]===0?"<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>":`<p class="text-secondary">${l[4]}</p>`}
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -127,15 +127,15 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
 
-              background-image: url(../assets/images/${n[4]===0?"img-team-badge.png":`ranking/${n[4]}.png`});
+              background-image: url(../assets/images/${i[4]===0?"img-team-badge.png":`ranking/${i[4]}.png`});
             "></div>
         </div>
       </div>
     </li>
           </ul>
         </div>
-      </div>`}i.innerHTML=g}catch(i){console.error("Error fetching data:",i)}},x=async i=>{try{const r=document.querySelector("#teamListBox");let g=[],c="";const o=(await axios.get(`${m}/teams?rankLimt=${i}&_expand=user`)).data;for(const l of o){let e=[],n=[],a=[],s=[],p=l.teamMerberId.filter(t=>t>0);(await axios.get(`${m}/teamsMember/${l.id}`)).data.forEach(t=>{t===null?n.push(0):n.push(t.avatar),t===null?e.push(0):e.push(t.username),t===null?a.push(0):a.push(t.userRank),t===null?s.push(0):s.push(t.likeHero)}),c+=`        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      </div>`}n.innerHTML=g}catch(n){console.error("Error fetching data:",n)}},y=async n=>{try{const r=document.querySelector("#teamListBox");let g=[],c="";const d=(await axios.get(`${m}/teams?rankLimt=${n}&_expand=user`)).data;for(const l of d){let e=[],i=[],a=[],s=[],p=l.teamMerberId.filter(t=>t>0);(await axios.get(`${m}/teamsMember/${l.id}`)).data.forEach(t=>{t===null?i.push(0):i.push(t.avatar),t===null?e.push(0):e.push(t.username),t===null?a.push(0):a.push(t.userRank),t===null?s.push(0):s.push(t.likeHero)}),c+=`        
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -155,9 +155,9 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${l.id}'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>
@@ -185,7 +185,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
             <li class="mb-2">
             <div class="d-flex justify-content-between mb-1">
               ${e[1]===0?"<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>":`<p class="text-secondary">${e[1]}</p>`}
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -206,7 +206,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
           <li class="mb-2">
           <div class="d-flex justify-content-between mb-1">
             ${e[2]===0?"<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>":`<p class="text-secondary">${e[2]}</p>`}
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -227,7 +227,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
         <li class="mb-2">
         <div class="d-flex justify-content-between mb-1">
           ${e[3]===0?"<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>":`<p class="text-secondary">${e[3]}</p>`}
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -248,7 +248,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
       <li class="mb-2">
       <div class="d-flex justify-content-between mb-1">
         ${e[4]===0?"<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>":`<p class="text-secondary">${e[4]}</p>`}
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -270,8 +270,8 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
     </li>
           </ul>
         </div>
-      </div>`}r.innerHTML=c}catch(r){console.error("Error fetching data:",r)}},y=async i=>{try{const r=document.querySelector("#teamListBox");let g=[],c="";const o=(await axios.get(`${m}/teams?playTime_lte=${i}&_expand=user`)).data;for(const l of o){let e=[],n=[],a=[],s=[],p=l.teamMerberId.filter(t=>t>0);(await axios.get(`${m}/teamsMember/${l.id}`)).data.forEach(t=>{t===null?n.push(0):n.push(t.avatar),t===null?e.push(0):e.push(t.username),t===null?a.push(0):a.push(t.userRank),t===null?s.push(0):s.push(t.likeHero)}),c+=`        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      </div>`}r.innerHTML=c}catch(r){console.error("Error fetching data:",r)}},k=async n=>{try{const r=document.querySelector("#teamListBox");let g=[],c="";const d=(await axios.get(`${m}/teams?playTime_lte=${n}&_expand=user`)).data;for(const l of d){let e=[],i=[],a=[],s=[],p=l.teamMerberId.filter(t=>t>0);(await axios.get(`${m}/teamsMember/${l.id}`)).data.forEach(t=>{t===null?i.push(0):i.push(t.avatar),t===null?e.push(0):e.push(t.username),t===null?a.push(0):a.push(t.userRank),t===null?s.push(0):s.push(t.likeHero)}),c+=`        
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -291,9 +291,9 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${l.id}'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>
@@ -321,7 +321,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
             <li class="mb-2">
             <div class="d-flex justify-content-between mb-1">
               ${e[1]===0?"<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>":`<p class="text-secondary">${e[1]}</p>`}
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -342,7 +342,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
           <li class="mb-2">
           <div class="d-flex justify-content-between mb-1">
             ${e[2]===0?"<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>":`<p class="text-secondary">${e[2]}</p>`}
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -363,7 +363,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
         <li class="mb-2">
         <div class="d-flex justify-content-between mb-1">
           ${e[3]===0?"<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>":`<p class="text-secondary">${e[3]}</p>`}
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -384,7 +384,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
       <li class="mb-2">
       <div class="d-flex justify-content-between mb-1">
         ${e[4]===0?"<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>":`<p class="text-secondary">${e[4]}</p>`}
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -406,8 +406,8 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
     </li>
           </ul>
         </div>
-      </div>`}r.innerHTML=c}catch(r){console.error("Error fetching data:",r)}},k=async i=>{try{const r=document.querySelector("#teamListBox");let g=[],c="";const o=(await axios.get(`${m}/teams?q=${i}&_expand=user`)).data;for(const l of o){let e=[],n=[],a=[],s=[],p=l.teamMerberId.filter(t=>t>0);(await axios.get(`${m}/teamsMember/${l.id}`)).data.forEach(t=>{t===null?n.push(0):n.push(t.avatar),t===null?e.push(0):e.push(t.username),t===null?a.push(0):a.push(t.userRank),t===null?s.push(0):s.push(t.likeHero)}),c+=`        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      </div>`}r.innerHTML=c}catch(r){console.error("Error fetching data:",r)}},f=async n=>{try{const r=document.querySelector("#teamListBox");let g=[],c="";const d=(await axios.get(`${m}/teams?q=${n}&_expand=user`)).data;for(const l of d){let e=[],i=[],a=[],s=[],p=l.teamMerberId.filter(t=>t>0);(await axios.get(`${m}/teamsMember/${l.id}`)).data.forEach(t=>{t===null?i.push(0):i.push(t.avatar),t===null?e.push(0):e.push(t.username),t===null?a.push(0):a.push(t.userRank),t===null?s.push(0):s.push(t.likeHero)}),c+=`        
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -427,9 +427,9 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${l.id}'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>
@@ -457,7 +457,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
             <li class="mb-2">
             <div class="d-flex justify-content-between mb-1">
               ${e[1]===0?"<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>":`<p class="text-secondary">${e[1]}</p>`}
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -478,7 +478,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
           <li class="mb-2">
           <div class="d-flex justify-content-between mb-1">
             ${e[2]===0?"<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>":`<p class="text-secondary">${e[2]}</p>`}
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -499,7 +499,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
         <li class="mb-2">
         <div class="d-flex justify-content-between mb-1">
           ${e[3]===0?"<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>":`<p class="text-secondary">${e[3]}</p>`}
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -520,7 +520,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
       <li class="mb-2">
       <div class="d-flex justify-content-between mb-1">
         ${e[4]===0?"<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>":`<p class="text-secondary">${e[4]}</p>`}
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -542,8 +542,8 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
     </li>
           </ul>
         </div>
-      </div>`}r.innerHTML=c}catch(r){console.error("Error fetching data:",r)}},b=async i=>{try{const r=document.querySelector("#teamListBox");let g=[],c="";const o=(await axios.get(`${m}/teamsThumb?_sort=${i}`)).data;for(const l of o){let e=[],n=[],a=[],s=[],p=l.teamMerberId.filter(t=>t>0);(await axios.get(`${m}/teamsMember/${l.id}`)).data.forEach(t=>{t===null?n.push(0):n.push(t.avatar),t===null?e.push(0):e.push(t.username),t===null?a.push(0):a.push(t.userRank),t===null?s.push(0):s.push(t.likeHero)}),c+=`        
-      <div class="teamCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
+      </div>`}r.innerHTML=c}catch(r){console.error("Error fetching data:",r)}},v=async n=>{try{const r=document.querySelector("#teamListBox");let g=[],c="";const d=(await axios.get(`${m}/teamsThumb?_sort=${n}`)).data;for(const l of d){let e=[],i=[],a=[],s=[],p=l.teamMerberId.filter(t=>t>0);(await axios.get(`${m}/teamsMember/${l.id}`)).data.forEach(t=>{t===null?i.push(0):i.push(t.avatar),t===null?e.push(0):e.push(t.username),t===null?a.push(0):a.push(t.userRank),t===null?s.push(0):s.push(t.likeHero)}),c+=`        
+      <div class="teamListCard blueShadow mx-4 mx-md-3 my-8" style="width:30%">
         <div class="card-header mb-4 mb-md-6">
           <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
             <div class="mb-2 mb-md-0">
@@ -563,9 +563,9 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100">
-            <p class="fs-7 w-100">立即加入</p>
-          </button>
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${l.id}'">
+                <p class="fs-7 w-100">立即加入</p>
+              </button>
         </div>
         <div class="card-body">
           <ul>
@@ -593,7 +593,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
             <li class="mb-2">
             <div class="d-flex justify-content-between mb-1">
               ${e[1]===0?"<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>":`<p class="text-secondary">${e[1]}</p>`}
-              <span class="text-secondary fs-8">TOP</span>
+              <span class="text-secondary fs-8">JG</span>
             </div>
             <div class="d-flex justify-content-between">
               <div class="parallelogramHero">
@@ -614,7 +614,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
           <li class="mb-2">
           <div class="d-flex justify-content-between mb-1">
             ${e[2]===0?"<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>":`<p class="text-secondary">${e[2]}</p>`}
-            <span class="text-secondary fs-8">TOP</span>
+            <span class="text-secondary fs-8">MID</span>
           </div>
           <div class="d-flex justify-content-between">
             <div class="parallelogramHero">
@@ -635,7 +635,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
         <li class="mb-2">
         <div class="d-flex justify-content-between mb-1">
           ${e[3]===0?"<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>":`<p class="text-secondary">${e[3]}</p>`}
-          <span class="text-secondary fs-8">TOP</span>
+          <span class="text-secondary fs-8">AD</span>
         </div>
         <div class="d-flex justify-content-between">
           <div class="parallelogramHero">
@@ -656,7 +656,7 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
       <li class="mb-2">
       <div class="d-flex justify-content-between mb-1">
         ${e[4]===0?"<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>":`<p class="text-secondary">${e[4]}</p>`}
-        <span class="text-secondary fs-8">TOP</span>
+        <span class="text-secondary fs-8">SUP</span>
       </div>
       <div class="d-flex justify-content-between">
         <div class="parallelogramHero">
@@ -678,4 +678,4 @@ import{a as m}from"./main-552c3467.js";import"./header-4e9731a3.js";const v=asyn
     </li>
           </ul>
         </div>
-      </div>`}r.innerHTML=c}catch(r){console.error("Error fetching data:",r)}};v();document.querySelector("#thumbDesc").addEventListener("click",()=>{b("desc")});document.querySelector("#thumbAsc").addEventListener("click",()=>{b("asc")});document.querySelector("#dateLte").addEventListener("change",()=>{const i=document.querySelector("#dateLte").value;y(`${i}`),console.log(i)});document.querySelectorAll("#rankSelect li").forEach(i=>{i.addEventListener("click",r=>{x(r.target.dataset.rank)})});document.querySelector("#teamQuery").addEventListener("change",i=>{k(`${i.target.value}`)});
+      </div>`}r.innerHTML=c}catch(r){console.error("Error fetching data:",r)}};x();document.querySelector("#thumbDesc").addEventListener("click",()=>{v("desc")});document.querySelector("#thumbAsc").addEventListener("click",()=>{v("asc")});document.querySelector("#dateLte").addEventListener("change",()=>{const n=document.querySelector("#dateLte").value;k(`${n}`),console.log(n)});document.querySelectorAll("#rankSelect li").forEach(n=>{n.addEventListener("click",r=>{y(r.target.dataset.rank)})});document.querySelector("#teamQuery").addEventListener("change",n=>{f(`${n.target.value}`)});

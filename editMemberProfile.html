@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>編輯會員資訊</title>
-    <script type="module" crossorigin src="/LOL-TeamMaster/assets/editMemberProfile-54495891.js"></script>
-    <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/main-552c3467.js">
-    <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/header-4e9731a3.js">
-    <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-a0e6b9ba.css">
+    <script type="module" crossorigin src="/LOL-TeamMaster/assets/editMemberProfile-8d67bd64.js"></script>
+    <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/main-b6541567.js">
+    <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/header-1de78961.js">
+    <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-d8a47dd2.css">
   </head>
   <body>
     <header>
@@ -50,7 +50,7 @@
             <a href="memberCenter.html" class="member"
               ><img
                 class="headerAvatar border border-1 border-white border-radius me-2"
-                src="/LOL-TeamMaster/assets/img-avatar-01-f1ae6358.png"
+                src=""
                 alt="avatar"
             /></a>
             <!-- member dropdown -->
@@ -393,57 +393,36 @@
             <h5 class="mb-lg-8">編輯資料</h5>
             <form id="myInfo" class="row justify-content-between">
               <div class="col-3">
-                <label for="memberAccount" class="form-label">帳號</label>
+                <label for="editMemberAccount" class="form-label">帳號</label>
                 <input
                   type="email"
-                  class="form-control mb-lg-12 box-shadow bg-secondary2 bg-opacity-30 border-0 text-dark text-opacity-80"
+                  class="form-control mb-lg-14 box-shadow bg-secondary2 bg-opacity-30 border-0 text-dark text-opacity-80"
                   id="editMemberAccount"
                   value=""
                   aria-describedby="memberAccount"
                   readonly
                 />
-                <label for="memberName" class="form-label">使用者名稱</label>
+                <label for="editMemberName" class="form-label">使用者名稱</label>
                 <input
                   type="text"
-                  class="form-control mb-lg-12"
+                  class="form-control mb-lg-25"
                   id="editMemberName"
                   value=""
                   aria-describedby="memberName"
                 />
-                <label for="memberPassword" class="form-label">修改密碼</label>
-                <input
-                  type="password"
-                  class="form-control mb-5"
-                  id="changeMemberPassword"
-                  value=""
-                  placeholder="Current Password"
-                  aria-describedby="memberPassword"
-                />
-                <input
-                  type="password"
-                  class="form-control mb-5"
-                  id="checkMemberPassword"
-                  value=""
-                  placeholder="New Password"
-                  aria-describedby="memberPassword"
-                />
-                <input
-                  type="password"
-                  class="form-control"
-                  id="doubleCheckMemberPassword"
-                  value=""
-                  placeholder="Confirm New Password"
-                  aria-describedby="memberPassword"
-                />
+                <a
+                  href="#changePasswordModal"
+                  class="changePasswordModal d-block mx-auto btn btn-white white-bg-btn active py-3 px-12"
+                  style="width: 162px; height: 50px;"
+                  role="button"
+                  data-bs-toggle="modal"
+                >修改密碼
+                </a>
               </div>
               <div class="col-4">
                 <div class="d-flex flex-column">
-                  <label for="memberAvatar" class="form-label">大頭貼</label>
-                  <img
-                    class="avatarMd mb-4"
-                    src="/LOL-TeamMaster/assets/Member-avatar-e1e0c2f7.png"
-                    alt="member-avatar"
-                  />
+                  <label for="editMemberAvatar" class="form-label">大頭貼</label>
+                  <img class="avatarMd mb-4" src="" alt="member-avatar" />
                 </div>
                 <div class="jsAvatarWrap">
                   <div class="d-flex justify-content-around mb-2">
@@ -689,6 +668,62 @@
       </div>
       <div class="layout-right d-none d-lg-block"></div>
     </div>
+
+    <div
+  class="modal fade"
+  id="changePasswordModal"
+  tabindex="-1"
+  aria-labelledby="changePasswordModal"
+  aria-hidden="true"
+  data-backdrop="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg py-18">
+    <div class="modal-content border-radius bg-dark px-25 py-12 blueShadow">
+      <div>
+        <h3 class="modal-title fs-4 fs-md-3 fw-md-bold fw-bold text-center">
+          修改密碼
+        </h3>
+      </div>
+      <div class="modal-body d-flex flex-column px-4 pt-8">
+        <form class="mb-12">
+                <label for="newMemberPassword" class="form-label">新密碼</label>
+                <input
+                  type="password"
+                  class="form-control mb-5"
+                  id="newMemberPassword"
+                  value=""
+                  placeholder="請輸入新密碼"
+                  aria-describedby="newMemberPassword"
+                />
+                <label for="checkMemberPassword" class="form-label">確認新密碼</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="checkMemberPassword"
+                  value=""
+                  placeholder="請再輸入新密碼"
+                  aria-describedby="checkMemberPassword"
+                />
+              </div>
+        </form>
+        <div class="submitGroup text-center align-items-center">
+          <a
+            href="#"
+            class="btn btn-size btn-outline-white white-bg-btn me-12 py-3 px-12"
+            data-bs-dismiss="modal"
+            role="button">
+                    取消</a>
+
+          <a
+            href="#"
+            class="jsChangePasswordBtn btn btn-size btn-outline-white white-bg-btn bg-secondary2 bg-opacity-60 me-12 py-3 px-12"
+            role="button">
+                修改密碼</a>       
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <footer class="animate__animated animate__fadeInUp text-center mb-12 mt-25">
   <img

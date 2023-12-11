@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
-  <script type="module" crossorigin src="/LOL-TeamMaster/assets/teamList-2303aa50.js"></script>
-  <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/main-552c3467.js">
-  <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/header-4e9731a3.js">
-  <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-a0e6b9ba.css">
+  <script type="module" crossorigin src="/LOL-TeamMaster/assets/teamList-c9a71963.js"></script>
+  <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/main-b6541567.js">
+  <link rel="modulepreload" crossorigin href="/LOL-TeamMaster/assets/header-1de78961.js">
+  <link rel="stylesheet" href="/LOL-TeamMaster/assets/main-d8a47dd2.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
             <a href="memberCenter.html" class="member"
               ><img
                 class="headerAvatar border border-1 border-white border-radius me-2"
-                src="/LOL-TeamMaster/assets/img-avatar-01-f1ae6358.png"
+                src=""
                 alt="avatar"
             /></a>
             <!-- member dropdown -->
@@ -833,14 +833,14 @@
       <script>
         axios
           .get(
-            "https://api.kcg.gov.tw:443/api/service/Get/1f2a6afe-f953-436f-981c-92f2739b3475"
+            "http://localhost:3000/teams"
           )
           .then((res) => {
             //   console.log(res.data.data);
             $(function () {
               let container = $("#pagination");
               container.pagination({
-                dataSource: res.data.data,
+                dataSource: res.data,
                 prevText: "&#9668",
                 nextText: "&#9658",
                 // callback: function (data, pagination) {
