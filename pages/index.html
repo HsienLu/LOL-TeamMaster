@@ -20,11 +20,12 @@
     <div class="banner d-flex justify-content-center">
       <div class="banner-text">
         <button type="button">
-          <p>立即開始組隊</p>
+          <p>立即組隊</p>
         </button>
       </div>
     </div>
     <div class="line"></div>
+
     <div class="container step">
       <div class="step-bg"></div>
       <button type="button">
@@ -38,55 +39,30 @@
           <div class="popular-teams-bg"></div>
           <div class="popular-teams-title fs-2 fw-bold">熱門隊伍</div>
         </div>
-        <button type="button" class="more-btn">
+        <a href="./teamList.html" class="more-btn">
           <p>更多隊伍</p>
-          <svg
-            width="10"
-            height="15"
-            viewBox="0 0 10 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2 14.5C1.71875 14.5 1.46875 14.4062 1.28125 14.2188C0.875 13.8438 0.875 13.1875 1.28125 12.8125L6.5625 7.5L1.28125 2.21875C0.875 1.84375 0.875 1.1875 1.28125 0.8125C1.65625 0.40625 2.3125 0.40625 2.6875 0.8125L8.6875 6.8125C9.09375 7.1875 9.09375 7.84375 8.6875 8.21875L2.6875 14.2188C2.5 14.4062 2.25 14.5 2 14.5Z"
-              fill="#D6EEFF"
-            />
-          </svg>
-        </button>
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
       </div>
-    </div>
-    <div class="popular-team">
-      <div class="swiper mySwiper popularSwiper" id="popular-team-swiper">
-        <div class="swiper-wrapper popularSwiper-wrapper">
-          <div class="swiper-slide popularSwiper-slide">
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-          </div>
-          <div class="swiper-slide">
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-          </div>
-          <div class="swiper-slide">
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-          </div>
-          <div class="swiper-slide">
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-          </div>
-          <div class="swiper-slide">
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-            <div><%- include('./layout/popularTeams') -%></div>
-          </div>
+      <div class="swiper-father position-relative mt-10">
+        <div id="popularTeamsSwiper" class="swiper">
+          <div class="swiper-wrapper popularTeamsCard"></div>
         </div>
-        <div class="swiper-button-prev" id="swiper-button-prev1"></div>
-        <div class="swiper-button-next" id="swiper-button-next1"></div>
-        <div class="swiper-pagination" id="swiper-pagination1"></div>
+        <div
+          class="swiper-button-next position-absolute"
+          id="swiper-button-next1"
+          style="right: -60px"
+        ></div>
+        <div
+          class="swiper-button-prev position-absolute"
+          id="swiper-button-prev1"
+          style="left: -60px"
+        ></div>
+        <div
+          class="swiper-pagination position-absolute"
+          id="swiper-pagination1"
+          style="bottom: -44px"
+        ></div>
       </div>
     </div>
     <div class="container mt-38">
@@ -95,120 +71,121 @@
           <div class="popular-palyers-bg"></div>
           <div class="popular-palyers-title fs-2 fw-bold">熱門隊友</div>
         </div>
-        <button type="button" class="more-btn">
+        <a href="./playerList.html" class="more-btn">
           <p>更多玩家</p>
-          <svg
-            width="10"
-            height="15"
-            viewBox="0 0 10 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2 14.5C1.71875 14.5 1.46875 14.4062 1.28125 14.2188C0.875 13.8438 0.875 13.1875 1.28125 12.8125L6.5625 7.5L1.28125 2.21875C0.875 1.84375 0.875 1.1875 1.28125 0.8125C1.65625 0.40625 2.3125 0.40625 2.6875 0.8125L8.6875 6.8125C9.09375 7.1875 9.09375 7.84375 8.6875 8.21875L2.6875 14.2188C2.5 14.4062 2.25 14.5 2 14.5Z"
-              fill=""
-            />
-          </svg>
-        </button>
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
       </div>
-    </div>
-    <div class="popular-player">
-      <div class="swiper mySwiper" id="popular-player-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
+      <div class="popular-player">
+        <div class="swiper-father position-relative mt-10">
+          <div id="popularPlayersSwiper" class="swiper">
+            <div class="swiper-wrapper popularPlayersCard"></div>
           </div>
-          <div class="swiper-slide">
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-          </div>
-          <div class="swiper-slide">
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-          </div>
-          <div class="swiper-slide">
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-          </div>
-          <div class="swiper-slide">
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-            <div><%- include('./layout/popularPlayers') -%></div>
-          </div>
+          <div
+            class="swiper-button-next position-absolute"
+            id="swiper-button-next2"
+            style="right: -60px"
+          ></div>
+          <div
+            class="swiper-button-prev position-absolute"
+            id="swiper-button-prev2"
+            style="left: -60px"
+          ></div>
+          <div
+            class="swiper-pagination position-absolute"
+            id="swiper-pagination2"
+            style="bottom: -44px"
+          ></div>
         </div>
-        <div class="swiper-button-prev" id="swiper-button-prev2"></div>
-        <div class="swiper-button-next" id="swiper-button-next2"></div>
-        <div class="swiper-pagination" id="swiper-pagination2"></div>
       </div>
     </div>
 
-    <div class="cta-banner mt-20 mb-20">
-      <div class="container">
-        <div class="cta">
+    <div class="cta-banner pt-20 mb-20">
+      <div class="container pt-md-41 pb-md-38">
+        <div class="cta mb-md-26">
           <div class="cta-bg"></div>
           <div class="cta-title fs-2 fw-bold">加入LOL組隊大師，你可以...</div>
         </div>
-      </div>
-      <div class="cta-content-group container d-flex justify-content-between">
-        <div class="cta-content">
-          <h3 class="text-primary">加入隊伍</h3>
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-        <div class="cta-content">
-          <h3 class="text-primary">加入隊伍</h3>
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-        <div class="cta-content">
-          <h3 class="text-primary">加入隊伍</h3>
-          <i class="fa-solid fa-people-group"></i>
-        </div>
+        <ul class="row justify-content-between">
+          <li
+            class="introItem col-md-4 cta-content d-flex flex-column justify-content-center align-items-center"
+          >
+            <h3
+              class="introTitle text-primary position-absolute start-50 top-35 translate-middle mb-md-6"
+            >
+              建立隊伍
+            </h3>
+            <i
+              class="introIcon fa-solid fa-hand-fist position-absolute start-50 top-60 translate-middle mb-md-6"
+            ></i>
+            <p
+              class="introDesc text-center position-absolute start-50 top-50 translate-middle-x w-80"
+            >
+              提供一個平台，玩家可以根據他們的遊戲需求，如遊玩時間、遊戲模式和技能水平，快速找到合適的隊友。
+            </p>
+            <a
+              href="./buildTeam.html"
+              class="introArrow d-block position-absolute start-50 top-75 translate-middle-x"
+              ><img src="../assets/images/img-arrow.png" alt="arrow"
+            /></a>
+          </li>
+          <li
+            class="introItem col-md-4 cta-content d-flex flex-column justify-content-center align-items-center"
+          >
+            <h3
+              class="introTitle text-primary position-absolute start-50 top-35 translate-middle mb-md-6"
+            >
+              加入隊伍
+            </h3>
+            <i
+              class="introIcon fa-solid fa-people-group position-absolute start-50 top-60 translate-middle mb-md-6"
+            ></i>
+            <p
+              class="introDesc text-center position-absolute start-50 top-50 translate-middle-x w-80"
+            >
+              選擇心儀的隊伍，跟著其他玩家享受遊戲！
+            </p>
+            <a
+              href="./teamList.html"
+              class="introArrow d-block position-absolute start-50 top-75 translate-middle-x"
+              ><img src="../assets/images/img-arrow.png" alt="arrow"
+            /></a>
+          </li>
+          <li
+            class="introItem col-md-4 cta-content d-flex flex-column justify-content-center align-items-center"
+          >
+            <h3
+              class="introTitle text-primary position-absolute start-50 top-35 translate-middle mb-md-6"
+            >
+              認識更多人
+            </h3>
+            <i
+              class="introIcon fa-solid fa-handshake position-absolute start-50 top-60 translate-middle mb-md-6"
+            ></i>
+            <p
+              class="introDesc text-center position-absolute start-50 top-50 translate-middle-x w-80"
+            >
+              來看看都有哪些高手！
+            </p>
+            <a
+              href="./playerList.html"
+              class="introArrow d-block position-absolute start-50 top-75 translate-middle-x"
+              ><img src="../assets/images/img-arrow.png" alt="arrow"
+            /></a>
+          </li>
+        </ul>
       </div>
     </div>
 
     <%- include('./layout/footer'); -%>
 
+    <script
+      src="https://kit.fontawesome.com/8eab62e458.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-      const swiper = new Swiper("#popular-team-swiper", {
-        cssMode: true,
-        navigation: {
-          nextEl: "#swiper-button-next1",
-          prevEl: "#swiper-button-prev1",
-        },
-        pagination: {
-          el: "#swiper-pagination1",
-          clickable: true,
-        },
-        mousewheel: true,
-        keyboard: true,
-      });
-
-      const swiper2 = new Swiper("#popular-player-swiper", {
-        cssMode: true,
-        navigation: {
-          nextEl: "#swiper-button-next2",
-          prevEl: "#swiper-button-prev2",
-        },
-        pagination: {
-          el: "#swiper-pagination2",
-          clickable: true,
-        },
-        mousewheel: true,
-        keyboard: true,
-      });
-    </script>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/index.js"></script>
   </body>
 </html>
