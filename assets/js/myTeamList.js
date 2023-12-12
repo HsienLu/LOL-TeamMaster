@@ -43,6 +43,7 @@ const fetchJoinDataAll = async () => {
   });
 
   dataArr.forEach(async (v) => {
+    console.log(v);
     const memberData = async (id) => {
       const memberDataArr = await axios.get(`${api_path}/teamsMember/${id}`);
       teamsMemberData = memberDataArr.data;
@@ -58,7 +59,7 @@ const fetchJoinDataAll = async () => {
             <div class="mb-2 mb-md-0">
               <h3 class="card-title mb-2">${v.teamName}</h3>
               <p class="card-subtitle text-secondary">
-                遊戲時間：${v.teamMerberId}
+                遊戲時間：${v.playTime}
               </p>
             </div>
             <div class="d-flex d-md-block justify-content-between align-items-center">
@@ -287,7 +288,7 @@ const fetchBuildDataAll = async () => {
               <div class="mb-2 mb-md-0">
                 <h3 class="card-title mb-2">${v.teamName}</h3>
                 <p class="card-subtitle text-secondary">
-                  遊戲時間：${v.teamMerberId}
+                  遊戲時間：${v.playTime}
                 </p>
               </div>
               <div class="d-flex d-md-block justify-content-between align-items-center">
