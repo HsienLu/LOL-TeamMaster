@@ -1,4 +1,4 @@
-import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let p;u?p=localStorage.getItem("userId"):Swal.fire({title:"無法加入隊伍",text:"請先進行登入",icon:"warning",background:"#060818",color:"#D6EEFF"});let g=parseInt(p);const v=async()=>{const o=document.querySelector("#joinMyTeamList"),c=await l.get(`${i}/teams?_expand=user`);let n=await l.get(`${i}/users`);n=n.data;const r=c.data;let t=[],a=[];r.forEach(e=>{e.teamMerberId.find(s=>s===g)&&r.forEach(s=>{if(e.id===s.id){let m=s.teamMerberId.filter(b=>b>0).length;t.push({...s,teamMemeberNumber:m})}})}),t.forEach(async e=>{console.log(e),await(async s=>{a=(await l.get(`${i}/teamsMember/${s}`)).data})(e.id),o.innerHTML=`            <div class="swiper-slide  bg-dark ">
+import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let p;u?p=localStorage.getItem("userId"):Swal.fire({title:"無法加入隊伍",text:"請先進行登入",icon:"warning",background:"#060818",color:"#D6EEFF"});let g=parseInt(p);const b=async()=>{const o=document.querySelector("#joinMyTeamList"),c=await l.get(`${i}/teams?_expand=user`);let n=await l.get(`${i}/users`);n=n.data;const m=c.data;let t=[],a=[];m.forEach(e=>{let r=e.teamMerberId.find(d=>d===g),s=e.teamMerberId.filter(d=>d>0);s=s.length,r&&t.push({...e,teamMemeberNumber:s})}),t.forEach(async e=>{await(async s=>{a=(await l.get(`${i}/teamsMember/${s}`)).data})(e.id),console.log(e),o.innerHTML+=`            <div class="swiper-slide  bg-dark ">
 
     <div class="  bg-dark " style="height: fit-content">
       <div class="teamCard1  bg-dark ">
@@ -27,7 +27,7 @@ import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let
           <ul>
           <li class="mb-2">
           <div class="d-flex justify-content-between mb-1">
-            ${a[0]===0?"<p class='text-secondary text-opacity-50'>等待上路玩家加入</p>":`<p class="text-secondary">${a[0].username}</p>`}
+            ${a[0]===null?"<p class='text-secondary text-opacity-50'>等待上路玩家加入</p>":`<p class="text-secondary">${a[0].username}</p>`}
             <span class="text-secondary fs-8">TOP</span>
           </div>
           <div class="d-flex justify-content-between">
@@ -35,20 +35,20 @@ import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(./images/${a[0]===0?"img-team-player@2x.png":`champion/${a[0].likeHero}.jpg`});
+                  background-image: url(./images/${a[0]===null?"img-team-player@2x.png":`champion/${a[0].likeHero}.jpg`});
                 "></div>
             </div>
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(./images/${a[0]===0?"img-team-badge.png":`ranking/${a[0].userRank}.png`});
+                  background-image: url(./images/${a[0]===null?"img-team-badge.png":`ranking/${a[0].userRank}.png`});
                 "></div>
             </div>
           </div>
         </li>
         <li class="mb-2">
         <div class="d-flex justify-content-between mb-1">
-          ${a[1]===0?"<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>":`<p class="text-secondary">${a[1].username}</p>`}
+          ${a[1]===null?"<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>":`<p class="text-secondary">${a[1].username}</p>`}
           <span class="text-secondary fs-8">JG</span>
         </div>
         <div class="d-flex justify-content-between">
@@ -56,20 +56,20 @@ import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:cover;
-                background-image: url(./images/${a[1]===0?"img-team-player@2x.png":`champion/${a[1].likeHero}.jpg`});
+                background-image: url(./images/${a[1]===null?"img-team-player@2x.png":`champion/${a[1].likeHero}.jpg`});
               "></div>
           </div>
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(./images/${a[1]===0?"img-team-badge.png":`ranking/${a[1].userRank}.png`});
+                background-image: url(./images/${a[1]===null?"img-team-badge.png":`ranking/${a[1].userRank}.png`});
               "></div>
           </div>
         </div>
       </li>
       <li class="mb-2">
       <div class="d-flex justify-content-between mb-1">
-        ${a[2]===0?"<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>":`<p class="text-secondary">${a[2].username}</p>`}
+        ${a[2]===null?"<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>":`<p class="text-secondary">${a[2].username}</p>`}
         <span class="text-secondary fs-8">MID</span>
       </div>
       <div class="d-flex justify-content-between">
@@ -77,20 +77,20 @@ import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let
           <div class="parallelogramContent teamCardHeroBg" style="
           background-position:0px -100%;
           background-size:cover;
-              background-image: url(./images/${a[2]===0?"img-team-player@2x.png":`champion/${a[2].likeHero}.jpg`});
+              background-image: url(./images/${a[2]===null?"img-team-player@2x.png":`champion/${a[2].likeHero}.jpg`});
             "></div>
         </div>
         <div class="parallelogramRank">
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
-              background-image: url(./images/${a[2]===0?"img-team-badge.png":`ranking/${a[2].userRank}.png`});
+              background-image: url(./images/${a[2]===null?"img-team-badge.png":`ranking/${a[2].userRank}.png`});
             "></div>
         </div>
       </div>
     </li>
     <li class="mb-2">
     <div class="d-flex justify-content-between mb-1">
-      ${a[3]===0?"<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>":`<p class="text-secondary">${a[3].username}</p>`}
+      ${a[3]===null?"<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>":`<p class="text-secondary">${a[3].username}</p>`}
       <span class="text-secondary fs-8">AD</span>
     </div>
     <div class="d-flex justify-content-between">
@@ -98,20 +98,20 @@ import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let
         <div class="parallelogramContent teamCardHeroBg" style="
         background-position:0px -100%;
         background-size:266px auto;
-            background-image: url(./images/${a[3]===0?"img-team-player@2x.png":`champion/${a[3].likeHero}.jpg`});
+            background-image: url(./images/${a[3]===null?"img-team-player@2x.png":`champion/${a[3].likeHero}.jpg`});
           "></div>
       </div>
       <div class="parallelogramRank">
         <div class="parallelogramContent teamCardRankBg" style="
         background-position:-3px -14px;
-            background-image: url(./images/${a[3]===0?"img-team-badge.png":`ranking/${a[3].userRank}.png`});
+            background-image: url(./images/${a[3]===null?"img-team-badge.png":`ranking/${a[3].userRank}.png`});
           "></div>
       </div>
     </div>
   </li>
   <li class="mb-2">
   <div class="d-flex justify-content-between mb-1">
-    ${a[4]===0?"<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>":`<p class="text-secondary">${a[4].username}</p>`}
+    ${a[4]===null?"<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>":`<p class="text-secondary">${a[4].username}</p>`}
     <span class="text-secondary fs-8">SUP</span>
   </div>
   <div class="d-flex justify-content-between">
@@ -120,14 +120,14 @@ import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let
         background-position:0px -100%;
         background-size:266px auto;
         
-          background-image: url(./images/${a[4]===0?"img-team-player@2x.png":`champion/${a[4].likeHero}.jpg`});
+          background-image: url(./images/${a[4]===null?"img-team-player@2x.png":`champion/${a[4].likeHero}.jpg`});
         "></div>
     </div>
     <div class="parallelogramRank">
       <div class="parallelogramContent teamCardRankBg" style="
       background-position:-3px -14px;
 
-          background-image: url(./images/${a[4]===0?"img-team-badge.png":`ranking/${a[4].userRank}.png`});
+          background-image: url(./images/${a[4]===null?"img-team-badge.png":`ranking/${a[4].userRank}.png`});
         "></div>
     </div>
   </div>
@@ -136,7 +136,7 @@ import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let
         </div>
       </div>
     </div>
-  </div>`})},x=async()=>{const o=document.querySelector("#buildMyTeamList"),c=await l.get(`${i}/teams?_expand=user`);let n=await l.get(`${i}/users`);n=n.data;const r=c.data;let t=[],a=[];r.forEach(e=>{if(e.userId===g){let d=e.teamMerberId.filter(s=>s>0).length;t.push({...e,teamMemeberNumber:d})}}),console.log(t),t.forEach(async e=>{await(async s=>{a=(await l.get(`${i}/teamsMember/${s}`)).data})(e.id),o.innerHTML=`            <div class="swiper-slide  bg-dark ">
+  </div>`})},v=async()=>{const o=document.querySelector("#buildMyTeamList"),c=await l.get(`${i}/teams?_expand=user`);let n=await l.get(`${i}/users`);n=n.data;const m=c.data;let t=[],a=[];m.forEach(e=>{if(e.userId===g){let r=e.teamMerberId.filter(s=>s>0).length;t.push({...e,teamMemeberNumber:r})}}),console.log(t),t.forEach(async e=>{await(async s=>{a=(await l.get(`${i}/teamsMember/${s}`)).data})(e.id),o.innerHTML=`            <div class="swiper-slide  bg-dark ">
 
       <div class="  bg-dark " style="height: fit-content">
         <div class="teamCard1  bg-dark ">
@@ -274,4 +274,4 @@ import{u,b as l,a as i}from"./main-6231738c.js";import"./header-6a8ecdaf.js";let
           </div>
         </div>
       </div>
-    </div>`})};v();x();
+    </div>`})};b();v();
