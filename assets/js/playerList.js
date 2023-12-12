@@ -1,8 +1,18 @@
-if (!userIsLogin) location.href = "index.html";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { async } from "validate.js";
 import { api_path, userIsLogin, memberId } from "./config";
+
+if (!userIsLogin) {
+  Swal.fire({
+    title: "請先登入會員",
+    icon: "warning",
+    background: "#060818",
+    color: "#D6EEFF",
+  }).then(() => {
+    location.href = "index.html";
+  });
+}
 
 let userPickIds = []; //存放會員要排除的ID
 let playerData = [];
@@ -307,7 +317,7 @@ playerWrap.addEventListener("click", (e) => {
           .then((res) => {
             Swal.fire({
               icon: "success",
-              title: "已送出好友邀請",
+              title: "已加入好友",
               showConfirmButton: false,
               timer: 2000,
               background: "#060818",
@@ -325,7 +335,7 @@ playerWrap.addEventListener("click", (e) => {
   if (selectAddComment) {
     axios
       .get(
-        `${api_path}/600/comments?userId=${memberId}&commentedId=${selectAddComment}`,
+        `${api_path}/comments?userId=${memberId}&commentedId=${selectAddComment}`,
         {
           headers: {
             Authorization: `Bearer ${userIsLogin}`,

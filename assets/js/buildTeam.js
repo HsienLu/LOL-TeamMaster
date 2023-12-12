@@ -5,6 +5,8 @@ if (!userIsLogin) {
   Swal.fire({
     title: "請先登入會員",
     icon: "warning",
+    background: "#060818",
+    color: "#D6EEFF",
   }).then(() => {
     console.log("Wait");
     location.href = "index.html";
