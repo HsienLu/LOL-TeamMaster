@@ -56,7 +56,7 @@ function renderCommentList() {
       <div class="meber-card-top">
         <div class="member-avatar position-relative">
           <img
-            src="../assets/images/avatar/${item.avatar}.png"
+            src="./images/${item.avatar}.png"
             alt=""
             class="member-avatar-style w-100"
             style="height: 306px;"/>
@@ -69,9 +69,7 @@ function renderCommentList() {
               <div
                 class="parallelogram-content-avatar"
                 style="
-                  background-image: url(../assets/images/ranking/${
-                    item.userRank
-                  }.png);
+                  background-image: url(./images/${item.userRank}.png);
                   background-size: cover;
                   background-position: center;
                   width: 82px;
@@ -210,7 +208,7 @@ function renderFriendList() {
         <div class="member-avatar position-relative">
           <div class="avatar">
             <img
-              src="../assets/images/avatar/${item.avatar}.png"
+              src="./images/${item.avatar}.png"
               alt=""
               class="member-avatar-style"
               style="height: 300px; object-fit: cover"
@@ -229,9 +227,7 @@ function renderFriendList() {
               <div
                 class="parallelogram-content-avatar"
                 style="
-                  background-image: url(../assets/images/ranking/${
-                    item.userRank
-                  }.png);
+                  background-image: url(./images/${item.userRank}.png);
                   background-size: cover;
                   background-position: center;
                   width: 82px;
@@ -434,7 +430,7 @@ function renderBanList() {
         <div class="member-avatar position-relative w-100">
           <div class="avatar w-100">
             <img
-              src="../assets/images/avatar/${item.avatar}.png"
+              src="./images/${item.avatar}.png"
               alt=""
               class="member-avatar-style"
               style="height: 300px; object-fit: cover"
@@ -447,9 +443,7 @@ function renderBanList() {
             <div class="parallelogram-1">
               <div class="parallelogram-content-avatar"
                 style="
-                  background-image: url(../assets/images/ranking/${
-                    item.userRank
-                  }.png);
+                  background-image: url(./images/${item.userRank}.png);
                   background-size: cover;
                   background-position: center;
                   width: 85px;
@@ -609,10 +603,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(/assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[0] === "waiting"
                       ? "img-team-player@2x.png"
-                      : `champion/${item.membersDetail[0].likeHero}.jpg`
+                      : `${item.membersDetail[0].likeHero}.jpg`
                   });
                 "
               ></div>
@@ -621,10 +615,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(/assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[0] === "waiting"
                       ? "img-team-badge.png"
-                      : `ranking/${item.membersDetail[0].userRank}.png`
+                      : `${item.membersDetail[0].userRank}.png`
                   });
                 "
               ></div>
@@ -645,10 +639,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[1] === "waiting"
                       ? "img-team-player@2x.png"
-                      : `champion/${item.membersDetail[1].likeHero}.jpg`
+                      : `${item.membersDetail[1].likeHero}.jpg`
                   });
                 "
               ></div>
@@ -657,10 +651,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[1] === "waiting"
                       ? "img-team-badge.png"
-                      : `ranking/${item.membersDetail[1].userRank}.png`
+                      : `${item.membersDetail[1].userRank}.png`
                   });
                 "
               ></div>
@@ -681,10 +675,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[2] === "waiting"
                       ? "img-team-player@2x.png"
-                      : `champion/${item.membersDetail[2].likeHero}.jpg`
+                      : `${item.membersDetail[2].likeHero}.jpg`
                   });
                 "
               ></div>
@@ -693,10 +687,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[2] === "waiting"
                       ? "img-team-badge.png"
-                      : `ranking/${item.membersDetail[2].userRank}.png`
+                      : `${item.membersDetail[2].userRank}.png`
                   });
                 "
               ></div>
@@ -717,10 +711,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[3] === "waiting"
                       ? "img-team-player@2x.png"
-                      : `champion/${item.membersDetail[3].likeHero}.jpg`
+                      : `${item.membersDetail[3].likeHero}.jpg`
                   });
                 "
               ></div>
@@ -729,10 +723,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[3] === "waiting"
                       ? "img-team-badge.png"
-                      : `ranking/${item.membersDetail[3].userRank}.png`
+                      : `${item.membersDetail[3].userRank}.png`
                   });
                 "
               ></div>
@@ -753,10 +747,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[4] === "waiting"
                       ? "img-team-player@2x.png"
-                      : `champion/${item.membersDetail[4].likeHero}.jpg`
+                      : `${item.membersDetail[4].likeHero}.jpg`
                   });
                 "
               ></div>
@@ -765,10 +759,10 @@ function renderHistoricalTeamList() {
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     item.membersDetail[4] === "waiting"
                       ? "img-team-badge.png"
-                      : `ranking/${item.membersDetail[4].userRank}.png`
+                      : `${item.membersDetail[4].userRank}.png`
                   });
                 "
               ></div>
