@@ -1,4 +1,4 @@
-import{u as g,S as c,b as l,a as o,m as s}from"./main-479ee411.js";import"./header-2643204d.js";g||c.fire({title:"請先登入會員",icon:"warning",background:"#060818",color:"#D6EEFF"}).then(()=>{location.href="index.html"});let h=[],d=[],b=0,u=$("#pagination");const v=document.querySelector("#playerThumbDesc"),C=document.querySelector("#playerThumbAsc"),f=document.querySelector(".jsPlayerWrap"),y=document.querySelector("#playerRankSelect"),w=document.querySelector(".jsPlayerSearch"),k=document.querySelector(".jsPlayerSearchBtn");function x(a){let t="";a.forEach(e=>{t+=`<div class="playerListCard col-lg-4 col-md-6 col-12 mt-18">
+import{u as g,S as c,b as l,a as o,m as s}from"./main-6231738c.js";import"./header-6a8ecdaf.js";g||c.fire({title:"請先登入會員",icon:"warning",background:"#060818",color:"#D6EEFF"}).then(()=>{location.href="index.html"});let h=[],d=[],b=0,u=$("#pagination");const v=document.querySelector("#playerThumbDesc"),C=document.querySelector("#playerThumbAsc"),f=document.querySelector(".jsPlayerWrap"),y=document.querySelector("#playerRankSelect"),w=document.querySelector(".jsPlayerSearch"),k=document.querySelector(".jsPlayerSearchBtn");function x(a){let t="";a.forEach(e=>{t+=`<div class="playerListCard col-lg-4 col-md-6 col-12 mt-18">
         <div
           class="memberCard border border-primary w-100 h-100 greenShadow bg-dark"
           style="border-radius: 2px"
@@ -7,7 +7,7 @@ import{u as g,S as c,b as l,a as o,m as s}from"./main-479ee411.js";import"./head
             <div class="member-avatar position-relative w-100">
               <div class="avatar w-100">
                 <img
-                  src="./images/${e.avatar}.png"
+                  src="./images/avatar/${e.avatar}.png"
                   alt=""
                   class="member-avatar-style"
                   style="height: 300px; object-fit: cover"
@@ -21,7 +21,7 @@ import{u as g,S as c,b as l,a as o,m as s}from"./main-479ee411.js";import"./head
                   <div
                     class="parallelogram-content-avatar"
                     style="
-                      background-image: url(./images/${e.userRank}.png);
+                      background-image: url(./images/ranking/${e.userRank}.png);
                       background-size: cover;
                       background-position: center;
                       width: 85px;
