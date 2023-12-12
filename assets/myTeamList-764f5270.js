@@ -35,13 +35,13 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(/images/${a[0]===0?"img-team-player@2x.png":`champion/${a[0].likeHero}.jpg`});
+                  background-image: url(./images/${a[0]===0?"img-team-player@2x.png":`champion/${a[0].likeHero}.jpg`});
                 "></div>
             </div>
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(/images/${a[0]===0?"img-team-badge.png":`ranking/${a[0].userRank}.png`});
+                  background-image: url(./images/${a[0]===0?"img-team-badge.png":`ranking/${a[0].userRank}.png`});
                 "></div>
             </div>
           </div>
@@ -56,13 +56,13 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:cover;
-                background-image: url(/images/${a[1]===0?"img-team-player@2x.png":`champion/${a[1].likeHero}.jpg`});
+                background-image: url(./images/${a[1]===0?"img-team-player@2x.png":`champion/${a[1].likeHero}.jpg`});
               "></div>
           </div>
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(/images/${a[1]===0?"img-team-badge.png":`ranking/${a[1].userRank}.png`});
+                background-image: url(./images/${a[1]===0?"img-team-badge.png":`ranking/${a[1].userRank}.png`});
               "></div>
           </div>
         </div>
@@ -77,13 +77,13 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
           <div class="parallelogramContent teamCardHeroBg" style="
           background-position:0px -100%;
           background-size:cover;
-              background-image: url(/images/${a[2]===0?"img-team-player@2x.png":`champion/${a[2].likeHero}.jpg`});
+              background-image: url(./images/${a[2]===0?"img-team-player@2x.png":`champion/${a[2].likeHero}.jpg`});
             "></div>
         </div>
         <div class="parallelogramRank">
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
-              background-image: url(/images/${a[2]===0?"img-team-badge.png":`ranking/${a[2].userRank}.png`});
+              background-image: url(./images/${a[2]===0?"img-team-badge.png":`ranking/${a[2].userRank}.png`});
             "></div>
         </div>
       </div>
@@ -98,13 +98,13 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
         <div class="parallelogramContent teamCardHeroBg" style="
         background-position:0px -100%;
         background-size:266px auto;
-            background-image: url(/images/${a[3]===0?"img-team-player@2x.png":`champion/${a[3].likeHero}.jpg`});
+            background-image: url(./images/${a[3]===0?"img-team-player@2x.png":`champion/${a[3].likeHero}.jpg`});
           "></div>
       </div>
       <div class="parallelogramRank">
         <div class="parallelogramContent teamCardRankBg" style="
         background-position:-3px -14px;
-            background-image: url(/images/${a[3]===0?"img-team-badge.png":`ranking/${a[3].userRank}.png`});
+            background-image: url(./images/${a[3]===0?"img-team-badge.png":`ranking/${a[3].userRank}.png`});
           "></div>
       </div>
     </div>
@@ -120,14 +120,14 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
         background-position:0px -100%;
         background-size:266px auto;
         
-          background-image: url(/images/${a[4]===0?"img-team-player@2x.png":`champion/${a[4].likeHero}.jpg`});
+          background-image: url(./images/${a[4]===0?"img-team-player@2x.png":`champion/${a[4].likeHero}.jpg`});
         "></div>
     </div>
     <div class="parallelogramRank">
       <div class="parallelogramContent teamCardRankBg" style="
       background-position:-3px -14px;
 
-          background-image: url(/images/${a[4]===0?"img-team-badge.png":`ranking/${a[4].userRank}.png`});
+          background-image: url(./images/${a[4]===0?"img-team-badge.png":`ranking/${a[4].userRank}.png`});
         "></div>
     </div>
   </div>
@@ -173,13 +173,13 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(/images/${a[0]===0?"img-team-player@2x.png":`champion/${a[0].likeHero}.jpg`});
+                    background-image: url(./images/${a[0]===0?"img-team-player@2x.png":`champion/${a[0].likeHero}.jpg`});
                   "></div>
               </div>
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(/images/${a[0]===0?"img-team-badge.png":`ranking/${a[0].userRank}.png`});
+                    background-image: url(./images/${a[0]===0?"img-team-badge.png":`ranking/${a[0].userRank}.png`});
                   "></div>
               </div>
             </div>
@@ -194,13 +194,13 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(/images/${a[1]===0?"img-team-player@2x.png":`champion/${a[1].likeHero}.jpg`});
+                  background-image: url(./images/${a[1]===0?"img-team-player@2x.png":`champion/${a[1].likeHero}.jpg`});
                 "></div>
             </div>
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(/images/${a[1]===0?"img-team-badge.png":`ranking/${a[1].userRank}.png`});
+                  background-image: url(./images/${a[1]===0?"img-team-badge.png":`ranking/${a[1].userRank}.png`});
                 "></div>
             </div>
           </div>
@@ -215,13 +215,13 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:cover;
-                background-image: url(/images/${a[2]===0?"img-team-player@2x.png":`champion/${a[2].likeHero}.jpg`});
+                background-image: url(./images/${a[2]===0?"img-team-player@2x.png":`champion/${a[2].likeHero}.jpg`});
               "></div>
           </div>
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(/images/${a[2]===0?"img-team-badge.png":`ranking/${a[2].userRank}.png`});
+                background-image: url(./images/${a[2]===0?"img-team-badge.png":`ranking/${a[2].userRank}.png`});
               "></div>
           </div>
         </div>
@@ -236,13 +236,13 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
           <div class="parallelogramContent teamCardHeroBg" style="
           background-position:0px -100%;
           background-size:266px auto;
-              background-image: url(/images/${a[3]===0?"img-team-player@2x.png":`champion/${a[3].likeHero}.jpg`});
+              background-image: url(./images/${a[3]===0?"img-team-player@2x.png":`champion/${a[3].likeHero}.jpg`});
             "></div>
         </div>
         <div class="parallelogramRank">
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
-              background-image: url(/images/${a[3]===0?"img-team-badge.png":`ranking/${a[3].userRank}.png`});
+              background-image: url(./images/${a[3]===0?"img-team-badge.png":`ranking/${a[3].userRank}.png`});
             "></div>
         </div>
       </div>
@@ -258,14 +258,14 @@ import{u,b as l,a as i}from"./main-81d082ef.js";import"./header-56cae863.js";let
           background-position:0px -100%;
           background-size:266px auto;
 
-            background-image: url(/images/${a[4]===0?"img-team-player@2x.png":`champion/${a[4].likeHero}.jpg`});
+            background-image: url(./images/${a[4]===0?"img-team-player@2x.png":`champion/${a[4].likeHero}.jpg`});
           "></div>
       </div>
       <div class="parallelogramRank">
         <div class="parallelogramContent teamCardRankBg" style="
         background-position:-3px -14px;
 
-            background-image: url(/images/${a[4]===0?"img-team-badge.png":`ranking/${a[4].userRank}.png`});
+            background-image: url(./images/${a[4]===0?"img-team-badge.png":`ranking/${a[4].userRank}.png`});
           "></div>
       </div>
     </div>
