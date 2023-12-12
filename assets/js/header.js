@@ -9,7 +9,7 @@ if (userIsLogin) {
   jsHeaderLogin.classList.add("d-flex");
   jsHeaderLogout.classList.add("d-none");
 
-  headerAvatar.src = `/assets/images/avatar/${memberAvatar}.png`;
+  headerAvatar.src = `./images/${memberAvatar}.png`;
   const jsLogout = document.querySelector(".jsLogout");
 
   jsLogout.addEventListener("click", (e) => {
