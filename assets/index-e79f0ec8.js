@@ -1,16 +1,16 @@
-import{b as d,a as o,l as v}from"./main-3cc3339b.js";import"./header-269041da.js";let g=[];const u=document.querySelector(".popularTeamsCard"),x=document.querySelector(".popularPlayersCard");function y(){f(),m("#popularTeamsSwiper",3,1),k()}const f=async()=>{try{let i=[];const a=(await d.get(`${o}/teamsThumb?_sort=desc`)).data;let c="";for(const n of a){let e=[],p=[],s=[],t=[],b=n.teamMerberId.filter(l=>l>0);(await d.get(`${o}/teamsMember/${n.id}`)).data.forEach(l=>{l===null?p.push(0):p.push(l.avatar),l===null?e.push(0):e.push(l.username),l===null?s.push(0):s.push(l.userRank),l===null?t.push(0):t.push(l.likeHero)}),c+=`        
+import{b as n,a as o,l as v}from"./main-479ee411.js";import"./header-2643204d.js";let g=[];const u=document.querySelector(".popularTeamsCard"),x=document.querySelector(".popularPlayersCard");function y(){f(),m("#popularTeamsSwiper",3,1),C()}const f=async()=>{try{let i=[];const a=(await n.get(`${o}/teamsThumb?_sort=desc`)).data;let c="";for(const d of a){let e=[],p=[],s=[],t=[],b=d.teamMerberId.filter(l=>l>0);(await n.get(`${o}/teamsMember/${d.id}`)).data.forEach(l=>{l===null?p.push(0):p.push(l.avatar),l===null?e.push(0):e.push(l.username),l===null?s.push(0):s.push(l.userRank),l===null?t.push(0):t.push(l.likeHero)}),c+=`        
         <div class="swiper-slide teamListCard blueShadow">
           <div class="card-header mb-4 mb-md-6">
             <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
               <div class="mb-2 mb-md-0">
-                <h3 class="card-title mb-2">${n.teamName}</h3>
+                <h3 class="card-title mb-2">${d.teamName}</h3>
                 <p class="card-subtitle text-secondary">
-                  遊戲時間：${n.playTime}
+                  遊戲時間：${d.playTime}
                 </p>
               </div>
               <div class="d-flex d-md-block justify-content-between align-items-center">
                 <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
-                  ${n.thumb}
+                  ${d.thumb}
                   <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
                 </span>
                 <span class="d-block text-secondary fs-6">
@@ -19,7 +19,7 @@ import{b as d,a as o,l as v}from"./main-3cc3339b.js";import"./header-269041da.js
                 </span>
               </div>
             </div>
-            <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${v}/LOL-TeamMaster/pages/teamDetails.html?id=${n.id}'">
+            <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${v}/LOL-TeamMaster/pages/teamDetails.html?id=${d.id}'">
                   <p class="fs-7 w-100">立即加入</p>
                 </button>
           </div>
@@ -35,13 +35,13 @@ import{b as d,a as o,l as v}from"./main-3cc3339b.js";import"./header-269041da.js
                     <div class="parallelogramContent teamCardHeroBg" style="
                     background-position:0px -100%;
                     background-size:cover;
-                        background-image: url(../assets/images/${t[0]===0?"img-team-player@2x.png":`champion/${t[0]}.jpg`});
+                        background-image: url(./images/${t[0]===0?"img-team-player@2x.png":`${t[0]}.jpg`});
                       "></div>
                   </div>
                   <div class="parallelogramRank">
                     <div class="parallelogramContent teamCardRankBg" style="
                     background-position:-3px -14px;
-                        background-image: url(../assets/images/${s[0]===0?"img-team-badge.png":`ranking/${s[0]}.png`});
+                        background-image: url(./images/${s[0]===0?"img-team-badge.png":`${s[0]}.png`});
                       "></div>
                   </div>
                 </div>
@@ -56,13 +56,13 @@ import{b as d,a as o,l as v}from"./main-3cc3339b.js";import"./header-269041da.js
                   <div class="parallelogramContent teamCardHeroBg" style="
                   background-position:0px -100%;
                   background-size:cover;
-                      background-image: url(../assets/images/${t[1]===0?"img-team-player@2x.png":`champion/${t[1]}.jpg`});
+                      background-image: url(./images/${t[1]===0?"img-team-player@2x.png":`${t[1]}.jpg`});
                     "></div>
                 </div>
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${s[1]===0?"img-team-badge.png":`ranking/${s[1]}.png`});
+                      background-image: url(./images/${s[1]===0?"img-team-badge.png":`${s[1]}.png`});
                     "></div>
                 </div>
               </div>
@@ -77,13 +77,13 @@ import{b as d,a as o,l as v}from"./main-3cc3339b.js";import"./header-269041da.js
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${t[2]===0?"img-team-player@2x.png":`champion/${t[2]}.jpg`});
+                    background-image: url(./images/${t[2]===0?"img-team-player@2x.png":`${t[2]}.jpg`});
                   "></div>
               </div>
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${s[2]===0?"img-team-badge.png":`ranking/${s[2]}.png`});
+                    background-image: url(./images/${s[2]===0?"img-team-badge.png":`${s[2]}.png`});
                   "></div>
               </div>
             </div>
@@ -98,13 +98,13 @@ import{b as d,a as o,l as v}from"./main-3cc3339b.js";import"./header-269041da.js
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:266px auto;
-                  background-image: url(../assets/images/${t[3]===0?"img-team-player@2x.png":`champion/${t[3]}.jpg`});
+                  background-image: url(./images/${t[3]===0?"img-team-player@2x.png":`${t[3]}.jpg`});
                 "></div>
             </div>
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${s[3]===0?"img-team-badge.png":`ranking/${s[3]}.png`});
+                  background-image: url(./images/${s[3]===0?"img-team-badge.png":`${s[3]}.png`});
                 "></div>
             </div>
           </div>
@@ -120,26 +120,26 @@ import{b as d,a as o,l as v}from"./main-3cc3339b.js";import"./header-269041da.js
               background-position:0px -100%;
               background-size:266px auto;
               
-                background-image: url(../assets/images/${t[4]===0?"img-team-player@2x.png":`champion/${t[4]}.jpg`});
+                background-image: url(./images/${t[4]===0?"img-team-player@2x.png":`${t[4]}.jpg`});
               "></div>
           </div>
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
   
-                background-image: url(../assets/images/${s[4]===0?"img-team-badge.png":`ranking/${s[4]}.png`});
+                background-image: url(./images/${s[4]===0?"img-team-badge.png":`${s[4]}.png`});
               "></div>
           </div>
         </div>
       </li>
             </ul>
           </div>
-        </div>`}u.innerHTML=c}catch(i){console.error("Error fetching data:",i)}};function k(){d.get(`${o}/users?_embed=friendLists&_sort=thumb&_order=desc`).then(i=>{g=i.data,C(g),m("#popularPlayersSwiper",4,2)}).catch(i=>{console.log(i)})}function C(i){let r="";i.forEach(a=>{r+=`<div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
+        </div>`}u.innerHTML=c}catch(i){console.error("Error fetching data:",i)}};function C(){n.get(`${o}/users?_embed=friendLists&_sort=thumb&_order=desc`).then(i=>{g=i.data,k(g),m("#popularPlayersSwiper",4,2)}).catch(i=>{console.log(i)})}function k(i){let r="";i.forEach(a=>{r+=`<div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
     <div class="meber-card-top">
       <div class="member-avatar position-relative">
         <div class="avatar">
           <img
-            src="../assets/images/avatar/${a.avatar}.png"
+            src="./images/${a.avatar}.png"
             alt=""
             class="member-avatar-style"
             style="height: 300px; object-fit: cover"
@@ -158,7 +158,7 @@ import{b as d,a as o,l as v}from"./main-3cc3339b.js";import"./header-269041da.js
             <div
               class="parallelogram-content-avatar"
               style="
-                background-image: url(../assets/images/ranking/${a.userRank}.png);
+                background-image: url(./images/${a.userRank}.png);
                 background-size: cover;
                 background-position: center;
                 width: 82px;

@@ -1,9 +1,9 @@
-import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./header-269041da.js";i||(location.href="index.html");const D=document.querySelector("#memberAccount"),C=document.querySelector("#memberName"),B=document.querySelector("#memberThumb"),S=document.querySelector("#memberAvatar"),P=document.querySelector("#memberRank"),I=document.querySelector("#memberPosition"),L=document.querySelector("#memberHero"),A={Iron:"鐵",Bronze:"銅",Silver:"銀",Gold:"金",Platinum:"白金",Emerald:"翡翠",Diamond:"鑽石",Master:"大師",Grandmaster:"宗師",Challenger:"菁英"};s.get(`${r}/600/users/${d}`,{headers:{Authorization:`Bearer ${i}`}}).then(a=>{D.value=a.data.email,C.value=a.data.username,B.textContent=a.data.thumb,S.src=`../assets/images/avatar/${a.data.avatar}.png`,P.textContent=A[a.data.userRank],I.textContent=a.data.likePosition,L.style=`background-image: url(../assets/images/champion/${a.data.likeHero}.jpg)`}).then(a=>{console.log(a)});i||(location.href="index.html");let g=[],p=[],u=[],h=[],v=[],f=[],x=[];const y=document.querySelector(".evaluateCard"),$=document.querySelector(".friendCard"),w=document.querySelector(".blackCard"),j=document.querySelector(".historicalCard");function G(){T(),H(),R(),E()}async function T(){try{(await s.get(`${r}/600/comments?userId=${d}`,{headers:{Authorization:`Bearer ${i}`}})).data.forEach(t=>{g.push(t.commentedId)}),p=(await s.get(`${r}/users`)).data.filter(t=>g.includes(t.id)),k(),l("#evaluateSwiper",4,3)}catch(a){console.log(a)}}function k(){let a="";p.forEach(e=>{a+=`
+import{u as i,b as s,a as r,m as n,S as o}from"./main-479ee411.js";import"./header-2643204d.js";i||(location.href="index.html");const D=document.querySelector("#memberAccount"),C=document.querySelector("#memberName"),B=document.querySelector("#memberThumb"),S=document.querySelector("#memberAvatar"),P=document.querySelector("#memberRank"),I=document.querySelector("#memberPosition"),L=document.querySelector("#memberHero"),A={Iron:"鐵",Bronze:"銅",Silver:"銀",Gold:"金",Platinum:"白金",Emerald:"翡翠",Diamond:"鑽石",Master:"大師",Grandmaster:"宗師",Challenger:"菁英"};s.get(`${r}/600/users/${n}`,{headers:{Authorization:`Bearer ${i}`}}).then(a=>{D.value=a.data.email,C.value=a.data.username,B.textContent=a.data.thumb,S.src=`./images/${a.data.avatar}.png`,P.textContent=A[a.data.userRank],I.textContent=a.data.likePosition,L.style=`background-image: url(./images/${a.data.likeHero}.jpg)`}).then(a=>{console.log(a)});i||(location.href="index.html");let g=[],p=[],u=[],f=[],v=[],h=[],x=[];const y=document.querySelector(".evaluateCard"),$=document.querySelector(".friendCard"),w=document.querySelector(".blackCard"),j=document.querySelector(".historicalCard");function G(){T(),H(),R(),E()}async function T(){try{(await s.get(`${r}/600/comments?userId=${n}`,{headers:{Authorization:`Bearer ${i}`}})).data.forEach(t=>{g.push(t.commentedId)}),p=(await s.get(`${r}/users`)).data.filter(t=>g.includes(t.id)),k(),l("#evaluateSwiper",4,3)}catch(a){console.log(a)}}function k(){let a="";p.forEach(e=>{a+=`
     <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
       <div class="meber-card-top">
         <div class="member-avatar position-relative">
           <img
-            src="../assets/images/avatar/${e.avatar}.png"
+            src="./images/${e.avatar}.png"
             alt=""
             class="member-avatar-style w-100"
             style="height: 306px;"/>
@@ -16,7 +16,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogram-content-avatar"
                 style="
-                  background-image: url(../assets/images/ranking/${e.userRank}.png);
+                  background-image: url(./images/${e.userRank}.png);
                   background-size: cover;
                   background-position: center;
                   width: 82px;
@@ -44,13 +44,13 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
         </button>
       </div>
     </div>
-    `}),y.innerHTML=a}y.addEventListener("click",async a=>{try{if(a.target.getAttribute("class")!=="jsCancelCommentBtn btn btnShadow d-block border border-primary text-primary w-50 mx-auto")return;const t=a.target.getAttribute("data-id"),n=await s.get(`${r}/600/comments?userId=${d}&commentedId=${t}`,{headers:{Authorization:`Bearer ${i}`}});await s.delete(`${r}/600/comments/${n.data[0].id}`,{headers:{Authorization:`Bearer ${i}`}}),o.fire({icon:"success",title:"取消成功",showConfirmButton:!1,timer:1500,background:"#060818",color:"#D6EEFF"}),k()}catch(e){console.log(e)}});async function H(){try{(await s.get(`${r}/600/friendLists?userId=${d}`,{headers:{Authorization:`Bearer ${i}`}})).data.forEach(t=>{u.push(t.friendId)}),h=(await s.get(`${r}/users`)).data.filter(t=>u.includes(t.id)),m(),l("#friendListSwiper",3,4)}catch(a){console.log(a)}}function m(){let a="";h.forEach(e=>{a+=`
+    `}),y.innerHTML=a}y.addEventListener("click",async a=>{try{if(a.target.getAttribute("class")!=="jsCancelCommentBtn btn btnShadow d-block border border-primary text-primary w-50 mx-auto")return;const t=a.target.getAttribute("data-id"),d=await s.get(`${r}/600/comments?userId=${n}&commentedId=${t}`,{headers:{Authorization:`Bearer ${i}`}});await s.delete(`${r}/600/comments/${d.data[0].id}`,{headers:{Authorization:`Bearer ${i}`}}),o.fire({icon:"success",title:"取消成功",showConfirmButton:!1,timer:1500,background:"#060818",color:"#D6EEFF"}),k()}catch(e){console.log(e)}});async function H(){try{(await s.get(`${r}/600/friendLists?userId=${n}`,{headers:{Authorization:`Bearer ${i}`}})).data.forEach(t=>{u.push(t.friendId)}),f=(await s.get(`${r}/users`)).data.filter(t=>u.includes(t.id)),b(),l("#friendListSwiper",3,4)}catch(a){console.log(a)}}function b(){let a="";f.forEach(e=>{a+=`
     <div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
       <div class="meber-card-top">
         <div class="member-avatar position-relative">
           <div class="avatar">
             <img
-              src="../assets/images/avatar/${e.avatar}.png"
+              src="./images/${e.avatar}.png"
               alt=""
               class="member-avatar-style"
               style="height: 300px; object-fit: cover"
@@ -69,7 +69,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogram-content-avatar"
                 style="
-                  background-image: url(../assets/images/ranking/${e.userRank}.png);
+                  background-image: url(./images/${e.userRank}.png);
                   background-size: cover;
                   background-position: center;
                   width: 82px;
@@ -115,13 +115,13 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
       </div>
     </div>
   </div>
-    `}),$.innerHTML=a}$.addEventListener("click",async a=>{try{if(a.target.getAttribute("class")!=="btn btnShadow border border-primary text-primary w-40")return;const t=a.target.getAttribute("data-banId"),n=a.target.getAttribute("data-removeId");if(t){const c=await s.get(`${r}/600/friendLists?userId=${d}&friendId=${t}`,{headers:{Authorization:`Bearer ${i}`}});await s.delete(`${r}/600/friendLists/${c.data[0].id}`,{headers:{Authorization:`Bearer ${i}`}}),await s.post(`${r}/600/banLists`,{userId:d,friendId:Number(t)},{headers:{Authorization:`Bearer ${i}`}}),o.fire({icon:"success",title:"加入黑名單成功",showConfirmButton:!1,timer:1500,background:"#060818",color:"#D6EEFF"}),m(),b(),l("#friendListSwiper",3,4),l("#blackListSwiper",4,5)}if(n){const c=await s.get(`${r}/600/friendLists?userId=${d}&friendId=${n}`,{headers:{Authorization:`Bearer ${i}`}});await s.delete(`${r}/600/friendLists/${c.data[0].id}`,{headers:{Authorization:`Bearer ${i}`}}),o.fire({icon:"success",title:"移除好友成功",showConfirmButton:!1,timer:1500,background:"#060818",color:"#D6EEFF"}),m(),l("#friendListSwiper",3,4)}}catch(e){console.log(e)}});async function R(){try{(await s.get(`${r}/600/banLists?userId=${d}`,{headers:{Authorization:`Bearer ${i}`}})).data.forEach(n=>{v.push(n.friendId)}),f=(await s.get(`${r}/users`)).data.filter(n=>v.includes(n.id)),b();const t=l("#blackListSwiper",4,5)}catch(a){console.log(a)}}function b(){let a="";f.forEach(e=>{a+=`
+    `}),$.innerHTML=a}$.addEventListener("click",async a=>{try{if(a.target.getAttribute("class")!=="btn btnShadow border border-primary text-primary w-40")return;const t=a.target.getAttribute("data-banId"),d=a.target.getAttribute("data-removeId");if(t){const c=await s.get(`${r}/600/friendLists?userId=${n}&friendId=${t}`,{headers:{Authorization:`Bearer ${i}`}});await s.delete(`${r}/600/friendLists/${c.data[0].id}`,{headers:{Authorization:`Bearer ${i}`}}),await s.post(`${r}/600/banLists`,{userId:n,friendId:Number(t)},{headers:{Authorization:`Bearer ${i}`}}),o.fire({icon:"success",title:"加入黑名單成功",showConfirmButton:!1,timer:1500,background:"#060818",color:"#D6EEFF"}),b(),m(),l("#friendListSwiper",3,4),l("#blackListSwiper",4,5)}if(d){const c=await s.get(`${r}/600/friendLists?userId=${n}&friendId=${d}`,{headers:{Authorization:`Bearer ${i}`}});await s.delete(`${r}/600/friendLists/${c.data[0].id}`,{headers:{Authorization:`Bearer ${i}`}}),o.fire({icon:"success",title:"移除好友成功",showConfirmButton:!1,timer:1500,background:"#060818",color:"#D6EEFF"}),b(),l("#friendListSwiper",3,4)}}catch(e){console.log(e)}});async function R(){try{(await s.get(`${r}/600/banLists?userId=${n}`,{headers:{Authorization:`Bearer ${i}`}})).data.forEach(d=>{v.push(d.friendId)}),h=(await s.get(`${r}/users`)).data.filter(d=>v.includes(d.id)),m();const t=l("#blackListSwiper",4,5)}catch(a){console.log(a)}}function m(){let a="";h.forEach(e=>{a+=`
     <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
       <div class="meber-card-top">
         <div class="member-avatar position-relative w-100">
           <div class="avatar w-100">
             <img
-              src="../assets/images/avatar/${e.avatar}.png"
+              src="./images/${e.avatar}.png"
               alt=""
               class="member-avatar-style"
               style="height: 300px; object-fit: cover"
@@ -134,7 +134,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
             <div class="parallelogram-1">
               <div class="parallelogram-content-avatar"
                 style="
-                  background-image: url(../assets/images/ranking/${e.userRank}.png);
+                  background-image: url(./images/${e.userRank}.png);
                   background-size: cover;
                   background-position: center;
                   width: 85px;
@@ -170,7 +170,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
         </button>
       </div>
     </div>
-    `}),w.innerHTML=a}w.addEventListener("click",async a=>{if(a.target.getAttribute("class")!=="btn btnShadow border border-primary text-primary w-80")return;const t=a.target.getAttribute("data-removeBanId"),n=await s.get(`${r}/600/banLists?userId=${d}&friendId=${t}`,{headers:{Authorization:`Bearer ${i}`}});await s.delete(`${r}/600/banLists/${n.data[0].id}`,{headers:{Authorization:`Bearer ${i}`}}),o.fire({icon:"success",title:"剔除成功",showConfirmButton:!1,timer:1500,background:"#060818",color:"#D6EEFF"}),b(),l("#blackListSwiper",4,5)});function E(){s.get(`${r}/teamsHistorical/${d}`).then(a=>{x=a.data,z(),l("#historicalTeamRecordsSwiper",3,6)}).catch(a=>{console.log(a)})}function z(){let a="";x.forEach(e=>{a+=`<div
+    `}),w.innerHTML=a}w.addEventListener("click",async a=>{if(a.target.getAttribute("class")!=="btn btnShadow border border-primary text-primary w-80")return;const t=a.target.getAttribute("data-removeBanId"),d=await s.get(`${r}/600/banLists?userId=${n}&friendId=${t}`,{headers:{Authorization:`Bearer ${i}`}});await s.delete(`${r}/600/banLists/${d.data[0].id}`,{headers:{Authorization:`Bearer ${i}`}}),o.fire({icon:"success",title:"剔除成功",showConfirmButton:!1,timer:1500,background:"#060818",color:"#D6EEFF"}),m(),l("#blackListSwiper",4,5)});function E(){s.get(`${r}/teamsHistorical/${n}`).then(a=>{x=a.data,z(),l("#historicalTeamRecordsSwiper",3,6)}).catch(a=>{console.log(a)})}function z(){let a="";x.forEach(e=>{a+=`<div
     class="swiper-slide historicalTeamRecordsCard border border-2 border-radius border-primary bg-dark blueShadow"
   >
     <div class="card-header mb-4 mb-md-6">
@@ -211,7 +211,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(/assets/images/${e.membersDetail[0]==="waiting"?"img-team-player@2x.png":`champion/${e.membersDetail[0].likeHero}.jpg`});
+                  background-image: url(./images/${e.membersDetail[0]==="waiting"?"img-team-player@2x.png":`${e.membersDetail[0].likeHero}.jpg`});
                 "
               ></div>
             </div>
@@ -219,7 +219,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(/assets/images/${e.membersDetail[0]==="waiting"?"img-team-badge.png":`ranking/${e.membersDetail[0].userRank}.png`});
+                  background-image: url(./images/${e.membersDetail[0]==="waiting"?"img-team-badge.png":`${e.membersDetail[0].userRank}.png`});
                 "
               ></div>
             </div>
@@ -235,7 +235,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(../assets/images/${e.membersDetail[1]==="waiting"?"img-team-player@2x.png":`champion/${e.membersDetail[1].likeHero}.jpg`});
+                  background-image: url(./images/${e.membersDetail[1]==="waiting"?"img-team-player@2x.png":`${e.membersDetail[1].likeHero}.jpg`});
                 "
               ></div>
             </div>
@@ -243,7 +243,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(../assets/images/${e.membersDetail[1]==="waiting"?"img-team-badge.png":`ranking/${e.membersDetail[1].userRank}.png`});
+                  background-image: url(./images/${e.membersDetail[1]==="waiting"?"img-team-badge.png":`${e.membersDetail[1].userRank}.png`});
                 "
               ></div>
             </div>
@@ -259,7 +259,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(../assets/images/${e.membersDetail[2]==="waiting"?"img-team-player@2x.png":`champion/${e.membersDetail[2].likeHero}.jpg`});
+                  background-image: url(./images/${e.membersDetail[2]==="waiting"?"img-team-player@2x.png":`${e.membersDetail[2].likeHero}.jpg`});
                 "
               ></div>
             </div>
@@ -267,7 +267,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(../assets/images/${e.membersDetail[2]==="waiting"?"img-team-badge.png":`ranking/${e.membersDetail[2].userRank}.png`});
+                  background-image: url(./images/${e.membersDetail[2]==="waiting"?"img-team-badge.png":`${e.membersDetail[2].userRank}.png`});
                 "
               ></div>
             </div>
@@ -283,7 +283,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(../assets/images/${e.membersDetail[3]==="waiting"?"img-team-player@2x.png":`champion/${e.membersDetail[3].likeHero}.jpg`});
+                  background-image: url(./images/${e.membersDetail[3]==="waiting"?"img-team-player@2x.png":`${e.membersDetail[3].likeHero}.jpg`});
                 "
               ></div>
             </div>
@@ -291,7 +291,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(../assets/images/${e.membersDetail[3]==="waiting"?"img-team-badge.png":`ranking/${e.membersDetail[3].userRank}.png`});
+                  background-image: url(./images/${e.membersDetail[3]==="waiting"?"img-team-badge.png":`${e.membersDetail[3].userRank}.png`});
                 "
               ></div>
             </div>
@@ -307,7 +307,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardHeroBg-1"
                 style="
-                  background-image: url(../assets/images/${e.membersDetail[4]==="waiting"?"img-team-player@2x.png":`champion/${e.membersDetail[4].likeHero}.jpg`});
+                  background-image: url(./images/${e.membersDetail[4]==="waiting"?"img-team-player@2x.png":`${e.membersDetail[4].likeHero}.jpg`});
                 "
               ></div>
             </div>
@@ -315,7 +315,7 @@ import{u as i,b as s,a as r,m as d,S as o}from"./main-3cc3339b.js";import"./head
               <div
                 class="parallelogramContent-1 teamCardRankBg-1"
                 style="
-                  background-image: url(../assets/images/${e.membersDetail[4]==="waiting"?"img-team-badge.png":`ranking/${e.membersDetail[4].userRank}.png`});
+                  background-image: url(./images/${e.membersDetail[4]==="waiting"?"img-team-badge.png":`${e.membersDetail[4].userRank}.png`});
                 "
               ></div>
             </div>
