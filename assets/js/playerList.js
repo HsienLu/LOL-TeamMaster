@@ -181,7 +181,7 @@ playerThumbAsc.addEventListener("click", (e) => {
     .get(`${api_path}/users?_embed=friendLists&_sort=thumb&_order=asc`)
     .then((res) => {
       let filteredUserData = res.data.filter((user) => {
-        return !userFriends.includes(user.id);
+        return !userPickIds.includes(user.id);
       });
 
       playerData = filteredUserData.filter((item) => {
@@ -201,7 +201,7 @@ playerThumbDesc.addEventListener("click", (e) => {
     .get(`${api_path}/users?_embed=friendLists&_sort=thumb&_order=desc`)
     .then((res) => {
       let filteredUserData = res.data.filter((user) => {
-        return !userFriends.includes(user.id);
+        return !userPickIds.includes(user.id);
       });
 
       playerData = filteredUserData.filter((item) => {
@@ -228,7 +228,7 @@ playerRankSelect.addEventListener("click", (e) => {
     .get(`${api_path}/users?_embed=friendLists&userRank=${rankSelectValue}`)
     .then((res) => {
       let filteredUserData = res.data.filter((user) => {
-        return !userFriends.includes(user.id);
+        return !userPickIds.includes(user.id);
       });
 
       playerData = filteredUserData.filter((item) => {
@@ -254,7 +254,7 @@ jsPlayerSearchBtn.addEventListener("click", (e) => {
     .get(`${api_path}/users?username=${playerNameSearch}`)
     .then((res) => {
       let filteredUserData = res.data.filter((user) => {
-        return !userFriends.includes(user.id);
+        return !userPickIds.includes(user.id);
       });
 
       playerData = filteredUserData.filter((item) => {
