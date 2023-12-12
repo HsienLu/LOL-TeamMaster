@@ -41,7 +41,7 @@ const fetchDataAll = async (idc) => {
               }
      
           <div class="d-flex flex-column align-items-center">
-            <img class="playerIcon mt-lg-6 mb-3 mb-md-0" src="../assets/images/avatar/${
+            <img class="playerIcon mt-lg-6 mb-3 mb-md-0" src="./images/avatar/${
               v === 0 ? "undefined" : v.avatar
             }.png" alt="member" />
             <h4 class="fs-5 fs-md-4 mt-lg-6">${
@@ -53,7 +53,7 @@ const fetchDataAll = async (idc) => {
           <div class="d-flex d-md-block flex-column justify-content-between align-items-center ms-15 ms-md-0">
             <div class="parallelogramRank mt-lg-6 mb-4 mb-md-0">
               <div class="parallelogramContent teamCardRankBg"
-                style="background-image: url(../assets/images/ranking/${
+                style="background-image: url(./images/ranking/${
                   v === 0 ? "" : v.userRank
                 }.png)"></div>
             </div>
@@ -140,10 +140,7 @@ async function addTeam() {
   let reqObj = {}; //更新資料需要傳送的物件
   async function addTeamAPI(reqObj) {
     try {
-      const addTeamAPI = await axios.patch(
-        `http://localhost:3000/teams/${idc}`,
-        reqObj
-      );
+      const addTeamAPI = await axios.patch(`${api_path}/teams/${idc}`, reqObj);
 
       Swal.fire({
         title: "確認加入",

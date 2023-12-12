@@ -45,6 +45,7 @@ const fetchJoinDataAll = async () => {
   });
 
   dataArr.forEach(async (v) => {
+    console.log(v);
     const memberData = async (id) => {
       const memberDataArr = await axios.get(`${api_path}/teamsMember/${id}`);
       teamsMemberData = memberDataArr.data;
@@ -60,7 +61,7 @@ const fetchJoinDataAll = async () => {
             <div class="mb-2 mb-md-0">
               <h3 class="card-title mb-2">${v.teamName}</h3>
               <p class="card-subtitle text-secondary">
-                遊戲時間：${v.teamMerberId}
+                遊戲時間：${v.playTime}
               </p>
             </div>
             <div class="d-flex d-md-block justify-content-between align-items-center">
@@ -92,7 +93,7 @@ const fetchJoinDataAll = async () => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamsMemberData[0] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamsMemberData[0].likeHero}.jpg`
@@ -102,7 +103,7 @@ const fetchJoinDataAll = async () => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamsMemberData[0] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamsMemberData[0].userRank}.png`
@@ -125,7 +126,7 @@ const fetchJoinDataAll = async () => {
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:cover;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamsMemberData[1] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamsMemberData[1].likeHero}.jpg`
@@ -135,7 +136,7 @@ const fetchJoinDataAll = async () => {
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamsMemberData[1] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamsMemberData[1].userRank}.png`
@@ -158,7 +159,7 @@ const fetchJoinDataAll = async () => {
           <div class="parallelogramContent teamCardHeroBg" style="
           background-position:0px -100%;
           background-size:cover;
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamsMemberData[2] === 0
                   ? "img-team-player@2x.png"
                   : `champion/${teamsMemberData[2].likeHero}.jpg`
@@ -168,7 +169,7 @@ const fetchJoinDataAll = async () => {
         <div class="parallelogramRank">
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamsMemberData[2] === 0
                   ? "img-team-badge.png"
                   : `ranking/${teamsMemberData[2].userRank}.png`
@@ -191,7 +192,7 @@ const fetchJoinDataAll = async () => {
         <div class="parallelogramContent teamCardHeroBg" style="
         background-position:0px -100%;
         background-size:266px auto;
-            background-image: url(../assets/images/${
+            background-image: url(./images/${
               teamsMemberData[3] === 0
                 ? "img-team-player@2x.png"
                 : `champion/${teamsMemberData[3].likeHero}.jpg`
@@ -201,7 +202,7 @@ const fetchJoinDataAll = async () => {
       <div class="parallelogramRank">
         <div class="parallelogramContent teamCardRankBg" style="
         background-position:-3px -14px;
-            background-image: url(../assets/images/${
+            background-image: url(./images/${
               teamsMemberData[3] === 0
                 ? "img-team-badge.png"
                 : `ranking/${teamsMemberData[3].userRank}.png`
@@ -225,7 +226,7 @@ const fetchJoinDataAll = async () => {
         background-position:0px -100%;
         background-size:266px auto;
         
-          background-image: url(../assets/images/${
+          background-image: url(./images/${
             teamsMemberData[4] === 0
               ? "img-team-player@2x.png"
               : `champion/${teamsMemberData[4].likeHero}.jpg`
@@ -236,7 +237,7 @@ const fetchJoinDataAll = async () => {
       <div class="parallelogramContent teamCardRankBg" style="
       background-position:-3px -14px;
 
-          background-image: url(../assets/images/${
+          background-image: url(./images/${
             teamsMemberData[4] === 0
               ? "img-team-badge.png"
               : `ranking/${teamsMemberData[4].userRank}.png`
@@ -289,7 +290,7 @@ const fetchBuildDataAll = async () => {
               <div class="mb-2 mb-md-0">
                 <h3 class="card-title mb-2">${v.teamName}</h3>
                 <p class="card-subtitle text-secondary">
-                  遊戲時間：${v.teamMerberId}
+                  遊戲時間：${v.playTime}
                 </p>
               </div>
               <div class="d-flex d-md-block justify-content-between align-items-center">
@@ -321,7 +322,7 @@ const fetchBuildDataAll = async () => {
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamsMemberData[0] === 0
                         ? "img-team-player@2x.png"
                         : `champion/${teamsMemberData[0].likeHero}.jpg`
@@ -331,7 +332,7 @@ const fetchBuildDataAll = async () => {
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamsMemberData[0] === 0
                         ? "img-team-badge.png"
                         : `ranking/${teamsMemberData[0].userRank}.png`
@@ -354,7 +355,7 @@ const fetchBuildDataAll = async () => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamsMemberData[1] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamsMemberData[1].likeHero}.jpg`
@@ -364,7 +365,7 @@ const fetchBuildDataAll = async () => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamsMemberData[1] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamsMemberData[1].userRank}.png`
@@ -387,7 +388,7 @@ const fetchBuildDataAll = async () => {
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:cover;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamsMemberData[2] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamsMemberData[2].likeHero}.jpg`
@@ -397,7 +398,7 @@ const fetchBuildDataAll = async () => {
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamsMemberData[2] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamsMemberData[2].userRank}.png`
@@ -420,7 +421,7 @@ const fetchBuildDataAll = async () => {
           <div class="parallelogramContent teamCardHeroBg" style="
           background-position:0px -100%;
           background-size:266px auto;
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamsMemberData[3] === 0
                   ? "img-team-player@2x.png"
                   : `champion/${teamsMemberData[3].likeHero}.jpg`
@@ -430,7 +431,7 @@ const fetchBuildDataAll = async () => {
         <div class="parallelogramRank">
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamsMemberData[3] === 0
                   ? "img-team-badge.png"
                   : `ranking/${teamsMemberData[3].userRank}.png`
@@ -454,7 +455,7 @@ const fetchBuildDataAll = async () => {
           background-position:0px -100%;
           background-size:266px auto;
 
-            background-image: url(../assets/images/${
+            background-image: url(./images/${
               teamsMemberData[4] === 0
                 ? "img-team-player@2x.png"
                 : `champion/${teamsMemberData[4].likeHero}.jpg`
@@ -465,7 +466,7 @@ const fetchBuildDataAll = async () => {
         <div class="parallelogramContent teamCardRankBg" style="
         background-position:-3px -14px;
 
-            background-image: url(../assets/images/${
+            background-image: url(./images/${
               teamsMemberData[4] === 0
                 ? "img-team-badge.png"
                 : `ranking/${teamsMemberData[4].userRank}.png`

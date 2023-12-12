@@ -24,14 +24,7 @@ let buildTeamNameText = "";
 let buildTeamTimeText = "";
 let buildTeamTagGroupText = "";
 let noticeGroupText = ["", "", "", "", ""];
-const userlogin = async () => {
-  let data = axios.get(`${api_path}/users/${idc}`);
 
-  return data;
-};
-// let data = await userlogin();
-// data = data.data;
-console.log(data);
 buildTeamName.addEventListener("input", (e) => {
   buildTeamNameText = e.target.value;
 });
@@ -65,27 +58,35 @@ noticeGroup.forEach((v, i) => {
     noticeGroupText[i] = e.target.value;
   });
 });
-let posHash = 0;
+let posHash;
 let posArr = [0, 0, 0, 0, 0];
-switch (data.likePosition) {
-  case "TOP":
-    posHash = 0;
-    break;
-  case "JG":
-    posHash = 1;
-    break;
-  case "MID":
-    posHash = 2;
-    break;
-  case "AD":
-    posHash = 3;
-    break;
-  case "SUP":
-    posHash = 4;
-    break;
-}
-posArr[posHash] = parseInt(idc);
-console.log(posHash);
+
+const switchFunction = async () => {
+  let data = await axios.get(`${api_path}/users/${idc}`);
+  data = data.data;
+  console.log(data.likePosition);
+  switch (data.likePosition) {
+    case "TOP":
+      posHash = 0;
+      break;
+    case "JG":
+      posHash = 1;
+      break;
+    case "MID":
+      posHash = 2;
+      break;
+    case "AD":
+      posHash = 3;
+      break;
+    case "SUP":
+      posHash = 4;
+      break;
+  }
+
+  posArr[posHash] = parseInt(idc);
+};
+switchFunction();
+
 addTeamButtom.addEventListener("click", () => {
   let teamDetalis = {
     userId: idc,
@@ -96,7 +97,7 @@ addTeamButtom.addEventListener("click", () => {
     teamMerberId: posArr,
     createAt: `${new Date()}`,
   };
-  axios.post("http://localhost:3000/teams", teamDetalis).then((res) => {
+  axios.post(`${api_path}/teams`, teamDetalis).then((res) => {
     console.log(res);
     Swal.fire({
       title: "建立隊伍成功",
