@@ -1,4 +1,4 @@
-import{a as i,u as b,S as d}from"./main-81d082ef.js";import"./header-56cae863.js";let o=location.search.toString().split("=")[1];const f={TOP:0,JG:1,MID:2,AD:3,SUP:4},u=async s=>{try{const t=await axios.get(`${i}/teams/${s}?_expand=user`),l=await axios.get(`${i}/teamsMember/${s}`);console.log(t.data),console.log(l.data),console.log(t.data.teamNotice);let m=t.data.teamNotice.map(e=>`<li class="fs-5 fs-lg-4">${e}</li>`).join(""),a=l.data.map(e=>e===null?e=0:e=e);console.log(a);let c=a.map(e=>`
+import{a as l,u as b,S as d}from"./main-44a04870.js";import"./header-8b1f7763.js";let o=location.search.toString().split("=")[1];const f={TOP:0,JG:1,MID:2,AD:3,SUP:4},u=async s=>{try{const t=await axios.get(`${l}/teams/${s}?_expand=user`),i=await axios.get(`${l}/teamsMember/${s}`);console.log(t.data),console.log(i.data),console.log(t.data.teamNotice);let m=t.data.teamNotice.map(e=>`<li class="fs-5 fs-lg-4">${e}</li>`).join(""),a=i.data.map(e=>e===null?e=0:e=e);console.log(a);let c=a.map(e=>`
     <li>
         <div
           class="flag greenShadow d-flex justify-md-content-start flex-md-column align-items-center bg-dark bg-opacity-60">
@@ -6,7 +6,7 @@ import{a as i,u as b,S as d}from"./main-81d082ef.js";import"./header-56cae863.js
               ${e.id===t.data.userId?'<i class="fa-solid fa-crown d-none d-md-block text-white fs-3 mt-lg-10"></i>':'<i class="fa-solid fa-crown d-none d-md-block text-dark fs-3 mt-lg-10 opcitit-0"></i>'}
      
           <div class="d-flex flex-column align-items-center">
-            <img class="playerIcon mt-lg-6 mb-3 mb-md-0" src="../assets/images/avatar/${e===0?"undefined":e.avatar}.png" alt="member" />
+            <img class="playerIcon mt-lg-6 mb-3 mb-md-0" src="./images/avatar/${e===0?"undefined":e.avatar}.png" alt="member" />
             <h4 class="fs-5 fs-md-4 mt-lg-6">${e===0?"等待加入":e.username}</h4>
           </div>
 
@@ -14,7 +14,7 @@ import{a as i,u as b,S as d}from"./main-81d082ef.js";import"./header-56cae863.js
           <div class="d-flex d-md-block flex-column justify-content-between align-items-center ms-15 ms-md-0">
             <div class="parallelogramRank mt-lg-6 mb-4 mb-md-0">
               <div class="parallelogramContent teamCardRankBg"
-                style="background-image: url(../assets/images/ranking/${e===0?"":e.userRank}.png)"></div>
+                style="background-image: url(./images/ranking/${e===0?"":e.userRank}.png)"></div>
             </div>
             <div class="d-flex flex-column-reverse flex-md-column align-items-center">
               <span class="badge bg-white text-dark mt-lg-6">${e===0?"尚未加入":e.likePosition}</span>
@@ -65,4 +65,4 @@ import{a as i,u as b,S as d}from"./main-81d082ef.js";import"./header-56cae863.js
           </button>
         </div>
       </div>
-      </div>;`,document.querySelector("#addTeamButtom").addEventListener("click",()=>{h()})}catch(t){console.error("Error fetching data:",t)}};u(o);async function h(){let s;b?s=localStorage.getItem("userId"):d.fire({title:"無法加入隊伍",text:"請先進行登入",icon:"warning"});let t={};async function l(p){try{const g=await axios.patch(`http://localhost:3000/teams/${o}`,p);d.fire({title:"確認加入",icon:"success"}).then(x=>{u(o),console.log(x)})}catch(g){console.log(g)}}let a=(await axios.get(`${i}/teams/${o}?_expand=user`)).data.teamMerberId,e=(await axios.get(`${i}/users/${s}`)).data.likePosition;console.log(e),console.log(f);let n=f[e],r=a[n];console.log(n),console.log(r),r===0?(a[n]=parseInt(s),console.log(a),t={teamMerberId:a},console.log(t),l(t)):d.fire({title:"無法加入隊伍",text:"此位置已被選擇，請選擇其他位置",icon:"warning"})}
+      </div>;`,document.querySelector("#addTeamButtom").addEventListener("click",()=>{h()})}catch(t){console.error("Error fetching data:",t)}};u(o);async function h(){let s;b?s=localStorage.getItem("userId"):d.fire({title:"無法加入隊伍",text:"請先進行登入",icon:"warning"});let t={};async function i(p){try{const g=await axios.patch(`${l}/teams/${o}`,p);d.fire({title:"確認加入",icon:"success"}).then(x=>{u(o),console.log(x)})}catch(g){console.log(g)}}let a=(await axios.get(`${l}/teams/${o}?_expand=user`)).data.teamMerberId,e=(await axios.get(`${l}/users/${s}`)).data.likePosition;console.log(e),console.log(f);let n=f[e],r=a[n];console.log(n),console.log(r),r===0?(a[n]=parseInt(s),console.log(a),t={teamMerberId:a},console.log(t),i(t)):d.fire({title:"無法加入隊伍",text:"此位置已被選擇，請選擇其他位置",icon:"warning"})}
