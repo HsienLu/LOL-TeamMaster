@@ -446,6 +446,8 @@ $spacers: (
   // 152
   39: $spacer * 9.75,
   // 156
+  41: $spacer * 10.25,
+  // 164
   74: $spacer * 18.5,
   // 296
 
@@ -467,15 +469,21 @@ $spacers: (
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+  //custom
+  15: 15%,
   20: 20%,
   //custom
   30: 30%,
   //custom
   33: 33%,
   //custom
+  35: 35%,
+  //custom
   40: 40%,
   //custom
   50: 50%,
+  60: 60%,
+  75: 75%,
   100: 100%,
 ) !default;
 // scss-docs-end position-map

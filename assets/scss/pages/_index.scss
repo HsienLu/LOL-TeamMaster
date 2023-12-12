@@ -3,120 +3,6 @@
   // background-color: $secondary2-6;
   // color: $dark-4;
 }
-//版
-@mixin title($width){
-  width: $width;
-  position: relative;
-  left: -40px;
-  &-bg{
-    background: url(../images/img-rectangle-title.png) no-repeat left center;
-    height: 126px;
-  }
-  &-title{
-    font-size: 48px;
-    position: absolute;
-    top: 21px;
-    left: 40px;
-    text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
-  }
-}
-@mixin titleMobile($width){
-  width: $width;
-  position: relative;
-  left: 0px;
-  &-bg{
-    background: url(../images/img-rectangle-title-mobile.png) no-repeat left center;
-    height: 64px;
-  }
-  &-title{
-    font-size: 32px;
-    line-height: 38px;
-    position: absolute;
-    top: 13px;
-    left: 40px;
-    text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
-  }
-}
-@mixin teamCardImg{
-  @include flex(row,flex-start,flex-start);
-  position: relative;
-  &-playerImg{
-    width: 266px;
-    height: 60px;
-    background: url(../images/img-wait.png) no-repeat center center;
-    background-size: cover;
-    -webkit-mask: url(../images/mask.png) no-repeat center center;
-    mask: url(../images/mask.png) no-repeat center center;
-    &::before{
-      position: absolute;
-      content: '';
-      background: url(../images/mask-line.png) no-repeat center center;
-      width: 266px;
-      height: 60px;
-    }
-  }
-  &-rankingImg {
-    position: absolute;
-    left: 254px;
-    width: 82px;
-    height: 60px;
-    background: url(../images/img-ranking-bg.png) no-repeat center center;
-    background-size: cover;
-    -webkit-mask: url(../images/mask-ranking.png) no-repeat center center;
-    mask: url(../images/mask-ranking.png) no-repeat center center;
-    &::before {
-      position: absolute;
-      content: "";
-      background: url(../images/mask-ranking-line.png) no-repeat center center;
-      width: 82px;
-      height: 60px;
-    }
-  }
-}
-@mixin teamCardImgMobile{
-  @include flex(row,flex-start,flex-start);
-  position: relative;
-  &-playerImg{
-    width: 229px;
-    height: 40px;
-    background: url(../images/img-wait-mobile.png) no-repeat center center;
-    background-size: cover;
-    -webkit-mask: url(../images/mask-mobile.png) no-repeat center center;
-    mask: url(../images/mask-mobile.png) no-repeat center center;
-    &::before{
-      position: absolute;
-      content: '';
-      background: url(../images/mask-line-mobile.png) no-repeat center center;
-      width: 229px;
-      height: 40px;
-    }
-  }
-  &-rankingImg {
-    position: absolute;
-    left: 225px;
-    width: 55px;
-    height: 40px;
-    background: url(../images/img-ranking-bg-mobile.png) no-repeat center center;
-    background-size: cover;
-    -webkit-mask: url(../images/mask-ranking-mobile.png) no-repeat center center;
-    mask: url(../images/mask-ranking-mobile.png) no-repeat center center;
-    &::before {
-      position: absolute;
-      content: "";
-      background: url(../images/mask-ranking-line-mobile.png) no-repeat center center;
-      width: 55px;
-      height: 40px;
-    }
-  }
-}
-@mixin tag($tagColor){
-  background-color: $tagColor;
-  font-size: 12px;
-  color: $dark;
-  border-radius: 4px;
-  padding: 4.2px 7.8px;
-  line-height: 12px;
-}
 
 .banner {
   background: url(../images/BG-Hero.png) center/ cover;
@@ -141,6 +27,7 @@
   height: 113px;
   margin-left: auto;
 }
+
 .step{
   text-align: center;
   margin-bottom: 144px;
@@ -154,546 +41,344 @@
     margin-top: 96px;
   }
 }
+
+.btn-index{
+  @include btn(253px,53px,237px,37px,18px);
+}
+
+@mixin title($width){
+  // width: 232px;
+  width: $width;
+  position: relative;
+  left: -40px;
+  &-bg{
+    background: url(../images/img-rectangle-title.png) no-repeat left center;
+    height: 126px;
+  }
+  &-title{
+    position: absolute;
+    top: 21px;
+    left: 40px;
+    text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+  }
+}
 .popular-teams{
   @include title(232px);
 }
-.popular-teams-card{
-  .teamCard{
-    box-sizing: border-box;
-    width: 416px;
-    height: 703px;
-    border-radius: 2px;
-    padding: 24px 40px 40px 40px;
-    box-shadow: 0px 0px 12px 0px rgba(0,102,255,0.55),inset 0px 0px 12px 0px rgba(0,102,255,0.55);
-    @include flex(column,start,center);
-    &:hover {
-        box-shadow: 0px 0px 12px 0px rgba(0,102,255,0.80),inset 0px 0px 12px 0px rgba(0,102,255,0.80);
-    }
-    button{
-      @include btn(352px,53px,336px,37px,18px);
-    }
-  }
-  .teamDetail{
-    @include flex(row,space-between,center);
-    margin-bottom: 24px;
-    width: 100%;
-  &-content{
-    h3{
-      width: 266px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      margin-bottom: 8px; 
-    }
-    div{
-      display: flex;
-      color: $secondary;
-    }
-  }
-  &-icon{
-    div{
-      @include flex(row,flex-start,center);
-      &:first-child{
-        margin-bottom: 8px;
-      }
-    }
-  }
-  }
-  .teamGroup{
-    margin-top: 24px;
-  }
-  .teamState{
-    width: 336px;
-    margin-bottom: 8px;
-    &:last-child{
-      margin-bottom: 0px;
-    }
-  &-wait{
-    @include flex(row,space-between,flex-end);
-    margin-bottom: 4px;
-    p{
-      font-size: 16px;
-      color: rgba($secondary, 0.5);
-      font-weight: lighter;
-    }
-    span{
-      color: $secondary;
-      font-size: 14px;
-    }
-  }
-  &-join{
-    @include flex(row,space-between,flex-end);
-    margin-bottom: 4px;
-    p{
-      font-size: 16px;
-      color: $secondary;
-      font-weight: bold;
-    }
-    span{
-      color: $secondary;
-      font-size: 14px;
-    }
-
-  }
-  &-img{
-    @include teamCardImg;
-  }
-}
-}
-//共用//
 .more-btn{
   @include btnFourth(234px,53px,24px);
 }
-.mobile-button{
-  display: none;
-}
-.popularSwiper {
-  max-width: 1468px;
-  margin: 0 auto;
-}
-.popularSwiper-wrapper{
-  margin: 0 auto;
-  max-width: 1320px;
-}
-.popularSwiper-slide {
-  box-sizing: border-box;
-  padding: 19px 12px 48px 12px;
-  max-width: 1320px;
-  margin: 0 auto;
-  @include flex(row,space-between,center);
-}
-.swiper-button-prev{
-  left: 0;
-}
-.swiper-button-next{
-  right: 0;
-}
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
-  margin: 0 12px 0 0;
-}
-//共用//
 
-.popular-players{
+//圖版
+// @mixin teamCardImg{
+//   @include flex(row,flex-start,flex-start);
+//   position: relative;
+//   &-playerImg{
+//     width: 266px;
+//     height: 60px;
+//     background: url(../images/img-wait.png) no-repeat center center;
+//     background-size: cover;
+//     -webkit-mask: url(../images/mask.png) no-repeat center center;
+//     mask: url(../images/mask.png) no-repeat center center;
+//     &::before{
+//       position: absolute;
+//       content: '';
+//       background: url(../images/mask-line.png) no-repeat center center;
+//       width: 266px;
+//       height: 60px;
+//     }
+//   }
+//   &-rankingImg {
+//     position: absolute;
+//     left: 254px;
+//     width: 82px;
+//     height: 60px;
+//     background: url(../images/img-ranking-bg.png) no-repeat center center;
+//     background-size: cover;
+//     -webkit-mask: url(../images/mask-ranking.png) no-repeat center center;
+//     mask: url(../images/mask-ranking.png) no-repeat center center;
+//     &::before {
+//       position: absolute;
+//       content: "";
+//       background: url(../images/mask-ranking-line.png) no-repeat center center;
+//       width: 82px;
+//       height: 60px;
+//     }
+//   }
+// }
+
+
+// .teamCard{
+//   box-sizing: border-box;
+//   width: 416px;
+//   height: 703px;
+//   border-radius: 2px;
+//   padding: 24px 40px 40px 40px;
+//   box-shadow: 0px 0px 12px 0px rgba(0,102,255,0.55),inset 0px 0px 12px 0px rgba(0,102,255,0.55);
+//   @include flex(column,start,center);
+//   &:hover {
+//       box-shadow: 0px 0px 12px 0px rgba(0,102,255,0.80),inset 0px 0px 12px 0px rgba(0,102,255,0.80);
+//   }
+//   button{
+//     @include btn(352px,53px,336px,37px,18px);
+//   }
+// }
+
+// .teamDetail{
+//   @include flex(row,space-between,center);
+//   margin-bottom: 24px;
+//   width: 100%;
+// &-content{
+//   h3{
+//     width: 266px;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     margin-bottom: 8px; 
+//   }
+//   div{
+//     display: flex;
+//     color: $secondary;
+//   }
+// }
+// &-icon{
+//   div{
+//     @include flex(row,flex-start,center);
+//     &:first-child{
+//       margin-bottom: 8px;
+//     }
+//   }
+// }
+// }
+// .teamGroup{
+//   margin-top: 24px;
+// }
+
+//狀態
+// .teamState{
+//     width: 336px;
+//     margin-bottom: 8px;
+//     &:last-child{
+//       margin-bottom: 0px;
+//     }
+//   &-wait{
+//     @include flex(row,space-between,flex-end);
+//     margin-bottom: 4px;
+//     p{
+//       font-size: 16px;
+//       color: rgba($secondary, 0.5);
+//       font-weight: lighter;
+//     }
+//     span{
+//       color: $secondary;
+//       font-size: 14px;
+//     }
+//   }
+//   &-join{
+//     @include flex(row,space-between,flex-end);
+//     margin-bottom: 4px;
+//     p{
+//       font-size: 16px;
+//       color: $secondary;
+//       font-weight: bold;
+//     }
+//     span{
+//       color: $secondary;
+//       font-size: 14px;
+//     }
+
+//   }
+//   &-img{
+//     @include teamCardImg;
+//   }
+// }
+
+// .popularSwiper {
+//   max-width: 1468px;
+//   // max-height: 751px;
+//   position: relative;
+//   margin: 0 auto;
+//   background-color: palegoldenrod;
+// }
+// .popularSwiper-wrapper{
+//   margin: 0 auto;
+//   max-width: 1320px;
+//   padding: 0;
+//   height: 751px;
+//   background-color: paleturquoise;
+// }
+
+// .popularSwiper-slide {
+//   background-color: pink;
+//   height: 703px;
+//   box-sizing: border-box;
+//   padding: 19px 12px 48px 12px;
+//   max-width: 1320px;
+//   margin: 0 auto;
+//   @include flex(row,space-between,center);
+// }
+// .swiper-button-prev{
+//   left: 0;
+// }
+// .swiper-button-next{
+//   right: 0;
+// }
+
+// .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+//   margin: 0 12px 0 0;
+// }
+
+.popular-palyers{
   @include title(232px);
 }
-.popular-players-card{
-  .playerCard{
-    box-sizing: border-box;
-    position: relative;
-    width: 306px;
-    height: 575px;
-    border: 2px solid $primary;
-    border-radius: 2px;
+
+@mixin tag($tagColor){
+  background-color: $tagColor;
+  font-size: 12px;
+  color: $dark;
+  border-radius: 4px;
+  padding: 4.2px 7.8px;
+  line-height: 12px;
+}
+.playerCard{
+  box-sizing: border-box;
+  position: relative;
+  width: 306px;
+  height: 575px;
+  border: 2px solid $primary;
+  border-radius: 2px;
+  box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.35),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.35);
+  &:hover{
+    box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.8),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.8);
+  }
+  img{
     box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.35),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.35);
     &:hover{
       box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.8),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.8);
     }
-    &-profile{
-      box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.35),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.35);
-      &:hover{
-        box-shadow:  0px 0px 12px 0px rgba(0, 255, 255, 0.8),inset  0px 0px 12px 0px rgba(0, 255, 255, 0.8);
-      }
-    }
-    &-rankingImg {
-      position: absolute;
-      z-index: 2;
-      top: 270px;
-      left: 112.33px;
-      width: 82px;
-      height: 60px;
-      background: url(../images/img-ranking-bg.png) no-repeat center center;
-      background-size: cover;
-      -webkit-mask: url(../images/mask-ranking.png) no-repeat center center;
-      mask: url(../images/mask-ranking.png) no-repeat center center;
-      &::before {
-        position: absolute;
-        content: "";
-        background: url(../images/mask-ranking-white-line.png) no-repeat center center;
-        width: 82px;
-        height: 60px;
-      }
-    }
-    .tagGroup{
-      @include flex(row,flex-start,center);
-      margin-top: 16px;
-      .show{
-        @include tag($white);
-        margin-right: 8px;
-        &:last-child{
-          margin-right: 0;
-        }
-      }
-      .invalid{
-        @include tag(rgba($white,0.2));
-        margin-right: 8px;
-        &:last-child{
-          margin-right: 0;
-        }
-      }
-    }
-    button{
-      @include btnThird(242px,48px,18px);
-    }
   }
+  // &-rankingImg {
+  //   position: absolute;
+  //   z-index: 2;
+  //   top: 270px;
+  //   left: 112.33px;
+  //   width: 82px;
+  //   height: 60px;
+  //   background: url(../images/img-ranking-bg.png) no-repeat center center;
+  //   background-size: cover;
+  //   -webkit-mask: url(../images/mask-ranking.png) no-repeat center center;
+  //   mask: url(../images/mask-ranking.png) no-repeat center center;
+  //   &::before {
+  //     position: absolute;
+  //     content: "";
+  //     background: url(../images/mask-ranking-white-line.png) no-repeat center center;
+  //     width: 82px;
+  //     height: 60px;
+  //   }
+  // }
+  // .tagGroup{
+  //   @include flex(row,flex-start,center);
+  //   margin-top: 16px;
+  //   .show{
+  //     @include tag($white);
+  //     margin-right: 8px;
+  //     &:last-child{
+  //       margin-right: 0;
+  //     }
+  //   }
+  //   .invalid{
+  //     @include tag(rgba($white,0.2));
+  //     margin-right: 8px;
+  //     &:last-child{
+  //       margin-right: 0;
+  //     }
+  //   }
+  // }
+  // button{
+  //   @include btnThird(242px,48px,18px);
+  // }
 }
 .cta-banner {
   background: url(../images/BG-CTA.png) center/ cover;
   max-width: 100%;
-  height: 1026px;
-  .container{
-    position: relative;
+}
+.cta{
+  @include title(664px);
+}
+
+.cta-content{
+  width: 384px;
+  height: 384px;
+  border-radius: 800px;
+  background-color: rgba($dark,0.7);
+  position: relative;
+  h3{
+    text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
   }
-  .cta{
-    @include title(664px);
-    position: absolute;
-    top: 296px;
+  i{
+    font-size: 80px;
+    text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
   }
-  .cta-group{
-    display: flex;
-    justify-content: space-between;
+  p{
+    text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
+  }
+
+  &:hover {
+    border-radius: 0;
+    transition: all 0.4s;
+
+    &::before{
+      border-radius: 0;
+      transition: all 0.4s;
+    }
+  }
+
+  &::before{
     position: absolute;
-    top: 458px;
-    .cta-content{
-      background-color: transparent;
-      min-width: 416px;
-      min-height: 416px;
-      border-radius: 50%;
-      border: 1px solid white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 24px;
-      h3{
-        margin-bottom: 48px;
-      }
-      &:last-child{
-        margin-right: 0;
-      }
-      p,svg{
-        display: none;
-      }
-      &:hover{
-        p,svg{
-          display: block;
-        }
-        border-radius: 0;
-        .cta-detail{
-          border-radius: 0;
-          text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.8);
-        }
-        h3{
-          margin-bottom: 24px;
-        }
-        p{
-          width: 304px;
-          text-align: center;
-          margin-top: 24px;
-          margin-bottom: 40px;
-        }
-      }
-      
-    }
-    .cta-detail{
-      width: 384px;
-      height: 384px;
-      border-radius: 50%;
-      background-color: rgba($dark,0.7);
-      backdrop-filter: blur(3px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
-      i{
-        font-size: 80px;
-      }
-    }
+    top: -16px;
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
+    content: '';
+    width: 416px;
+    height: 416px;
+    border-radius: 800px;
+    border: 1px solid white;
   }
 }
 
-
-@media (min-width: 1200px) { 
-  .cta-group{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    .cta-content{
-      &:last-child{
-        margin-top: 48px;
-      }
-    }
+.intro {
+  &Desc {
+    opacity: 0;
+    transition: opacity 0.4s;
   }
-}
-// @media (min-width: 992px) {
-
-// }
-// @media (min-width: 768px) {
-  
-// }
-// @media (min-width: 576px) {
-//   .popular-team{
-//     background-color: $dark;
-//   }
-// }
-@media (max-width: 375px) {
-  .banner {
-    background: url(../images/BG-Hero.png) center/ cover;
-    max-width: 100%;
-    height: 726px;
-    text-align: center;
-    &-text{
-      background: url(../images/banner-text-mobile.png) center/ cover;
-      width: 322px;
-      height: 287px;
-      position: absolute;
-      top: 66px;
-    }
-    button{
-      @include btn(253px,53px,237px,37px,18px);
-      margin-top: 93px;
-    }
+  &Arrow {
+    opacity: 0;
+    transition: all 0.4s;
   }
-  .line{
-    background: url(../images/image-line.png) left/ cover;
-    width: 187px;
-    height: 112px;
-    margin-left: auto;
+  &Title {
+    transition: all 0.4s;
   }
-  .step{
-    text-align: center;
-    margin-bottom: 144px;
-    &-bg{
-      margin-top: 48px;
-      background: url(../images/step-mobile.png) center/ cover;
-      max-width: 100%;
-      height: 739px;
-    }
-    button{
-      @include btn(253px,53px,237px,37px,18px);
-      margin-top: 48px;
-    }
+  &Icon {
+    transition: all 0.4s;
   }
-  .popular-teams{
-    @include titleMobile(168px);
-    margin: 0 auto;
-  }
-  .popular-teams-card{
-    .teamCard{
-      width: 328px;
-      height: 598px;
-      padding: 16px 24px 24px 24px;
-      @include flex(column,start,center);
-      button{
-        @include btn(296px,53px,280px,37px,18px);
-      }
-    }
-    .teamDetail{
-      @include flex(column,flex-start,flex-start);
-      margin-bottom: 24px;
-      width: 100%;
-      &-content{
-      h3{
-        width: 280px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin-bottom: 8px; 
-      }
-      div{
-        display: flex;
-        color: $secondary;
-        justify-content: space-between;
-        align-items: center;
-      }
-      }
-      &-icon{
-        width: 280px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-
-        div{
-          &:first-child{
-            margin-bottom: 0px;
+  &Item {
+    z-index: 1;
+      &:hover {
+        .intro {
+          &Desc {
+            opacity: 1;
+          }
+          &Arrow {
+            opacity: 1;
+          }
+          &Title {
+            top: 15% !important;
+          }
+          &Icon {
+            top: 35% !important;
           }
         }
       }
-    }
-    .teamState{
-      width: 280px;
-    &-img{
-      @include teamCardImgMobile;
-    }
-    }
-    .popularSwiper {
-      max-width: 375px;
-      margin: 0 auto;
-    }
-    .popularSwiper-wrapper{
-      max-width: 375px;
-      margin: 0 auto;
-    }
-    .popularSwiper-slide {
-      box-sizing: border-box;
-      padding: 27px 23.5px 48px 23.5px;
-      max-width: 328px;
-      margin: 0 auto;
-      @include flex(row,space-between,center);
-    }
-    .swiper-button-prev{
-      display: none;
-    }
-    .swiper-button-next{
-      display: none;
-    }
-    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
-      margin: 0 12px 0 0;
-    }
-
-    // .teamCard{
-    //   box-sizing: border-box;
-    //   width: 416px;
-    //   height: 703px;
-    //   border-radius: 2px;
-    //   padding: 24px 40px 40px 40px;
-    //   box-shadow: 0px 0px 12px 0px rgba(0,102,255,0.55),inset 0px 0px 12px 0px rgba(0,102,255,0.55);
-    //   @include flex(column,start,center);
-    //   &:hover {
-    //       box-shadow: 0px 0px 12px 0px rgba(0,102,255,0.80),inset 0px 0px 12px 0px rgba(0,102,255,0.80);
-    //   }
-    //   button{
-    //     @include btn(352px,53px,336px,37px,18px);
-    //   }
-    // }
-  }
-  //共用//
-  .container .more-btn{
-    display: none;
-  }
-  .mobile-button{
-    display: block;
-    margin-top: 40px;
-    button{
-      @include btnThird(300px,53px,24px);
-      margin: 0 auto;
-    }
-  }
-  //共用//
-  .popular-players{
-    @include titleMobile(168px);
-    margin: 0 auto;
-  }
-  .popular-players-card{
-    .playerCard{
-      margin-right: 16px;
-      margin-left: 16px;
-    }
-    .popularSwiper {
-      max-width: 375px;
-      margin: 0 auto;
-    }
-    .popularSwiper-wrapper{
-      min-width: 338px;
-      margin: 0 auto;
-    }
-    .popularSwiper-slide {
-      max-width: 338px;
-      box-sizing: border-box;
-      padding: 27px 23.5px 48px 23.5px;
-      margin: 0 auto;
-      @include flex(row,space-between,center);
-    }
-    .swiper-button-prev{
-      display: none;
-    }
-    .swiper-button-next{
-      display: none;
-    }
-    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
-      margin: 0 12px 0 0;
-    }
-  }
-  .cta-container{
-    height: 1192px;
-  }
-  .cta-banner {
-    background: url(../images/BG-CTA-mobile.png) center / cover;
-    max-width: 100%;
-    height: 707px;
-    .container{
-      position: relative;
-    }
-    .cta{
-      @include titleMobile(326px);
-      position: absolute;
-      top: 80px;
-      left: 5px;
-    }
-    .cta-group{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-items: center;
-      position: absolute;
-      top: 244px;
-      .cta-content{
-        background-color: transparent;
-        min-width: 300px;
-        min-height: 300px;
-        border-radius: 50%;
-        border: 1px solid white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 0;
-        margin-bottom: 24px;
-        h3{
-          margin-bottom: 24px;
-        }
-        &:last-child{
-          margin-bottom: 0;
-        }
-        p,svg{
-          display: none;
-        }
-        &:hover{
-          p,svg{
-            display: block;
-          }
-          border-radius: 0;
-          .cta-detail{
-            border-radius: 0;
-            text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.8);
-          }
-          h3{
-            margin-bottom: 16px;
-          }
-          p{
-            width: 252px;
-            font-size: 14px;
-            text-align: center;
-            margin-bottom: 24px;
-          }
-        }
-        
-      }
-      .cta-detail{
-        width: 284px;
-        height: 284px;
-        border-radius: 50%;
-        background-color: rgba($dark,0.7);
-        backdrop-filter: blur(3px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0px 0px 40px rgba(0, 209, 255, 0.45);
-        i{
-          font-size: 56px;
-        }
-      }
-    }
   }
 }

@@ -418,7 +418,7 @@ async function getBanList() {
       return bansId.includes(user.id);
     });
     renderBanList();
-    setSwiper("#blackListSwiper", 4, 5);
+    const blackListSwiper = setSwiper("#blackListSwiper", 4, 5);
   } catch (error) {
     console.log(error);
   }
