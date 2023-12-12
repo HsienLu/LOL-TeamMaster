@@ -154,7 +154,7 @@ dl {
   background: rgba(0, 255, 255, 1);
   filter: blur(400px);
   position: absolute;
-  bottom: -1032px;
+  top: 3441px;
   left: -829px;
 }
 
@@ -166,8 +166,9 @@ dl {
   background: rgba(0, 102, 255, 1);
   filter: blur(500px);
   position: absolute;
-  bottom: -2169px;
-  right: -613px;
+  top: 2482px;
+  right: -1260px;
+  z-index: 0;
 }
 
 .BG-Light-white {
@@ -177,6 +178,10 @@ dl {
   border-radius: 782px;
   background: rgba(255, 255, 255, 1);
   filter: blur(250px);
+  position: absolute;
+  top: 2482px;
+  right: -1200px;
+  z-index: 0;
 }
 
 //其他頁背景光
