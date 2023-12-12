@@ -1,4 +1,4 @@
-import{a as l,u as b,S as d}from"./main-44a04870.js";import"./header-8b1f7763.js";let o=location.search.toString().split("=")[1];const f={TOP:0,JG:1,MID:2,AD:3,SUP:4},u=async s=>{try{const t=await axios.get(`${l}/teams/${s}?_expand=user`),i=await axios.get(`${l}/teamsMember/${s}`);console.log(t.data),console.log(i.data),console.log(t.data.teamNotice);let m=t.data.teamNotice.map(e=>`<li class="fs-5 fs-lg-4">${e}</li>`).join(""),a=i.data.map(e=>e===null?e=0:e=e);console.log(a);let c=a.map(e=>`
+import{a as s,u as x,S as d}from"./main-44a04870.js";import"./header-8b1f7763.js";let i=location.search.toString().split("=")[1];const f={TOP:0,JG:1,MID:2,AD:3,SUP:4},u=async l=>{try{const t=await axios.get(`${s}/teams/${l}?_expand=user`),o=await axios.get(`${s}/teamsMember/${l}`);console.log(t.data),console.log(o.data),console.log(t.data.teamNotice);let c=t.data.teamNotice.map(e=>`<li class="fs-5 fs-lg-4">${e}</li>`).join(""),a=o.data.map(e=>e===null?e=0:e=e);console.log(a);let m=a.map(e=>`
     <li>
         <div
           class="flag greenShadow d-flex justify-md-content-start flex-md-column align-items-center bg-dark bg-opacity-60">
@@ -41,7 +41,7 @@ import{a as l,u as b,S as d}from"./main-44a04870.js";import"./header-8b1f7763.js
       </div>
       <ul
       class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4 gap-md-0 px-3 px-lg-26">
-      ${c}
+      ${m}
       </ul>
       <div class="container mb-20 mb-md-25 mt-lg-21">
       <div class="row d-flex justify-content-center">
@@ -52,7 +52,7 @@ import{a as l,u as b,S as d}from"./main-44a04870.js";import"./header-8b1f7763.js
             </div>
             <div class="messageBody">
               <ol class="d-flex flex-column p-5 p-md-9 gap-2 gap-md-3">
-              ${m}
+              ${c}
               </ol>
             </div>
           </div>
@@ -65,4 +65,4 @@ import{a as l,u as b,S as d}from"./main-44a04870.js";import"./header-8b1f7763.js
           </button>
         </div>
       </div>
-      </div>;`,document.querySelector("#addTeamButtom").addEventListener("click",()=>{h()})}catch(t){console.error("Error fetching data:",t)}};u(o);async function h(){let s;b?s=localStorage.getItem("userId"):d.fire({title:"無法加入隊伍",text:"請先進行登入",icon:"warning"});let t={};async function i(p){try{const g=await axios.patch(`${l}/teams/${o}`,p);d.fire({title:"確認加入",icon:"success"}).then(x=>{u(o),console.log(x)})}catch(g){console.log(g)}}let a=(await axios.get(`${l}/teams/${o}?_expand=user`)).data.teamMerberId,e=(await axios.get(`${l}/users/${s}`)).data.likePosition;console.log(e),console.log(f);let n=f[e],r=a[n];console.log(n),console.log(r),r===0?(a[n]=parseInt(s),console.log(a),t={teamMerberId:a},console.log(t),i(t)):d.fire({title:"無法加入隊伍",text:"此位置已被選擇，請選擇其他位置",icon:"warning"})}
+      </div>;`,document.querySelector("#addTeamButtom").addEventListener("click",()=>{h()})}catch(t){console.error("Error fetching data:",t)}};u(i);async function h(){let l;x?l=localStorage.getItem("userId"):d.fire({title:"無法加入隊伍",text:"請先進行登入",icon:"warning",background:"#060818",color:"#D6EEFF"});let t={};async function o(p){try{const g=await axios.patch(`${s}/teams/${i}`,p);d.fire({title:"確認加入",icon:"success",background:"#060818",color:"#D6EEFF"}).then(b=>{u(i),console.log(b)})}catch(g){console.log(g)}}let a=(await axios.get(`${s}/teams/${i}?_expand=user`)).data.teamMerberId,e=(await axios.get(`${s}/users/${l}`)).data.likePosition;console.log(e),console.log(f);let n=f[e],r=a[n];console.log(n),console.log(r),r===0?(a[n]=parseInt(l),console.log(a),t={teamMerberId:a},console.log(t),o(t)):d.fire({title:"無法加入隊伍",text:"此位置已被選擇，請選擇其他位置",icon:"warning",background:"#060818",color:"#D6EEFF"})}
