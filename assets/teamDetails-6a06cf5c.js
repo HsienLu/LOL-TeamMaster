@@ -1,4 +1,4 @@
-import{a as i,u as b,S as d}from"./main-81d082ef.js";import"./header-56cae863.js";let o=location.search.toString().split("=")[1];const f={TOP:0,JG:1,MID:2,AD:3,SUP:4},u=async s=>{try{const t=await axios.get(`${i}/teams/${s}?_expand=user`),l=await axios.get(`${i}/teamsMember/${s}`);console.log(t.data),console.log(l.data),console.log(t.data.teamNotice);let m=t.data.teamNotice.map(e=>`<li class="fs-5 fs-lg-4">${e}</li>`).join(""),a=l.data.map(e=>e===null?e=0:e=e);console.log(a);let c=a.map(e=>`
+import{a as i,u as b,S as d}from"./main-4c0970ef.js";import"./header-2d129c62.js";let o=location.search.toString().split("=")[1];const f={TOP:0,JG:1,MID:2,AD:3,SUP:4},u=async s=>{try{const t=await axios.get(`${i}/teams/${s}?_expand=user`),l=await axios.get(`${i}/teamsMember/${s}`);console.log(t.data),console.log(l.data),console.log(t.data.teamNotice);let m=t.data.teamNotice.map(e=>`<li class="fs-5 fs-lg-4">${e}</li>`).join(""),a=l.data.map(e=>e===null?e=0:e=e);console.log(a);let c=a.map(e=>`
     <li>
         <div
           class="flag greenShadow d-flex justify-md-content-start flex-md-column align-items-center bg-dark bg-opacity-60">
