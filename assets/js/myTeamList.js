@@ -7,6 +7,8 @@ if (!userIsLogin) {
     title: "無法加入隊伍",
     text: "請先進行登入",
     icon: "warning",
+    background: "#060818",
+    color: "#D6EEFF",
   });
 } else {
   loginUserId = localStorage.getItem("userId");

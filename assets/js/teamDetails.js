@@ -131,6 +131,8 @@ async function addTeam() {
       title: "無法加入隊伍",
       text: "請先進行登入",
       icon: "warning",
+      background: "#060818",
+      color: "#D6EEFF",
     });
   } else {
     loginUserId = localStorage.getItem("userId");
@@ -143,6 +145,8 @@ async function addTeam() {
       Swal.fire({
         title: "確認加入",
         icon: "success",
+        background: "#060818",
+        color: "#D6EEFF",
       }).then((res) => {
         fetchDataAll(idc);
         console.log(res);
@@ -172,6 +176,8 @@ async function addTeam() {
       title: "無法加入隊伍",
       text: "此位置已被選擇，請選擇其他位置",
       icon: "warning",
+      background: "#060818",
+      color: "#D6EEFF",
     });
   }
 }
