@@ -144,14 +144,7 @@ dl {
 .arrowBtn:hover {
   color: $primary !important;
 }
-// 背景光
-// body {
-//   background-image: url(../assets/images/BG-Light-green.png),
-//     url(../assets/images/BG-Light-blue.png);
-//   background-size: 1282px 1282px, 1282px 1282px;
-//   background-repeat: no-repeat, no-repeat;
-//   background-position: -745px 1168px, right -745px top -260px;
-// }
+
 //首頁背景光
 .BG-Light-green {
   width: 1282px;
@@ -163,6 +156,65 @@ dl {
   position: absolute;
   bottom: -1032px;
   left: -829px;
+}
+
+.BG-Light-blue {
+  width: 1282px;
+  height: 1282px;
+  flex-shrink: 0;
+  border-radius: 1282px;
+  background: rgba(0, 102, 255, 1);
+  filter: blur(500px);
+  position: absolute;
+  bottom: -2169px;
+  right: -613px;
+}
+
+.BG-Light-white {
+  width: 782px;
+  height: 782px;
+  flex-shrink: 0;
+  border-radius: 782px;
+  background: rgba(255, 255, 255, 1);
+  filter: blur(250px);
+}
+
+//其他頁背景光
+.bg-Light-green {
+  width: 600px;
+  height: 600px;
+  flex-shrink: 0;
+  border-radius: 600px;
+  background: rgba(0, 255, 255, 1);
+  filter: blur(250px);
+  position: fixed;
+  top: 600px;
+  left: -488px;
+}
+
+.bg-Light-blue {
+  width: 450px;
+  height: 450px;
+  flex-shrink: 0;
+  border-radius: 450px;
+  background: rgba(0, 102, 255, 1);
+  filter: blur(250px);
+  position: fixed;
+  top: 200px;
+  right: -450px;
+}
+
+.bg-Light-white {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 250px;
+  background: rgba(255, 255, 255, 1);
+  filter: blur(250px);
+  position: fixed;
+  top: 200px;
+  right: -350px;
+  z-index: 2;
 }
 
 //layout
