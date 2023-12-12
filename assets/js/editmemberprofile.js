@@ -30,7 +30,7 @@ axios
   .then((res) => {
     setMemberAccount.value = res.data.email;
     setMemberName.value = res.data.username;
-    selectActiveMd.src = `./images/avatar/${res.data.avatar}.png`;
+    selectActiveMd.src = `../images/avatar/${res.data.avatar}.png`;
 
     avatarSelect = document.querySelector(`[data-avatar='${res.data.avatar}']`);
     avatarSelect.classList.add("avatarActive");
@@ -47,7 +47,7 @@ axios
     positionSelect = positionSelect.getAttribute("data-position");
 
     selectHero.value = res.data.likeHero;
-    setMemberHero.style = `background-image: url(./images/champion/${res.data.likeHero}.jpg)`;
+    setMemberHero.style = `background-image: url(../images/champion/${res.data.likeHero}.jpg)`;
   })
   .catch((error) => {
     console.log(error);
@@ -69,7 +69,7 @@ jsAvatarWrap.addEventListener("click", (e) => {
   avatarSelect = e.target.getAttribute("data-avatar");
   e.target.classList.add("avatarActive");
 
-  selectActiveMd.src = `./images/avatar/${avatarSelect}.png`;
+  selectActiveMd.src = `../images/avatar/${avatarSelect}.png`;
 });
 
 jsRankWrap.addEventListener("click", (e) => {
@@ -107,7 +107,7 @@ jsPositionWrap.addEventListener("click", (e) => {
 });
 
 selectHero.addEventListener("change", (e) => {
-  setMemberHero.style = `background-image: url(./images/champion/${selectHero.value}.jpg)`;
+  setMemberHero.style = `background-image: url(../images/champion/${selectHero.value}.jpg)`;
 });
 
 jsChangeInfoBtn.addEventListener("click", (e) => {
