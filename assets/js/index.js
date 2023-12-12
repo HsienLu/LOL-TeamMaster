@@ -82,7 +82,7 @@ const fetchDataThumbSort = async () => {
                         background-image: url(./images/${
                           teamMemeLikeHero[0] === 0
                             ? "img-team-player@2x.png"
-                            : `${teamMemeLikeHero[0]}.jpg`
+                            : `champion/${teamMemeLikeHero[0]}.jpg`
                         });
                       "></div>
                   </div>
@@ -92,7 +92,7 @@ const fetchDataThumbSort = async () => {
                         background-image: url(./images/${
                           teamMemeberRank[0] === 0
                             ? "img-team-badge.png"
-                            : `${teamMemeberRank[0]}.png`
+                            : `ranking/${teamMemeberRank[0]}.png`
                         });
                       "></div>
                   </div>
@@ -115,7 +115,7 @@ const fetchDataThumbSort = async () => {
                       background-image: url(./images/${
                         teamMemeLikeHero[1] === 0
                           ? "img-team-player@2x.png"
-                          : `${teamMemeLikeHero[1]}.jpg`
+                          : `champion/${teamMemeLikeHero[1]}.jpg`
                       });
                     "></div>
                 </div>
@@ -125,7 +125,7 @@ const fetchDataThumbSort = async () => {
                       background-image: url(./images/${
                         teamMemeberRank[1] === 0
                           ? "img-team-badge.png"
-                          : `${teamMemeberRank[1]}.png`
+                          : `ranking/${teamMemeberRank[1]}.png`
                       });
                     "></div>
                 </div>
@@ -148,7 +148,7 @@ const fetchDataThumbSort = async () => {
                     background-image: url(./images/${
                       teamMemeLikeHero[2] === 0
                         ? "img-team-player@2x.png"
-                        : `${teamMemeLikeHero[2]}.jpg`
+                        : `champion/${teamMemeLikeHero[2]}.jpg`
                     });
                   "></div>
               </div>
@@ -158,7 +158,7 @@ const fetchDataThumbSort = async () => {
                     background-image: url(./images/${
                       teamMemeberRank[2] === 0
                         ? "img-team-badge.png"
-                        : `${teamMemeberRank[2]}.png`
+                        : `ranking/${teamMemeberRank[2]}.png`
                     });
                   "></div>
               </div>
@@ -181,7 +181,7 @@ const fetchDataThumbSort = async () => {
                   background-image: url(./images/${
                     teamMemeLikeHero[3] === 0
                       ? "img-team-player@2x.png"
-                      : `${teamMemeLikeHero[3]}.jpg`
+                      : `champion/${teamMemeLikeHero[3]}.jpg`
                   });
                 "></div>
             </div>
@@ -191,7 +191,7 @@ const fetchDataThumbSort = async () => {
                   background-image: url(./images/${
                     teamMemeberRank[3] === 0
                       ? "img-team-badge.png"
-                      : `${teamMemeberRank[3]}.png`
+                      : `ranking/${teamMemeberRank[3]}.png`
                   });
                 "></div>
             </div>
@@ -215,7 +215,7 @@ const fetchDataThumbSort = async () => {
                 background-image: url(./images/${
                   teamMemeLikeHero[4] === 0
                     ? "img-team-player@2x.png"
-                    : `${teamMemeLikeHero[4]}.jpg`
+                    : `champion/${teamMemeLikeHero[4]}.jpg`
                 });
               "></div>
           </div>
@@ -226,7 +226,7 @@ const fetchDataThumbSort = async () => {
                 background-image: url(./images/${
                   teamMemeberRank[4] === 0
                     ? "img-team-badge.png"
-                    : `${teamMemeberRank[4]}.png`
+                    : `ranking/${teamMemeberRank[4]}.png`
                 });
               "></div>
           </div>
@@ -248,6 +248,7 @@ function getPopularPlayers() {
     .get(`${api_path}/users?_embed=friendLists&_sort=thumb&_order=desc`)
     .then((res) => {
       playerData = res.data;
+      playerData.length = 11;
       renderPlayerListCard(playerData);
       setSwiper("#popularPlayersSwiper", 4, 2);
     })
@@ -258,13 +259,13 @@ function getPopularPlayers() {
 
 function renderPlayerListCard(playerData) {
   let str = "";
-  playerData.forEach((item) => {
+  playerData.forEach((item, index) => {
     str += `<div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
     <div class="meber-card-top">
       <div class="member-avatar position-relative">
         <div class="avatar">
           <img
-            src="./images/${item.avatar}.png"
+            src="./images/avatar/${item.avatar}.png"
             alt=""
             class="member-avatar-style"
             style="height: 300px; object-fit: cover"
@@ -283,7 +284,7 @@ function renderPlayerListCard(playerData) {
             <div
               class="parallelogram-content-avatar"
               style="
-                background-image: url(./images/${item.userRank}.png);
+                background-image: url(./images/ranking/${item.userRank}.png);
                 background-size: cover;
                 background-position: center;
                 width: 82px;

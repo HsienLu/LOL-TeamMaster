@@ -38,7 +38,7 @@ function renderPlayerListCard(playerData) {
             <div class="member-avatar position-relative w-100">
               <div class="avatar w-100">
                 <img
-                  src="./images/${item.avatar}.png"
+                  src="./images/avatar/${item.avatar}.png"
                   alt=""
                   class="member-avatar-style"
                   style="height: 300px; object-fit: cover"
@@ -52,7 +52,7 @@ function renderPlayerListCard(playerData) {
                   <div
                     class="parallelogram-content-avatar"
                     style="
-                      background-image: url(./images/${item.userRank}.png);
+                      background-image: url(./images/ranking/${item.userRank}.png);
                       background-size: cover;
                       background-position: center;
                       width: 85px;
