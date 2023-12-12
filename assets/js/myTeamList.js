@@ -21,38 +21,27 @@ const fetchJoinDataAll = async () => {
   let users = await axios.get(`${api_path}/users`);
   users = users.data;
   const teamDetail = resTeams.data;
-
   let count = 0;
   let dataArr = [];
   let teamsMemberData = [];
-  //出已加入隊伍的資料
+  //找出已加入隊伍的資料
   teamDetail.forEach((v) => {
-    let result = v.teamMerberId.find((v) => {
-      return v === id;
-    });
-    if (result) {
-      //找出已加入隊伍ID
-      count += 1;
-      //整理隊伍基本資訊
-      teamDetail.forEach((u) => {
-        if (v.id === u.id) {
-          let teamMemeberNumber = u.teamMerberId.filter((v) => v > 0).length; //計算隊伍成員
-
-          dataArr.push({ ...u, teamMemeberNumber });
-        }
-      });
+    let hash = v.teamMerberId.find((v) => v === id);
+    let teamMemeberNumber = v.teamMerberId.filter((v) => v > 0);
+    teamMemeberNumber = teamMemeberNumber.length;
+    if (hash) {
+      dataArr.push({ ...v, teamMemeberNumber: teamMemeberNumber });
     }
   });
 
   dataArr.forEach(async (v) => {
-    console.log(v);
-    const memberData = async (id) => {
-      const memberDataArr = await axios.get(`${api_path}/teamsMember/${id}`);
+    let memberData = async (id) => {
+      let memberDataArr = await axios.get(`${api_path}/teamsMember/${id}`);
       teamsMemberData = memberDataArr.data;
     };
     await memberData(v.id);
-
-    joinMyTeamList.innerHTML = `            <div class="swiper-slide  bg-dark ">
+    console.log(v);
+    joinMyTeamList.innerHTML += `            <div class="swiper-slide  bg-dark ">
 
     <div class="  bg-dark " style="height: fit-content">
       <div class="teamCard1  bg-dark ">
@@ -82,7 +71,7 @@ const fetchJoinDataAll = async () => {
           <li class="mb-2">
           <div class="d-flex justify-content-between mb-1">
             ${
-              teamsMemberData[0] === 0
+              teamsMemberData[0] === null
                 ? "<p class='text-secondary text-opacity-50'>等待上路玩家加入</p>"
                 : `<p class="text-secondary">${teamsMemberData[0].username}</p>`
             }
@@ -94,7 +83,7 @@ const fetchJoinDataAll = async () => {
               background-position:0px -100%;
               background-size:cover;
                   background-image: url(./images/${
-                    teamsMemberData[0] === 0
+                    teamsMemberData[0] === null
                       ? "img-team-player@2x.png"
                       : `champion/${teamsMemberData[0].likeHero}.jpg`
                   });
@@ -104,7 +93,7 @@ const fetchJoinDataAll = async () => {
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
                   background-image: url(./images/${
-                    teamsMemberData[0] === 0
+                    teamsMemberData[0] === null
                       ? "img-team-badge.png"
                       : `ranking/${teamsMemberData[0].userRank}.png`
                   });
@@ -115,7 +104,7 @@ const fetchJoinDataAll = async () => {
         <li class="mb-2">
         <div class="d-flex justify-content-between mb-1">
           ${
-            teamsMemberData[1] === 0
+            teamsMemberData[1] === null
               ? "<p class='text-secondary text-opacity-50'>等待打野玩家加入</p>"
               : `<p class="text-secondary">${teamsMemberData[1].username}</p>`
           }
@@ -127,7 +116,7 @@ const fetchJoinDataAll = async () => {
             background-position:0px -100%;
             background-size:cover;
                 background-image: url(./images/${
-                  teamsMemberData[1] === 0
+                  teamsMemberData[1] === null
                     ? "img-team-player@2x.png"
                     : `champion/${teamsMemberData[1].likeHero}.jpg`
                 });
@@ -137,7 +126,7 @@ const fetchJoinDataAll = async () => {
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
                 background-image: url(./images/${
-                  teamsMemberData[1] === 0
+                  teamsMemberData[1] === null
                     ? "img-team-badge.png"
                     : `ranking/${teamsMemberData[1].userRank}.png`
                 });
@@ -148,7 +137,7 @@ const fetchJoinDataAll = async () => {
       <li class="mb-2">
       <div class="d-flex justify-content-between mb-1">
         ${
-          teamsMemberData[2] === 0
+          teamsMemberData[2] === null
             ? "<p class='text-secondary text-opacity-50'>等待中路玩家加入</p>"
             : `<p class="text-secondary">${teamsMemberData[2].username}</p>`
         }
@@ -160,7 +149,7 @@ const fetchJoinDataAll = async () => {
           background-position:0px -100%;
           background-size:cover;
               background-image: url(./images/${
-                teamsMemberData[2] === 0
+                teamsMemberData[2] === null
                   ? "img-team-player@2x.png"
                   : `champion/${teamsMemberData[2].likeHero}.jpg`
               });
@@ -170,7 +159,7 @@ const fetchJoinDataAll = async () => {
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
               background-image: url(./images/${
-                teamsMemberData[2] === 0
+                teamsMemberData[2] === null
                   ? "img-team-badge.png"
                   : `ranking/${teamsMemberData[2].userRank}.png`
               });
@@ -181,7 +170,7 @@ const fetchJoinDataAll = async () => {
     <li class="mb-2">
     <div class="d-flex justify-content-between mb-1">
       ${
-        teamsMemberData[3] === 0
+        teamsMemberData[3] === null
           ? "<p class='text-secondary text-opacity-50'>等待下路玩家加入</p>"
           : `<p class="text-secondary">${teamsMemberData[3].username}</p>`
       }
@@ -193,7 +182,7 @@ const fetchJoinDataAll = async () => {
         background-position:0px -100%;
         background-size:266px auto;
             background-image: url(./images/${
-              teamsMemberData[3] === 0
+              teamsMemberData[3] === null
                 ? "img-team-player@2x.png"
                 : `champion/${teamsMemberData[3].likeHero}.jpg`
             });
@@ -203,7 +192,7 @@ const fetchJoinDataAll = async () => {
         <div class="parallelogramContent teamCardRankBg" style="
         background-position:-3px -14px;
             background-image: url(./images/${
-              teamsMemberData[3] === 0
+              teamsMemberData[3] === null
                 ? "img-team-badge.png"
                 : `ranking/${teamsMemberData[3].userRank}.png`
             });
@@ -214,7 +203,7 @@ const fetchJoinDataAll = async () => {
   <li class="mb-2">
   <div class="d-flex justify-content-between mb-1">
     ${
-      teamsMemberData[4] === 0
+      teamsMemberData[4] === null
         ? "<p class='text-secondary text-opacity-50'>等待輔助玩家加入</p>"
         : `<p class="text-secondary">${teamsMemberData[4].username}</p>`
     }
@@ -227,7 +216,7 @@ const fetchJoinDataAll = async () => {
         background-size:266px auto;
         
           background-image: url(./images/${
-            teamsMemberData[4] === 0
+            teamsMemberData[4] === null
               ? "img-team-player@2x.png"
               : `champion/${teamsMemberData[4].likeHero}.jpg`
           });
@@ -238,7 +227,7 @@ const fetchJoinDataAll = async () => {
       background-position:-3px -14px;
 
           background-image: url(./images/${
-            teamsMemberData[4] === 0
+            teamsMemberData[4] === null
               ? "img-team-badge.png"
               : `ranking/${teamsMemberData[4].userRank}.png`
           });
