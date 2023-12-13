@@ -40,7 +40,7 @@ const fetchDataThumbSort = async () => {
       });
 
       str += `        
-        <div class="swiper-slide teamListCard blueShadow">
+        <div class="swiper-slide teamListCard">
           <div class="card-header mb-4 mb-md-6">
             <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
               <div class="mb-2 mb-md-0">
@@ -262,8 +262,8 @@ function getPopularPlayers() {
 
 function renderPlayerListCard(playerData) {
   let str = "";
-  playerData.forEach((item, index) => {
-    str += `<div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
+  playerData.forEach((item) => {
+    str += `<div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark">
     <div class="meber-card-top">
       <div class="member-avatar position-relative">
         <div class="avatar">

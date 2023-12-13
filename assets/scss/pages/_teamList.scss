@@ -15,6 +15,7 @@
   max-width: 328px;
   padding: 16px 24px 24px 24px;
   border-radius: 2px;
+  background-color: $dark;
   @include pad {
     max-height: 703px;
     max-width: 416px;
