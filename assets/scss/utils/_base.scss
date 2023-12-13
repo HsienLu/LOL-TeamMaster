@@ -149,7 +149,6 @@ dl {
 .BG-Light-green {
   width: 1282px;
   height: 1282px;
-  flex-shrink: 0;
   border-radius: 1282px;
   background: rgba(0, 255, 255, 1);
   filter: blur(400px);
@@ -161,27 +160,23 @@ dl {
 .BG-Light-blue {
   width: 1282px;
   height: 1282px;
-  flex-shrink: 0;
   border-radius: 1282px;
   background: rgba(0, 102, 255, 1);
   filter: blur(500px);
   position: absolute;
   top: 2300px;
   right: -100px;
-  z-index: 0;
 }
 
 .BG-Light-white {
   width: 782px;
   height: 782px;
-  flex-shrink: 0;
   border-radius: 782px;
   background: rgba(255, 255, 255, 1);
   filter: blur(250px);
   position: absolute;
   top: 2482px;
   right: -600px;
-  z-index: 0;
 }
 
 
@@ -189,7 +184,6 @@ dl {
 .bg-Light-green {
   width: 600px;
   height: 600px;
-  flex-shrink: 0;
   border-radius: 600px;
   background: rgba(0, 255, 255, 1);
   filter: blur(250px);
@@ -201,7 +195,6 @@ dl {
 .bg-Light-blue {
   width: 450px;
   height: 450px;
-  flex-shrink: 0;
   border-radius: 450px;
   background: rgba(0, 102, 255, 1);
   filter: blur(250px);
@@ -213,7 +206,6 @@ dl {
 .bg-Light-white {
   width: 250px;
   height: 250px;
-  flex-shrink: 0;
   border-radius: 250px;
   background: rgba(255, 255, 255, 1);
   filter: blur(250px);
