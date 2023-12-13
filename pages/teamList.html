@@ -98,32 +98,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
       <script>
-        axios
-          .get(
-            "https://lol-teammaster-jasonserver.onrender.com/teams"
-          )
-          .then((res) => {
-            //   console.log(res.data.data);
-            $(function () {
-              let container = $("#pagination");
-              container.pagination({
-                dataSource: res.data,
-                prevText: "&#9668",
-                nextText: "&#9658",
-                // callback: function (data, pagination) {
-                //   var dataHtml = "<ul>";
 
-                //   $.each(data, function (index, item) {
-                //     dataHtml += "<li>" + item.name + "</li>";
-                //   });
-
-                //   dataHtml += "</ul>";
-
-                //   $("#data-container").html(dataHtml);
-                // },
-              });
-            });
-          });
 
         flatpickr(".flatpickr", {
           altInput: true,
