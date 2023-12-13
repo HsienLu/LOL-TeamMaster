@@ -22,10 +22,23 @@
   }
 }
 .line{
-  background: url(../images/image-line.png) center/ cover;
+  background: url(../images/image-line.png) left/ cover;
   width: 649px;
   height: 113px;
   margin-left: auto;
+}
+
+.line1{
+  background: url(../images/image-line.png) left/ cover;
+  width: 312px;
+  height: 113px;
+  margin-left: auto;
+}
+
+.line2{
+  background: url(../images/image-line.png) right/ cover;
+  width: 314px;
+  height: 113px;
 }
 
 .step{
