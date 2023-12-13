@@ -328,7 +328,7 @@ dl {
   box-sizing: border-box;
   border: 0px;
   padding: 0px;
-  background-color: $dark;
+  // background-color: $dark;
   width: $width;
   height: $height;
   @include flex(row, center, center);
