@@ -17,6 +17,9 @@
 
   <body>
     <%- include('./layout/header'); -%>
+    <span class="BG-Light-green"></span>
+    <span class="BG-Light-blue"></span>
+    <span class="BG-Light-white"></span>
     <div class="banner d-flex justify-content-center">
       <div class="banner-text">
         <button type="button">
@@ -32,9 +35,7 @@
         <p>立即開始組隊</p>
       </button>
     </div>
-    <span class="BG-Light-green"></span>
-    <span class="BG-Light-blue"></span>
-    <span class="BG-Light-white"></span>
+    
 
     <div class="container">
       <div class="d-flex justify-content-between align-items-center">
@@ -47,9 +48,9 @@
           <i class="fa-solid fa-angle-right"></i>
         </a>
       </div>
-      <div class="swiper-father position-relative mt-10">
+      <div class="swiper-father position-relative mt-10 z-2 opacity-100">
         <div id="popularTeamsSwiper" class="swiper">
-          <div class="swiper-wrapper popularTeamsCard"></div>
+          <div class="swiper-wrapper popularTeamsCard opacity-100"></div>
         </div>
         <div
           class="swiper-button-next position-absolute"
@@ -181,6 +182,7 @@
     </div>
 
     <%- include('./layout/footer'); -%>
+    <%- include('./layout/toTopBtn'); -%>
 
     <script
       src="https://kit.fontawesome.com/8eab62e458.js"
