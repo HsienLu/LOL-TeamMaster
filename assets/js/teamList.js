@@ -14,6 +14,7 @@ const fetchDataAll = async () => {
       let teamMemeLikeHero = [];
       let countPeople = v.teamMerberId.filter((v) => v > 0);
       const resTeamsMember = await axios.get(`${api_path}/teamsMember/${v.id}`);
+
       resTeamsMember.data.forEach((v) => {
         v === null
           ? teamMemeberAvatar.push(0)
