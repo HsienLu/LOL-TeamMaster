@@ -67,7 +67,7 @@ const fetchDataAll = async () => {
                   <div class="parallelogramContent teamCardHeroBg" style="
                   background-position:0px -100%;
                   background-size:cover;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeLikeHero[0] === 0
                           ? "img-team-player@2x.png"
                           : `champion/${teamMemeLikeHero[0]}.jpg`
@@ -77,7 +77,7 @@ const fetchDataAll = async () => {
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeberRank[0] === 0
                           ? "img-team-badge.png"
                           : `ranking/${teamMemeberRank[0]}.png`
@@ -100,7 +100,7 @@ const fetchDataAll = async () => {
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeLikeHero[1] === 0
                         ? "img-team-player@2x.png"
                         : `champion/${teamMemeLikeHero[1]}.jpg`
@@ -110,7 +110,7 @@ const fetchDataAll = async () => {
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeberRank[1] === 0
                         ? "img-team-badge.png"
                         : `ranking/${teamMemeberRank[1]}.png`
@@ -133,7 +133,7 @@ const fetchDataAll = async () => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeLikeHero[2] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamMemeLikeHero[2]}.jpg`
@@ -143,7 +143,7 @@ const fetchDataAll = async () => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeberRank[2] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamMemeberRank[2]}.png`
@@ -166,7 +166,7 @@ const fetchDataAll = async () => {
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:266px auto;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeLikeHero[3] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamMemeLikeHero[3]}.jpg`
@@ -176,7 +176,7 @@ const fetchDataAll = async () => {
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeberRank[3] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamMemeberRank[3]}.png`
@@ -200,7 +200,7 @@ const fetchDataAll = async () => {
             background-position:0px -100%;
             background-size:266px auto;
             
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeLikeHero[4] === 0
                   ? "img-team-player@2x.png"
                   : `champion/${teamMemeLikeHero[4]}.jpg`
@@ -211,7 +211,7 @@ const fetchDataAll = async () => {
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
 
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeberRank[4] === 0
                   ? "img-team-badge.png"
                   : `ranking/${teamMemeberRank[4]}.png`
@@ -300,7 +300,7 @@ const fetchDataPlayTimeAsc = async () => {
                   <div class="parallelogramContent teamCardHeroBg" style="
                   background-position:0px -100%;
                   background-size:cover;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeLikeHero[0] === 0
                           ? "img-team-player@2x.png"
                           : `champion/${teamMemeLikeHero[0]}.jpg`
@@ -310,7 +310,7 @@ const fetchDataPlayTimeAsc = async () => {
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeberRank[0] === 0
                           ? "img-team-badge.png"
                           : `ranking/${teamMemeberRank[0]}.png`
@@ -333,7 +333,7 @@ const fetchDataPlayTimeAsc = async () => {
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeLikeHero[1] === 0
                         ? "img-team-player@2x.png"
                         : `champion/${teamMemeLikeHero[1]}.jpg`
@@ -343,7 +343,7 @@ const fetchDataPlayTimeAsc = async () => {
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeberRank[1] === 0
                         ? "img-team-badge.png"
                         : `ranking/${teamMemeberRank[1]}.png`
@@ -366,7 +366,7 @@ const fetchDataPlayTimeAsc = async () => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeLikeHero[2] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamMemeLikeHero[2]}.jpg`
@@ -376,7 +376,7 @@ const fetchDataPlayTimeAsc = async () => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeberRank[2] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamMemeberRank[2]}.png`
@@ -399,7 +399,7 @@ const fetchDataPlayTimeAsc = async () => {
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:266px auto;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeLikeHero[3] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamMemeLikeHero[3]}.jpg`
@@ -409,7 +409,7 @@ const fetchDataPlayTimeAsc = async () => {
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeberRank[3] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamMemeberRank[3]}.png`
@@ -433,7 +433,7 @@ const fetchDataPlayTimeAsc = async () => {
             background-position:0px -100%;
             background-size:266px auto;
             
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeLikeHero[4] === 0
                   ? "img-team-player@2x.png"
                   : `champion/${teamMemeLikeHero[4]}.jpg`
@@ -444,7 +444,7 @@ const fetchDataPlayTimeAsc = async () => {
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
 
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeberRank[4] === 0
                   ? "img-team-badge.png"
                   : `ranking/${teamMemeberRank[4]}.png`
@@ -533,7 +533,7 @@ const fetchDataPlayTimeDesc = async () => {
                   <div class="parallelogramContent teamCardHeroBg" style="
                   background-position:0px -100%;
                   background-size:cover;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeLikeHero[0] === 0
                           ? "img-team-player@2x.png"
                           : `champion/${teamMemeLikeHero[0]}.jpg`
@@ -543,7 +543,7 @@ const fetchDataPlayTimeDesc = async () => {
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeberRank[0] === 0
                           ? "img-team-badge.png"
                           : `ranking/${teamMemeberRank[0]}.png`
@@ -566,7 +566,7 @@ const fetchDataPlayTimeDesc = async () => {
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeLikeHero[1] === 0
                         ? "img-team-player@2x.png"
                         : `champion/${teamMemeLikeHero[1]}.jpg`
@@ -576,7 +576,7 @@ const fetchDataPlayTimeDesc = async () => {
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeberRank[1] === 0
                         ? "img-team-badge.png"
                         : `ranking/${teamMemeberRank[1]}.png`
@@ -599,7 +599,7 @@ const fetchDataPlayTimeDesc = async () => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeLikeHero[2] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamMemeLikeHero[2]}.jpg`
@@ -609,7 +609,7 @@ const fetchDataPlayTimeDesc = async () => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeberRank[2] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamMemeberRank[2]}.png`
@@ -632,7 +632,7 @@ const fetchDataPlayTimeDesc = async () => {
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:266px auto;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeLikeHero[3] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamMemeLikeHero[3]}.jpg`
@@ -642,7 +642,7 @@ const fetchDataPlayTimeDesc = async () => {
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeberRank[3] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamMemeberRank[3]}.png`
@@ -666,7 +666,7 @@ const fetchDataPlayTimeDesc = async () => {
             background-position:0px -100%;
             background-size:266px auto;
             
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeLikeHero[4] === 0
                   ? "img-team-player@2x.png"
                   : `champion/${teamMemeLikeHero[4]}.jpg`
@@ -677,7 +677,7 @@ const fetchDataPlayTimeDesc = async () => {
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
 
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeberRank[4] === 0
                   ? "img-team-badge.png"
                   : `ranking/${teamMemeberRank[4]}.png`
@@ -766,7 +766,7 @@ const fetchDataRankLimit = async (rank) => {
                   <div class="parallelogramContent teamCardHeroBg" style="
                   background-position:0px -100%;
                   background-size:cover;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeLikeHero[0] === 0
                           ? "img-team-player@2x.png"
                           : `champion/${teamMemeLikeHero[0]}.jpg`
@@ -776,7 +776,7 @@ const fetchDataRankLimit = async (rank) => {
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeberRank[0] === 0
                           ? "img-team-badge.png"
                           : `ranking/${teamMemeberRank[0]}.png`
@@ -799,7 +799,7 @@ const fetchDataRankLimit = async (rank) => {
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeLikeHero[1] === 0
                         ? "img-team-player@2x.png"
                         : `champion/${teamMemeLikeHero[1]}.jpg`
@@ -809,7 +809,7 @@ const fetchDataRankLimit = async (rank) => {
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeberRank[1] === 0
                         ? "img-team-badge.png"
                         : `ranking/${teamMemeberRank[1]}.png`
@@ -832,7 +832,7 @@ const fetchDataRankLimit = async (rank) => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeLikeHero[2] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamMemeLikeHero[2]}.jpg`
@@ -842,7 +842,7 @@ const fetchDataRankLimit = async (rank) => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeberRank[2] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamMemeberRank[2]}.png`
@@ -865,7 +865,7 @@ const fetchDataRankLimit = async (rank) => {
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:266px auto;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeLikeHero[3] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamMemeLikeHero[3]}.jpg`
@@ -875,7 +875,7 @@ const fetchDataRankLimit = async (rank) => {
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeberRank[3] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamMemeberRank[3]}.png`
@@ -899,7 +899,7 @@ const fetchDataRankLimit = async (rank) => {
             background-position:0px -100%;
             background-size:266px auto;
             
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeLikeHero[4] === 0
                   ? "img-team-player@2x.png"
                   : `champion/${teamMemeLikeHero[4]}.jpg`
@@ -910,7 +910,7 @@ const fetchDataRankLimit = async (rank) => {
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
 
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeberRank[4] === 0
                   ? "img-team-badge.png"
                   : `ranking/${teamMemeberRank[4]}.png`
@@ -999,7 +999,7 @@ const fetchDataPlayTimeLimit = async (time) => {
                   <div class="parallelogramContent teamCardHeroBg" style="
                   background-position:0px -100%;
                   background-size:cover;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeLikeHero[0] === 0
                           ? "img-team-player@2x.png"
                           : `champion/${teamMemeLikeHero[0]}.jpg`
@@ -1009,7 +1009,7 @@ const fetchDataPlayTimeLimit = async (time) => {
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeberRank[0] === 0
                           ? "img-team-badge.png"
                           : `ranking/${teamMemeberRank[0]}.png`
@@ -1032,7 +1032,7 @@ const fetchDataPlayTimeLimit = async (time) => {
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeLikeHero[1] === 0
                         ? "img-team-player@2x.png"
                         : `champion/${teamMemeLikeHero[1]}.jpg`
@@ -1042,7 +1042,7 @@ const fetchDataPlayTimeLimit = async (time) => {
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeberRank[1] === 0
                         ? "img-team-badge.png"
                         : `ranking/${teamMemeberRank[1]}.png`
@@ -1065,7 +1065,7 @@ const fetchDataPlayTimeLimit = async (time) => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeLikeHero[2] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamMemeLikeHero[2]}.jpg`
@@ -1075,7 +1075,7 @@ const fetchDataPlayTimeLimit = async (time) => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeberRank[2] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamMemeberRank[2]}.png`
@@ -1098,7 +1098,7 @@ const fetchDataPlayTimeLimit = async (time) => {
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:266px auto;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeLikeHero[3] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamMemeLikeHero[3]}.jpg`
@@ -1108,7 +1108,7 @@ const fetchDataPlayTimeLimit = async (time) => {
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeberRank[3] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamMemeberRank[3]}.png`
@@ -1132,7 +1132,7 @@ const fetchDataPlayTimeLimit = async (time) => {
             background-position:0px -100%;
             background-size:266px auto;
             
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeLikeHero[4] === 0
                   ? "img-team-player@2x.png"
                   : `champion/${teamMemeLikeHero[4]}.jpg`
@@ -1143,7 +1143,7 @@ const fetchDataPlayTimeLimit = async (time) => {
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
 
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeberRank[4] === 0
                   ? "img-team-badge.png"
                   : `ranking/${teamMemeberRank[4]}.png`
@@ -1232,7 +1232,7 @@ const fetchDataQuery = async (query) => {
                   <div class="parallelogramContent teamCardHeroBg" style="
                   background-position:0px -100%;
                   background-size:cover;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeLikeHero[0] === 0
                           ? "img-team-player@2x.png"
                           : `champion/${teamMemeLikeHero[0]}.jpg`
@@ -1242,7 +1242,7 @@ const fetchDataQuery = async (query) => {
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeberRank[0] === 0
                           ? "img-team-badge.png"
                           : `ranking/${teamMemeberRank[0]}.png`
@@ -1265,7 +1265,7 @@ const fetchDataQuery = async (query) => {
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeLikeHero[1] === 0
                         ? "img-team-player@2x.png"
                         : `champion/${teamMemeLikeHero[1]}.jpg`
@@ -1275,7 +1275,7 @@ const fetchDataQuery = async (query) => {
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeberRank[1] === 0
                         ? "img-team-badge.png"
                         : `ranking/${teamMemeberRank[1]}.png`
@@ -1298,7 +1298,7 @@ const fetchDataQuery = async (query) => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeLikeHero[2] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamMemeLikeHero[2]}.jpg`
@@ -1308,7 +1308,7 @@ const fetchDataQuery = async (query) => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeberRank[2] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamMemeberRank[2]}.png`
@@ -1331,7 +1331,7 @@ const fetchDataQuery = async (query) => {
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:266px auto;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeLikeHero[3] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamMemeLikeHero[3]}.jpg`
@@ -1341,7 +1341,7 @@ const fetchDataQuery = async (query) => {
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeberRank[3] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamMemeberRank[3]}.png`
@@ -1365,7 +1365,7 @@ const fetchDataQuery = async (query) => {
             background-position:0px -100%;
             background-size:266px auto;
             
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeLikeHero[4] === 0
                   ? "img-team-player@2x.png"
                   : `champion/${teamMemeLikeHero[4]}.jpg`
@@ -1376,7 +1376,7 @@ const fetchDataQuery = async (query) => {
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
 
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeberRank[4] === 0
                   ? "img-team-badge.png"
                   : `ranking/${teamMemeberRank[4]}.png`
@@ -1463,7 +1463,7 @@ const fetchDataThumbSort = async (sort) => {
                   <div class="parallelogramContent teamCardHeroBg" style="
                   background-position:0px -100%;
                   background-size:cover;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeLikeHero[0] === 0
                           ? "img-team-player@2x.png"
                           : `champion/${teamMemeLikeHero[0]}.jpg`
@@ -1473,7 +1473,7 @@ const fetchDataThumbSort = async (sort) => {
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeberRank[0] === 0
                           ? "img-team-badge.png"
                           : `ranking/${teamMemeberRank[0]}.png`
@@ -1496,7 +1496,7 @@ const fetchDataThumbSort = async (sort) => {
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeLikeHero[1] === 0
                         ? "img-team-player@2x.png"
                         : `champion/${teamMemeLikeHero[1]}.jpg`
@@ -1506,7 +1506,7 @@ const fetchDataThumbSort = async (sort) => {
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeberRank[1] === 0
                         ? "img-team-badge.png"
                         : `ranking/${teamMemeberRank[1]}.png`
@@ -1529,7 +1529,7 @@ const fetchDataThumbSort = async (sort) => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:cover;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeLikeHero[2] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamMemeLikeHero[2]}.jpg`
@@ -1539,7 +1539,7 @@ const fetchDataThumbSort = async (sort) => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeberRank[2] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamMemeberRank[2]}.png`
@@ -1562,7 +1562,7 @@ const fetchDataThumbSort = async (sort) => {
             <div class="parallelogramContent teamCardHeroBg" style="
             background-position:0px -100%;
             background-size:266px auto;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeLikeHero[3] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamMemeLikeHero[3]}.jpg`
@@ -1572,7 +1572,7 @@ const fetchDataThumbSort = async (sort) => {
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeberRank[3] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamMemeberRank[3]}.png`
@@ -1596,7 +1596,7 @@ const fetchDataThumbSort = async (sort) => {
             background-position:0px -100%;
             background-size:266px auto;
             
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeLikeHero[4] === 0
                   ? "img-team-player@2x.png"
                   : `champion/${teamMemeLikeHero[4]}.jpg`
@@ -1607,7 +1607,7 @@ const fetchDataThumbSort = async (sort) => {
           <div class="parallelogramContent teamCardRankBg" style="
           background-position:-3px -14px;
 
-              background-image: url(../assets/images/${
+              background-image: url(./images/${
                 teamMemeberRank[4] === 0
                   ? "img-team-badge.png"
                   : `ranking/${teamMemeberRank[4]}.png`

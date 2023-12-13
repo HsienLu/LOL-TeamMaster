@@ -34,10 +34,10 @@ axios
     memberAccount.value = res.data.email;
     memberName.value = res.data.username;
     memberThumb.textContent = res.data.thumb;
-    memberAvatar.src = `../assets/images/avatar/${res.data.avatar}.png`;
+    memberAvatar.src = `./images/avatar/${res.data.avatar}.png`;
     memberRank.textContent = rankMap[res.data.userRank];
     memberPosition.textContent = res.data.likePosition;
-    memberHero.style = `background-image: url(../assets/images/champion/${res.data.likeHero}.jpg)`;
+    memberHero.style = `background-image: url(./images/champion/${res.data.likeHero}.jpg)`;
   })
   .then((error) => {
     console.log(error);

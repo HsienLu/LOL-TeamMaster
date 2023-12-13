@@ -79,7 +79,7 @@ const fetchDataThumbSort = async () => {
                     <div class="parallelogramContent teamCardHeroBg" style="
                     background-position:0px -100%;
                     background-size:cover;
-                        background-image: url(../assets/images/${
+                        background-image: url(./images/${
                           teamMemeLikeHero[0] === 0
                             ? "img-team-player@2x.png"
                             : `champion/${teamMemeLikeHero[0]}.jpg`
@@ -89,7 +89,7 @@ const fetchDataThumbSort = async () => {
                   <div class="parallelogramRank">
                     <div class="parallelogramContent teamCardRankBg" style="
                     background-position:-3px -14px;
-                        background-image: url(../assets/images/${
+                        background-image: url(./images/${
                           teamMemeberRank[0] === 0
                             ? "img-team-badge.png"
                             : `ranking/${teamMemeberRank[0]}.png`
@@ -112,7 +112,7 @@ const fetchDataThumbSort = async () => {
                   <div class="parallelogramContent teamCardHeroBg" style="
                   background-position:0px -100%;
                   background-size:cover;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeLikeHero[1] === 0
                           ? "img-team-player@2x.png"
                           : `champion/${teamMemeLikeHero[1]}.jpg`
@@ -122,7 +122,7 @@ const fetchDataThumbSort = async () => {
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
                   background-position:-3px -14px;
-                      background-image: url(../assets/images/${
+                      background-image: url(./images/${
                         teamMemeberRank[1] === 0
                           ? "img-team-badge.png"
                           : `ranking/${teamMemeberRank[1]}.png`
@@ -145,7 +145,7 @@ const fetchDataThumbSort = async () => {
                 <div class="parallelogramContent teamCardHeroBg" style="
                 background-position:0px -100%;
                 background-size:cover;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeLikeHero[2] === 0
                         ? "img-team-player@2x.png"
                         : `champion/${teamMemeLikeHero[2]}.jpg`
@@ -155,7 +155,7 @@ const fetchDataThumbSort = async () => {
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
                 background-position:-3px -14px;
-                    background-image: url(../assets/images/${
+                    background-image: url(./images/${
                       teamMemeberRank[2] === 0
                         ? "img-team-badge.png"
                         : `ranking/${teamMemeberRank[2]}.png`
@@ -178,7 +178,7 @@ const fetchDataThumbSort = async () => {
               <div class="parallelogramContent teamCardHeroBg" style="
               background-position:0px -100%;
               background-size:266px auto;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeLikeHero[3] === 0
                       ? "img-team-player@2x.png"
                       : `champion/${teamMemeLikeHero[3]}.jpg`
@@ -188,7 +188,7 @@ const fetchDataThumbSort = async () => {
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
               background-position:-3px -14px;
-                  background-image: url(../assets/images/${
+                  background-image: url(./images/${
                     teamMemeberRank[3] === 0
                       ? "img-team-badge.png"
                       : `ranking/${teamMemeberRank[3]}.png`
@@ -212,7 +212,7 @@ const fetchDataThumbSort = async () => {
               background-position:0px -100%;
               background-size:266px auto;
               
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeLikeHero[4] === 0
                     ? "img-team-player@2x.png"
                     : `champion/${teamMemeLikeHero[4]}.jpg`
@@ -223,7 +223,7 @@ const fetchDataThumbSort = async () => {
             <div class="parallelogramContent teamCardRankBg" style="
             background-position:-3px -14px;
   
-                background-image: url(../assets/images/${
+                background-image: url(./images/${
                   teamMemeberRank[4] === 0
                     ? "img-team-badge.png"
                     : `ranking/${teamMemeberRank[4]}.png`
@@ -248,6 +248,7 @@ function getPopularPlayers() {
     .get(`${api_path}/users?_embed=friendLists&_sort=thumb&_order=desc`)
     .then((res) => {
       playerData = res.data;
+      playerData.length = 11;
       renderPlayerListCard(playerData);
       setSwiper("#popularPlayersSwiper", 4, 2);
     })
@@ -264,7 +265,7 @@ function renderPlayerListCard(playerData) {
       <div class="member-avatar position-relative">
         <div class="avatar">
           <img
-            src="../assets/images/avatar/${item.avatar}.png"
+            src="./images/avatar/${item.avatar}.png"
             alt=""
             class="member-avatar-style"
             style="height: 300px; object-fit: cover"
@@ -283,9 +284,7 @@ function renderPlayerListCard(playerData) {
             <div
               class="parallelogram-content-avatar"
               style="
-                background-image: url(../assets/images/ranking/${
-                  item.userRank
-                }.png);
+                background-image: url(./images/ranking/${item.userRank}.png);
                 background-size: cover;
                 background-position: center;
                 width: 82px;

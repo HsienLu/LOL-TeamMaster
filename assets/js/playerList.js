@@ -1,8 +1,18 @@
-if (!userIsLogin) location.href = "index.html";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { async } from "validate.js";
 import { api_path, userIsLogin, memberId } from "./config";
+
+if (!userIsLogin) {
+  Swal.fire({
+    title: "請先登入會員",
+    icon: "warning",
+    background: "#060818",
+    color: "#D6EEFF",
+  }).then(() => {
+    location.href = "index.html";
+  });
+}
 
 let userPickIds = []; //存放會員要排除的ID
 let playerData = [];
@@ -28,7 +38,7 @@ function renderPlayerListCard(playerData) {
             <div class="member-avatar position-relative w-100">
               <div class="avatar w-100">
                 <img
-                  src="../assets/images/avatar/${item.avatar}.png"
+                  src="./images/avatar/${item.avatar}.png"
                   alt=""
                   class="member-avatar-style"
                   style="height: 300px; object-fit: cover"
@@ -42,7 +52,7 @@ function renderPlayerListCard(playerData) {
                   <div
                     class="parallelogram-content-avatar"
                     style="
-                      background-image: url(../assets/images/ranking/${item.userRank}.png);
+                      background-image: url(./images/ranking/${item.userRank}.png);
                       background-size: cover;
                       background-position: center;
                       width: 85px;
@@ -171,7 +181,7 @@ playerThumbAsc.addEventListener("click", (e) => {
     .get(`${api_path}/users?_embed=friendLists&_sort=thumb&_order=asc`)
     .then((res) => {
       let filteredUserData = res.data.filter((user) => {
-        return !userFriends.includes(user.id);
+        return !userPickIds.includes(user.id);
       });
 
       playerData = filteredUserData.filter((item) => {
@@ -191,7 +201,7 @@ playerThumbDesc.addEventListener("click", (e) => {
     .get(`${api_path}/users?_embed=friendLists&_sort=thumb&_order=desc`)
     .then((res) => {
       let filteredUserData = res.data.filter((user) => {
-        return !userFriends.includes(user.id);
+        return !userPickIds.includes(user.id);
       });
 
       playerData = filteredUserData.filter((item) => {
@@ -218,7 +228,7 @@ playerRankSelect.addEventListener("click", (e) => {
     .get(`${api_path}/users?_embed=friendLists&userRank=${rankSelectValue}`)
     .then((res) => {
       let filteredUserData = res.data.filter((user) => {
-        return !userFriends.includes(user.id);
+        return !userPickIds.includes(user.id);
       });
 
       playerData = filteredUserData.filter((item) => {
@@ -244,7 +254,7 @@ jsPlayerSearchBtn.addEventListener("click", (e) => {
     .get(`${api_path}/users?username=${playerNameSearch}`)
     .then((res) => {
       let filteredUserData = res.data.filter((user) => {
-        return !userFriends.includes(user.id);
+        return !userPickIds.includes(user.id);
       });
 
       playerData = filteredUserData.filter((item) => {
@@ -307,7 +317,7 @@ playerWrap.addEventListener("click", (e) => {
           .then((res) => {
             Swal.fire({
               icon: "success",
-              title: "已送出好友邀請",
+              title: "已加入好友",
               showConfirmButton: false,
               timer: 2000,
               background: "#060818",
@@ -325,7 +335,7 @@ playerWrap.addEventListener("click", (e) => {
   if (selectAddComment) {
     axios
       .get(
-        `${api_path}/600/comments?userId=${memberId}&commentedId=${selectAddComment}`,
+        `${api_path}/comments?userId=${memberId}&commentedId=${selectAddComment}`,
         {
           headers: {
             Authorization: `Bearer ${userIsLogin}`,

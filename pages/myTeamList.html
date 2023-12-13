@@ -84,11 +84,11 @@
           <div class="swiper-wrapper" id="joinMyTeamList">
 
             <!-- 卡片開始 -->
-            <div class="swiper-slide  bg-dark ">
+            <!-- <div class="swiper-slide  bg-dark ">
               <h4 class="pt-12 fw-black align-middle text-center w-100 p-0" style=" height: 608px">
                 並無建立隊伍
               </h4>
-            </div>
+            </div> -->
             <!-- 卡片結束 -->
           </div>
 
@@ -112,12 +112,12 @@
         <!-- Slider main container -->
         <div class="swiper " id="mySwiper2">
           <div class="swiper-wrapper " id="buildMyTeamList">
-            <div class="swiper-slide  bg-dark ">
-
+            <!-- <div class="swiper-slide  bg-dark ">
+              
               <h4 class="pt-12 fw-black align-middle text-center w-100 p-0" style=" height: 608px">
                 並無建立隊伍
               </h4>
-            </div>
+            </div> -->
 
           </div>
 
@@ -136,60 +136,64 @@
       <script type="module" src="../main.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script src="../assets/js/myTeamList.js" type="module"></script>
       <script>
-        var swiper = new Swiper("#mySwiper2", {
-          loop: true,
-          slidesPerView: 3,
-          spaceBetween: 30,
-          pagination: {
-            el: "#swiper-pagination2",
-            clickable: true,
-          },
+        //swiper要等網頁載入完再宣告，才能運作
+        window.onload = function () {
+          var swiper = new Swiper("#mySwiper2", {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+              el: "#swiper-pagination2",
+              clickable: true,
+            },
 
-          navigation: {
-            nextEl: "#swiper-button-next2",
-            prevEl: "#swiper-button-prev2",
-          },
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
+            navigation: {
+              nextEl: "#swiper-button-next2",
+              prevEl: "#swiper-button-prev2",
             },
-            768: {
-              slidesPerView: 2,
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
             },
-            1024: {
-              slidesPerView: 3,
+          });
+          var swiper = new Swiper("#mySwiper1", {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+              el: "#swiper-pagination1",
+              clickable: true,
             },
-          },
-        });
-        var swiper = new Swiper("#mySwiper1", {
-          loop: true,
-          slidesPerView: 3,
-          spaceBetween: 30,
-          pagination: {
-            el: "#swiper-pagination1",
-            clickable: true,
-          },
 
-          navigation: {
-            nextEl: "#swiper-button-next1",
-            prevEl: "#swiper-button-prev1",
-          },
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
+            navigation: {
+              nextEl: "#swiper-button-next1",
+              prevEl: "#swiper-button-prev1",
             },
-            768: {
-              slidesPerView: 2,
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
             },
-            1024: {
-              slidesPerView: 3,
-            },
-          },
-        });
+          });
+        }
 
       </script>
-      <script src="../assets/js/myTeamList.js" type="module"></script>
 </body>
 
 </html>
