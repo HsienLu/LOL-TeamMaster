@@ -19,7 +19,7 @@ import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-bdd2aebe.js";import
                 </span>
               </div>
             </div>
-            <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${h}/LOL-TeamMaster/pages/teamDetails.html?id=${o.id}'">
+            <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${h}/LOL-TeamMaster/teamDetails.html?id=${o.id}'">
                   <p class="fs-7 w-100">立即加入</p>
                 </button>
           </div>
