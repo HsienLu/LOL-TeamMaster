@@ -46,7 +46,7 @@ const fetchDataAll = async () => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
             <p class="fs-7 w-100">立即加入</p>
@@ -279,7 +279,7 @@ const fetchDataPlayTimeAsc = async () => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -512,7 +512,7 @@ const fetchDataPlayTimeDesc = async () => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -745,7 +745,7 @@ const fetchDataRankLimit = async (rank) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -978,7 +978,7 @@ const fetchDataPlayTimeLimit = async (time) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -1211,7 +1211,7 @@ const fetchDataQuery = async (query) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -1442,7 +1442,7 @@ const fetchDataThumbSort = async (sort) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
