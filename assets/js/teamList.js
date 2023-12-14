@@ -1627,7 +1627,7 @@ const fetchDataThumbSort = async (sort) => {
     console.error("Error fetching data:", error);
   }
 };
-fetchDataAll();
+
 document.querySelector("#thumbDesc").addEventListener("click", () => {
   fetchDataThumbSort("desc");
 });
@@ -1648,3 +1648,4 @@ document.querySelectorAll("#rankSelect li").forEach((v) => {
 document.querySelector("#teamQuery").addEventListener("change", (e) => {
   fetchDataQuery(`${e.target.value}`);
 });
+fetchDataAll();
