@@ -19,7 +19,7 @@ import{a as m,l as b}from"./main-bdd2aebe.js";import"./header-a7c960aa.js";const
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${d.id}'">
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/teamDetails.html?id=${d.id}'">
             <p class="fs-7 w-100">立即加入</p>
           </button>
         </div>
@@ -155,7 +155,7 @@ import{a as m,l as b}from"./main-bdd2aebe.js";import"./header-a7c960aa.js";const
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${l.id}'">
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/teamDetails.html?id=${l.id}'">
                 <p class="fs-7 w-100">立即加入</p>
               </button>
         </div>
@@ -291,7 +291,7 @@ import{a as m,l as b}from"./main-bdd2aebe.js";import"./header-a7c960aa.js";const
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${l.id}'">
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/teamDetails.html?id=${l.id}'">
                 <p class="fs-7 w-100">立即加入</p>
               </button>
         </div>
@@ -427,7 +427,7 @@ import{a as m,l as b}from"./main-bdd2aebe.js";import"./header-a7c960aa.js";const
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${l.id}'">
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/teamDetails.html?id=${l.id}'">
                 <p class="fs-7 w-100">立即加入</p>
               </button>
         </div>
@@ -563,7 +563,7 @@ import{a as m,l as b}from"./main-bdd2aebe.js";import"./header-a7c960aa.js";const
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/pages/teamDetails.html?id=${l.id}'">
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${b}/LOL-TeamMaster/teamDetails.html?id=${l.id}'">
                 <p class="fs-7 w-100">立即加入</p>
               </button>
         </div>
