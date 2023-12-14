@@ -114,7 +114,7 @@ const fetchDataAll = async (idc) => {
           </button>
         </div>
       </div>
-      </div>;`;
+      </div>`;
 
     document.querySelector("#addTeamButtom").addEventListener("click", () => {
       addTeam();
