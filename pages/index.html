@@ -4,36 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LOL 組隊大師</title>   
+    <title>LOL 組隊大師</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body style="overflow-x: hidden">
     <%- include('./layout/header'); -%>
     <span class="BG-Light-green"></span>
     <span class="BG-Light-blue"></span>
+    <span class="BG-Light-blue"></span>
     <span class="BG-Light-white"></span>
-    
+
     <div class="banner d-flex justify-content-center">
       <div class="banner-text">
-        <a href="teamList.html"><button type="button">
-          <p>立即組隊</p>
-        </button></a>
+        <a href="teamList.html"
+          ><button type="button">
+            <p>立即組隊</p>
+          </button></a
+        >
       </div>
     </div>
     <div class="line mt-md-10"></div>
 
     <div class="container step">
       <div class="step-bg"></div>
-      <a href="buildTeam.html"><button type="button">
-        <p>立即開始組隊</p>
-      </button></a>
+      <a href="buildTeam.html"
+        ><button type="button">
+          <p>立即開始組隊</p>
+        </button></a
+      >
     </div>
-    
 
     <div class="container">
       <div class="d-flex justify-content-between align-items-center">
@@ -46,7 +50,10 @@
           <i class="fa-solid fa-angle-right"></i>
         </a>
       </div>
-      <div class="swiper-father position-relative mt-10 opacity-100" data-aos="zoom-in-up">
+      <div
+        class="swiper-father position-relative mt-10 opacity-100"
+        data-aos="zoom-in-up"
+      >
         <div id="popularTeamsSwiper" class="swiper">
           <div class="swiper-wrapper popularTeamsCard opacity-100"></div>
         </div>
@@ -80,7 +87,10 @@
         </a>
       </div>
       <div class="popular-player">
-        <div class="swiper-father position-relative mt-10" data-aos="zoom-in-up">
+        <div
+          class="swiper-father position-relative mt-10"
+          data-aos="zoom-in-up"
+        >
           <div id="popularPlayersSwiper" class="swiper">
             <div class="swiper-wrapper popularPlayersCard"></div>
           </div>
@@ -181,8 +191,7 @@
       </div>
     </div>
 
-    <%- include('./layout/footer'); -%>
-    <%- include('./layout/toTopBtn'); -%>
+    <%- include('./layout/footer'); -%> <%- include('./layout/toTopBtn'); -%>
 
     <script
       src="https://kit.fontawesome.com/8eab62e458.js"
