@@ -103,7 +103,7 @@ addTeamButtom.addEventListener("click", () => {
       title: "建立隊伍成功",
       icon: "success",
     }).then(() => {
-      location.href = `${localhost}/LOL-TeamMaster/pages/teamList.html`;
+      location.href = `${localhost}/LOL-TeamMaster/teamList.html`;
     });
   });
 });

@@ -14,6 +14,7 @@ const fetchDataAll = async () => {
       let teamMemeLikeHero = [];
       let countPeople = v.teamMerberId.filter((v) => v > 0);
       const resTeamsMember = await axios.get(`${api_path}/teamsMember/${v.id}`);
+
       resTeamsMember.data.forEach((v) => {
         v === null
           ? teamMemeberAvatar.push(0)
@@ -45,7 +46,7 @@ const fetchDataAll = async () => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
             <p class="fs-7 w-100">立即加入</p>
@@ -278,7 +279,7 @@ const fetchDataPlayTimeAsc = async () => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -511,7 +512,7 @@ const fetchDataPlayTimeDesc = async () => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -744,7 +745,7 @@ const fetchDataRankLimit = async (rank) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -977,7 +978,7 @@ const fetchDataPlayTimeLimit = async (time) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -1210,7 +1211,7 @@ const fetchDataQuery = async (query) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -1441,7 +1442,7 @@ const fetchDataThumbSort = async (sort) => {
               </span>
             </div>
           </div>
-          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+          <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                 <p class="fs-7 w-100">立即加入</p>
@@ -1626,7 +1627,7 @@ const fetchDataThumbSort = async (sort) => {
     console.error("Error fetching data:", error);
   }
 };
-fetchDataAll();
+
 document.querySelector("#thumbDesc").addEventListener("click", () => {
   fetchDataThumbSort("desc");
 });
@@ -1647,3 +1648,4 @@ document.querySelectorAll("#rankSelect li").forEach((v) => {
 document.querySelector("#teamQuery").addEventListener("change", (e) => {
   fetchDataQuery(`${e.target.value}`);
 });
+fetchDataAll();

@@ -60,7 +60,7 @@ const fetchDataThumbSort = async () => {
                 </span>
               </div>
             </div>
-            <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/pages/teamDetails.html?id=${
+            <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${localhost}/LOL-TeamMaster/teamDetails.html?id=${
         v.id
       }'">
                   <p class="fs-7 w-100">立即加入</p>
