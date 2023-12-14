@@ -14,6 +14,7 @@ const commentList = document.querySelector(".evaluateCard");
 const friendList = document.querySelector(".friendCard");
 const banList = document.querySelector(".blackCard");
 const historicalTeamList = document.querySelector(".historicalCard");
+let bansList;
 
 function init() {
   getCommentList();
@@ -52,7 +53,9 @@ function renderCommentList() {
   let str = "";
   commentData.forEach((item) => {
     str += `
-    <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow">
+    <div class="swiper-slide memberEvaluateCard border border-2 border-radius border-primary w-20 bg-dark blueShadow" data-commentSwiper="${
+      item.id
+    }">
       <div class="meber-card-top">
         <div class="member-avatar position-relative">
           <img
@@ -163,10 +166,10 @@ commentList.addEventListener("click", async (e) => {
       background: "#060818",
       color: "#D6EEFF",
     });
-    renderCommentList();
-    // setTimeout(() => {
-    //   location.reload();
-    // }, 2000);
+
+    document
+      .querySelector(`[data-commentSwiper ='${selectCancelId}']`)
+      .remove();
   } catch (error) {
     console.log(error);
   }
@@ -203,7 +206,9 @@ function renderFriendList() {
   let str = "";
   friendData.forEach((item) => {
     str += `
-    <div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
+    <div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow" data-friendSwiper="${
+      item.id
+    }">
       <div class="meber-card-top">
         <div class="member-avatar position-relative">
           <div class="avatar">
@@ -352,10 +357,13 @@ friendList.addEventListener("click", async (e) => {
         color: "#D6EEFF",
       });
 
-      renderFriendList();
+      document.querySelector(`[data-friendSwiper ='${selectBanId}']`).remove();
+
       renderBanList();
-      setSwiper("#friendListSwiper", 3, 4);
-      setSwiper("#blackListSwiper", 4, 5);
+      // bansList = setSwiper("#blackListSwiper", 4, 5);
+      bansList.appendSlide('<div class="swiper-slide">Slide</div>');
+      // bansList.update();
+      // bansList.updateSlides();
     }
 
     if (selectRemoveIdId) {
@@ -386,8 +394,9 @@ friendList.addEventListener("click", async (e) => {
         color: "#D6EEFF",
       });
 
-      renderFriendList();
-      setSwiper("#friendListSwiper", 3, 4);
+      document
+        .querySelector(`[data-friendSwiper ='${selectRemoveIdId}']`)
+        .remove();
     }
   } catch (error) {
     console.log(error);
@@ -415,7 +424,7 @@ async function getBanList() {
       return bansId.includes(user.id);
     });
     renderBanList();
-    const blackListSwiper = setSwiper("#blackListSwiper", 4, 5);
+    bansList = setSwiper("#blackListSwiper", 4, 5);
   } catch (error) {
     console.log(error);
   }
@@ -425,7 +434,9 @@ function renderBanList() {
   let str = "";
   banData.forEach((item) => {
     str += `
-    <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow">
+    <div class="swiper-slide blackListCard border border-2 border-radius border-primary bg-dark blueShadow" data-banSwiper="${
+      item.id
+    }">
       <div class="meber-card-top">
         <div class="member-avatar position-relative w-100">
           <div class="avatar w-100">
@@ -538,8 +549,7 @@ banList.addEventListener("click", async (e) => {
     color: "#D6EEFF",
   });
 
-  renderBanList();
-  setSwiper("#blackListSwiper", 4, 5);
+  document.querySelector(`[data-banSwiper ='${selectRemoveBanId}']`).remove();
 });
 
 function getHistoricalTeamList() {
@@ -777,11 +787,14 @@ function renderHistoricalTeamList() {
 }
 
 function setSwiper(id, slidesPerView, swiperNum) {
-  new Swiper(id, {
+  return new Swiper(id, {
     slidesPerView: slidesPerView,
     spaceBetween: 24,
     loop: true,
     grabCursor: "true",
+    watchOverflow: true,
+    observer: true,
+
     pagination: {
       el: `#swiper-pagination${swiperNum}`,
       clickable: true,

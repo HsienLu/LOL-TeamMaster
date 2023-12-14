@@ -1,7 +1,9 @@
 import axios from "axios";
+import Swal from "sweetalert2";
 import { api_path, userIsLogin, memberId, localhost } from "./config";
 
 let playerData = [];
+let isFriend = 0;
 
 const popularTeamsList = document.querySelector(".popularTeamsCard");
 const popularPlayersCard = document.querySelector(".popularPlayersCard");
@@ -16,7 +18,8 @@ const fetchDataThumbSort = async () => {
   try {
     let teamUser = [];
     const resTeams = await axios.get(`${api_path}/teamsThumb?_sort=desc`);
-    const teamDetail = resTeams.data;
+    let teamDetail = resTeams.data;
+    teamDetail.length = 12;
     let str = "";
     for (const v of teamDetail) {
       let teamMemeberName = [];
@@ -37,7 +40,7 @@ const fetchDataThumbSort = async () => {
       });
 
       str += `        
-        <div class="swiper-slide teamListCard blueShadow">
+        <div class="swiper-slide teamListCard">
           <div class="card-header mb-4 mb-md-6">
             <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
               <div class="mb-2 mb-md-0">
@@ -248,7 +251,7 @@ function getPopularPlayers() {
     .get(`${api_path}/users?_embed=friendLists&_sort=thumb&_order=desc`)
     .then((res) => {
       playerData = res.data;
-      playerData.length = 11;
+      playerData.length = 15;
       renderPlayerListCard(playerData);
       setSwiper("#popularPlayersSwiper", 4, 2);
     })
@@ -259,8 +262,8 @@ function getPopularPlayers() {
 
 function renderPlayerListCard(playerData) {
   let str = "";
-  playerData.forEach((item, index) => {
-    str += `<div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark blueShadow">
+  playerData.forEach((item) => {
+    str += `<div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark">
     <div class="meber-card-top">
       <div class="member-avatar position-relative">
         <div class="avatar">
@@ -363,6 +366,80 @@ function renderPlayerListCard(playerData) {
   });
   popularPlayersCard.innerHTML = str;
 }
+
+popularPlayersCard.addEventListener("click", (e) => {
+  isFriend = 0;
+
+  let selectAddFriend = Number(e.target.getAttribute("data-friendinvite"));
+
+  if (!userIsLogin) {
+    Swal.fire({
+      title: "請先登入會員",
+      icon: "warning",
+      background: "#060818",
+      color: "#D6EEFF",
+    });
+    return;
+  }
+
+  if (selectAddFriend) {
+    axios.get(`${api_path}/friendLists`).then((res) => {
+      res.data.forEach((item) => {
+        if (item.userId === memberId && item.friendId === selectAddFriend)
+          isFriend = 1;
+      });
+
+      if (isFriend) {
+        Swal.fire({
+          icon: "error",
+          title: "已經是好友",
+          showConfirmButton: false,
+          timer: 2000,
+          background: "#060818",
+          color: "#D6EEFF",
+        });
+        return;
+      }
+    });
+
+    Swal.fire({
+      title: "確定要加入好友?",
+      icon: "question",
+      background: "#060818",
+      color: "#D6EEFF",
+      showCancelButton: true,
+      customClass: {
+        confirmButton: "bg-white text-dark me-4",
+        cancelButton: "border border-2 border-white bg-transparent",
+      },
+      confirmButtonText: "確定",
+      cancelButtonText: "取消",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .post(`${api_path}/friendLists`, {
+            userId: memberId,
+            friendId: selectAddFriend,
+            status: 1,
+          })
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "已加入好友",
+              showConfirmButton: false,
+              timer: 2000,
+              background: "#060818",
+              color: "#D6EEFF",
+            });
+            getPopularPlayers();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    });
+  }
+});
 
 function setSwiper(id, slidesPerView, swiperNum) {
   new Swiper(id, {
