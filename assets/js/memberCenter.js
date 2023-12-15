@@ -361,7 +361,7 @@ friendList.addEventListener("click", async (e) => {
 
       renderBanList();
       // bansList = setSwiper("#blackListSwiper", 4, 5);
-      bansList.appendSlide('<div class="swiper-slide">Slide</div>');
+      // bansList.appendSlide('<div class="swiper-slide">Slide</div>');
       // bansList.update();
       // bansList.updateSlides();
     }
